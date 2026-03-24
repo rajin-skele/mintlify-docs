@@ -1,0 +1,504 @@
+---
+title: "Margin"
+description: "Control element spacing with margin utilities including static and fluid variants"
+---
+
+import { MarginDemo } from "/snippets/margin-demo.jsx"
+
+## Interactive Demo
+
+<MarginDemo />
+
+## Overview
+
+Use margin utilities to control the space around elements. Margins create space outside an element's border, pushing other elements away. These utilities work with a consistent 4px scale and include both static and fluid variants for responsive designs. The spacing scale is a core concept—see the [Spacing Overview](/overview/spacing#spacing-scale) for details.
+
+## All Sides Margin
+
+Apply margin to all sides of an element at once.
+
+| Class     | Value | CSS             | Usage              |
+| --------- | ----- | --------------- | ------------------ |
+| `.m-0`    | 0     | `margin: 0;`    | No margin          |
+| `.m-px`   | 1px   | `margin: 1px;`  | 1px margin         |
+| `.m-1`    | 4px   | `margin: 4px;`  | Small margin       |
+| `.m-2`    | 8px   | `margin: 8px;`  | Small margin       |
+| `.m-3`    | 12px  | `margin: 12px;` | Medium margin      |
+| `.m-4`    | 16px  | `margin: 16px;` | Standard margin    |
+| `.m-6`    | 24px  | `margin: 24px;` | Large margin       |
+| `.m-8`    | 32px  | `margin: 32px;` | Extra large margin |
+| `.m-12`   | 48px  | `margin: 48px;` | Section margin     |
+| `.m-auto` | Auto  | `margin: auto;` | Center element     |
+
+### Examples
+
+```html
+<!-- All sides margin -->
+<div class="elementor-element m-4 p-4 bg-blue text-white">
+  Standard margin all around
+</div>
+
+<!-- Auto margin for centering -->
+<div class="elementor-element m-auto p-4 bg-green text-white max-w-md">
+  Centered with auto margin
+</div>
+```
+
+### Individual Vertical Margins
+
+#### Top Margin
+
+| Class    | Value | CSS                 | Usage                  |
+| -------- | ----- | ------------------- | ---------------------- |
+| `.mt-0`  | 0     | `margin-top: 0;`    | No top margin          |
+| `.mt-px` | 1px   | `margin-top: 1px;`  | 1px top margin         |
+| `.mt-1`  | 4px   | `margin-top: 4px;`  | Small top margin       |
+| `.mt-2`  | 8px   | `margin-top: 8px;`  | Small top margin       |
+| `.mt-3`  | 12px  | `margin-top: 12px;` | Medium top margin      |
+| `.mt-4`  | 16px  | `margin-top: 16px;` | Standard top margin    |
+| `.mt-6`  | 24px  | `margin-top: 24px;` | Large top margin       |
+| `.mt-8`  | 32px  | `margin-top: 32px;` | Extra large top margin |
+| `.mt-12` | 48px  | `margin-top: 48px;` | Section top margin     |
+
+#### Bottom Margin
+
+| Class    | Value | CSS                    | Usage                     |
+| -------- | ----- | ---------------------- | ------------------------- |
+| `.mb-0`  | 0     | `margin-bottom: 0;`    | No bottom margin          |
+| `.mb-px` | 1px   | `margin-bottom: 1px;`  | 1px bottom margin         |
+| `.mb-1`  | 4px   | `margin-bottom: 4px;`  | Small bottom margin       |
+| `.mb-2`  | 8px   | `margin-bottom: 8px;`  | Small bottom margin       |
+| `.mb-3`  | 12px  | `margin-bottom: 12px;` | Medium bottom margin      |
+| `.mb-4`  | 16px  | `margin-bottom: 16px;` | Standard bottom margin    |
+| `.mb-6`  | 24px  | `margin-bottom: 24px;` | Large bottom margin       |
+| `.mb-8`  | 32px  | `margin-bottom: 32px;` | Extra large bottom margin |
+| `.mb-12` | 48px  | `margin-bottom: 48px;` | Section bottom margin     |
+
+### Examples
+
+```html
+<!-- Top and bottom margins -->
+<div class="elementor-element mt-6 mb-4 p-4 bg-green text-white">
+  Different top and bottom margins
+</div>
+
+<!-- Section spacing -->
+<section class="elementor-element mt-12 mb-8">
+  <h2 class="text-3xl font-bold">Section Title</h2>
+  <p class="text-gray">Section content</p>
+</section>
+```
+
+## Horizontal Margin
+
+Control left and right margins together or independently.
+
+| Class      | Value | CSS                                      | Usage                         |
+| ---------- | ----- | ---------------------------------------- | ----------------------------- |
+| `.mx-0`    | 0     | `margin-left: 0; margin-right: 0;`       | No horizontal margin          |
+| `.mx-px`   | 1px   | `margin-left: 1px; margin-right: 1px;`   | 1px horizontal margin         |
+| `.mx-1`    | 4px   | `margin-left: 4px; margin-right: 4px;`   | Small horizontal margin       |
+| `.mx-2`    | 8px   | `margin-left: 8px; margin-right: 8px;`   | Small horizontal margin       |
+| `.mx-3`    | 12px  | `margin-left: 12px; margin-right: 12px;` | Medium horizontal margin      |
+| `.mx-4`    | 16px  | `margin-left: 16px; margin-right: 16px;` | Standard horizontal margin    |
+| `.mx-6`    | 24px  | `margin-left: 24px; margin-right: 24px;` | Large horizontal margin       |
+| `.mx-8`    | 32px  | `margin-left: 32px; margin-right: 32px;` | Extra large horizontal margin |
+| `.mx-12`   | 48px  | `margin-left: 48px; margin-right: 48px;` | Section horizontal margin     |
+| `.mx-auto` | Auto  | `margin-left: auto; margin-right: auto;` | Center horizontally           |
+
+### Individual Horizontal Margins
+
+| Class      | Value | CSS                  | Usage                   |
+| ---------- | ----- | -------------------- | ----------------------- |
+| `.ml-0`    | 0     | `margin-left: 0;`    | No left margin          |
+| `.ml-px`   | 1px   | `margin-left: 1px;`  | 1px left margin         |
+| `.ml-1`    | 4px   | `margin-left: 4px;`  | Small left margin       |
+| `.ml-2`    | 8px   | `margin-left: 8px;`  | Small left margin       |
+| `.ml-3`    | 12px  | `margin-left: 12px;` | Medium left margin      |
+| `.ml-4`    | 16px  | `margin-left: 16px;` | Standard left margin    |
+| `.ml-6`    | 24px  | `margin-left: 24px;` | Large left margin       |
+| `.ml-8`    | 32px  | `margin-left: 32px;` | Extra large left margin |
+| `.ml-12`   | 48px  | `margin-left: 48px;` | Section left margin     |
+| `.ml-auto` | Auto  | `margin-left: auto;` | Push element right      |
+
+| Class      | Value | CSS                   | Usage                    |
+| ---------- | ----- | --------------------- | ------------------------ |
+| `.mr-0`    | 0     | `margin-right: 0;`    | No right margin          |
+| `.mr-px`   | 1px   | `margin-right: 1px;`  | 1px right margin         |
+| `.mr-1`    | 4px   | `margin-right: 4px;`  | Small right margin       |
+| `.mr-2`    | 8px   | `margin-right: 8px;`  | Small right margin       |
+| `.mr-3`    | 12px  | `margin-right: 12px;` | Medium right margin      |
+| `.mr-4`    | 16px  | `margin-right: 16px;` | Standard right margin    |
+| `.mr-6`    | 24px  | `margin-right: 24px;` | Large right margin       |
+| `.mr-8`    | 32px  | `margin-right: 32px;` | Extra large right margin |
+| `.mr-12`   | 48px  | `margin-right: 48px;` | Section right margin     |
+| `.mr-auto` | Auto  | `margin-right: auto;` | Push element left        |
+
+### Examples
+
+```html
+<!-- Horizontal margin -->
+<div class="elementor-element mx-4 p-4 bg-blue text-white">
+  Horizontal margin on both sides
+</div>
+
+<!-- Centered with auto margins -->
+<div class="elementor-element mx-auto p-4 bg-green text-white max-w-md">
+  Centered element
+</div>
+
+<!-- Auto left margin (pushed right) -->
+<div class="elementor-element ml-auto p-4 bg-red text-white max-w-md">
+  Pushed to the right
+</div>
+```
+
+## Vertical Margin
+
+Control top and bottom margins together or independently.
+
+| Class      | Value | CSS                                      | Usage                       |
+| ---------- | ----- | ---------------------------------------- | --------------------------- |
+| `.my-0`    | 0     | `margin-top: 0; margin-bottom: 0;`       | No vertical margin          |
+| `.my-px`   | 1px   | `margin-top: 1px; margin-bottom: 1px;`   | 1px vertical margin         |
+| `.my-1`    | 4px   | `margin-top: 4px; margin-bottom: 4px;`   | Small vertical margin       |
+| `.my-2`    | 8px   | `margin-top: 8px; margin-bottom: 8px;`   | Small vertical margin       |
+| `.my-3`    | 12px  | `margin-top: 12px; margin-bottom: 12px;` | Medium vertical margin      |
+| `.my-4`    | 16px  | `margin-top: 16px; margin-bottom: 16px;` | Standard vertical margin    |
+| `.my-6`    | 24px  | `margin-top: 24px; margin-bottom: 24px;` | Large vertical margin       |
+| `.my-8`    | 32px  | `margin-top: 32px; margin-bottom: 32px;` | Extra large vertical margin |
+| `.my-12`   | 48px  | `margin-top: 48px; margin-bottom: 48px;` | Section vertical margin     |
+| `.my-auto` | Auto  | `margin-top: auto; margin-bottom: auto;` | Center vertically           |
+
+### Examples
+
+```html
+<!-- Vertical margin -->
+<div class="elementor-element my-6 p-4 bg-green text-white">
+  Vertical margin on top and bottom
+</div>
+
+<!-- Centered vertically with auto -->
+<div class="elementor-element flex items-center h-screen">
+  <div class="elementor-element my-auto p-4 bg-blue text-white">
+    Vertically centered
+  </div>
+</div>
+```
+
+## Fluid Margin
+
+Fluid margin utilities use `clamp()` to scale smoothly between mobile and desktop sizes. They're perfect for hero sections, marketing pages, and responsive layouts that need to adapt automatically.
+
+<Tabs>
+  <Tab title="All Sides">
+    | Class | Clamp Expression | Mobile → Desktop | 
+    | ----- | ---------------- | ---------------- | 
+    | `.m-fluid-1` | `clamp(0.25rem, calc(0.21rem + 0.09vw), 0.31rem)` | 4px → 5px | 
+    | `.m-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px | 
+    | `.m-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
+    | `.m-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
+    | `.m-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px |  
+    | `.m-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px |  
+    | `.m-fluid-12` | `clamp(3rem, calc(2.56rem + 1.1vw), 3.75rem)` | 48px → 60px |
+  </Tab>
+  <Tab title="Top">
+    | Class | Clamp Expression | Mobile → Desktop | 
+    | ----- | ---------------- | ---------------- |
+    | `.mt-fluid-1` | `clamp(0.25rem, calc(0.21rem + 0.09vw), 0.31rem)` | 4px → 5px | 
+    | `.mt-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px | 
+    | `.mt-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
+    | `.mt-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
+    | `.mt-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px | 
+    | `.mt-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px | 
+    | `.mt-fluid-12` | `clamp(3rem, calc(2.56rem + 1.1vw), 3.75rem)` | 48px → 60px |
+  </Tab>
+  <Tab title="Bottom">
+    | Class | Clamp Expression | Mobile → Desktop | 
+    | ----- | ---------------- | ---------------- | 
+    | `.mb-fluid-1` | `clamp(0.25rem, calc(0.21rem + 0.09vw), 0.31rem)` | 4px → 5px | 
+    | `.mb-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px | 
+    | `.mb-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
+    | `.mb-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
+    | `.mb-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px | 
+    | `.mb-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px | 
+    | `.mb-fluid-12` | `clamp(3rem, calc(2.56rem + 1.1vw), 3.75rem)` | 48px → 60px |
+  </Tab>
+</Tabs>
+
+### Fluid Margin Examples
+
+```html
+<!-- Hero section with fluid margins -->
+<section class="mt-fluid-12 mb-fluid-8">
+  <h1 class="text-fluid-6xl font-bold mb-fluid-4">Hero Title</h1>
+  <p class="text-fluid-lg">Supporting text with fluid spacing</p>
+</section>
+
+<!-- Card with fluid bottom margin -->
+<div class="card p-6 mb-fluid-4">
+  <h3 class="text-xl font-semibold mb-fluid-2">Card Title</h3>
+  <p class="text-gray">Content with responsive margin</p>
+</div>
+```
+
+<Tip>
+  Use fluid margin utilities for hero sections, marketing pages, and any content
+  that needs to scale smoothly across viewport sizes. They work especially well
+  when paired with fluid typography utilities.
+</Tip>
+
+## Negative and Auto Margins
+
+Negative and auto margins are powerful tools for advanced layout control. They serve different purposes but are both essential for creating sophisticated layouts.
+
+### Negative Margins
+
+Negative margins pull elements closer together or extend them beyond their container boundaries. They're useful for:
+
+- **Overlapping elements**: Create visual depth by pulling elements closer
+- **Compensating for container padding**: Extend child elements to the edge of padded containers
+- **Tight spacing**: Reduce gaps between elements when the standard scale is too large
+- **Visual effects**: Create overlapping cards, pull-out sections, or break-out designs
+
+| Class    | Value | CSS              | Usage                       |
+| -------- | ----- | ---------------- | --------------------------- |
+| `.-m-px` | -1px  | `margin: -1px;`  | 1px negative margin         |
+| `.-m-1`  | -4px  | `margin: -4px;`  | Small negative margin       |
+| `.-m-2`  | -8px  | `margin: -8px;`  | Small negative margin       |
+| `.-m-3`  | -12px | `margin: -12px;` | Medium negative margin      |
+| `.-m-4`  | -16px | `margin: -16px;` | Standard negative margin    |
+| `.-m-6`  | -24px | `margin: -24px;` | Large negative margin       |
+| `.-m-8`  | -32px | `margin: -32px;` | Extra large negative margin |
+| `.-m-12` | -48px | `margin: -48px;` | Section negative margin     |
+
+Negative margins are available for all directions: `.-mt-*`, `.-mb-*`, `.-ml-*`, `.-mr-*`, `.-mx-*`, `.-my-*`.
+
+### Auto Margins
+
+Auto margins distribute available space automatically, making them perfect for centering and alignment:
+
+- **Horizontal centering**: `.mx-auto` centers block elements horizontally
+- **Vertical centering**: `.my-auto` centers elements vertically in flex containers
+- **Asymmetric layouts**: `.ml-auto` or `.mr-auto` push elements to one side
+- **Responsive alignment**: Automatically adapts to container size
+
+| Class      | CSS                                      | Usage               |
+| ---------- | ---------------------------------------- | ------------------- |
+| `.m-auto`  | `margin: auto;`                          | Center on all sides |
+| `.mx-auto` | `margin-left: auto; margin-right: auto;` | Center horizontally |
+| `.my-auto` | `margin-top: auto; margin-bottom: auto;` | Center vertically   |
+| `.ml-auto` | `margin-left: auto;`                     | Push element right  |
+| `.mr-auto` | `margin-right: auto;`                    | Push element left   |
+
+### Examples
+
+```html
+<!-- Negative margin to extend beyond container -->
+<div class="elementor-element p-6 bg-gray-light">
+  <div class="elementor-element -mx-6 p-6 bg-blue text-white">
+    Extended to container edges
+  </div>
+</div>
+
+<!-- Overlapping cards with negative margin -->
+<div class="elementor-element flex gap-4">
+  <div class="elementor-element card p-6 -mr-4">Card 1</div>
+  <div class="elementor-element card p-6 -mr-4">Card 2</div>
+  <div class="elementor-element card p-6">Card 3</div>
+</div>
+
+<!-- Centered content with auto margins -->
+<div class="elementor-element mx-auto my-auto max-w-2xl p-8">
+  Centered both horizontally and vertically
+</div>
+```
+
+<Warning>
+  Use negative margins carefully—they can cause elements to overflow containers
+  or overlap unexpectedly. Always test across different screen sizes.
+</Warning>
+
+## Important Ways to Use Margin
+
+Margin is one of the most versatile spacing tools. Here are the key patterns and use cases:
+
+### 1. Section Spacing
+
+Create consistent vertical rhythm between major page sections:
+
+```html
+<section class="mt-12 mb-8">
+  <h2 class="text-3xl font-bold mb-6">Section Title</h2>
+  <p class="text-lg text-gray mb-4">Section description</p>
+  <!-- Content -->
+</section>
+```
+
+### 2. Element Separation
+
+Add space between related but distinct elements:
+
+```html
+<div class="elementor-element mb-4">
+  <label class="text-sm font-medium mb-2">Email</label>
+  <input type="email" class="w-full p-3" />
+</div>
+<div class="elementor-element mb-6">
+  <label class="text-sm font-medium mb-2">Password</label>
+  <input type="password" class="w-full p-3" />
+</div>
+```
+
+### 3. Centering Content
+
+Use auto margins to center block-level elements:
+
+```html
+<!-- Centered container -->
+<div class="elementor-element mx-auto max-w-2xl mt-8 mb-12">
+  <h1 class="text-3xl font-bold mb-4">Centered Content</h1>
+  <p class="text-gray">Content with centered layout</p>
+</div>
+```
+
+### 4. Asymmetric Layouts
+
+Push elements to specific sides using directional auto margins:
+
+```html
+<nav class="elementor-element flex items-center">
+  <div class="elementor-element logo">Logo</div>
+  <div class="elementor-element ml-auto flex gap-4">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+  </div>
+</nav>
+```
+
+### 5. Compensating for Container Padding
+
+Use negative margins to extend child elements to container edges:
+
+```html
+<div class="elementor-element p-6 bg-gray-light">
+  <div class="elementor-element -mx-6 -mt-6 p-6 bg-blue text-white">
+    Full-width header within padded container
+  </div>
+  <div class="elementor-element mt-4">Regular content</div>
+</div>
+```
+
+### 6. Visual Hierarchy
+
+Create depth and hierarchy through strategic margin usage:
+
+```html
+<div class="elementor-element card p-6 mb-8">
+  <h3 class="text-xl font-semibold mb-4">Primary Card</h3>
+  <p class="text-gray">Important content</p>
+</div>
+<div class="elementor-element card p-4 mb-4">
+  <h4 class="text-lg font-medium mb-2">Secondary Card</h4>
+  <p class="text-sm text-gray">Supporting content</p>
+</div>
+```
+
+### 7. Responsive Spacing
+
+Combine static and fluid margins for responsive designs:
+
+```html
+<section class="mt-fluid-12 mb-fluid-8">
+  <h1 class="text-fluid-6xl font-bold mb-fluid-4">Hero Title</h1>
+  <p class="text-fluid-lg">Responsive spacing</p>
+</section>
+```
+
+## Common Margin Patterns
+
+### Section Spacing
+
+```html
+<section class="elementor-element mt-12 mb-8">
+  <h2 class="text-3xl font-bold mb-6">Section Title</h2>
+  <p class="text-lg text-gray mb-4">Section description</p>
+  <div class="elementor-element flex gap-6">
+    <div class="elementor-element w-1-3 p-6 bg-white rounded-lg">Content 1</div>
+    <div class="elementor-element w-1-3 p-6 bg-white rounded-lg">Content 2</div>
+    <div class="elementor-element w-1-3 p-6 bg-white rounded-lg">Content 3</div>
+  </div>
+</section>
+```
+
+### Centered Content
+
+```html
+<div class="elementor-element mx-auto max-w-2xl mt-8 mb-12">
+  <h1 class="text-3xl font-bold mb-4">Centered Content</h1>
+  <p class="text-gray">Content with centered layout</p>
+</div>
+```
+
+### Form Field Spacing
+
+```html
+<form class="elementor-element max-w-md">
+  <div class="elementor-element mb-4">
+    <label class="text-sm font-medium mb-2">Email</label>
+    <input type="email" class="w-full p-3 border border-gray rounded" />
+  </div>
+  <div class="elementor-element mb-6">
+    <label class="text-sm font-medium mb-2">Password</label>
+    <input type="password" class="w-full p-3 border border-gray rounded" />
+  </div>
+  <button class="btn btn-blue w-full">Submit</button>
+</form>
+```
+
+## Best Practices
+
+<Steps>
+  <Step title="Use the 4px Scale">
+    Always use the predefined spacing scale (1px, 1, 2, 3, 4, 6, 8, 12) for
+    consistency. See the [Spacing Overview](/overview/spacing) for the complete
+    scale.
+  </Step>
+  <Step title="Maintain Vertical Rhythm">
+    Use consistent spacing between related elements for better visual flow.
+  </Step>
+  <Step title="Use Auto for Centering">
+    Use `.mx-auto` for horizontal centering or `.my-auto` for vertical centering
+    in flex containers. This is more reliable than manual calculations.
+  </Step>
+  <Step title="Consider Mobile">
+    Use fluid margins for responsive designs that need to scale smoothly across
+    breakpoints.
+  </Step>
+</Steps>
+
+## Common Mistakes
+
+<Warning>**Avoid these margin mistakes:**</Warning>
+
+- Don't use margin for spacing between flex items (use gap instead)
+- Don't mix different spacing scales inconsistently
+- Don't forget to consider mobile spacing needs
+- Don't overuse auto margins for centering (use flexbox utilities when appropriate)
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Padding" icon="square" href="/spacing/padding">
+    Control internal spacing with padding utilities
+  </Card>
+  <Card title="Gap" icon="arrows-up-down-left-right" href="/spacing/gap">
+    Control spacing between flex items
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Flexbox and display utilities for layout
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    Width and height utilities
+  </Card>
+</CardGroup>

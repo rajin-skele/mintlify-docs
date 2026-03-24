@@ -1,0 +1,39 @@
+/* Custom CSS for Atomic Utility Docs */
+
+/* Table header styling for better visibility in dark mode */
+.mintlify-docs table thead th {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* Alternative: Use a lighter blue for better contrast */
+.mintlify-docs table thead th {
+  background-color: #60a5fa !important;
+  color: #ffffff !important;
+}
+
+/* Ensure table headers are visible in both light and dark modes */
+[data-theme="dark"] .mintlify-docs table thead th {
+  background-color: #60a5fa !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .mintlify-docs table thead th {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+/* More specific targeting for Mintlify's table structure */
+.mintlify-docs .mintlify-table thead th,
+.mintlify-docs table thead th,
+.mintlify-docs .table thead th {
+  background-color: #60a5fa !important;
+  color: #ffffff !important;
+  border-color: #60a5fa !important;
+}
+
+/* Target Card component tables specifically */
+.mintlify-docs .mintlify-card table thead th {
+  background-color: #60a5fa !important;
+  color: #ffffff !important;
+}

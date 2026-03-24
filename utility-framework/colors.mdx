@@ -1,0 +1,338 @@
+---
+title: "Colors"
+description: "Text, background, and border colors with semantic naming"
+---
+
+## Color Palette
+
+This framework includes a carefully curated color palette designed for modern web applications.
+
+<Card title="Color Palette" icon="palette">
+
+|            |         |                           |
+| ---------- | ------- | ------------------------- |
+| White      | `#ffffff` | Backgrounds, text on dark |
+| Black      | `#000000` | Text, borders             |
+| Dark Gray  | `#374151` | Primary text              |
+| Gray       | `#6b7280` | Secondary text            |
+| Light Gray | `#9ca3af` | Muted text                |
+| Blue       | `#3b82f6` | Primary actions, links    |
+| Green      | `#10b981` | Success states            |
+| Red        | `#ef4444` | Error states, warnings    |
+| Yellow     | `#f59e0b` | Warning states            |
+
+</Card>
+
+## Text Colors
+
+Control text color with semantic color utilities.
+
+<Card title="Text Colors" icon="text-size">
+
+|                    |            |         |                   |                           |
+| ------------------ | ---------- | ------- | ----------------- | ------------------------ |
+| `.text-white`      | White      | #ffffff | `color: #ffffff;` | Text on dark backgrounds |
+| `.text-black`      | Black      | #000000 | `color: #000000;` | Primary text             |
+| `.text-gray-dark`  | Dark Gray  | #374151 | `color: #374151;` | Primary text             |
+| `.text-gray`       | Gray       | #6b7280 | `color: #6b7280;` | Secondary text           |
+| `.text-gray-light` | Light Gray | #9ca3af | `color: #9ca3af;` | Muted text               |
+| `.text-blue`       | Blue       | #3b82f6 | `color: #3b82f6;` | Links, primary actions   |
+| `.text-green`      | Green      | #10b981 | `color: #10b981;` | Success messages         |
+| `.text-red`        | Red        | #ef4444 | `color: #ef4444;` | Error messages           |
+| `.text-yellow`     | Yellow     | #f59e0b | `color: #f59e0b;` | Warning messages         |
+
+</Card>
+
+### Examples
+
+```html
+<!-- Text color examples -->
+<h1 class="text-3xl font-700 text-black">Primary Heading</h1>
+<p class="text-base text-gray">Secondary text content</p>
+<a href="#" class="text-blue underline">Link text</a>
+<div class="text-green">Success message</div>
+<div class="text-red">Error message</div>
+<div class="text-yellow">Warning message</div>
+```
+
+## Background Colors
+
+Control background color with semantic utilities.
+
+<Card title="Background Colors" icon="square">
+
+|                  |            |         |                              |                    |
+| ---------------- | ---------- | ------- | ---------------------------- | ------------------ |
+| `.bg-white`      | White      | #ffffff | `background-color: #ffffff;` | Light backgrounds  |
+| `.bg-black`      | Black      | #000000 | `background-color: #000000;` | Dark backgrounds   |
+| `.bg-gray-dark`  | Dark Gray  | #374151 | `background-color: #374151;` | Dark sections      |
+| `.bg-gray`       | Gray       | #6b7280 | `background-color: #6b7280;` | Muted backgrounds  |
+| `.bg-gray-light` | Light Gray | #f3f4f6 | `background-color: #f3f4f6;` | Subtle backgrounds |
+| `.bg-blue`       | Blue       | #3b82f6 | `background-color: #3b82f6;` | Primary actions    |
+| `.bg-green`      | Green      | #10b981 | `background-color: #10b981;` | Success states     |
+| `.bg-red`        | Red        | #ef4444 | `background-color: #ef4444;` | Error states       |
+| `.bg-yellow`     | Yellow     | #f59e0b | `background-color: #f59e0b;` | Warning states     |
+
+</Card>
+
+### Examples
+
+```html
+<!-- Background color examples -->
+<div class="bg-white p-6 rounded-lg">White background card</div>
+<div class="bg-gray-light p-6 rounded-lg">Light gray background</div>
+<div class="bg-blue text-white p-6 rounded-lg">
+  Blue background with white text
+</div>
+<div class="bg-green text-white p-6 rounded-lg">Green success background</div>
+<div class="bg-red text-white p-6 rounded-lg">Red error background</div>
+```
+
+## Border Colors
+
+Control border color with semantic utilities.
+
+<Card title="Border Colors" icon="square">
+
+|                      |            |         |                          |                  |
+| -------------------- | ---------- | ------- | ------------------------ | ---------------- |
+| `.border-white`      | White      | #ffffff | `border-color: #ffffff;` | White borders    |
+| `.border-black`      | Black      | #000000 | `border-color: #000000;` | Black borders    |
+| `.border-gray`       | Gray       | #6b7280 | `border-color: #6b7280;` | Standard borders |
+| `.border-gray-light` | Light Gray | #e5e7eb | `border-color: #e5e7eb;` | Subtle borders   |
+| `.border-blue`       | Blue       | #3b82f6 | `border-color: #3b82f6;` | Primary borders  |
+
+</Card>
+
+### Examples
+
+```html
+<!-- Border color examples -->
+<div class="border border-gray p-4 rounded">Gray border</div>
+<div class="border border-gray-light p-4 rounded">Light gray border</div>
+<div class="border border-blue p-4 rounded">Blue border</div>
+<div class="border-2 border-black p-4 rounded">Thick black border</div>
+```
+
+## Color Combinations
+
+### High Contrast Combinations
+
+<Card title="High Contrast Text" icon="eye">
+```html
+<!-- High contrast combinations -->
+<div class="bg-black text-white p-6">Black background, white text</div>
+<div class="bg-white text-black p-6 border border-black">White background, black text</div>
+<div class="bg-blue text-white p-6">Blue background, white text</div>
+<div class="bg-green text-white p-6">Green background, white text</div>
+```
+</Card>
+
+### Subtle Combinations
+
+<Card title="Subtle Text Colors" icon="eye-slash">
+```html
+<!-- Subtle combinations -->
+<div class="bg-white text-gray-dark p-6">White background, dark gray text</div>
+<div class="bg-gray-light text-gray p-6">Light gray background, gray text</div>
+<div class="bg-white text-gray-light p-6">White background, light gray text</div>
+```
+</Card>
+
+### Status Color Combinations
+
+<Card title="Status Colors" icon="info-circle">
+```html
+<!-- Status color combinations -->
+<div class="bg-green text-white p-4 rounded">Success: Operation completed</div>
+<div class="bg-red text-white p-4 rounded">Error: Something went wrong</div>
+<div class="bg-yellow text-black p-4 rounded">Warning: Please check this</div>
+<div class="bg-blue text-white p-4 rounded">Info: Additional information</div>
+```
+</Card>
+
+## Common Color Patterns
+
+### Card with Color Accent
+
+<Card title="Colored Card" icon="square">
+  ```html
+  <div class="bg-white border-l-4 border-blue p-6 rounded-lg">
+    <h3 class="text-xl font-600 text-black mb-2">Card Title</h3>
+    <p class="text-gray">Card content with blue accent border</p>
+  </div>
+  ```
+</Card>
+
+### Button Color Variants
+
+<Card title="Button Colors" icon="hand-pointer">
+  ```html
+  <button class="btn btn-blue">Primary Button</button>
+  <button class="btn btn-green">Success Button</button>
+  <button class="btn btn-red">Danger Button</button>
+  <button class="btn bg-gray text-white">Secondary Button</button>
+  ```
+</Card>
+
+### Form Field States
+
+<Card title="Form States" icon="list">
+```html
+<!-- Normal state -->
+<input type="text" class="w-full p-3 border border-gray rounded" placeholder="Normal input">
+
+<!-- Error state -->
+
+<input type="text" class="w-full p-3 border border-red rounded" placeholder="Error input">
+
+<!-- Success state -->
+
+<input type="text" class="w-full p-3 border border-green rounded" placeholder="Success input">
+```
+</Card>
+
+### Navigation with Color
+
+<Card title="Colored Navigation" icon="bars">
+  ```html
+  <nav class="bg-blue text-white p-4">
+    <div class="flex items-center justify-between">
+      <h1 class="text-xl font-700">Logo</h1>
+      <div class="flex gap-6">
+        <a href="#" class="text-white hover:text-gray-light">
+          Home
+        </a>
+        <a href="#" class="text-white hover:text-gray-light">
+          About
+        </a>
+        <a href="#" class="text-white hover:text-gray-light">
+          Contact
+        </a>
+      </div>
+    </div>
+  </nav>
+  ```
+</Card>
+
+## Color Accessibility
+
+### Contrast Requirements
+
+<Warning>
+  **Accessibility Note:** Ensure sufficient color contrast for readability. The
+  color palette is designed to meet WCAG AA standards.
+</Warning>
+
+<Card title="Contrast Guidelines" icon="eye">
+  - **Normal text:** Minimum 4.5:1 contrast ratio - **Large text:** Minimum 3:1
+  contrast ratio - **UI components:** Minimum 3:1 contrast ratio - **Focus
+  indicators:** Minimum 3:1 contrast ratio
+</Card>
+
+### Color Blindness Considerations
+
+<Card title="Color Blindness Support" icon="eye-slash">
+  - Don't rely solely on color to convey information - Use icons, text, or
+  patterns alongside color - Test with color blindness simulators - Provide
+  alternative ways to identify status
+</Card>
+
+## Color Best Practices
+
+### Semantic Usage
+
+<Steps>
+  <Step title="Use Semantic Colors">
+    Use colors that match their semantic meaning (green for success, red for
+    errors).
+  </Step>
+  <Step title="Maintain Consistency">
+    Use the same colors for the same purposes throughout your design.
+  </Step>
+  <Step title="Consider Context">
+    Choose colors that work well with your brand and content.
+  </Step>
+  <Step title="Test Accessibility">
+    Ensure all color combinations meet accessibility standards.
+  </Step>
+</Steps>
+
+### Color Hierarchy
+
+<Card title="Color Hierarchy" icon="list">
+  1. **Primary:** Blue for main actions and links 2. **Secondary:** Gray for
+  supporting text and elements 3. **Success:** Green for positive feedback 4.
+  **Warning:** Yellow for cautionary messages 5. **Error:** Red for errors and
+  destructive actions 6. **Neutral:** White, black, and grays for structure
+</Card>
+
+## Custom Colors
+
+### Adding Custom Colors
+
+To add your own colors, create CSS with your custom color utilities:
+
+```css
+/* Custom brand colors */
+.text-brand {
+  color: #your-brand-color;
+}
+.bg-brand {
+  background-color: #your-brand-color;
+}
+.border-brand {
+  border-color: #your-brand-color;
+}
+
+/* Custom accent colors */
+.text-accent {
+  color: #your-accent-color;
+}
+.bg-accent {
+  background-color: #your-accent-color;
+}
+```
+
+### Color Variables
+
+For better maintainability, consider using CSS custom properties:
+
+```css
+:root {
+  --brand-primary: #your-brand-color;
+  --brand-secondary: #your-secondary-color;
+}
+
+.text-brand {
+  color: var(--brand-primary);
+}
+.bg-brand {
+  background-color: var(--brand-primary);
+}
+```
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card
+    title="Typography"
+    icon="text-size"
+    href="/utility-framework/typography"
+  >
+    Text utilities that work with colors
+  </Card>
+  <Card title="Borders" icon="square" href="/utility-framework/borders">
+    Border utilities with color support
+  </Card>
+  <Card
+    title="Components"
+    icon="puzzle-piece"
+    href="/utility-framework/components"
+  >
+    Pre-built components with color variants
+  </Card>
+  <Card title="Effects" icon="sparkles" href="/utility-framework/effects">
+    Opacity utilities for color effects
+  </Card>
+</CardGroup>

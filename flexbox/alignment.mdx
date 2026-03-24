@@ -1,0 +1,223 @@
+---
+title: "Flexbox Alignment"
+description: "Align items with justify-content and align-items utilities"
+---
+
+import { FlexAlignDemo } from "/snippets/flex-align-demo.jsx"
+
+## Interactive Demo
+
+<FlexAlignDemo />
+
+## Overview
+
+Control how flex items are aligned within a flex container. Use justify-content for horizontal alignment and align-items for vertical alignment.
+
+## Justify Content
+
+Control horizontal alignment of flex items.
+
+| Class | Alignment | CSS | Usage |
+| ----- | --------- | --- | ----- |
+| `.justify-start` | Start | `justify-content: flex-start;` | Align to start |
+| `.justify-center` | Center | `justify-content: center;` | Center alignment |
+| `.justify-end` | End | `justify-content: flex-end;` | Align to end |
+| `.justify-between` | Space between | `justify-content: space-between;` | Space between items |
+| `.justify-around` | Space around | `justify-content: space-around;` | Space around items |
+| `.justify-evenly` | Space evenly | `justify-content: space-evenly;` | Equal space around items |
+
+## Align Items
+
+Control vertical alignment of flex items.
+
+| Class | Alignment | CSS | Usage |
+| ----- | --------- | --- | ----- |
+| `.items-start` | Start | `align-items: start;` | Align to start |
+| `.items-center` | Center | `align-items: center;` | Center alignment |
+| `.items-end` | End | `align-items: end;` | Align to end |
+| `.items-stretch` | Stretch | `align-items: stretch;` | Stretch to fill |
+
+## Align Self
+
+Control individual item alignment.
+
+| Class | Alignment | CSS | Usage |
+| ----- | --------- | --- | ----- |
+| `.self-center` | Center | `align-self: center;` | Center this item |
+| `.self-start` | Start | `align-self: start;` | Align to start |
+| `.self-end` | End | `align-self: end;` | Align to end |
+
+## Align Content
+
+Control how multiple lines of flex items are aligned when there's extra space in the cross axis.
+
+| Class | Alignment | CSS | Usage |
+| ----- | --------- | --- | ----- |
+| `.content-start` | Start | `align-content: start;` | Align lines to start |
+| `.content-center` | Center | `align-content: center;` | Center lines |
+| `.content-end` | End | `align-content: end;` | Align lines to end |
+| `.content-between` | Space between | `align-content: space-between;` | Space between lines |
+| `.content-around` | Space around | `align-content: space-around;` | Space around lines |
+| `.content-evenly` | Space evenly | `align-content: space-evenly;` | Equal space around lines |
+
+## Order
+
+Control the order of flex items.
+
+| Class | Value | CSS | Usage |
+| ----- | ----- | --- | ----- |
+| `.order-first` | First | `order: -99999;` | Move item to first position |
+| `.order-last` | Last | `order: 99999;` | Move item to last position |
+
+## Flex Grow & Shrink
+
+Control how flex items grow and shrink.
+
+| Class | Property | CSS | Usage |
+| ----- | -------- | --- | ----- |
+| `.flex-grow` | Grow | `flex-grow: 1;` | Allow item to grow |
+| `.flex-shrink` | Shrink | `flex-shrink: 1;` | Allow item to shrink |
+
+## Examples
+
+### Centered Content
+
+```html
+<div class="flex items-center justify-center min-h-screen">
+  <div class="text-center">
+    <h1 class="text-4xl font-700 mb-4">Welcome</h1>
+    <button class="btn btn-blue">Get Started</button>
+  </div>
+</div>
+```
+
+### Header with Space Between
+
+```html
+<header class="flex items-center justify-between p-6 bg-white">
+  <h1 class="text-2xl font-bold">Logo</h1>
+  <nav class="flex gap-6">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+  </nav>
+</header>
+```
+
+### Vertical Center
+
+```html
+<div class="flex items-center gap-4">
+  <div class="w-12 h-12 bg-blue rounded-full"></div>
+  <div>
+    <h3 class="font-semibold">Title</h3>
+    <p class="text-gray">Description</p>
+  </div>
+</div>
+```
+
+### Individual Item Alignment
+
+```html
+<div class="flex items-start gap-4">
+  <div class="p-4 bg-blue text-white">Item 1</div>
+  <div class="p-4 bg-blue text-white self-center">Centered Item</div>
+  <div class="p-4 bg-blue text-white">Item 3</div>
+</div>
+```
+
+### Space Around and Evenly
+
+```html
+<!-- Space around items -->
+<div class="flex justify-around p-6 bg-gray-light">
+  <div class="p-4 bg-blue text-white">Item 1</div>
+  <div class="p-4 bg-blue text-white">Item 2</div>
+  <div class="p-4 bg-blue text-white">Item 3</div>
+</div>
+
+<!-- Space evenly distributed -->
+<div class="flex justify-evenly p-6 bg-gray-light">
+  <div class="p-4 bg-green text-white">Item 1</div>
+  <div class="p-4 bg-green text-white">Item 2</div>
+  <div class="p-4 bg-green text-white">Item 3</div>
+</div>
+```
+
+### Order Control
+
+```html
+<!-- Reorder items visually -->
+<div class="flex gap-4">
+  <div class="p-4 bg-blue text-white order-last">Item 1 (appears last)</div>
+  <div class="p-4 bg-blue text-white">Item 2</div>
+  <div class="p-4 bg-blue text-white order-first">Item 3 (appears first)</div>
+</div>
+```
+
+### Flex Grow
+
+```html
+<!-- Item that grows to fill space -->
+<div class="flex gap-4">
+  <div class="p-4 bg-blue text-white">Fixed width</div>
+  <div class="p-4 bg-green text-white flex-grow">Grows to fill remaining space</div>
+  <div class="p-4 bg-blue text-white">Fixed width</div>
+</div>
+```
+
+## Common Patterns
+
+### Navigation Bar
+
+```html
+<nav class="flex items-center justify-between p-4 bg-white">
+  <div class="flex items-center gap-4">
+    <img src="logo.png" alt="Logo" class="h-8">
+    <span class="text-xl font-bold">Brand</span>
+  </div>
+  <div class="flex items-center gap-6">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+```
+
+### Card with Icon
+
+```html
+<div class="flex items-center gap-4 p-6 bg-white rounded-lg">
+  <div class="w-12 h-12 bg-blue rounded-full flex items-center justify-center">
+    <span class="text-white text-xl">✓</span>
+  </div>
+  <div class="flex-1">
+    <h3 class="font-semibold mb-1">Card Title</h3>
+    <p class="text-gray">Card description</p>
+  </div>
+</div>
+```
+
+## Best Practices
+
+- **Center content:** Use `items-center justify-center` for centered layouts
+- **Space between:** Use `justify-between` for header navigation
+- **Vertical alignment:** Use `items-center` to vertically center items in a row
+- **Individual control:** Use `self-*` utilities to override container alignment
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Direction" icon="arrows-left-right" href="/flexbox/direction">
+    Control flex direction
+  </Card>
+  <Card title="Wrap" icon="arrows-left-right" href="/flexbox/wrap">
+    Control flex wrapping
+  </Card>
+  <Card title="Gap" icon="arrows-up-down-left-right" href="/flexbox/gap">
+    Spacing between flex items
+  </Card>
+  <Card title="Flexbox Overview" icon="table-cells-large" href="/overview/flexbox">
+    Complete flexbox system overview
+  </Card>
+</CardGroup>
+

@@ -1,0 +1,101 @@
+---
+title: "Layout"
+description: "Display, overflow, object-fit, aspect-ratio, and layout utilities for modern designs"
+---
+
+## Overview
+
+Control the display type, overflow behavior, object fitting, and aspect ratios of elements using our layout utilities. These utilities form the foundation of your page structure and work seamlessly with Elementor v4's Atomic Elements.
+
+<CardGroup cols={2}>
+  <Card title="Display" icon="grid" href="/layout/display">
+    Control how elements are displayed with `.block`, `.flex`, `.hidden`, and more
+  </Card>
+  <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
+    Control content overflow with `.overflow-hidden` and `.overflow-auto`
+  </Card>
+  <Card title="Object Fit" icon="image" href="/layout/object-fit">
+    Control how images fit containers with `.object-cover` and `.object-contain`
+  </Card>
+  <Card title="Aspect Ratio" icon="square" href="/layout/aspect-ratio">
+    Maintain consistent proportions with `.aspect-square` and `.aspect-video`
+  </Card>
+  <Card title="Flexbox" icon="table-cells-large" href="/overview/flexbox">
+    Complete flexbox utilities for direction, alignment, and spacing
+  </Card>
+</CardGroup>
+
+## Quick Start
+
+### Basic Layout
+
+```html
+<!-- Display utilities -->
+<div class="flex items-center gap-4">
+  <div class="block p-4 bg-blue text-white">Block</div>
+  <div class="inline-block p-2 bg-green text-white">Inline Block</div>
+</div>
+
+<!-- Overflow -->
+<div class="w-64 h-32 overflow-auto border border-gray">
+  <p class="p-4">Scrollable content</p>
+</div>
+
+<!-- Object fit -->
+<img src="image.jpg" class="w-64 h-32 object-cover rounded" alt="Cover image">
+
+<!-- Aspect ratio -->
+<div class="w-full aspect-video bg-gray-light rounded"></div>
+```
+
+## Layout Utilities Reference
+
+### Display Utilities
+- **Block:** `.block`, `.inline-block`
+- **Flex:** `.flex`, `.inline-flex`
+- **Hidden:** `.hidden`
+
+### Overflow Utilities
+- **Hidden:** `.overflow-hidden`
+- **Auto:** `.overflow-auto`
+
+### Object Fit Utilities
+- **Cover:** `.object-cover`
+- **Contain:** `.object-contain`
+
+### Aspect Ratio Utilities
+- **Square:** `.aspect-square` (1:1)
+- **Video:** `.aspect-video` (16:9)
+
+<Info>
+For comprehensive flexbox utilities including direction, wrap, justify, align, and gap, see the [Flexbox documentation](/utility-framework/flexbox/flexbox).
+</Info>
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card
+    title="Spacing"
+    icon="arrows-to-line"
+    href="/overview/spacing"
+  >
+    Margin and padding for layout spacing
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    Width and height utilities for layout
+  </Card>
+  <Card
+    title="Positioning"
+    icon="crosshairs"
+    href="/positioning/positioning"
+  >
+    Position utilities for advanced layouts
+  </Card>
+  <Card
+    title="Components"
+    icon="puzzle-piece"
+    href="/overview/components"
+  >
+    Pre-built layout components
+  </Card>
+</CardGroup>

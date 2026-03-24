@@ -1,122 +1,160 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Atomic Utility Docs",
+  "description": "Documentation for importing utility classes and design variables into Elementor v4.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#3b82f6",
+    "light": "#60a5fa",
+    "dark": "#2563eb"
   },
   "favicon": "/favicon.svg",
+  "css": "/custom.css",
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Documentation",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "getting-started/installation"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Utility Framework",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "utility-framework/overview"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Overview",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "overview/typography",
+              "overview/layout",
+              "overview/spacing",
+              "overview/sizing",
+              "overview/colors",
+              "overview/effects",
+              "overview/flexbox",
+              "overview/components",
+              "overview/borders"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Typography",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
+              "typography/font-size",
+              "typography/font-weight",
+              "typography/line-height",
+              "typography/text-alignment",
+              "typography/letter-spacing",
+              "typography/text-style"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Layout",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "layout/display",
+              "layout/overflow",
+              "layout/object-fit",
+              "layout/aspect-ratio",
+              "layout/z-index"
+            ]
+          },
+          {
+            "group": "Spacing",
+            "pages": [
+              "spacing/margin",
+              "spacing/padding",
+              "spacing/gap"
+            ]
+          },
+          {
+            "group": "Sizing",
+            "pages": [
+              "sizing/width",
+              "sizing/height",
+              "sizing/max-width"
+            ]
+          },
+          {
+            "group": "Positioning",
+            "pages": [
+              "positioning/positioning"
+            ]
+          },
+          {
+            "group": "Colors",
+            "pages": [
+              "colors/text-colors",
+              "colors/background-colors",
+              "colors/border-colors"
+            ]
+          },
+          {
+            "group": "Effects",
+            "pages": [
+              "effects/effects"
+            ]
+          },
+          {
+            "group": "Flexbox",
+            "pages": [
+              "flexbox/direction",
+              "flexbox/wrap",
+              "flexbox/alignment",
+              "flexbox/gap"
+            ]
+          },
+          {
+            "group": "Components",
+            "pages": [
+              "components/button",
+              "components/card",
+              "components/container"
+            ]
+          },
+          {
+            "group": "Borders",
+            "pages": [
+              "borders/width",
+              "borders/style",
+              "borders/radius"
+            ]
+          },
+          {
+            "group": "Usage",
+            "pages": [
+              "usage/basic-usage",
+              "usage/examples",
+              "usage/best-practices",
+              "usage/custom-css"
+            ]
+          },
+          {
+            "group": "CSS Reference",
+            "pages": [
+              "css-reference/supported-properties",
+              "css-reference/writing-css",
+              "css-reference/reserved-names"
+            ]
+          },
+          {
+            "group": "Troubleshooting",
+            "pages": [
+              "troubleshooting/common-errors",
+              "troubleshooting/faq",
+              "troubleshooting/support"
             ]
           }
         ]
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "anchors": []
     }
   }
 }

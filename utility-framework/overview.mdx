@@ -1,0 +1,339 @@
+---
+title: "Utility Framework Overview"
+description: "Complete utility framework for Elementor v4"
+---
+
+## What is the Utility Framework?
+
+This utility framework is a comprehensive collection of 200+ CSS utility classes designed for Elementor v4's Atomic Elements. It gives you a practical starting point for modern, responsive layouts without hand-authoring every style in the editor.
+
+<Card title="Quick Import" icon="download" href="/quickstart">
+  Import the complete framework in minutes.
+</Card>
+
+## Framework Categories
+
+<CardGroup cols={3}>
+  <Card
+    title="Typography"
+    icon="text-size"
+    href="/overview/typography"
+  >
+    9 font sizes, 6 font weights, line heights, text alignment, and more.
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display, positioning, flexbox, overflow, and aspect ratio utilities.
+  </Card>
+  <Card
+    title="Spacing"
+    icon="arrows-to-line"
+    href="/overview/spacing"
+  >
+    Margin, padding, and gap utilities with consistent 4px scale.
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    Width, height, max-width, and min-height utilities.
+  </Card>
+  <Card title="Colors" icon="palette" href="/overview/colors">
+    Text, background, and border colors with semantic naming.
+  </Card>
+  <Card title="Borders" icon="square" href="/overview/borders">
+    Border width, style, radius, and color utilities.
+  </Card>
+  <Card title="Effects" icon="sparkles" href="/effects/effects">
+    Opacity utilities for creating overlays and transparency effects.
+  </Card>
+  <Card
+    title="Positioning"
+    icon="crosshairs"
+    href="/positioning/positioning"
+  >
+    Position types and z-index utilities with automatic positioning.
+  </Card>
+  <Card
+    title="Flexbox"
+    icon="table-cells-large"
+    href="/overview/flexbox"
+  >
+    Complete flexbox utilities for modern layouts.
+  </Card>
+  <Card
+    title="Components"
+    icon="puzzle-piece"
+    href="/overview/components"
+  >
+    Pre-built button, card, and container components.
+  </Card>
+</CardGroup>
+
+## Design System Principles
+
+### Consistent Scale
+
+All spacing utilities follow a consistent 4px scale:
+
+|     |      |                     |
+| --- | ---- | ------------------- |
+| 1   | 4px  | Fine adjustments    |
+| 2   | 8px  | Small spacing       |
+| 3   | 12px | Medium spacing      |
+| 4   | 16px | Standard spacing    |
+| 6   | 24px | Large spacing       |
+| 8   | 32px | Extra large spacing |
+| 12  | 48px | Section spacing     |
+
+### Semantic Naming
+
+Classes use intuitive, semantic names that describe their purpose:
+
+```css
+/* Clear and descriptive */
+.text-2xl {
+  font-size: 24px;
+}
+.bg-blue {
+  background-color: #3b82f6;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+```
+
+### Mobile-First Approach
+
+All utilities are designed to work seamlessly across devices:
+
+```html
+<!-- Responsive by default -->
+<div class="flex flex-col md:flex-row gap-4">
+  <div class="w-full md:w-1-2">Content</div>
+  <div class="w-full md:w-1-2">Content</div>
+</div>
+```
+
+## Quick Reference
+
+### Most Used Classes
+
+<Columns cols={2}>
+  <div>
+    <h3>Typography</h3>
+    ```css
+    .text-2xl /* 24px font size */
+    .font-700 /* Bold weight */
+    .text-center /* Center alignment */
+    .leading-relaxed /* 24px line height */
+    ```
+  </div>
+  <div>
+    <h3>Layout</h3>
+    ```css
+    .flex /* Flexbox display */
+    .items-center /* Center alignment */
+    .justify-between /* Space between */
+    .gap-4 /* 16px gap */
+    ```
+  </div>
+  <div>
+    <h3>Spacing</h3>
+    ```css
+    .p-4 /* 16px padding */
+    .m-4 /* 16px margin */
+    .px-6 /* 24px horizontal padding */
+    .py-2 /* 8px vertical padding */
+    ```
+  </div>
+  <div>
+    <h3>Colors</h3>
+    ```css
+    .text-gray /* Gray text */
+    .bg-white /* White background */
+    .border-gray /* Gray border */
+    .text-blue /* Blue text */
+    ```
+  </div>
+</Columns>
+
+### Component Examples
+
+#### Button Component
+
+```html
+<button class="btn btn-blue">Primary Button</button>
+<button class="btn btn-green btn-lg">Large Button</button>
+<button class="btn btn-red btn-sm">Small Button</button>
+```
+
+#### Card Component
+
+```html
+<div class="card p-6 rounded-lg bg-white">
+  <h2 class="text-xl font-600 mb-4">Card Title</h2>
+  <p class="text-gray">Card content goes here.</p>
+</div>
+```
+
+#### Container Component
+
+```html
+<div class="cont">
+  <div class="flex gap-6 flex-wrap">
+    <div class="w-1-3">Column 1</div>
+    <div class="w-1-3">Column 2</div>
+    <div class="w-1-3">Column 3</div>
+  </div>
+</div>
+```
+
+## Browser Support
+
+The utility framework is built with modern CSS features and supports:
+
+- **Chrome:** 88+
+- **Firefox:** 78+
+- **Safari:** 14+
+- **Edge:** 88+
+
+<Note>
+  **Elementor Compatibility:** All utilities are designed to work seamlessly
+  with Elementor v4's Global Classes system and Atomic Elements.
+</Note>
+
+## Performance
+
+<Columns cols={2}>
+  <div>
+    <h3>Optimized CSS</h3>
+    <ul>
+      <li>Minimal CSS footprint</li>
+      <li>No unused styles</li>
+      <li>Efficient selectors</li>
+      <li>Compressed output</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Elementor Integration</h3>
+    <ul>
+      <li>Native Global Classes</li>
+      <li>No custom CSS injection</li>
+      <li>Automatic optimization</li>
+      <li>Cache-friendly</li>
+    </ul>
+  </div>
+</Columns>
+
+## Customization
+
+### Extending the Framework
+
+You can easily extend the framework with your own utilities:
+
+```css
+/* Add custom utilities */
+.text-custom {
+  font-size: 28px;
+}
+.bg-brand {
+  background-color: #your-brand-color;
+}
+.spacing-xl {
+  margin: 64px;
+}
+```
+
+### Modifying Existing Classes
+
+To modify existing classes:
+
+<Steps>
+  <Step title="Delete Existing Class">
+    Remove the class from Elementor's Global Classes panel.
+  </Step>
+  <Step title="Create Modified Version">
+    Write your modified CSS with the same class name.
+  </Step>
+  <Step title="Re-import">Import the updated CSS through the importer.</Step>
+</Steps>
+
+## Best Practices
+
+### Class Combination
+
+Combine multiple utilities for complex designs:
+
+```html
+<!-- Complex card with multiple utilities -->
+<div class="card p-6 rounded-lg bg-white shadow-lg border border-gray-light">
+  <h2 class="text-2xl font-700 text-center mb-4">Title</h2>
+  <p class="text-gray leading-relaxed">Content</p>
+  <button class="btn btn-blue mt-4">Action</button>
+</div>
+```
+
+### Consistent Spacing
+
+Use the spacing scale consistently:
+
+```html
+<!-- Good: Consistent spacing scale -->
+<div class="p-4 mb-6">
+  <h2 class="mb-4">Title</h2>
+  <p class="mb-2">Paragraph 1</p>
+  <p class="mb-2">Paragraph 2</p>
+</div>
+
+<!-- Avoid: Inconsistent spacing -->
+<div class="p-3 mb-7">
+  <h2 class="mb-5">Title</h2>
+  <p class="mb-1">Paragraph 1</p>
+  <p class="mb-3">Paragraph 2</p>
+</div>
+```
+
+### Semantic HTML
+
+Always use semantic HTML with utility classes:
+
+```html
+<!-- Good: Semantic HTML with utilities -->
+<header class="bg-white p-6 border-b border-gray-light">
+  <h1 class="text-3xl font-700">Site Title</h1>
+</header>
+
+<!-- Avoid: Generic divs -->
+<div class="bg-white p-6 border-b border-gray-light">
+  <div class="text-3xl font-700">Site Title</div>
+</div>
+```
+
+## Next Steps
+
+<CardGroup cols={2}>
+  <Card
+    title="Typography Guide"
+    icon="text-size"
+    href="/overview/typography"
+  >
+    Learn about font sizes, weights, and text utilities.
+  </Card>
+  <Card title="Layout Guide" icon="grid" href="/overview/layout">
+    Master display, positioning, and flexbox utilities.
+  </Card>
+  <Card
+    title="Spacing Guide"
+    icon="arrows-to-line"
+    href="/overview/spacing"
+  >
+    Understand the spacing system and scale.
+  </Card>
+  <Card
+    title="Component Guide"
+    icon="puzzle-piece"
+    href="/overview/components"
+  >
+    Explore pre-built components and patterns.
+  </Card>
+</CardGroup>

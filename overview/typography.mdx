@@ -1,0 +1,264 @@
+---
+title: "Typography"
+description: "Complete typography system with static and fluid utilities for font sizes, weights, line heights, alignment, and text styling"
+---
+
+## Overview
+
+This typography system provides comprehensive utilities for controlling every aspect of text styling. Choose between static utilities for precise control or fluid utilities that scale smoothly across viewport sizes.
+
+Control the size, weight, line height, alignment, letter spacing, and style of text using our typography utilities. All utilities are designed to work seamlessly with Elementor v4's Global Classes system.
+
+<CardGroup cols={2}>
+  <Card title="Font Size" icon="text-size" href="/typography/font-size">
+    Static and fluid font size utilities from `.text-xs` to `.text-9xl`
+  </Card>
+  <Card title="Font Weight" icon="bold" href="/typography/font-weight">
+    Nine font weight utilities from thin (100) to black (900)
+  </Card>
+  <Card title="Line Height" icon="lines-leaning" href="/typography/line-height">
+    Static and fluid line height utilities for optimal readability
+  </Card>
+  <Card title="Text Alignment" icon="align-left" href="/typography/text-alignment">
+    Semantic alignment utilities that respect document direction
+  </Card>
+  <Card title="Letter Spacing" icon="arrow-left-right" href="/typography/letter-spacing">
+    Eleven tracking utilities from tightest to ultra-wide
+  </Card>
+  <Card title="Text Style" icon="highlighter" href="/typography/text-style">
+    Text transform, decoration, and style utilities
+  </Card>
+</CardGroup>
+
+## Quick Start
+
+### Basic Typography
+
+```html
+<h1 class="text-4xl font-bold text-black">Main Heading</h1>
+<p class="text-base font-normal text-gray-dark leading-relaxed">
+  Body text with comfortable line height for readability.
+</p>
+<small class="text-sm text-gray">Caption or metadata</small>
+```
+
+### Fluid Typography
+
+```html
+<h1 class="text-fluid-5xl font-extrabold leading-fluid-tight">
+  Responsive heading that scales smoothly
+</h1>
+<p class="text-fluid-base leading-fluid-relaxed">
+  Paragraph text that adapts to viewport size automatically.
+</p>
+```
+
+### Typography Combinations
+
+```html
+<div class="text-center">
+  <p class="text-sm uppercase tracking-widest text-gray mb-2">Category</p>
+  <h1 class="text-fluid-6xl font-black tracking-tight text-black mb-4">
+    Hero Title
+  </h1>
+  <p class="text-fluid-lg leading-fluid-relaxed text-gray max-w-fluid-lg mx-auto">
+    Supporting text that scales beautifully across all devices.
+  </p>
+</div>
+```
+
+## Static vs Fluid Utilities
+
+### Static Utilities
+
+Static utilities provide fixed pixel values that match exactly what you see in the Elementor editor. Use them for:
+
+- **UI components** (buttons, navigation, forms)
+- **Precise layouts** where exact measurements matter
+- **Consistent sizing** across different sections
+
+```html
+<button class="text-base font-medium">Button Text</button>
+<nav class="text-sm font-normal">Navigation</nav>
+```
+
+### Fluid Utilities
+
+Fluid utilities use `clamp()` to scale smoothly between mobile and desktop sizes. Use them for:
+
+- **Hero sections** and marketing headlines
+- **Long-form content** and editorial layouts
+- **Responsive typography** that adapts automatically
+
+```html
+<h1 class="text-fluid-6xl font-bold">Hero Heading</h1>
+<p class="text-fluid-base leading-fluid-relaxed">Article content</p>
+```
+
+<Tip>
+Mix static and fluid utilities strategically: use static for UI elements and fluid for content that needs to scale across breakpoints.
+</Tip>
+
+## Typography Scale
+
+### Font Size Scale
+
+The framework includes 14 font size utilities (9 static + 14 fluid variants):
+
+- **Static:** `.text-xs` (12px) through `.text-9xl` (128px)
+- **Fluid:** `.text-fluid-2xs` through `.text-fluid-9xl` with responsive scaling
+
+### Font Weight Scale
+
+Nine weight utilities from ultra-thin to ultra-black:
+
+- `.font-thin` (100) → `.font-black` (900)
+
+### Line Height Scale
+
+Four static and four fluid line height utilities:
+
+- **Static:** `.leading-tight`, `.leading-normal`, `.leading-relaxed`, `.leading-loose`
+- **Fluid:** `.leading-fluid-tight` through `.leading-fluid-loose`
+
+## Common Patterns
+
+### Hero Section
+
+```html
+<section class="py-fluid-12 text-center">
+  <p class="text-sm uppercase tracking-widest text-gray mb-fluid-2">
+    Introducing
+  </p>
+  <h1 class="text-fluid-7xl font-black leading-fluid-tight text-black mb-fluid-4">
+    Amazing Product
+  </h1>
+  <p class="text-fluid-xl leading-fluid-relaxed text-gray max-w-fluid-xl mx-auto mb-fluid-8">
+    Build something incredible with our platform
+  </p>
+  <button class="btn btn-blue btn-lg">Get Started</button>
+</section>
+```
+
+### Article Content
+
+```html
+<article class="max-w-fluid-2xl">
+  <h1 class="text-4xl font-bold mb-6">Article Title</h1>
+  <p class="text-lg leading-relaxed mb-4">
+    Introduction paragraph with relaxed line height for comfortable reading.
+  </p>
+  <h2 class="text-2xl font-semibold mb-4">Section Heading</h2>
+  <p class="text-base leading-normal mb-4">
+    Body text with normal line height for regular content.
+  </p>
+</article>
+```
+
+### Card Typography
+
+```html
+<div class="card p-6">
+  <p class="text-xs uppercase tracking-wide text-gray mb-2">Category</p>
+  <h3 class="text-xl font-semibold mb-2">Card Title</h3>
+  <p class="text-sm text-gray leading-tight">
+    Short description with tight line height
+  </p>
+</div>
+```
+
+### Form Labels
+
+```html
+<form class="max-w-md">
+  <label class="text-sm font-medium uppercase tracking-wide text-gray-dark mb-2">
+    Email Address
+  </label>
+  <input type="email" class="w-full p-3 border border-gray rounded">
+  
+  <label class="text-sm font-medium uppercase tracking-wide text-gray-dark mb-2 mt-4">
+    Password
+  </label>
+  <input type="password" class="w-full p-3 border border-gray rounded">
+</form>
+```
+
+## Best Practices
+
+### Typography Hierarchy
+
+<Steps>
+  <Step title="Use Semantic HTML">
+    Always use proper heading tags (h1, h2, h3) with utility classes for accessibility and SEO.
+  </Step>
+  <Step title="Maintain Visual Hierarchy">
+    Use larger font sizes and heavier weights for more important content.
+  </Step>
+  <Step title="Consistent Spacing">
+    Pair typography utilities with consistent margin and padding utilities.
+  </Step>
+  <Step title="Readable Line Heights">
+    Use relaxed line heights for body text, tight for headings.
+  </Step>
+  <Step title="Choose Static or Fluid">
+    Use static for UI elements, fluid for content that needs to scale.
+  </Step>
+</Steps>
+
+### Accessibility
+
+<Warning>
+**Accessibility Note:** Always ensure sufficient color contrast between text and background colors for readability. Test with WCAG contrast checkers.
+</Warning>
+
+- Use `font-semibold` or `font-bold` for important text
+- Maintain consistent line heights for readability
+- Use semantic HTML elements with utility classes
+- Test with screen readers for proper heading structure
+- Ensure text remains readable at all sizes
+
+### Performance
+
+- Font weights are loaded efficiently by the browser
+- Line height values are optimized for performance
+- Text transforms don't affect layout performance
+- Fluid utilities use native CSS `clamp()` for optimal performance
+
+## Typography Utilities Reference
+
+### Static Utilities
+
+- **Font Size:** `.text-xs` through `.text-9xl` (9 sizes)
+- **Font Weight:** `.font-thin` through `.font-black` (9 weights)
+- **Line Height:** `.leading-tight`, `.leading-normal`, `.leading-relaxed`, `.leading-loose` (4 values)
+- **Text Alignment:** `.text-start`, `.text-center`, `.text-end` (3 values)
+- **Letter Spacing:** `.tracking-tightest` through `.tracking-ultra-wide` (11 values)
+- **Text Transform:** `.uppercase`, `.lowercase` (2 values)
+- **Text Decoration:** `.underline`, `.no-underline` (2 values)
+- **Font Style:** `.italic` (1 value)
+
+### Fluid Utilities
+
+- **Font Size:** `.text-fluid-2xs` through `.text-fluid-9xl` (14 sizes)
+- **Line Height:** `.leading-fluid-tight`, `.leading-fluid-normal`, `.leading-fluid-relaxed`, `.leading-fluid-loose` (4 values)
+
+<Info>
+Fluid utilities use CSS `clamp()` to scale smoothly between mobile and desktop viewport sizes, providing responsive typography without media queries.
+</Info>
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Colors" icon="palette" href="/overview/colors">
+    Text colors for better contrast and hierarchy
+  </Card>
+  <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
+    Margin and padding for typography spacing
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display utilities for text layout
+  </Card>
+  <Card title="Components" icon="puzzle-piece" href="/overview/components">
+    Pre-built typography components
+  </Card>
+</CardGroup>

@@ -1,0 +1,224 @@
+---
+title: "Gap"
+description: "Control spacing between flex items with gap utilities including static and fluid variants"
+---
+
+import { GapDemo } from "/snippets/gap-demo.jsx"
+
+## Interactive Demo
+
+<GapDemo />
+
+## Overview
+
+Use gap utilities to control the spacing between flex items. Gap is the modern way to add spacing between flex items without using margin utilities. These utilities work with a consistent 4px scale and include both static and fluid variants for responsive designs. The spacing scale is a core concept—see the [Spacing Overview](/overview/spacing#spacing-scale) for details.
+
+<Tip>
+Use `gap` instead of margin for spacing between flex items. It's more semantic and doesn't require negative margins to work correctly.
+</Tip>
+
+## Static Gap Utilities
+
+Control spacing between flex items with static gap utilities.
+
+| Class | Value | CSS | Usage |
+| ----- | ----- | --- | ----- |
+| `.gap-px` | 1px | `gap: 1px;` | 1px gap |
+| `.gap-1` | 4px | `gap: 4px;` | Small gap |
+| `.gap-2` | 8px | `gap: 8px;` | Small gap |
+| `.gap-3` | 12px | `gap: 12px;` | Medium gap |
+| `.gap-4` | 16px | `gap: 16px;` | Standard gap |
+| `.gap-6` | 24px | `gap: 24px;` | Large gap |
+| `.gap-8` | 32px | `gap: 32px;` | Extra large gap |
+| `.gap-10` | 40px | `gap: 40px;` | Extra large gap |
+| `.gap-12` | 48px | `gap: 48px;` | Section gap |
+| `.gap-14` | 56px | `gap: 56px;` | Large section gap |
+| `.gap-16` | 64px | `gap: 64px;` | Extra large section gap |
+| `.gap-18` | 72px | `gap: 72px;` | Very large gap |
+| `.gap-20` | 80px | `gap: 80px;` | Huge gap |
+| `.gap-22` | 88px | `gap: 88px;` | Extra huge gap |
+| `.gap-24` | 96px | `gap: 96px;` | Maximum gap |
+
+### Examples
+
+```html
+<!-- Small gap -->
+<div class="flex gap-2">
+  <div class="p-2 bg-blue text-white">Item 1</div>
+  <div class="p-2 bg-green text-white">Item 2</div>
+  <div class="p-2 bg-red text-white">Item 3</div>
+</div>
+
+<!-- Large gap -->
+<div class="flex gap-6">
+  <div class="p-4 bg-blue text-white">Item 1</div>
+  <div class="p-4 bg-green text-white">Item 2</div>
+  <div class="p-4 bg-red text-white">Item 3</div>
+</div>
+```
+
+## Fluid Gap Utilities
+
+Fluid gap utilities use `clamp()` to scale smoothly between mobile and desktop sizes, perfect for responsive layouts.
+
+| Class | Clamp Expression | Mobile → Desktop |
+| ----- | ---------------- | ---------------- |
+| `.gap-fluid-1` | `clamp(0.25rem, calc(0.21rem + 0.09vw), 0.31rem)` | 4px → 5px |
+| `.gap-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px |
+| `.gap-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px |
+| `.gap-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px |
+| `.gap-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px |
+| `.gap-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px |
+| `.gap-fluid-10` | `clamp(2.5rem, calc(2.14rem + 0.93vw), 3.13rem)` | 40px → 50px |
+| `.gap-fluid-12` | `clamp(3rem, calc(2.56rem + 1.1vw), 3.75rem)` | 48px → 60px |
+| `.gap-fluid-14` | `clamp(3.5rem, calc(2.99rem + 1.29vw), 4.38rem)` | 56px → 70px |
+| `.gap-fluid-16` | `clamp(4rem, calc(3.42rem + 1.48vw), 5rem)` | 64px → 80px |
+| `.gap-fluid-18` | `clamp(4.5rem, calc(3.84rem + 1.67vw), 5.63rem)` | 72px → 90px |
+| `.gap-fluid-20` | `clamp(5rem, calc(4.27rem + 1.85vw), 6.25rem)` | 80px → 100px |
+| `.gap-fluid-22` | `clamp(5.5rem, calc(4.7rem + 2.04vw), 6.88rem)` | 88px → 110px |
+| `.gap-fluid-24` | `clamp(6rem, calc(5.13rem + 2.22vw), 7.5rem)` | 96px → 120px |
+
+### Fluid Gap Examples
+
+```html
+<!-- Responsive card grid with fluid gap -->
+<div class="flex flex-wrap gap-fluid-6">
+  <div class="w-1-3">
+    <div class="card p-6">Card 1</div>
+  </div>
+  <div class="w-1-3">
+    <div class="card p-6">Card 2</div>
+  </div>
+  <div class="w-1-3">
+    <div class="card p-6">Card 3</div>
+  </div>
+</div>
+
+<!-- Hero section with fluid gap -->
+<section class="flex flex-col items-center gap-fluid-8 py-fluid-12">
+  <h1 class="text-fluid-6xl font-bold">Title</h1>
+  <p class="text-fluid-lg">Supporting text</p>
+  <button class="btn btn-blue">Action</button>
+</section>
+```
+
+<Tip>
+Use fluid gap utilities for layouts that need to scale smoothly across viewport sizes. They work especially well in hero sections and marketing pages.
+</Tip>
+
+## Common Gap Patterns
+
+### Navigation with Gap
+
+```html
+<nav class="flex items-center gap-6">
+  <a href="#" class="text-gray">Home</a>
+  <a href="#" class="text-gray">About</a>
+  <a href="#" class="text-gray">Contact</a>
+</nav>
+```
+
+### Card Grid with Gap
+
+```html
+<div class="flex flex-wrap gap-6">
+  <div class="w-1-3">
+    <div class="card p-6">Card 1</div>
+  </div>
+  <div class="w-1-3">
+    <div class="card p-6">Card 2</div>
+  </div>
+  <div class="w-1-3">
+    <div class="card p-6">Card 3</div>
+  </div>
+</div>
+```
+
+### Button Group with Gap
+
+```html
+<div class="flex gap-4">
+  <button class="btn btn-blue">Primary</button>
+  <button class="btn bg-gray text-white">Secondary</button>
+  <button class="btn bg-gray-light text-gray">Tertiary</button>
+</div>
+```
+
+### Form Fields with Gap
+
+```html
+<form class="flex flex-col gap-4 max-w-md">
+  <input type="text" class="p-3 border border-gray rounded" placeholder="Name">
+  <input type="email" class="p-3 border border-gray rounded" placeholder="Email">
+  <button class="btn btn-blue">Submit</button>
+</form>
+```
+
+## Best Practices
+
+<Steps>
+  <Step title="Use Gap for Flex Items">
+    Always use gap utilities instead of margin for spacing between flex items.
+  </Step>
+  <Step title="Use the 4px Scale">
+    Use the predefined spacing scale (1px, 1, 2, 3, 4, 6, 8, 12, and larger values) for consistency. See the [Spacing Overview](/overview/spacing#spacing-scale) for the complete scale.
+  </Step>
+  <Step title="Consistent Gap Values">
+    Use consistent gap values within the same component or section.
+  </Step>
+  <Step title="Use Fluid for Responsive">
+    Use fluid gap utilities for layouts that need to scale smoothly across breakpoints.
+  </Step>
+  <Step title="Match Gap to Content">
+    Choose gap values that match the visual weight and importance of the content.
+  </Step>
+</Steps>
+
+## Gap vs Margin
+
+### When to Use Gap
+
+- Spacing between flex items
+- Grid layouts
+- Button groups
+- Navigation items
+- Card grids
+
+### When to Use Margin
+
+- Spacing between sections
+- Pushing elements away from container edges
+- Centering elements (with auto)
+- Creating space outside elements
+
+<Info>
+Gap is applied to the flex container and automatically spaces all direct children. This is more efficient and predictable than using margin on individual items.
+</Info>
+
+## Common Mistakes
+
+<Warning>**Avoid these gap mistakes:**</Warning>
+
+- Don't use margin for spacing between flex items (use gap instead)
+- Don't mix gap and margin inconsistently
+- Don't forget gap works on both row and column flex directions
+- Don't use gap on non-flex containers (it won't have any effect)
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Margin" icon="arrows-maximize" href="/spacing/margin">
+    Control external spacing with margin utilities
+  </Card>
+  <Card title="Padding" icon="square" href="/spacing/padding">
+    Control internal spacing with padding utilities
+  </Card>
+  <Card title="Flexbox" icon="table-cells-large" href="/overview/flexbox">
+    Complete flexbox utilities for layouts
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display utilities for flexbox
+  </Card>
+</CardGroup>
+
+

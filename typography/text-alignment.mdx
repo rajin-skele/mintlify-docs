@@ -1,0 +1,44 @@
+---
+title: "Text Alignment"
+description: "Apply semantic alignment utilities that respect document direction and layout context."
+---
+
+## Alignment Utilities
+
+The alignment utilities map directly to logical CSS properties, so they work automatically for both LTR and RTL content.
+
+| Class | CSS | When to use |
+| ----- | --- | ----------- |
+| `.text-start` | `text-align: start;` | Default left alignment (LTR) or right alignment (RTL) |
+| `.text-center` | `text-align: center;` | Headlines, testimonials, CTA sections |
+| `.text-end` | `text-align: end;` | Pricing tables, metadata, RTL body copy |
+
+```html
+<div class="grid gap-6">
+  <header class="text-center">
+    <p class="text-sm text-gray">Case study</p>
+    <h2 class="text-4xl font-semibold text-black">
+      Center alignment puts the spotlight on your testimonial
+    </h2>
+  </header>
+  <aside class="text-end text-sm text-gray">
+    <p>Updated: October 2025</p>
+    <p>Written by: @project-team</p>
+  </aside>
+</div>
+```
+
+<Tip>
+Because `.text-start` respects writing direction, you can design once and reuse the same component on multilingual Elementor sites without creating separate classes.
+</Tip>
+
+## Responsive Alignment Strategy
+
+- **Mobile-first:** Keep paragraphs left-aligned for readability; reserve `.text-center` for short statements.
+- **Hero sections:** Combine `.text-center` with `.max-w-fluid-md mx-auto` to keep lines readable across breakpoints.
+- **Data tables:** Use `.text-end` for numbers and currency to align decimals cleanly.
+
+<Check>
+Wrap alignment utilities alongside flexbox helpers: `class="flex flex-col items-start text-start md:text-center"` gives you nuanced control as layouts shift.
+</Check>
+

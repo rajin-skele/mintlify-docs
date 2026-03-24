@@ -1,0 +1,166 @@
+---
+title: "Quickstart"
+description: "Detailed setup guide for importing your first utility classes into Elementor v4."
+---
+
+## Get Started in 3 Steps
+
+This is the longer version of the quickstart flow for teams that want a little more setup detail.
+
+### Step 1: Install the Plugin
+
+<AccordionGroup>
+  <Accordion icon="download" title="Install the package">
+    <Steps>
+      <Step title="Get the build">
+        Download the plugin ZIP from the release source or handoff package used by your team.
+      </Step>
+      <Step title="Upload to WordPress">
+        In WordPress admin, go to **Plugins -> Add New -> Upload Plugin** and select the ZIP file.
+      </Step>
+      <Step title="Activate">
+        Activate the plugin after installation completes.
+      </Step>
+    </Steps>
+  </Accordion>
+  <Accordion icon="check-circle" title="Verify requirements">
+    Make sure your environment has WordPress 5.8+, PHP 7.4+, and Elementor v4 with Atomic Elements enabled.
+    <Tip>
+      If you plan to import design tokens, enable Elementor Variables too.
+    </Tip>
+  </Accordion>
+</AccordionGroup>
+
+### Step 2: Import Your First CSS
+
+<AccordionGroup>
+  <Accordion icon="code" title="Use the bundled framework">
+    Start with the bundled utility CSS so you can verify the full workflow first.
+    <Steps>
+      <Step title="Open the importer admin screen">
+        Open the plugin's importer screen from the WordPress dashboard.
+      </Step>
+      <Step title="Copy the bundled stylesheet">
+        Copy the CSS from the utility stylesheet shipped with the plugin package.
+      </Step>
+      <Step title="Run the import">
+        Paste the CSS into the importer and submit it.
+      </Step>
+      <Step title="Confirm success">
+        Wait for the confirmation state, then check the imported classes inside Elementor.
+      </Step>
+    </Steps>
+  </Accordion>
+  <Accordion icon="pen-to-square" title="Import custom CSS">
+    Once the starter import works, begin bringing in your own classes.
+    <Steps>
+      <Step title="Prepare the CSS">
+        Follow the [CSS writing guidelines](/css-reference/writing-css) so your classes use supported properties and values.
+      </Step>
+      <Step title="Import in batches">
+        For larger sets, import smaller groups first so you can isolate failures quickly.
+      </Step>
+      <Step title="Verify in Elementor">
+        Test the imported classes in the editor before moving on to the next batch.
+      </Step>
+    </Steps>
+  </Accordion>
+</AccordionGroup>
+
+### Step 3: Use Classes in Elementor
+
+<Accordion icon="magic-wand" title="Apply utility classes">
+  After import, utility classes are ready to use on Elementor v4 atomic elements.
+  <Steps>
+    <Step title="Open Elementor">
+      Edit any page or post with Elementor.
+    </Step>
+    <Step title="Choose an atomic element">
+      Add a Heading, Text, Div Block, Button, or another supported v4 element.
+    </Step>
+    <Step title="Assign classes">
+      Add utility classes in Elementor's class field for that element.
+    </Step>
+    <Step title="Review the output">
+      Confirm the imported styles render as expected in the editor preview.
+    </Step>
+  </Steps>
+</Accordion>
+
+## Quick Examples
+
+### Flexbox Layout
+
+```html
+<div class="flex items-center justify-between p-6 bg-white rounded-lg">
+  <h1 class="text-2xl font-bold">Logo</h1>
+  <nav class="flex gap-6">
+    <a class="text-base text-gray">Home</a>
+    <a class="text-base text-gray">About</a>
+  </nav>
+</div>
+```
+
+### Button Component
+
+```html
+<button class="btn btn-blue">Primary Button</button>
+<button class="btn btn-green btn-lg">Large Button</button>
+```
+
+### Card Grid
+
+```html
+<div class="cont">
+  <div class="flex gap-6 flex-wrap">
+    <div class="card w-1-3">Card 1</div>
+    <div class="card w-1-3">Card 2</div>
+    <div class="card w-1-3">Card 3</div>
+  </div>
+</div>
+```
+
+## What Happens Next?
+
+<CardGroup cols={2}>
+  <Card title="Explore Utilities" icon="search" href="/overview">
+    Browse the complete framework and decide what to keep or customize.
+  </Card>
+  <Card title="Learn Best Practices" icon="star" href="/usage/best-practices">
+    Review patterns for composing classes without creating utility sprawl.
+  </Card>
+  <Card title="View Examples" icon="code" href="/usage/examples">
+    See utility-driven layouts and components in context.
+  </Card>
+  <Card title="Customize CSS" icon="pen-to-square" href="/usage/custom-css">
+    Start importing your own class sets when the starter framework is stable.
+  </Card>
+</CardGroup>
+
+## Common Issues
+
+<Warning>
+  **Important:** Avoid importing the same classes repeatedly without cleaning up or replacing the earlier set.
+</Warning>
+
+### Classes Not Working?
+
+- Check that Elementor v4 Atomic Elements is enabled.
+- Verify the import completed successfully in the importer admin screen.
+- Clear Elementor cache through **Elementor -> Tools -> Regenerate CSS**.
+
+### Import Errors?
+
+- Reduce batch size to isolate the failing classes.
+- Check for missing semicolons, unsupported values, or reserved class names.
+- Confirm you are not importing duplicates that already exist.
+
+### Need Help?
+
+- Start with the [troubleshooting guide](/troubleshooting/common-errors)
+- Browse the [FAQ](/troubleshooting/faq)
+- Review the [support page](/troubleshooting/support)
+
+<Note>
+  **Success:** Once your first import works, continue with the [utility framework overview](/utility-framework/overview) to see what else is available.
+</Note>

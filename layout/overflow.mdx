@@ -1,0 +1,194 @@
+---
+title: "Overflow"
+description: "Control how content overflows its container with overflow utilities"
+---
+
+import { OverflowDemo } from "/snippets/overflow-demo.jsx"
+
+## Interactive Demo
+
+<OverflowDemo />
+
+## Overview
+
+Use overflow utilities to control how content behaves when it exceeds the boundaries of its container. These utilities are essential for creating scrollable areas, hiding overflow, and managing content that doesn't fit.
+
+## Overflow Utilities
+
+| Class | Type | CSS | Usage |
+| ----- | ---- | --- | ----- |
+| `.overflow-hidden` | Hidden | `overflow: hidden;` | Hide overflowing content |
+| `.overflow-auto` | Auto | `overflow: auto;` | Show scrollbars when needed |
+
+## Overflow Hidden
+
+Use `.overflow-hidden` to clip any content that overflows the container. The overflowing content will be completely hidden and not accessible via scrolling.
+
+```html
+<div class="w-64 h-32 overflow-hidden border border-gray rounded">
+  <p class="p-4">
+    This content might overflow the container and will be hidden if it does.
+  </p>
+</div>
+```
+
+### Common Use Cases
+
+- Image containers that need to crop content
+- Creating clean edges on rounded containers
+- Hiding content that extends beyond boundaries
+- Creating card layouts with consistent heights
+
+```html
+<!-- Image container with overflow hidden -->
+<div class="w-full h-64 overflow-hidden rounded-lg">
+  <img src="image.jpg" class="w-full h-full object-cover" alt="Cover image">
+</div>
+```
+
+## Overflow Auto
+
+Use `.overflow-auto` to show scrollbars automatically when content overflows. Scrollbars only appear when needed, keeping the interface clean when content fits.
+
+```html
+<div class="w-64 h-32 overflow-auto border border-gray rounded">
+  <p class="p-4">
+    This content will show scrollbars when it overflows the container.
+    You can scroll to see all the content.
+  </p>
+</div>
+```
+
+### Common Use Cases
+
+- Scrollable content areas
+- Sidebars with long navigation lists
+- Modal content that might exceed viewport height
+- Code blocks or preformatted text
+
+```html
+<!-- Scrollable sidebar -->
+<aside class="w-64 h-screen overflow-auto bg-gray-light p-4">
+  <nav class="flex flex-col gap-2">
+    <a href="#" class="p-2 bg-white rounded">Link 1</a>
+    <a href="#" class="p-2 bg-white rounded">Link 2</a>
+    <!-- Many more links... -->
+  </nav>
+</aside>
+```
+
+## Overflow Examples
+
+### Image Gallery with Hidden Overflow
+
+```html
+<div class="flex gap-4 overflow-hidden">
+  <div class="w-32 h-32 overflow-hidden rounded-lg">
+    <img src="image1.jpg" class="w-full h-full object-cover" alt="Gallery image 1">
+  </div>
+  <div class="w-32 h-32 overflow-hidden rounded-lg">
+    <img src="image2.jpg" class="w-full h-full object-cover" alt="Gallery image 2">
+  </div>
+  <div class="w-32 h-32 overflow-hidden rounded-lg">
+    <img src="image3.jpg" class="w-full h-full object-cover" alt="Gallery image 3">
+  </div>
+</div>
+```
+
+### Scrollable Content Area
+
+```html
+<div class="max-w-2xl mx-auto">
+  <div class="h-96 overflow-auto border border-gray rounded-lg p-6">
+    <h2 class="text-2xl font-bold mb-4">Scrollable Content</h2>
+    <p class="mb-4">Long content that can scroll...</p>
+    <p class="mb-4">More content...</p>
+    <!-- Additional content that causes scrolling -->
+  </div>
+</div>
+```
+
+### Card with Hidden Overflow
+
+```html
+<div class="card overflow-hidden rounded-lg">
+  <div class="h-48 overflow-hidden">
+    <img src="hero.jpg" class="w-full h-full object-cover" alt="Card image">
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-semibold mb-2">Card Title</h3>
+    <p class="text-gray">Card content</p>
+  </div>
+</div>
+```
+
+### Modal with Scrollable Content
+
+```html
+<div class="fixed inset-0 z-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg max-w-md w-full mx-4 max-h-96 overflow-auto">
+    <div class="p-6">
+      <h3 class="text-xl font-semibold mb-4">Modal Title</h3>
+      <p class="mb-4">Modal content that might be long...</p>
+      <!-- More content that can scroll -->
+    </div>
+  </div>
+</div>
+```
+
+## Best Practices
+
+<Steps>
+  <Step title="Use Hidden for Images">
+    Combine `.overflow-hidden` with `.object-cover` for image containers to create clean, cropped images.
+  </Step>
+  <Step title="Use Auto for Scrollable Content">
+    Use `.overflow-auto` for content areas that might exceed their container height, ensuring users can access all content.
+  </Step>
+  <Step title="Consider Mobile">
+    Test overflow behavior on mobile devices where screen space is limited.
+  </Step>
+  <Step title="Maintain Accessibility">
+    Ensure scrollable content is keyboard accessible and screen reader friendly.
+  </Step>
+</Steps>
+
+## Common Patterns
+
+### Rounded Container with Hidden Overflow
+
+```html
+<div class="w-64 h-64 overflow-hidden rounded-full">
+  <img src="avatar.jpg" class="w-full h-full object-cover" alt="Avatar">
+</div>
+```
+
+### Horizontal Scrollable List
+
+```html
+<div class="overflow-auto">
+  <div class="flex gap-4" style="width: max-content;">
+    <div class="w-48 p-4 bg-gray-light rounded">Item 1</div>
+    <div class="w-48 p-4 bg-gray-light rounded">Item 2</div>
+    <div class="w-48 p-4 bg-gray-light rounded">Item 3</div>
+  </div>
+</div>
+```
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Display" icon="grid" href="/layout/display">
+    Display utilities for container behavior
+  </Card>
+  <Card title="Object Fit" icon="image" href="/layout/object-fit">
+    Control how images fit in containers
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    Width and height utilities
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    All layout utilities overview
+  </Card>
+</CardGroup>
+

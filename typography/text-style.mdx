@@ -1,0 +1,59 @@
+---
+title: "Text Style"
+description: "Use transform and decoration utilities to add emphasis without writing custom CSS."
+---
+
+import { TextStyleDemo } from "/snippets/text-style-demo.jsx"
+
+## Interactive Demo
+
+<TextStyleDemo />
+
+## Text Transform
+
+| Class | CSS | Typical use |
+| ----- | --- | ----------- |
+| `.uppercase` | `text-transform: uppercase;` | Section labels, badges, navigation |
+| `.lowercase` | `text-transform: lowercase;` | Code identifiers, stylistic headings |
+
+```html
+<div class="flex flex-col gap-2">
+  <p class="text-sm uppercase tracking-wide text-gray">Release notes</p>
+  <h3 class="text-3xl font-semibold text-black">
+    Version 1.4.0 introduces fluid typography
+  </h3>
+</div>
+```
+
+## Text Decoration & Style
+
+| Class | CSS | Usage |
+| ----- | --- | ----- |
+| `.underline` | `text-decoration: underline;` | Link emphasis, inline callouts |
+| `.no-underline` | `text-decoration: none;` | Remove default link underline |
+| `.italic` | `font-style: italic;` | Quotes, citations, calls to action |
+
+```html
+<p class="text-base text-gray">
+  Try the new <a class="text-blue underline font-medium">fluid utilities</a> or disable decoration with
+  <a class="text-blue no-underline font-medium">class="no-underline"</a>.
+</p>
+<blockquote class="text-lg italic text-gray-dark border-l-4 border-blue pl-4">
+  “Pair `.italic` with `.leading-relaxed` for long-form testimonials.”
+</blockquote>
+```
+
+<Tip>
+Combine `.uppercase` with `.tracking-wide` or `.tracking-wider` to prevent capped text from feeling cramped.
+</Tip>
+
+## Style Guardrails
+
+- Reserve `.uppercase` for short labels; long uppercase paragraphs quickly lose readability.
+- Use `.no-underline` alongside a hover state (e.g. `.underline` on hover) so links remain discoverable.
+- Italic text can appear faint at lighter weights—bump to `.font-medium` or higher if contrast is low.
+
+<Check>
+Inline emphasis should come from utility classes, not manual HTML elements. This keeps your Elementor global styles consistent and easy to audit.
+</Check>
+

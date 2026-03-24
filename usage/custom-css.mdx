@@ -1,0 +1,260 @@
+---
+title: "Custom CSS"
+description: "Writing and importing your own utility classes"
+---
+
+## Writing Custom Utilities
+
+### Supported CSS Properties
+
+The importer supports most common CSS properties:
+
+- **Typography:** font-size, font-weight, line-height, text-align
+- **Spacing:** margin, padding, gap
+- **Layout:** display, position, flexbox properties
+- **Colors:** color, background-color, border-color
+- **Borders:** border-width, border-style, border-radius
+- **Sizing:** width, height, max-width, min-height
+- **Effects:** opacity
+
+### CSS Format
+
+Write your utilities in standard CSS format:
+
+```css
+/* Simple utility */
+.text-custom {
+  font-size: 28px;
+}
+
+/* Multiple properties */
+.btn-custom {
+  background-color: #your-brand-color;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 8px;
+}
+
+/* Directional spacing */
+.px-custom {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+```
+
+## Value Formats
+
+### Supported Values
+
+- **Pixels:** `16px`, `1px`, `100px`
+- **Percentages:** `50%`, `100%`, `33.333%`
+- **Viewport units:** `100vh`, `100vw`
+- **Relative units:** `1rem`, `2em`
+- **Auto:** `auto`
+- **Numbers:** `0`, `10`, `1`, `0.5`
+- **Hex colors:** `#ffffff`, `#3b82f6`
+- **Keywords:** `none`, `flex`, `center`, etc.
+
+### Examples
+
+```css
+/* Pixels */
+.w-custom {
+  width: 300px;
+}
+
+/* Percentages */
+.h-half {
+  height: 50%;
+}
+
+/* Viewport units */
+.h-screen-custom {
+  height: 100vh;
+}
+
+/* Auto values */
+.m-auto-custom {
+  margin: auto;
+}
+
+/* Colors */
+.bg-brand {
+  background-color: #your-brand-color;
+}
+```
+
+## Reserved Names
+
+<Warning>**Cannot use these class names:**</Warning>
+
+- `container` (use `.cont` or similar instead)
+- Any Elementor reserved keywords
+
+### Good Alternatives
+
+```css
+/* Instead of .container */
+.cont {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.site-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+```
+
+## Importing Custom CSS
+
+### Step 1: Write Your CSS
+
+Create your custom utilities following the supported format:
+
+```css
+/* Custom brand utilities */
+.text-brand {
+  color: #your-brand-color;
+}
+.bg-brand {
+  background-color: #your-brand-color;
+}
+.border-brand {
+  border-color: #your-brand-color;
+}
+
+/* Custom spacing */
+.spacing-xl {
+  margin: 64px;
+}
+.spacing-2xl {
+  margin: 128px;
+}
+
+/* Custom components */
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+```
+
+### Step 2: Import Through the Importer
+
+1. Open the importer admin screen in WordPress
+2. Paste your CSS into the textarea
+3. Click **"Import Into Elementor"**
+4. Wait for success message
+
+### Step 3: Use Your Classes
+
+Apply your custom classes in Elementor:
+
+```html
+<h1 class="hero-title text-brand">Custom Hero Title</h1>
+<div class="bg-brand spacing-xl">Custom branded section</div>
+```
+
+## Best Practices
+
+### Naming Conventions
+
+Use consistent naming patterns:
+
+```css
+/* Size-based naming */
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-lg {
+  font-size: 18px;
+}
+
+/* Color-based naming */
+.text-primary {
+  color: #your-primary-color;
+}
+.bg-primary {
+  background-color: #your-primary-color;
+}
+
+/* Component-based naming */
+.btn-primary {
+  /* primary button styles */
+}
+.card-featured {
+  /* featured card styles */
+}
+```
+
+### Organization
+
+Organize your CSS logically:
+
+```css
+/* Typography utilities */
+.text-custom {
+  font-size: 28px;
+}
+.font-custom {
+  font-weight: 600;
+}
+
+/* Spacing utilities */
+.spacing-custom {
+  margin: 32px;
+}
+.padding-custom {
+  padding: 24px;
+}
+
+/* Component utilities */
+.btn-custom {
+  /* custom button */
+}
+.card-custom {
+  /* custom card */
+}
+```
+
+## Troubleshooting
+
+### Common Issues
+
+**Classes not working:**
+
+- Check CSS syntax (missing semicolons, units)
+- Ensure class names don't conflict with existing classes
+- Verify values use supported formats
+
+**Import errors:**
+
+- Import in smaller batches (20-30 classes at a time)
+- Check for reserved class names
+- Ensure proper CSS formatting
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card
+    title="CSS Reference"
+    icon="code"
+    href="/css-reference/supported-properties"
+  >
+    Complete CSS property reference
+  </Card>
+  <Card
+    title="Writing CSS"
+    icon="pen-to-square"
+    href="/css-reference/writing-css"
+  >
+    CSS writing guidelines
+  </Card>
+</CardGroup>

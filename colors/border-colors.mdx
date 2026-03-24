@@ -1,0 +1,106 @@
+---
+title: "Border Colors"
+description: "Border color utilities that work with border width utilities"
+---
+
+## Overview
+
+Control border color with semantic utilities. Border colors work together with border width, style, and radius utilities to create complete border styling.
+
+## Border Color Utilities
+
+| Class | Color | Hex | CSS | Usage |
+| ----- | ----- | --- | --- | ----- |
+| `.border-white` | White | #ffffff | `border-color: #ffffff;` | White borders |
+| `.border-black` | Black | #000000 | `border-color: #000000;` | Black borders |
+| `.border-gray` | Gray | #6b7280 | `border-color: #6b7280;` | Standard borders |
+| `.border-gray-light` | Light Gray | #e5e7eb | `border-color: #e5e7eb;` | Subtle borders |
+| `.border-blue` | Blue | #3b82f6 | `border-color: #3b82f6;` | Primary borders |
+
+## Examples
+
+```html
+<!-- Border color examples -->
+<div class="border border-gray p-4 rounded">Gray border</div>
+<div class="border border-gray-light p-4 rounded">Light gray border</div>
+<div class="border border-blue p-4 rounded">Blue border</div>
+<div class="border-2 border-black p-4 rounded">Thick black border</div>
+```
+
+## Common Patterns
+
+### Form Field States
+
+```html
+<!-- Normal state -->
+<input type="text" class="w-full p-3 border border-gray rounded" placeholder="Normal input">
+
+<!-- Error state -->
+<input type="text" class="w-full p-3 border border-red rounded" placeholder="Error input">
+
+<!-- Success state -->
+<input type="text" class="w-full p-3 border border-green rounded" placeholder="Success input">
+```
+
+### Accent Borders
+
+```html
+<div class="border-l-4 border-blue bg-blue-light p-6 rounded">
+  <h3 class="text-lg font-600 mb-2">Accent Border</h3>
+  <p class="text-gray">Left accent border for emphasis</p>
+</div>
+```
+
+### Button with Border
+
+```html
+<button class="border-2 border-blue text-blue px-6 py-3 rounded hover:bg-blue hover:text-white">
+  Bordered Button
+</button>
+```
+
+## Border Combinations
+
+### Complete Border Styling
+
+```html
+<div class="border-2 border-solid border-blue rounded-lg p-6 bg-white">
+  <h3 class="text-xl font-600 mb-4">Complete Border</h3>
+  <p class="text-gray">
+    This element has width, style, color, and radius all defined.
+  </p>
+</div>
+```
+
+### Subtle Border
+
+```html
+<div class="border border-gray-light rounded p-4 bg-white">
+  <p class="text-gray">Subtle border for gentle separation</p>
+</div>
+```
+
+## Best Practices
+
+- **Use semantic colors:** Match border colors to their purpose
+- **Maintain consistency:** Use the same border colors for similar elements
+- **Consider contrast:** Ensure borders are visible against their backgrounds
+- **Combine with width:** Use thicker borders with darker colors for emphasis
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Border Width" icon="square" href="/borders/width">
+    Border width utilities
+  </Card>
+  <Card title="Border Style" icon="square" href="/borders/style">
+    Border style utilities
+  </Card>
+  <Card title="Border Radius" icon="circle" href="/borders/radius">
+    Border radius utilities
+  </Card>
+  <Card title="Colors Overview" icon="palette" href="/overview/colors">
+    Complete color system overview
+  </Card>
+</CardGroup>
+

@@ -1,0 +1,202 @@
+---
+title: "Aspect Ratio"
+description: "Control the aspect ratio of elements for consistent proportions"
+---
+
+## Overview
+
+Use aspect ratio utilities to maintain consistent proportions for elements like images, videos, and containers. These utilities ensure elements maintain their intended shape across different screen sizes.
+
+## Aspect Ratio Utilities
+
+| Class | Ratio | CSS | Usage |
+| ----- | ----- | --- | ----- |
+| `.aspect-square` | 1:1 | `aspect-ratio: 1 / 1;` | Square aspect ratio |
+| `.aspect-video` | 16:9 | `aspect-ratio: 16 / 9;` | Video aspect ratio |
+
+## Aspect Square
+
+Use `.aspect-square` to create a 1:1 square aspect ratio. Perfect for avatars, thumbnails, and card images that need to be square.
+
+```html
+<div class="w-64 aspect-square bg-blue rounded"></div>
+```
+
+### Common Use Cases
+
+- Avatar images
+- Thumbnail grids
+- Square card images
+- Icon containers
+- Profile pictures
+
+```html
+<!-- Square avatar -->
+<div class="w-32 aspect-square overflow-hidden rounded-full">
+  <img src="avatar.jpg" class="w-full h-full object-cover" alt="Avatar">
+</div>
+```
+
+## Aspect Video
+
+Use `.aspect-video` to create a 16:9 aspect ratio, the standard for video content. Perfect for video embeds, hero images, and media containers.
+
+```html
+<div class="w-full aspect-video bg-gray-light rounded"></div>
+```
+
+### Common Use Cases
+
+- Video embeds
+- Hero image containers
+- Media galleries
+- YouTube/Vimeo iframes
+- Responsive video containers
+
+```html
+<!-- Video container -->
+<div class="w-full aspect-video bg-black rounded-lg overflow-hidden">
+  <iframe 
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    class="w-full h-full"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+```
+
+## Aspect Ratio Examples
+
+### Square Image Grid
+
+```html
+<div class="flex flex-wrap gap-4">
+  <div class="w-48 aspect-square overflow-hidden rounded-lg">
+    <img src="image1.jpg" class="w-full h-full object-cover" alt="Image 1">
+  </div>
+  <div class="w-48 aspect-square overflow-hidden rounded-lg">
+    <img src="image2.jpg" class="w-full h-full object-cover" alt="Image 2">
+  </div>
+  <div class="w-48 aspect-square overflow-hidden rounded-lg">
+    <img src="image3.jpg" class="w-full h-full object-cover" alt="Image 3">
+  </div>
+</div>
+```
+
+### Video Hero Section
+
+```html
+<section class="w-full aspect-video relative overflow-hidden rounded-lg">
+  <video class="w-full h-full object-cover" autoplay muted loop>
+    <source src="hero-video.mp4" type="video/mp4">
+  </video>
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="absolute inset-0 flex items-center justify-center">
+    <h1 class="text-4xl font-bold text-white">Hero Title</h1>
+  </div>
+</section>
+```
+
+### Responsive Card with Square Image
+
+```html
+<div class="card overflow-hidden rounded-lg">
+  <div class="w-full aspect-square overflow-hidden">
+    <img src="card-image.jpg" class="w-full h-full object-cover" alt="Card image">
+  </div>
+  <div class="p-6">
+    <h3 class="text-xl font-semibold mb-2">Card Title</h3>
+    <p class="text-gray">Card content</p>
+  </div>
+</div>
+```
+
+### Gallery with Mixed Aspect Ratios
+
+```html
+<div class="flex flex-wrap gap-4">
+  <!-- Square thumbnails -->
+  <div class="w-32 aspect-square overflow-hidden rounded">
+    <img src="thumb1.jpg" class="w-full h-full object-cover" alt="Thumbnail 1">
+  </div>
+  <div class="w-32 aspect-square overflow-hidden rounded">
+    <img src="thumb2.jpg" class="w-full h-full object-cover" alt="Thumbnail 2">
+  </div>
+  
+  <!-- Video aspect ratio -->
+  <div class="w-64 aspect-video overflow-hidden rounded">
+    <img src="video-thumb.jpg" class="w-full h-full object-cover" alt="Video thumbnail">
+  </div>
+</div>
+```
+
+## Best Practices
+
+<Steps>
+  <Step title="Combine with Object Fit">
+    Use aspect ratio utilities with `.object-cover` or `.object-contain` to control how content fills the container.
+  </Step>
+  <Step title="Use Square for Thumbnails">
+    Use `.aspect-square` for consistent thumbnail grids and avatar images.
+  </Step>
+  <Step title="Use Video for Media">
+    Use `.aspect-video` for video embeds and media containers to maintain proper proportions.
+  </Step>
+  <Step title="Set Container Width">
+    Always set a width on the container when using aspect ratio utilities to control the size.
+  </Step>
+</Steps>
+
+## Common Patterns
+
+### Responsive Image Container
+
+```html
+<div class="w-full aspect-video overflow-hidden rounded-lg">
+  <img src="hero.jpg" class="w-full h-full object-cover" alt="Hero image">
+</div>
+```
+
+### Avatar Grid
+
+```html
+<div class="flex gap-4">
+  <div class="w-16 aspect-square overflow-hidden rounded-full">
+    <img src="avatar1.jpg" class="w-full h-full object-cover" alt="Avatar 1">
+  </div>
+  <div class="w-16 aspect-square overflow-hidden rounded-full">
+    <img src="avatar2.jpg" class="w-full h-full object-cover" alt="Avatar 2">
+  </div>
+</div>
+```
+
+### Video Embed Container
+
+```html
+<div class="w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden">
+  <iframe 
+    src="https://www.youtube.com/embed/VIDEO_ID" 
+    class="w-full h-full"
+    frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+```
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Object Fit" icon="image" href="/layout/object-fit">
+    Control how images fit in containers
+  </Card>
+  <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
+    Control content overflow behavior
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    Width and height utilities
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    All layout utilities overview
+  </Card>
+</CardGroup>
+

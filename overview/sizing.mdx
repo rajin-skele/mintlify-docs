@@ -1,0 +1,72 @@
+---
+title: "Sizing"
+description: "Width, height, max-width, and min-height utilities for controlling element dimensions"
+---
+
+## Overview
+
+Control the width, height, and size constraints of elements using our sizing utilities. These utilities work with percentages, viewport units, and fixed pixel values to create responsive layouts.
+
+<CardGroup cols={2}>
+  <Card title="Width" icon="expand" href="/sizing/width">
+    Control element width with `.w-full`, `.w-1-2`, `.w-1-3`, and more
+  </Card>
+  <Card title="Height" icon="expand" href="/sizing/height">
+    Control element height with `.h-full`, `.h-screen`, `.min-h-screen`, and more
+  </Card>
+  <Card title="Max Width" icon="expand" href="/sizing/max-width">
+    Constrain maximum width with static and fluid utilities
+  </Card>
+</CardGroup>
+
+## Quick Start
+
+### Basic Sizing
+
+```html
+<!-- Width utilities -->
+<div class="w-full p-4">Full width</div>
+<div class="w-1-2 p-4">Half width</div>
+<div class="w-1-3 p-4">One third width</div>
+
+<!-- Height utilities -->
+<div class="h-screen flex items-center justify-center">
+  <div class="text-center">Full viewport height</div>
+</div>
+
+<!-- Max width utilities -->
+<div class="max-w-2xl mx-auto p-6">
+  <h1 class="text-3xl font-bold">Centered content</h1>
+</div>
+```
+
+## Sizing Utilities Reference
+
+### Width Utilities
+- **Full:** `.w-full` (100%)
+- **Auto:** `.w-auto`
+- **Fractions:** `.w-1-2`, `.w-1-3`, `.w-2-3`, `.w-1-4`, `.w-3-4`
+
+### Height Utilities
+- **Full:** `.h-full` (100%)
+- **Auto:** `.h-auto`
+- **Screen:** `.h-screen` (100vh)
+
+### Min Height Utilities
+- **Screen:** `.min-h-screen` (100vh)
+- **Full:** `.min-h-full` (100%)
+
+### Max Width Utilities
+- **Static:** `.max-w-sm`, `.max-w-md`, `.max-w-lg`, `.max-w-xl`, `.max-w-2xl`
+- **Fluid:** `.max-w-fluid-sm`, `.max-w-fluid-md`, `.max-w-fluid-lg`, `.max-w-fluid-xl`, `.max-w-fluid-2xl`
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display utilities for sizing
+  </Card>
+  <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
+    Margin and padding utilities
+  </Card>
+</CardGroup>

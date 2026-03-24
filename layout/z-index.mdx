@@ -1,0 +1,145 @@
+---
+title: "Z-Index"
+description: "Control the stacking order of elements with z-index utilities"
+---
+
+## Overview
+
+Use z-index utilities to control the stacking order of positioned elements. When elements overlap, z-index determines which element appears on top. Higher z-index values bring elements to the front, while lower values send them to the back.
+
+<Note>
+  **Position Required:** Z-index only works on positioned elements (`relative`,
+  `absolute`, `fixed`, or `sticky`). When imported into Elementor, z-index
+  utilities automatically add `position: relative` to ensure proper display.
+</Note>
+
+## Z-Index Utilities
+
+| Class    | Value | CSS             | Usage                    |
+| -------- | ----- | --------------- | ------------------------ |
+| `.z-0`   | 0     | `z-index: 0;`   | Base stacking level      |
+| `.z-10`  | 10    | `z-index: 10;`  | Low priority overlay     |
+| `.z-20`  | 20    | `z-index: 20;`  | Medium priority overlay  |
+| `.z-50`  | 50    | `z-index: 50;`  | High priority overlay    |
+| `.z-100` | 100   | `z-index: 100;` | Highest priority overlay |
+
+## Basic Usage
+
+Apply z-index utilities to control which elements appear on top when they overlap:
+
+```html
+<div class="relative z-0">Base layer</div>
+<div class="relative z-10">Low priority overlay</div>
+<div class="relative z-50">High priority overlay</div>
+```
+
+## Examples
+
+### Modal Dialog
+
+```html
+<div class="fixed inset-0 z-50 flex items-center justify-center">
+  <div class="bg-white rounded-lg p-6">Modal content</div>
+</div>
+```
+
+### Dropdown Menu
+
+```html
+<div class="relative">
+  <button class="btn btn-blue">Menu</button>
+  <div class="absolute top-full left-0 z-50 mt-2 bg-white rounded-lg">
+    <!-- Dropdown content -->
+  </div>
+</div>
+```
+
+### Image Overlay
+
+```html
+<div class="relative">
+  <img src="image.jpg" alt="Background" />
+  <div class="absolute inset-0 z-10 bg-black opacity-50"></div>
+  <div class="absolute inset-0 z-20 flex items-center justify-center">
+    <h2 class="text-white">Overlay Text</h2>
+  </div>
+</div>
+```
+
+## Z-Index Scale
+
+The utility framework provides a carefully designed z-index scale:
+
+- **`.z-0`** - Base level for background content
+- **`.z-10`** - Low priority overlays (badges, tooltips)
+- **`.z-20`** - Medium priority overlays (dropdowns, cards)
+- **`.z-50`** - High priority overlays (modals, navigation)
+- **`.z-100`** - Highest priority (critical notifications)
+
+<Tip>
+  **Consistent Layering:** Stick to the predefined z-index values for
+  consistency across your project. This makes it easier to manage stacking order
+  and prevents z-index conflicts.
+</Tip>
+
+## Best Practices
+
+<Steps>
+  <Step title="Use Consistent Z-Index Scale">
+    Stick to the predefined z-index values (0, 10, 20, 50, 100) for consistency
+    across your project. Avoid creating custom z-index values that don't follow
+    the scale.
+  </Step>
+  <Step title="Plan Your Layers">
+    Think about the stacking order before implementing. Consider which elements
+    need to appear above others and assign z-index values accordingly.
+  </Step>
+  <Step title="Use Position Utilities">
+    Remember that z-index only works on positioned elements. Use position
+    utilities (`.relative`, `.absolute`, `.fixed`, `.sticky`) in combination
+    with z-index utilities.
+  </Step>
+  <Step title="Avoid Deep Nesting">
+    Keep z-index values simple and avoid creating deeply nested stacking
+    contexts that can be difficult to manage.
+  </Step>
+  <Step title="Test on Different Devices">
+    Ensure z-index layering works correctly on mobile and desktop devices,
+    especially for fixed and sticky positioned elements.
+  </Step>
+</Steps>
+
+## How Z-Index Works
+
+Z-index controls the stacking order of positioned elements along the z-axis (perpendicular to the screen). Elements with higher z-index values appear in front of elements with lower values.
+
+### Stacking Context
+
+When you apply z-index to an element, it creates a new stacking context. Elements within the same stacking context are compared using their z-index values, while elements in different stacking contexts are compared based on their parent's z-index.
+
+<Warning>
+  **Stacking Context:** Z-index only works within the same stacking context. If
+  an element has a lower z-index but is in a parent with a higher z-index, it
+  will still appear above elements in the parent with lower z-index values.
+</Warning>
+
+### Position Requirement
+
+Z-index only affects positioned elements. Elements with `position: static` (the default) ignore z-index values. When imported into Elementor, z-index utilities automatically add `position: relative` to ensure they work correctly.
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Positioning" icon="location-dot" href="/positioning/positioning">
+    Position utilities for z-index to work
+  </Card>
+  <Card title="Display" icon="grid" href="/layout/display">
+    Display utilities for layout control
+  </Card>
+  <Card title="Effects" icon="sparkles" href="/effects/effects">
+    Opacity utilities for layered effects
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    All layout utilities overview
+  </Card>
+</CardGroup>

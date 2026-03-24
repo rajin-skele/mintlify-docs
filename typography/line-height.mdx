@@ -1,0 +1,75 @@
+---
+title: "Line Height"
+description: "Fine-tune vertical rhythm with static `.leading-*` utilities or fluid `.leading-fluid-*` variants."
+---
+
+import { LineHeightDemo } from "/snippets/line-height-demo.jsx"
+
+## Interactive Demo
+
+<LineHeightDemo />
+
+## Static Leading
+
+Static line-height utilities map to the typography scale so you can keep copy legible while preserving layout precision.
+
+| Class | CSS | Best for |
+| ----- | --- | -------- |
+| `.leading-tight` | `line-height: 16;` | Compact headings, badges (unitless, relative to font-size) |
+| `.leading-normal` | `line-height: 18;` | Standard body copy (unitless, relative to font-size) |
+| `.leading-relaxed` | `line-height: 24;` | Long-form paragraphs (unitless, relative to font-size) |
+| `.leading-loose` | `line-height: 32;` | Display headings, quotes (unitless, relative to font-size) |
+
+<Info>
+Line-height values are unitless, meaning they're calculated relative to the element's font-size. For example, with `font-size: 16px` and `line-height: 18`, the actual line-height will be `18px` (16px × 1.125).
+</Info>
+
+```html
+<article class="space-y-4">
+  <h2 class="text-3xl font-bold leading-tight text-black">
+    Static leading for precise layouts
+  </h2>
+  <p class="text-base leading-relaxed text-gray-dark">
+    Use `.leading-tight` when you want stacked headings to stay visually compact. Swap to `.leading-relaxed` to keep dense paragraphs readable.
+  </p>
+</article>
+```
+
+## Fluid Leading
+
+Fluid line-height utilities mirror the font-size fluid scale. They maintain ideal spacing as text grows with the viewport.
+
+| Class | Clamp expression | Ideal pairing |
+| ----- | ---------------- | ------------- |
+| `.leading-fluid-tight` | `line-height: clamp(1, calc(0.85 + 0.37vw), 1.25);` | `.text-fluid-4xl` hero headings |
+| `.leading-fluid-normal` | `line-height: clamp(1.125, calc(0.96rem + 0.42vw), 1.41rem);` | `.text-fluid-base` paragraphs |
+| `.leading-fluid-relaxed` | `line-height: clamp(1.5, calc(1.28rem + 0.56vw), 1.88rem);` | Feature sections and product descriptions |
+| `.leading-fluid-loose` | `line-height: clamp(2, calc(1.71rem + 0.74vw), 2.5rem);` | Oversized display copy |
+
+```html
+<section class="py-fluid-6">
+  <div class="cont text-center">
+    <h1 class="text-fluid-5xl font-extrabold leading-fluid-tight text-black">
+      Balanced rhythm on every screen size
+    </h1>
+    <p class="text-fluid-base leading-fluid-relaxed text-gray max-w-fluid-lg mx-auto mt-fluid-3">
+      Combine fluid font sizes with fluid leading to preserve readability from mobile to desktop without manual breakpoints.
+    </p>
+  </div>
+</section>
+```
+
+<Info>
+Fluid line-height values use unitless clamps so they respond to the parent font size. You can safely reuse them across headings and paragraphs.
+</Info>
+
+## Best Practices
+
+- **Heading stacks:** Use `.leading-tight` or `.leading-fluid-tight` to keep multi-line headings from feeling airy.
+- **Paragraphs:** Start with `.leading-relaxed` for static copy or `.leading-fluid-normal` for responsive layouts.
+- **Overlays:** Tighten line height for overlays on images to improve readability at smaller sizes.
+
+<Check>
+Preview your Elementor section at tablet width. If the copy feels crowded, bump from `.leading-tight` to `.leading-normal` rather than resizing the font.
+</Check>
+

@@ -1,0 +1,321 @@
+---
+title: "Borders"
+description: "Border width, style, radius, and color utilities for defining element boundaries"
+---
+
+## Border Width
+
+Control border thickness with width utilities.
+
+<Card title="Border Width" icon="square">
+
+|             |     |                      |               |
+| ----------- | --- | -------------------- | ------------- |
+| `.border-0` | 0   | `border-width: 0;`   | No border     |
+| `.border-1` | 1px | `border-width: 1px;` | Thin border   |
+| `.border-2` | 2px | `border-width: 2px;` | Medium border |
+| `.border-3` | 3px | `border-width: 3px;` | Thick border  |
+
+</Card>
+
+### Examples
+
+```html
+<!-- Border width examples -->
+<div class="border-1 p-4 bg-white">Thin border</div>
+<div class="border-2 p-4 bg-white">Medium border</div>
+<div class="border-3 p-4 bg-white">Thick border</div>
+<div class="border-0 p-4 bg-gray-light">No border</div>
+```
+
+## Border Style
+
+Control border appearance with style utilities.
+
+<Card title="Border Style" icon="square">
+  |  |  |  |  | 
+  |-------|-------|-----|-------| 
+  | `.border-solid` | Solid | `border-style: solid;` | Solid line border | 
+  | `.border-dashed` | Dashed | `border-style: dashed;` | Dashed line border | 
+  | `.border-none` | None | `border-style: none;` | No border style |
+</Card>
+
+### Examples
+
+```html
+<!-- Border style examples -->
+<div class="border-2 border-solid p-4 bg-white">Solid border</div>
+<div class="border-2 border-dashed p-4 bg-white">Dashed border</div>
+<div class="border-none p-4 bg-gray-light">No border</div>
+```
+
+## Border Radius
+
+Control corner rounding with radius utilities.
+
+<Card title="Border Radius" icon="circle">
+  |  |  |  |  | 
+  |-------|--------|-----|-------| 
+  | `.rounded-none` | 0 | `border-radius: 0;` | Square corners | 
+  | `.rounded-sm` | 4px | `border-radius: 4px;` | Small rounding | 
+  | `.rounded` | 6px | `border-radius: 6px;` | Standard rounding | 
+  | `.rounded-lg` | 8px | `border-radius: 8px;` | Large rounding | 
+  | `.rounded-xl` | 12px | `border-radius: 12px;` | Extra large rounding | 
+  | `.rounded-2xl` | 16px | `border-radius: 16px;` | Very large rounding |  
+  | `.rounded-full` | 9999px | `border-radius: 9999px;` | Fully rounded (pills) |
+</Card>
+
+### Examples
+
+```html
+<!-- Border radius examples -->
+<div class="border-2 border-gray rounded-none p-4">Square corners</div>
+<div class="border-2 border-gray rounded-sm p-4">Small rounding</div>
+<div class="border-2 border-gray rounded p-4">Standard rounding</div>
+<div class="border-2 border-gray rounded-lg p-4">Large rounding</div>
+<div class="border-2 border-gray rounded-xl p-4">Extra large rounding</div>
+<div class="border-2 border-gray rounded-full p-4">Fully rounded</div>
+```
+
+## Border Colors
+
+Control border color with semantic color utilities.
+
+<Card title="Border Colors" icon="palette">
+  |  |  |  |  |  | 
+  |-------|-------|-----|-----|-------| 
+  | `.border-white` | White | #ffffff | `border-color: #ffffff;` | White borders |
+  | `.border-black` | Black | #000000 | `border-color: #000000;` | Black borders | 
+  | `.border-gray` | Gray | #6b7280 | `border-color: #6b7280;` | Standard borders | 
+  | `.border-gray-light` | Light Gray | #e5e7eb | `border-color: #e5e7eb;` | Subtle borders | 
+  | `.border-blue` | Blue | #3b82f6 | `border-color: #3b82f6;` | Primary borders |
+</Card>
+
+### Examples
+
+```html
+<!-- Border color examples -->
+<div class="border-2 border-gray p-4 rounded">Gray border</div>
+<div class="border-2 border-gray-light p-4 rounded">Light gray border</div>
+<div class="border-2 border-blue p-4 rounded">Blue border</div>
+<div class="border-2 border-black p-4 rounded">Black border</div>
+```
+
+## Common Border Patterns
+
+### Card with Border
+
+<Card title="Bordered Card" icon="square">
+  ```html
+  <div class="border border-gray-light rounded-lg p-6 bg-white">
+    <h3 class="text-xl font-600 mb-4">Card Title</h3>
+    <p class="text-gray">Card content with subtle border</p>
+  </div>
+  ```
+</Card>
+
+### Input Field Styling
+
+<Card title="Form Inputs" icon="list">
+```html
+<!-- Normal input -->
+<input type="text" class="w-full p-3 border border-gray rounded" placeholder="Normal input">
+
+<!-- Focused input -->
+
+<input type="text" class="w-full p-3 border-2 border-blue rounded" placeholder="Focused input">
+
+<!-- Error input -->
+
+<input type="text" class="w-full p-3 border-2 border-red rounded" placeholder="Error input">
+```
+</Card>
+
+### Button with Border
+
+<Card title="Bordered Button" icon="hand-pointer">
+  ```html
+  <button class="border-2 border-blue text-blue px-6 py-3 rounded hover:bg-blue hover:text-white">
+    Bordered Button
+  </button>
+  ```
+</Card>
+
+### Image with Border
+
+<Card title="Bordered Image" icon="image">
+```html
+<img src="image.jpg" class="border-2 border-gray-light rounded-lg" alt="Bordered image">
+```
+</Card>
+
+## Border Combinations
+
+### Complete Border Styling
+
+<Card title="Complete Border Example" icon="square">
+  ```html
+  <div class="border-2 border-solid border-blue rounded-lg p-6 bg-white">
+    <h3 class="text-xl font-600 mb-4">Complete Border</h3>
+    <p class="text-gray">
+      This element has width, style, color, and radius all defined.
+    </p>
+  </div>
+  ```
+</Card>
+
+### Subtle Border
+
+<Card title="Subtle Border" icon="eye-slash">
+  ```html
+  <div class="border border-gray-light rounded p-4 bg-white">
+    <p class="text-gray">Subtle border for gentle separation</p>
+  </div>
+  ```
+</Card>
+
+### Accent Border
+
+<Card title="Accent Border" icon="star">
+  ```html
+  <div class="border-l-4 border-blue bg-blue-light p-6 rounded">
+    <h3 class="text-lg font-600 mb-2">Accent Border</h3>
+    <p class="text-gray">Left accent border for emphasis</p>
+  </div>
+  ```
+</Card>
+
+## Border Utilities in Components
+
+### Card Component
+
+<Card title="Card with Border Variants" icon="square">
+```html
+<!-- Standard card -->
+<div class="card p-6">Standard card</div>
+
+<!-- Card with border -->
+
+<div class="card border border-gray-light p-6">Card with border</div>
+
+<!-- Card with accent border -->
+
+<div class="card border-l-4 border-blue p-6">Card with accent</div>
+```
+</Card>
+
+### Button Variants
+
+<Card title="Button Border Styles" icon="hand-pointer">
+```html
+<!-- Solid button -->
+<button class="btn btn-blue">Solid Button</button>
+
+<!-- Outlined button -->
+
+<button class="border-2 border-blue text-blue px-6 py-3 rounded hover:bg-blue hover:text-white">
+  Outlined Button
+</button>
+
+<!-- Dashed button -->
+
+<button class="border-2 border-dashed border-gray text-gray px-6 py-3 rounded">
+  Dashed Button
+</button>
+```
+</Card>
+
+### Form Elements
+
+<Card title="Form Border States" icon="list">
+```html
+<!-- Normal state -->
+<div class="mb-4">
+  <label class="text-sm font-500 mb-2">Normal Input</label>
+  <input type="text" class="w-full p-3 border border-gray rounded">
+</div>
+
+<!-- Focused state -->
+
+<div class="mb-4">
+  <label class="text-sm font-500 mb-2">Focused Input</label>
+  <input type="text" class="w-full p-3 border-2 border-blue rounded">
+</div>
+
+<!-- Error state -->
+
+<div class="mb-4">
+  <label class="text-sm font-500 mb-2 text-red">Error Input</label>
+  <input type="text" class="w-full p-3 border-2 border-red rounded">
+  <p class="text-sm text-red mt-1">This field is required</p>
+</div>
+```
+</Card>
+
+## Border Best Practices
+
+### Consistent Border Usage
+
+<Steps>
+  <Step title="Use Consistent Widths">
+    Stick to the predefined border widths (1px, 2px, 3px) for consistency.
+  </Step>
+  <Step title="Match Border Radius">
+    Use consistent border radius values throughout your design.
+  </Step>
+  <Step title="Choose Appropriate Colors">
+    Use border colors that complement your design and provide good contrast.
+  </Step>
+  <Step title="Consider Accessibility">
+    Ensure borders provide sufficient contrast and don't interfere with content
+    readability.
+  </Step>
+</Steps>
+
+### Border Hierarchy
+
+<Card title="Border Hierarchy" icon="list">
+  1. **No border:** For seamless integration 2. **Subtle border (1px, light
+  color):** For gentle separation 3. **Standard border (1px, medium color):**
+  For clear definition 4. **Emphasis border (2px, dark color):** For important
+  elements 5. **Accent border (thick, colored):** For special emphasis
+</Card>
+
+### Responsive Borders
+
+```html
+<!-- Responsive border example -->
+<div class="border border-gray-light md:border-2 md:border-gray rounded-lg p-4">
+  <p>Border that gets thicker on larger screens</p>
+</div>
+```
+
+## Common Mistakes
+
+<Warning>**Avoid these border mistakes:**</Warning>
+
+- Don't use too many different border styles in one design
+- Don't make borders too thick (3px is usually the maximum)
+- Don't use borders that compete with content for attention
+- Don't forget to consider how borders look on different backgrounds
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Colors" icon="palette" href="/utility-framework/colors">
+    Color utilities for border colors
+  </Card>
+  <Card title="Spacing" icon="arrows-to-line" href="/utility-framework/spacing">
+    Padding utilities for border spacing
+  </Card>
+  <Card title="Layout" icon="grid" href="/utility-framework/layout">
+    Display utilities for border behavior
+  </Card>
+  <Card
+    title="Components"
+    icon="puzzle-piece"
+    href="/utility-framework/components"
+  >
+    Pre-built components with borders
+  </Card>
+</CardGroup>

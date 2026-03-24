@@ -1,0 +1,248 @@
+---
+title: "Reserved Names"
+description: "Class names that cannot be used with the importer"
+---
+
+## Elementor Reserved Names
+
+<Warning>
+  **Cannot use these class names** as they are reserved by Elementor:
+</Warning>
+
+### Primary Reserved Names
+
+- `container` - Reserved by Elementor
+- `widget` - Reserved by Elementor
+- `element` - Reserved by Elementor
+
+### Common Reserved Patterns
+
+- `elementor-*` - All Elementor-specific classes
+- `e-*` - Elementor shorthand classes
+- `element-*` - Element-specific classes
+
+## Alternative Names
+
+### Instead of `container`
+
+Use these alternatives:
+
+```css
+/* Good alternatives */
+.cont {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.site-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+```
+
+### Instead of `widget`
+
+Use these alternatives:
+
+```css
+/* Good alternatives */
+.component {
+  /* widget styles */
+}
+.block {
+  /* widget styles */
+}
+.card {
+  /* widget styles */
+}
+.panel {
+  /* widget styles */
+}
+```
+
+### Instead of `element`
+
+Use these alternatives:
+
+```css
+/* Good alternatives */
+.item {
+  /* element styles */
+}
+.part {
+  /* element styles */
+}
+.section {
+  /* element styles */
+}
+.unit {
+  /* element styles */
+}
+```
+
+## Naming Best Practices
+
+### Use Descriptive Names
+
+Choose names that clearly describe the purpose:
+
+```css
+/* Good: Descriptive */
+.header-nav {
+  /* navigation styles */
+}
+.hero-section {
+  /* hero styles */
+}
+.card-featured {
+  /* featured card styles */
+}
+
+/* Avoid: Generic */
+.nav {
+  /* too generic */
+}
+.hero {
+  /* too generic */
+}
+.card {
+  /* too generic */
+}
+```
+
+### Use Prefixes
+
+Add prefixes to avoid conflicts:
+
+```css
+/* Brand prefix */
+.brand-header {
+  /* brand header styles */
+}
+.brand-button {
+  /* brand button styles */
+}
+
+/* Project prefix */
+.project-nav {
+  /* project navigation */
+}
+.project-card {
+  /* project card styles */
+}
+```
+
+### Use Semantic Names
+
+Choose names based on function:
+
+```css
+/* Function-based */
+.primary-button {
+  /* primary action button */
+}
+.secondary-button {
+  /* secondary action button */
+}
+.danger-button {
+  /* destructive action button */
+}
+
+/* Size-based */
+.small-text {
+  /* small text size */
+}
+.large-text {
+  /* large text size */
+}
+```
+
+## Testing Class Names
+
+### Check Before Import
+
+Before importing, verify your class names:
+
+1. **Search Elementor documentation** for reserved names
+2. **Test in a small batch** first
+3. **Check for conflicts** with existing classes
+
+### Common Conflicts
+
+Watch out for these common conflicts:
+
+```css
+/* These might conflict */
+.nav {
+  /* might conflict with navigation */
+}
+.btn {
+  /* might conflict with buttons */
+}
+.card {
+  /* might conflict with cards */
+}
+
+/* Use more specific names */
+.main-nav {
+  /* specific navigation */
+}
+.primary-btn {
+  /* specific button */
+}
+.feature-card {
+  /* specific card */
+}
+```
+
+## Error Messages
+
+### "reserved_class_name" Error
+
+If you get this error:
+
+<Steps>
+  <Step title="Identify the Reserved Name">
+    Check which class name is causing the error
+  </Step>
+  <Step title="Choose Alternative">Pick a different, non-reserved name</Step>
+  <Step title="Update CSS">Replace the reserved name in your CSS</Step>
+  <Step title="Re-import">Import the updated CSS</Step>
+</Steps>
+
+### Prevention Tips
+
+- **Use descriptive prefixes** (brand-, project-, custom-)
+- **Avoid generic names** (container, widget, element)
+- **Test small batches** before importing large CSS files
+- **Check documentation** for reserved names
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card
+    title="Writing CSS"
+    icon="pen-to-square"
+    href="/css-reference/writing-css"
+  >
+    CSS writing guidelines
+  </Card>
+  <Card
+    title="Supported Properties"
+    icon="list"
+    href="/css-reference/supported-properties"
+  >
+    Complete property reference
+  </Card>
+</CardGroup>

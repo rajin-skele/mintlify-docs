@@ -1,0 +1,47 @@
+---
+title: "Font Weight"
+description: "Dial in typographic emphasis using `.font-*` utilities from ultra-thin to ultra-black."
+---
+
+import { FontWeightDemo } from "/snippets/font-weight-demo.jsx"
+
+## Interactive Demo
+
+<FontWeightDemo />
+
+## Weight Scale
+
+Weights are aligned with standard numeric values so you can map them to any font family that supports the range.
+
+| Class | Weight | CSS | Usage notes |
+| ----- | ------ | --- | ----------- |
+| `.font-thin` | 100 | `font-weight: 100;` | Ultra-fine hero overlays |
+| `.font-extralight` | 200 | `font-weight: 200;` | Light captions on dark backgrounds |
+| `.font-light` | 300 | `font-weight: 300;` | Subtle supporting text |
+| `.font-normal` | 400 | `font-weight: 400;` | Default body copy |
+| `.font-medium` | 500 | `font-weight: 500;` | Navigation, cards, CTAs |
+| `.font-semibold` | 600 | `font-weight: 600;` | Section headings and key metrics |
+| `.font-bold` | 700 | `font-weight: 700;` | Primary headings and buttons |
+| `.font-extrabold` | 800 | `font-weight: 800;` | Emphasis on hero headings |
+| `.font-black` | 900 | `font-weight: 900;` | Large display typography |
+
+```html
+<div class="space-y-2">
+  <p class="text-base font-light text-gray">Designed for Elementor</p>
+  <h2 class="text-3xl font-bold text-black">Craft polished typographic systems</h2>
+  <p class="text-base font-normal text-gray-dark">
+    Mix `.font-medium` for UI labels with `.font-semibold` or `.font-bold` for headings.
+  </p>
+</div>
+```
+
+## Recommendations
+
+- **Pair with the right font files.** Ensure your Elementor site loads weight variants that match the utilities you plan to use.
+- **Keep contrast accessible.** Heavy weights improve legibility at smaller sizes; lighter weights need larger sizes or higher contrast.
+- **Use restraint.** Stick to two or three weights per page to maintain a cohesive voice.
+
+<Tip>
+Combine `.font-semibold` with `.text-fluid-3xl` for marketing headlines. The fluid scale handles sizing while the semi-bold weight keeps text readable across breakpoints.
+</Tip>
+

@@ -1,0 +1,64 @@
+---
+title: "Flexbox"
+description: "Complete flexbox utilities for modern layouts including direction, wrap, justify, align, and gap"
+---
+
+## Overview
+
+Use flexbox utilities to control how flex items are sized, aligned, and distributed within a flex container. These utilities work seamlessly with Elementor v4's layout system and provide powerful control over component alignment and spacing.
+
+Flexbox utilities give you complete control over flex container behavior, item alignment, and spacing. Combine them with display utilities to build modern, responsive layouts.
+
+<CardGroup cols={2}>
+  <Card title="Direction" icon="arrows-left-right" href="/flexbox/direction">
+    Control flex direction with `.flex-row` and `.flex-col`
+  </Card>
+  <Card title="Alignment" icon="objects-align-left" href="/flexbox/alignment">
+    Align items with justify-content and align-items utilities
+  </Card>
+  <Card title="Gap" icon="arrows-up-down-left-right" href="/flexbox/gap">
+    Static and fluid gap utilities for spacing between flex items
+  </Card>
+</CardGroup>
+
+## Quick Start
+
+### Basic Flexbox
+
+```html
+<!-- Horizontal layout -->
+<div class="flex items-center justify-between p-6">
+  <h1 class="text-2xl font-bold">Logo</h1>
+  <nav class="flex gap-6">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+  </nav>
+</div>
+
+<!-- Centered content -->
+<div class="flex items-center justify-center min-h-screen">
+  <div class="text-center">
+    <h1 class="text-4xl font-bold mb-4">Welcome</h1>
+    <button class="btn btn-blue">Get Started</button>
+  </div>
+</div>
+```
+
+## Common Patterns
+
+- **Headers:** Use `justify-between` for logo and navigation
+- **Centered Content:** Combine `items-center` and `justify-center`
+- **Card Grids:** Use `flex-wrap` with gap utilities
+- **Form Layouts:** Stack form fields with `flex-col`
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display utilities for flexbox
+  </Card>
+  <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
+    Margin and padding utilities
+  </Card>
+</CardGroup>
+

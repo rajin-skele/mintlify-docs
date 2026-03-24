@@ -1,0 +1,139 @@
+---
+title: "Flexbox Wrap"
+description: "Control how flex items wrap with wrap utilities"
+---
+
+## Overview
+
+Control whether flex items wrap to new lines when they exceed the container width. Wrap utilities are essential for creating responsive grids and layouts that adapt to different screen sizes.
+
+## Flex Wrap Utilities
+
+| Class | Behavior | CSS | Usage |
+| ----- | -------- | --- | ----- |
+| `.flex-wrap` | Wrap | `flex-wrap: wrap;` | Allow items to wrap to new lines |
+| `.flex-nowrap` | No wrap | `flex-wrap: nowrap;` | Prevent wrapping (default) |
+| `.flex-wrap-reverse` | Wrap reverse | `flex-wrap: wrap-reverse;` | Wrap items in reverse order |
+
+## Flex Wrap
+
+Use `.flex-wrap` to allow flex items to wrap to new lines when they don't fit in the container.
+
+```html
+<!-- Responsive card grid -->
+<div class="flex flex-wrap gap-6">
+  <div class="w-1-3">
+    <div class="card p-6">Card 1</div>
+  </div>
+  <div class="w-1-3">
+    <div class="card p-6">Card 2</div>
+  </div>
+  <div class="w-1-3">
+    <div class="card p-6">Card 3</div>
+  </div>
+  <div class="w-1-3">
+    <div class="card p-6">Card 4</div>
+  </div>
+</div>
+```
+
+## Flex No Wrap
+
+Use `.flex-nowrap` to prevent items from wrapping, keeping them on a single line.
+
+```html
+<!-- Horizontal scrolling container -->
+<div class="flex flex-nowrap gap-4 overflow-x-auto">
+  <div class="w-64 p-6 bg-blue text-white flex-shrink-0">Item 1</div>
+  <div class="w-64 p-6 bg-blue text-white flex-shrink-0">Item 2</div>
+  <div class="w-64 p-6 bg-blue text-white flex-shrink-0">Item 3</div>
+  <div class="w-64 p-6 bg-blue text-white flex-shrink-0">Item 4</div>
+</div>
+```
+
+## Flex Wrap Reverse
+
+Use `.flex-wrap-reverse` to wrap items in reverse order, with new lines appearing above previous lines.
+
+```html
+<!-- Reverse wrap layout -->
+<div class="flex flex-wrap-reverse gap-4">
+  <div class="w-1-3 p-4 bg-blue text-white">Item 1</div>
+  <div class="w-1-3 p-4 bg-green text-white">Item 2</div>
+  <div class="w-1-3 p-4 bg-red text-white">Item 3</div>
+  <div class="w-1-3 p-4 bg-yellow text-black">Item 4</div>
+</div>
+```
+
+## Common Patterns
+
+### Responsive Grid
+
+```html
+<!-- Card grid that wraps on smaller screens -->
+<div class="flex flex-wrap gap-6">
+  <div class="w-full md:w-1-2 lg:w-1-3">
+    <div class="card p-6">Card 1</div>
+  </div>
+  <div class="w-full md:w-1-2 lg:w-1-3">
+    <div class="card p-6">Card 2</div>
+  </div>
+  <div class="w-full md:w-1-2 lg:w-1-3">
+    <div class="card p-6">Card 3</div>
+  </div>
+</div>
+```
+
+### Horizontal Scroll
+
+```html
+<!-- Horizontal scrolling list -->
+<div class="flex flex-nowrap gap-4 overflow-x-auto pb-4">
+  <div class="w-48 p-6 bg-gray-light rounded flex-shrink-0">Item 1</div>
+  <div class="w-48 p-6 bg-gray-light rounded flex-shrink-0">Item 2</div>
+  <div class="w-48 p-6 bg-gray-light rounded flex-shrink-0">Item 3</div>
+  <div class="w-48 p-6 bg-gray-light rounded flex-shrink-0">Item 4</div>
+</div>
+```
+
+### Tag List
+
+```html
+<!-- Tags that wrap naturally -->
+<div class="flex flex-wrap gap-2">
+  <span class="px-3 py-1 bg-blue text-white rounded">Tag 1</span>
+  <span class="px-3 py-1 bg-green text-white rounded">Tag 2</span>
+  <span class="px-3 py-1 bg-red text-white rounded">Tag 3</span>
+  <span class="px-3 py-1 bg-yellow text-black rounded">Tag 4</span>
+  <span class="px-3 py-1 bg-purple text-white rounded">Tag 5</span>
+</div>
+```
+
+## Best Practices
+
+- **Use wrap for grids:** Use `.flex-wrap` with fractional widths for responsive card grids
+- **Prevent wrapping when needed:** Use `.flex-nowrap` for horizontal scrolling containers
+- **Combine with gap:** Always use gap utilities instead of margin for spacing between wrapped items
+- **Test on mobile:** Ensure wrapped layouts work well on small screens
+
+<Tip>
+Use `.flex-wrap` with fractional width utilities (`.w-1-2`, `.w-1-3`, etc.) to create responsive grids that automatically stack on smaller screens.
+</Tip>
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Direction" icon="arrows-left-right" href="/flexbox/direction">
+    Control flex direction
+  </Card>
+  <Card title="Alignment" icon="objects-align-left" href="/flexbox/alignment">
+    Align flex items
+  </Card>
+  <Card title="Gap" icon="arrows-up-down-left-right" href="/flexbox/gap">
+    Spacing between flex items
+  </Card>
+  <Card title="Flexbox Overview" icon="table-cells-large" href="/overview/flexbox">
+    Complete flexbox system overview
+  </Card>
+</CardGroup>
+

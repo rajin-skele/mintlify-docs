@@ -1,0 +1,131 @@
+---
+title: "Button Component"
+description: "Button component with size and color variants"
+---
+
+## Overview
+
+Ready-to-use button component with size and color variants. Buttons are designed to work seamlessly with Elementor v4's styling system and can be customized with utility classes.
+
+## Button Base
+
+```css
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+```
+
+## Button Sizes
+
+| Class     | Padding   | Font Size | Usage         |
+| --------- | --------- | --------- | ------------- |
+| `.btn-sm` | 8px 16px  | 14px      | Small buttons |
+| `.btn-lg` | 16px 32px | 18px      | Large buttons |
+
+## Button Colors
+
+| Class        | Background | Text  | Usage           |
+| ------------ | ---------- | ----- | --------------- |
+| `.btn-blue`  | #3b82f6    | White | Primary actions |
+| `.btn-green` | #10b981    | White | Success actions |
+| `.btn-red`   | #ef4444    | White | Danger actions  |
+
+## Examples
+
+### Basic Buttons
+
+```html
+<button class="btn btn-blue">Primary Button</button>
+<button class="btn btn-green btn-lg">Large Success Button</button>
+<button class="btn btn-red btn-sm">Small Danger Button</button>
+```
+
+### Button in Card
+
+```html
+<div class="elementor-element card p-6">
+  <h3 class="text-xl font-semibold mb-4">Card with Button</h3>
+  <p class="text-gray mb-4">Card content with action button</p>
+  <button class="btn btn-blue">Action</button>
+</div>
+```
+
+### Button Variants
+
+```html
+<!-- Solid button -->
+<button class="btn btn-blue">Solid Button</button>
+
+<!-- Outlined button -->
+<button
+  class="border-2 border-blue text-blue px-6 py-3 rounded hover:bg-blue hover:text-white"
+>
+  Outlined Button
+</button>
+
+<!-- Disabled button -->
+<button class="btn btn-blue opacity-50 cursor-not-allowed">
+  Disabled Button
+</button>
+```
+
+## Common Patterns
+
+### Button Groups
+
+```html
+<div class="elementor-element flex gap-4">
+  <button class="btn btn-blue">Primary</button>
+  <button class="btn btn-green">Success</button>
+  <button class="btn btn-red">Danger</button>
+</div>
+```
+
+### Full Width Button
+
+```html
+<button class="btn btn-blue w-full">Full Width Button</button>
+```
+
+### Button with Icon
+
+```html
+<button class="btn btn-blue flex items-center gap-2">
+  <span>✓</span>
+  <span>Submit</span>
+</button>
+```
+
+## Best Practices
+
+- **Use semantic colors:** Match button colors to their purpose (blue for primary, red for danger)
+- **Consistent sizing:** Use the same button size for similar actions
+- **Clear labels:** Use descriptive button text
+- **Accessibility:** Ensure buttons have sufficient contrast and are keyboard accessible
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Card" icon="square" href="/components/card">
+    Card component
+  </Card>
+  <Card title="Container" icon="box-isometric" href="/components/container">
+    Container component
+  </Card>
+  <Card title="Colors" icon="palette" href="/overview/colors">
+    Color utilities
+  </Card>
+  <Card
+    title="Components Overview"
+    icon="puzzle-piece"
+    href="/overview/components"
+  >
+    Complete components overview
+  </Card>
+</CardGroup>

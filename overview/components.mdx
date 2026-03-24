@@ -1,0 +1,70 @@
+---
+title: "Components"
+description: "Pre-built button, card, and container components"
+---
+
+## Overview
+
+This framework includes pre-built components that work seamlessly with Elementor v4's Atomic Elements. These components provide consistent styling and behavior out of the box, saving you time while maintaining design consistency.
+
+Use these components as building blocks for your layouts. They're designed to work together and can be customized with utility classes.
+
+<CardGroup cols={2}>
+  <Card title="Button" icon="hand-pointer" href="/components/button">
+    Button component with size and color variants
+  </Card>
+  <Card title="Card" icon="square" href="/components/card">
+    Flexible card component for content containers
+  </Card>
+  <Card title="Container" icon="box-isometric" href="/components/container">
+    Centered container with max-width and responsive padding
+  </Card>
+</CardGroup>
+
+## Quick Start
+
+### Basic Components
+
+```html
+<!-- Button -->
+<button class="btn btn-blue">Primary Button</button>
+<button class="btn btn-green btn-lg">Large Success Button</button>
+
+<!-- Card -->
+<div class="card p-6">
+  <h3 class="text-xl font-semibold mb-4">Card Title</h3>
+  <p class="text-gray">Card content goes here.</p>
+</div>
+
+<!-- Container -->
+<div class="cont">
+  <h1 class="text-3xl font-bold mb-6">Page Title</h1>
+  <p class="text-lg text-gray">Centered content with max width</p>
+</div>
+```
+
+## Component Combinations
+
+Components work great together:
+
+```html
+<div class="cont">
+  <div class="card p-6">
+    <h3 class="text-xl font-semibold mb-4">Card Title</h3>
+    <p class="text-gray mb-4">Card content with action button</p>
+    <button class="btn btn-blue">Action</button>
+  </div>
+</div>
+```
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Colors" icon="palette" href="/overview/colors">
+    Color utilities for components
+  </Card>
+  <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
+    Padding and margin utilities
+  </Card>
+</CardGroup>
+

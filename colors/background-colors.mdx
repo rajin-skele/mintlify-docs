@@ -1,0 +1,132 @@
+---
+title: "Background Colors"
+description: "Background color utilities for sections, cards, and containers"
+---
+
+## Overview
+
+Control background color with semantic utilities. Background colors help create visual hierarchy, define sections, and establish the overall tone of your design.
+
+## Background Color Utilities
+
+| Class | Color | Hex | CSS | Usage |
+| ----- | ----- | --- | --- | ----- |
+| `.bg-white` | White | #ffffff | `background-color: #ffffff;` | Light backgrounds |
+| `.bg-black` | Black | #000000 | `background-color: #000000;` | Dark backgrounds |
+| `.bg-gray-dark` | Dark Gray | #374151 | `background-color: #374151;` | Dark sections |
+| `.bg-gray` | Gray | #6b7280 | `background-color: #6b7280;` | Muted backgrounds |
+| `.bg-gray-light` | Light Gray | #f3f4f6 | `background-color: #f3f4f6;` | Subtle backgrounds |
+| `.bg-blue` | Blue | #3b82f6 | `background-color: #3b82f6;` | Primary actions |
+| `.bg-green` | Green | #10b981 | `background-color: #10b981;` | Success states |
+| `.bg-red` | Red | #ef4444 | `background-color: #ef4444;` | Error states |
+| `.bg-yellow` | Yellow | #f59e0b | `background-color: #f59e0b;` | Warning states |
+
+## Examples
+
+```html
+<!-- Background color examples -->
+<div class="bg-white p-6 rounded-lg">White background card</div>
+<div class="bg-gray-light p-6 rounded-lg">Light gray background</div>
+<div class="bg-blue text-white p-6 rounded-lg">
+  Blue background with white text
+</div>
+<div class="bg-green text-white p-6 rounded-lg">Green success background</div>
+<div class="bg-red text-white p-6 rounded-lg">Red error background</div>
+```
+
+## Common Patterns
+
+### Section Backgrounds
+
+```html
+<section class="bg-white py-12">
+  <div class="cont">
+    <h2 class="text-3xl font-bold mb-6">Section Title</h2>
+    <p class="text-gray">Section content</p>
+  </div>
+</section>
+
+<section class="bg-gray-light py-12">
+  <div class="cont">
+    <h2 class="text-3xl font-bold mb-6">Alternating Section</h2>
+    <p class="text-gray">Alternating background</p>
+  </div>
+</section>
+```
+
+### Status Backgrounds
+
+```html
+<!-- Status color combinations -->
+<div class="bg-green text-white p-4 rounded">Success: Operation completed</div>
+<div class="bg-red text-white p-4 rounded">Error: Something went wrong</div>
+<div class="bg-yellow text-black p-4 rounded">Warning: Please check this</div>
+<div class="bg-blue text-white p-4 rounded">Info: Additional information</div>
+```
+
+### Card with Color Accent
+
+```html
+<div class="bg-white border-l-4 border-blue p-6 rounded-lg">
+  <h3 class="text-xl font-semibold text-black mb-2">Card Title</h3>
+  <p class="text-gray">Card content with blue accent border</p>
+</div>
+```
+
+### Navigation with Color
+
+```html
+<nav class="bg-blue text-white p-4">
+  <div class="flex items-center justify-between">
+    <h1 class="text-xl font-bold">Logo</h1>
+    <div class="flex gap-6">
+      <a href="#" class="text-white hover:text-gray-light">Home</a>
+      <a href="#" class="text-white hover:text-gray-light">About</a>
+      <a href="#" class="text-white hover:text-gray-light">Contact</a>
+    </div>
+  </div>
+</nav>
+```
+
+## Color Combinations
+
+### High Contrast Combinations
+
+```html
+<!-- High contrast combinations -->
+<div class="bg-black text-white p-6">Black background, white text</div>
+<div class="bg-white text-black p-6 border border-black">White background, black text</div>
+<div class="bg-blue text-white p-6">Blue background, white text</div>
+<div class="bg-green text-white p-6">Green background, white text</div>
+```
+
+### Subtle Combinations
+
+```html
+<!-- Subtle combinations -->
+<div class="bg-white text-gray-dark p-6">White background, dark gray text</div>
+<div class="bg-gray-light text-gray p-6">Light gray background, gray text</div>
+<div class="bg-white text-gray-light p-6">White background, light gray text</div>
+```
+
+## Best Practices
+
+- **Use semantic colors:** Match background colors to their purpose (green for success, red for errors)
+- **Maintain contrast:** Ensure text is readable on colored backgrounds
+- **Create hierarchy:** Use different background colors to separate sections
+- **Consider accessibility:** Test color combinations for sufficient contrast
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Text Colors" icon="text-size" href="/colors/text-colors">
+    Text color utilities
+  </Card>
+  <Card title="Border Colors" icon="square" href="/colors/border-colors">
+    Border color utilities
+  </Card>
+  <Card title="Colors Overview" icon="palette" href="/overview/colors">
+    Complete color system overview
+  </Card>
+</CardGroup>
+

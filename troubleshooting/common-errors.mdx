@@ -1,0 +1,157 @@
+---
+title: "Common Errors"
+description: "Troubleshooting common issues with the utility importer"
+---
+
+## Import Errors
+
+### "reserved_class_name" Error
+
+<Warning>**Cause:** You're using a reserved name like `container`</Warning>
+
+**Solution:** Use a different name like `.cont`, `.wrapper`, `.site-container`
+
+```css
+/* Instead of */
+.container {
+  max-width: 1200px;
+}
+
+/* Use */
+.cont {
+  max-width: 1200px;
+}
+.wrapper {
+  max-width: 1200px;
+}
+.site-container {
+  max-width: 1200px;
+}
+```
+
+### "invalid_value" Error
+
+<Warning>**Cause:** Missing units on values that need them</Warning>
+
+**Solution:** Add `px`, `%`, `rem`, etc. to numeric values
+
+```css
+/* Instead of */
+.text-large {
+  font-size: 24;
+}
+
+/* Use */
+.text-large {
+  font-size: 24px;
+}
+```
+
+### Duplicate Classes Error
+
+<Warning>**Cause:** Classes with same names already exist</Warning>
+
+**Solution:** Delete existing classes first, then re-import
+
+<Steps>
+  <Step title="Delete Existing Classes">
+    Go to Elementor → Global Classes panel and delete the conflicting classes
+  </Step>
+  <Step title="Re-import">Import your updated CSS through the importer</Step>
+</Steps>
+
+## Classes Not Working
+
+### Classes Import But Don't Work
+
+**Possible Causes:**
+
+- Property values use incorrect format
+- Z-index classes need position:relative
+- Elementor cache needs clearing
+
+**Solutions:**
+
+```css
+/* Check property values */
+.items-center {
+  align-items: center;
+} /* Correct */
+.items-center {
+  align-items: flex-center;
+} /* Incorrect */
+
+/* Z-index classes automatically get position:relative */
+.z-10 {
+  z-index: 10;
+  position: relative;
+}
+```
+
+### Empty Variants in Global Classes
+
+**Cause:** Property type not supported by parser
+
+**Solution:** Check that CSS property is in the supported list
+
+## Troubleshooting Steps
+
+### Step 1: Delete Specific Classes
+
+Delete the specific failing classes in Elementor's Global Classes panel
+
+### Step 2: Import in Smaller Batches
+
+Import 20-30 classes at a time to avoid timeouts
+
+### Step 3: Check CSS Syntax
+
+Look for missing semicolons, units, etc.
+
+### Step 4: Clear Elementor Cache
+
+Go to **Elementor → Tools → Regenerate CSS**
+
+### Step 5: Nuclear Reset
+
+If all else fails:
+
+<Steps>
+  <Step title="Delete ALL Global Classes">
+    Go to Elementor → Global Classes panel and delete everything
+  </Step>
+  <Step title="Delete ALL CSS Variables">
+    Remove any global CSS variables if they exist
+  </Step>
+  <Step title="Re-import Fresh">Import your CSS fresh through the importer</Step>
+</Steps>
+
+## Performance Issues
+
+### Slow Import Process
+
+**Solutions:**
+
+- Import in smaller batches (20-30 classes)
+- Check server PHP memory limit
+- Ensure stable internet connection
+
+### Classes Not Applying
+
+**Solutions:**
+
+- Clear browser cache
+- Clear Elementor cache
+- Check for CSS conflicts
+- Verify Elementor v4 compatibility
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card title="FAQ" icon="question-circle" href="/troubleshooting/faq">
+    Frequently asked questions
+  </Card>
+  <Card title="Support" icon="life-ring" href="/troubleshooting/support">
+    Get help from support
+  </Card>
+</CardGroup>

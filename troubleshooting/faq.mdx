@@ -1,0 +1,194 @@
+---
+title: "FAQ"
+description: "Frequently asked questions about the utility importer"
+---
+
+## General Questions
+
+<AccordionGroup>
+  <Accordion title="Can I import the same CSS file multiple times?">
+    **No.** Re-importing the same classes will cause errors. Each class can only be imported **once**. If you need to update a class:
+
+    1. Delete it from Elementor's Global Classes panel
+    2. Re-import the updated CSS
+  </Accordion>
+
+  <Accordion title="What happens when I deactivate the plugin?">
+    **All Elementor settings modified by the plugin are automatically restored** to their original values. Your imported global classes remain in Elementor.
+  </Accordion>
+
+  <Accordion title="Does this work with Elementor Free or only Pro?">
+    **Works with both** Elementor Free and Pro, as long as you have <Badge color="blue" size="sm">v4.0.0+</Badge> with Atomic Elements enabled.
+  </Accordion>
+</AccordionGroup>
+
+## Import Questions
+
+<AccordionGroup>
+  <Accordion title="How many classes can I import?">
+    **Hundreds.** The plugin automatically manages limits during import. You can import large utility frameworks without issues.
+  </Accordion>
+
+  <Accordion title="Can I import in batches?">
+    **Yes!** This is actually recommended for large CSS files. Import 20-30 classes at a time, test them, then import more.
+  </Accordion>
+
+  <Accordion title="What if I get errors during import?">
+    **Try these solutions:**
+
+    - Import in smaller batches
+    - Check for CSS syntax errors (missing units, semicolons)
+    - Ensure you're not re-importing existing classes
+    - See our [troubleshooting guide](/troubleshooting/common-errors)
+  </Accordion>
+</AccordionGroup>
+
+## Performance Questions
+
+<AccordionGroup>
+  <Accordion title="Will this slow down my site?">
+    **No.** Global classes are native Elementor features. The plugin only helps import them - it doesn't add any frontend overhead.
+  </Accordion>
+
+  <Accordion title="Does the plugin affect Elementor performance?">
+    **No.** The plugin uses Elementor's built-in Global Classes system, so there's no performance impact.
+  </Accordion>
+</AccordionGroup>
+
+## Compatibility Questions
+
+<AccordionGroup>
+  <Accordion title="What version of Elementor do I need?">
+    **Elementor v4.0.0 or higher** with Atomic Elements feature enabled. This includes Elementor beta versions 3.32.4+.
+    
+    <Warning>
+      Make sure Atomic Elements is enabled in your Elementor settings.
+    </Warning>
+  </Accordion>
+
+  <Accordion title="What WordPress version is required?">
+    **WordPress 5.8 or higher** is required for optimal compatibility. <Badge color="green" size="sm">5.8+</Badge>
+  </Accordion>
+
+  <Accordion title="What PHP version is required?">
+    **PHP 7.4 or higher** is required. PHP 8.0+ is recommended for better performance. <Badge color="orange" size="sm">7.4+</Badge>
+  </Accordion>
+</AccordionGroup>
+
+## Usage Questions
+
+<AccordionGroup>
+  <Accordion title="Can I use utility classes on any Elementor element?">
+    **Yes, on atomic elements.** You can use utility classes on:
+
+    - Headings (h1-h6)
+    - Paragraphs
+    - Div Blocks
+    - Buttons
+    - Links
+    - Images
+    - Containers
+  </Accordion>
+
+  <Accordion title="How do I apply utility classes in Elementor?">
+    <Steps>
+      <Step title="Select Element">
+        Select an atomic element in the Elementor editor.
+      </Step>
+      <Step title="Open Advanced Tab">
+        Go to the **Advanced** tab in the element settings.
+      </Step>
+      <Step title="Add Classes">
+        Add classes to the **CSS Classes** field.
+      </Step>
+      <Step title="See Results">
+        See instant results in the editor preview.
+      </Step>
+    </Steps>
+  </Accordion>
+
+  <Accordion title="Can I combine multiple utility classes?">
+    **Yes!** You can combine multiple classes for complex designs:
+
+    ```html
+    <div
+      class="flex items-center justify-between p-6 bg-white rounded-lg border border-gray-light"
+    >
+      <h1 class="text-2xl font-bold text-gray-dark">Title</h1>
+      <button class="btn btn-blue">Action</button>
+    </div>
+    ```
+  </Accordion>
+</AccordionGroup>
+
+## Customization Questions
+
+<AccordionGroup>
+  <Accordion title="Can I modify existing utility classes?">
+    **Yes.** To modify an existing class:
+
+    1. Delete it from Elementor's Global Classes panel
+    2. Create your modified version
+    3. Re-import through the importer
+  </Accordion>
+
+  <Accordion title="Can I add my own custom utilities?">
+    **Yes!** You can create and import your own utility classes following our [CSS writing guidelines](/css-reference/writing-css).
+  </Accordion>
+
+  <Accordion title="What CSS properties are supported?">
+    **Most common CSS properties** are supported including:
+
+    - Typography (font-size, font-weight, etc.)
+    - Spacing (margin, padding, gap)
+    - Layout (display, flexbox, positioning)
+    - Colors (color, background-color, border-color)
+    - Borders (width, style, radius)
+    - Sizing (width, height, max-width)
+  </Accordion>
+</AccordionGroup>
+
+## Troubleshooting Questions
+
+<AccordionGroup>
+  <Accordion title="My classes aren't working in the editor" icon="exclamation-triangle">
+    **Check these:**
+
+    - Ensure Elementor v4 with Atomic Elements is enabled
+    - Verify classes were imported successfully
+    - Clear Elementor cache: **Elementor → Tools → Regenerate CSS**
+    - Check that you're using atomic elements
+  </Accordion>
+
+  <Accordion title="Import keeps failing" icon="x-circle">
+    **Try these solutions:**
+
+    - Import in smaller batches (20-30 classes)
+    - Check CSS syntax for errors
+    - Ensure you're not re-importing existing classes
+    - Use the nuclear reset method (delete all classes, re-import)
+  </Accordion>
+
+  <Accordion title="Classes import but don't appear in Global Classes" icon="question-circle">
+    **This usually means:**
+
+    - Classes were imported successfully but may have empty variants
+    - Check Elementor's Global Classes panel
+    - Some properties may not be fully supported
+  </Accordion>
+</AccordionGroup>
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card
+    title="Common Errors"
+    icon="exclamation-triangle"
+    href="/troubleshooting/common-errors"
+  >
+    Troubleshooting specific errors
+  </Card>
+  <Card title="Support" icon="life-ring" href="/troubleshooting/support">
+    Get help from support team
+  </Card>
+</CardGroup>

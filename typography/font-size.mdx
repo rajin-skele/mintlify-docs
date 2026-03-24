@@ -1,0 +1,95 @@
+---
+title: "Font Size"
+description: "Use static `.text-*` utilities for precise scales or fluid `.text-fluid-*` utilities for responsive typography."
+---
+
+import { FontSizeDemo } from "/snippets/font-size-demo.jsx"
+
+## Interactive Demo
+
+<FontSizeDemo />
+
+## Static Size Scale
+
+Static classes map one-to-one with Elementor's font size presets, so what you preview in the editor is exactly what users see.
+
+| Class | Size | CSS | Typical usage |
+| ----- | ---- | --- | -------------- |
+| `.text-xs` | 12px | `font-size: 12px;` | Legal text, metadata |
+| `.text-sm` | 14px | `font-size: 14px;` | Form labels, UI copy |
+| `.text-base` | 16px | `font-size: 16px;` | Body copy baseline |
+| `.text-lg` | 18px | `font-size: 18px;` | Supporting paragraphs |
+| `.text-xl` | 20px | `font-size: 20px;` | Section subheadings |
+| `.text-2xl` | 24px | `font-size: 24px;` | Lead paragraphs |
+| `.text-3xl` | 30px | `font-size: 30px;` | H3 headings |
+| `.text-4xl` | 36px | `font-size: 36px;` | H2 headings |
+| `.text-5xl` | 48px | `font-size: 48px;` | Hero subheadings |
+| `.text-6xl` | 60px | `font-size: 60px;` | Hero headings |
+| `.text-7xl` | 72px | `font-size: 72px;` | Billboard headings |
+| `.text-8xl` | 96px | `font-size: 96px;` | Landing hero titles |
+| `.text-9xl` | 128px | `font-size: 128px;` | Oversized hero titles |
+
+```html
+<div class="text-center space-y-4">
+  <p class="text-sm text-gray">Static scale keeps buttons crisp</p>
+  <h1 class="text-5xl font-bold text-black">Craft better Elementor experiences</h1>
+  <p class="text-lg text-gray-dark leading-relaxed">
+    Start with `.text-base` for body copy and move up the scale as you assign heading levels.
+  </p>
+</div>
+```
+
+<Tip>
+Need to match an existing Elementor Global Font? Assign the font family once, then stack `.text-*` utilities for size and `.font-*` utilities for weight to stay consistent.
+</Tip>
+
+## Fluid Size Scale
+
+Fluid utilities use `clamp()` to interpolate between a mobile-friendly minimum and a spacious desktop maximum. They shine for hero banners, marketing pages, and long-form editorial content.
+
+| Class | Clamp expression | Mobile → Desktop range |
+| ----- | ---------------- | ---------------------- |
+| `.text-fluid-2xs` | `clamp(0.58rem, calc(0.49rem + 0.09vw), 0.64rem)` | 9.3px → 10.2px |
+| `.text-fluid-xs` | `clamp(0.69rem, calc(0.59rem + 0.16vw), 0.8rem)` | 11px → 12.8px |
+| `.text-fluid-sm` | `clamp(0.83rem, calc(0.71rem + 0.25vw), 1rem)` | 13.3px → 16px |
+| `.text-fluid-base` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px |
+| `.text-fluid-lg` | `clamp(1.2rem, calc(1.02rem + 0.53vw), 1.56rem)` | 19.2px → 25px |
+| `.text-fluid-xl` | `clamp(1.44rem, calc(1.22rem + 0.75vw), 1.95rem)` | 23px → 31.2px |
+| `.text-fluid-2xl` | `clamp(1.73rem, calc(1.47rem + 1.05vw), 2.44rem)` | 27.6px → 39px |
+| `.text-fluid-3xl` | `clamp(2.07rem, calc(1.76rem + 1.45vw), 3.05rem)` | 33.1px → 48.8px |
+| `.text-fluid-4xl` | `clamp(2.49rem, calc(2.12rem + 1.97vw), 3.82rem)` | 39.8px → 61.1px |
+| `.text-fluid-5xl` | `clamp(2.99rem, calc(2.54rem + 2.63vw), 4.77rem)` | 47.8px → 76.3px |
+| `.text-fluid-6xl` | `clamp(3.59rem, calc(3.08rem + 3.47vw), 5.96rem)` | 57.4px → 95.4px |
+| `.text-fluid-7xl` | `clamp(4.31rem, calc(3.74rem + 4.58vw), 7.45rem)` | 69px → 119.2px |
+| `.text-fluid-8xl` | `clamp(5.17rem, calc(4.51rem + 6.05vw), 9.31rem)` | 82.7px → 149px |
+| `.text-fluid-9xl` | `clamp(6.2rem, calc(5.45rem + 7.98vw), 11.64rem)` | 99.2px → 186px |
+
+```html
+<header class="py-fluid-6 text-center">
+  <p class="text-sm uppercase tracking-wide text-gray mb-fluid-2">Introducing utility classes</p>
+  <h1 class="text-fluid-6xl font-black leading-fluid-tight text-black">
+    Fluid type that scales naturally across breakpoints
+  </h1>
+  <p class="text-fluid-base leading-fluid-relaxed text-gray max-w-fluid-md mx-auto mt-fluid-3">
+    Swap a single class to jump between static and fluid typography. The rest of your component can stay the same.
+  </p>
+</header>
+```
+
+<Warning>
+Fluid typography uses viewport units. Make sure you’re comfortable with the smallest size in the clamp range before publishing.
+</Warning>
+
+## Choosing the Right Scale
+
+| Component | Recommended utility |
+| --------- | ------------------- |
+| Navigation, buttons, form labels | Static `.text-sm`, `.text-base` |
+| Product cards, feature grids | Static `.text-lg` paired with `.text-fluid-xl` headings |
+| Hero banners, marketing headlines | Fluid `.text-fluid-4xl` → `.text-fluid-7xl` |
+| Editorial content | Fluid `.text-fluid-base` for paragraphs and static `.text-2xl` for subheads |
+
+<Check>
+Mixing static body copy with fluid headings keeps layout measurements predictable while still delivering a responsive experience.
+</Check>
+

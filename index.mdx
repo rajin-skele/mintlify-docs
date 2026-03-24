@@ -1,97 +1,169 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "Atomic Utility Docs"
+description: "Import utility classes and design variables into Elementor v4."
 ---
 
-## Setting up
+## What is this project?
 
-Get your documentation site up and running in minutes.
+This documentation covers a utility-import workflow for Elementor v4. Use it to install the importer, load the starter utility framework, and apply reusable classes and variables through Elementor's native Global Classes and Variables systems.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
+<Card title="Quick Start" icon="rocket" href="/quickstart" horizontal>
+  Get from plugin install to first imported utilities in three steps.
 </Card>
 
-## Make it yours
+<Info>
+  **Elementor v4 required:** Enable Atomic Elements, and turn on Variables if you want reusable design tokens. <Badge color="blue" size="sm">v4 Required</Badge>
+</Info>
 
-Design a docs site that looks great and empowers your users.
+## Key Features
 
 <Columns cols={2}>
   <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
+    title="Native Elementor Output"
+    icon="sparkles"
+    href="/getting-started/installation"
   >
-    Edit your docs locally and preview them in real time.
+    Import utilities into Elementor's native classes and variable systems instead of relying on custom frontend CSS injection.
   </Card>
   <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
+    title="Reusable Design Variables"
+    icon="sliders"
+    href="/css-reference/writing-css"
   >
-    Customize the design and colors of your site to match your brand.
-  </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+    Bring in colors, spacing values, and typography tokens alongside utility classes for more consistent editing.
   </Card>
   <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
+    title="Batch-Friendly Imports"
+    icon="upload"
+    href="/troubleshooting/faq"
   >
-    Auto-generate API documentation from OpenAPI specifications.
+    Split large utility sets into manageable imports while you validate how classes and variables behave in the editor.
+  </Card>
+  <Card title="Custom CSS Support" icon="code" href="/usage/custom-css">
+    Start with the bundled framework or import your own utility classes using standard CSS syntax.
   </Card>
 </Columns>
 
-## Create beautiful pages
+## Included Utility Framework
 
-Everything you need to create world-class documentation.
+The starter framework includes 200+ ready-to-use classes for common Elementor layouts:
+
+<CardGroup cols={3}>
+  <Card
+    title="Typography"
+    icon="text-size"
+    href="/overview/typography"
+  >
+    Font sizes, weights, line heights, alignment, and text styling helpers.
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display, positioning, flexbox, and responsive layout utilities.
+  </Card>
+  <Card
+    title="Spacing"
+    icon="arrows-to-line"
+    href="/overview/spacing"
+  >
+    Margin, padding, and gap utilities based on a consistent spacing scale.
+  </Card>
+  <Card title="Colors" icon="palette" href="/overview/colors">
+    Text, background, and border color utilities with semantic naming.
+  </Card>
+  <Card title="Borders" icon="square" href="/overview/borders">
+    Border width, style, radius, and color utilities.
+  </Card>
+  <Card
+    title="Components"
+    icon="puzzle-piece"
+    href="/overview/components"
+  >
+    Button, card, and container patterns built from the same utility system.
+  </Card>
+</CardGroup>
+
+## Requirements
+
+<Warning>
+  **Compatibility:** Use Elementor v4 with Atomic Elements enabled. Turn on Variables as well if your workflow depends on imported design tokens.
+</Warning>
+
+| Requirement | Minimum | Recommended |
+|------------|---------|-------------|
+| **WordPress** | 5.8+ | 6.0+ |
+| **PHP** | 7.4+ | 8.0+ |
+| **Elementor** | v4 with Atomic Elements | Latest v4 build |
+| **Variables** | Optional | Enabled |
+
+## How It Works
+
+<Steps>
+  <Step title="Install & Activate">
+    Install the plugin package in WordPress and confirm the importer admin screen loads.
+  </Step>
+  <Step title="Import CSS">
+    Paste your utility CSS or the bundled starter framework into the importer and run the import.
+  </Step>
+  <Step title="Use Classes & Variables">
+    Apply imported classes and variables inside Elementor's atomic editor.
+  </Step>
+</Steps>
+
+## Example Usage
+
+Once imported, use utility classes directly in Elementor:
+
+```html
+<!-- Flexbox layout -->
+<div class="flex items-center gap-4">
+  <h1 class="text-2xl font-bold">Heading</h1>
+  <p class="text-gray">Subtitle</p>
+</div>
+
+<!-- Button component -->
+<button class="btn btn-blue">Click Me</button>
+
+<!-- Card layout -->
+<div class="card p-6 rounded-lg bg-white">
+  <h2 class="text-xl font-semibold mb-4">Card Title</h2>
+  <p class="text-gray">Card content goes here.</p>
+</div>
+```
+
+## Why This Workflow Works
 
 <Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
+  <div>
+    <h3>Native editor integration</h3>
+    <p>Classes and variables land inside Elementor's own systems, so they are easier to manage and reuse across the site.</p>
+  </div>
+  <div>
+    <h3>CSS-first authoring</h3>
+    <p>Write familiar CSS utilities, then map them into Elementor instead of rebuilding the same decisions manually in the editor.</p>
+  </div>
+  <div>
+    <h3>Predictable utility scale</h3>
+    <p>The framework keeps spacing, type, layout, and color decisions consistent across pages and components.</p>
+  </div>
+  <div>
+    <h3>Flexible expansion</h3>
+    <p>Start with the bundled framework, then extend it with your own custom utilities and variables as your design system grows.</p>
+  </div>
 </Columns>
 
-## Need inspiration?
+## Get Started
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+<CardGroup cols={3}>
+  <Card title="Start with Quickstart" icon="play" href="/quickstart">
+    Follow the shortest path from installation to your first imported utility classes.
+  </Card>
+  <Card title="Browse the Framework" icon="book-open" href="/overview">
+    Explore the full utility surface area before importing a larger CSS set.
+  </Card>
+  <Card title="Review Examples" icon="code" href="/usage/examples">
+    See composable patterns you can reuse in Elementor layouts.
+  </Card>
+</CardGroup>
+
+<Tip>
+  **Need help?** Start with the [troubleshooting guide](/troubleshooting/common-errors) and the [FAQ](/troubleshooting/faq) before escalating an import issue.
+</Tip>

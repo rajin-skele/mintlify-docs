@@ -1,0 +1,88 @@
+---
+title: "Support"
+description: "How to gather issue details and escalate importer problems effectively."
+---
+
+## Support Workflow
+
+This documentation set is intentionally white-labeled, so support should follow the route used by your own team, client handoff, or deployment environment.
+
+### Start Here
+
+- Review the [quickstart guide](/quickstart)
+- Check the [installation guide](/getting-started/installation)
+- Work through the [common errors guide](/troubleshooting/common-errors)
+- Browse the [FAQ](/troubleshooting/faq)
+
+## Before You Escalate
+
+Gather the basics before handing the issue to another person or team.
+
+### Environment Details
+
+- WordPress version
+- Elementor version
+- PHP version
+- Plugin version
+- Whether Atomic Elements is enabled
+- Whether Variables is enabled
+
+### Import Context
+
+- What you were importing: starter framework, custom utilities, variables, or both
+- Approximate number of classes or variables in the batch
+- Whether the site already had existing global classes or variables
+- Exact error message or validation failure
+
+### Evidence to Collect
+
+- Steps to reproduce the issue
+- Screenshots or screen recordings
+- Relevant server or browser console errors
+- A reduced CSS sample that still reproduces the problem
+
+## Basic Triage Steps
+
+<Steps>
+  <Step title="Clear caches">
+    Clear Elementor cache and refresh the editor before assuming the import failed.
+  </Step>
+  <Step title="Check feature flags">
+    Confirm Elementor v4 features needed by your workflow are enabled.
+  </Step>
+  <Step title="Retry with a small batch">
+    Reduce the import to a small, known-good subset to isolate whether the issue is data-specific.
+  </Step>
+  <Step title="Test in a clean layout">
+    Apply the imported classes on a simple atomic element to verify whether the issue is import-time or render-time.
+  </Step>
+</Steps>
+
+## When to Escalate
+
+Escalate the issue when:
+
+- the plugin cannot activate
+- imported classes are missing from Elementor after a reported success
+- variables import but references are broken inside classes
+- the editor UI limit and the actual API behavior do not match
+- duplicate IDs, collisions, or override behavior create unexpected results
+
+## What to Send With an Escalation
+
+- environment versions
+- the exact import payload or reduced sample
+- expected result versus actual result
+- whether the issue reproduces on a second site
+- any relevant screenshots, logs, or recordings
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card title="Common Errors" icon="exclamation-triangle" href="/troubleshooting/common-errors">
+    Troubleshoot class conflicts, bad values, and re-import issues.
+  </Card>
+  <Card title="FAQ" icon="question-circle" href="/troubleshooting/faq">
+    Review common setup and usage answers.
+  </Card>
+</CardGroup>

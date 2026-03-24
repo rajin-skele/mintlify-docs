@@ -1,0 +1,118 @@
+---
+title: "Text Colors"
+description: "Semantic text color utilities for headings, body text, and links"
+---
+
+## Overview
+
+Control text color with semantic color utilities. All text color utilities are designed to meet WCAG accessibility standards and work seamlessly with Elementor v4's Global Classes system.
+
+## Text Color Utilities
+
+| Class | Color | Hex | CSS | Usage |
+| ----- | ----- | --- | --- | ----- |
+| `.text-white` | White | #ffffff | `color: #ffffff;` | Text on dark backgrounds |
+| `.text-black` | Black | #000000 | `color: #000000;` | Primary text |
+| `.text-gray-dark` | Dark Gray | #374151 | `color: #374151;` | Primary text |
+| `.text-gray` | Gray | #6b7280 | `color: #6b7280;` | Secondary text |
+| `.text-gray-light` | Light Gray | #9ca3af | `color: #9ca3af;` | Muted text |
+| `.text-blue` | Blue | #3b82f6 | `color: #3b82f6;` | Links, primary actions |
+| `.text-green` | Green | #10b981 | `color: #10b981;` | Success messages |
+| `.text-red` | Red | #ef4444 | `color: #ef4444;` | Error messages |
+| `.text-yellow` | Yellow | #f59e0b | `color: #f59e0b;` | Warning messages |
+
+## Examples
+
+```html
+<!-- Text color examples -->
+<h1 class="text-3xl font-bold text-black">Primary Heading</h1>
+<p class="text-base text-gray">Secondary text content</p>
+<a href="#" class="text-blue underline">Link text</a>
+<div class="text-green">Success message</div>
+<div class="text-red">Error message</div>
+<div class="text-yellow">Warning message</div>
+```
+
+## Common Patterns
+
+### Heading Hierarchy
+
+```html
+<h1 class="text-4xl font-bold text-black">Main Heading</h1>
+<h2 class="text-2xl font-semibold text-gray-dark">Section Heading</h2>
+<p class="text-base text-gray">Body text content</p>
+```
+
+### Status Messages
+
+```html
+<div class="text-green">✓ Success: Operation completed</div>
+<div class="text-red">✗ Error: Something went wrong</div>
+<div class="text-yellow">⚠ Warning: Please check this</div>
+```
+
+### Links
+
+```html
+<a href="#" class="text-blue underline">Primary link</a>
+<a href="#" class="text-gray hover:text-blue">Secondary link</a>
+```
+
+## Color Combinations
+
+### High Contrast Text
+
+```html
+<!-- High contrast combinations -->
+<div class="bg-black text-white p-6">Black background, white text</div>
+<div class="bg-white text-black p-6 border border-black">White background, black text</div>
+<div class="bg-blue text-white p-6">Blue background, white text</div>
+```
+
+### Subtle Text Colors
+
+```html
+<!-- Subtle combinations -->
+<div class="bg-white text-gray-dark p-6">White background, dark gray text</div>
+<div class="bg-gray-light text-gray p-6">Light gray background, gray text</div>
+<div class="bg-white text-gray-light p-6">White background, light gray text</div>
+```
+
+## Accessibility
+
+<Warning>
+  **Accessibility Note:** Ensure sufficient color contrast for readability. Text colors are designed to meet WCAG AA standards when used with appropriate backgrounds.
+</Warning>
+
+### Contrast Guidelines
+
+- **Normal text:** Minimum 4.5:1 contrast ratio
+- **Large text:** Minimum 3:1 contrast ratio
+- **UI components:** Minimum 3:1 contrast ratio
+- **Focus indicators:** Minimum 3:1 contrast ratio
+
+## Best Practices
+
+- **Use semantic colors:** Choose colors that match their meaning (green for success, red for errors)
+- **Maintain hierarchy:** Use darker colors for primary text, lighter for secondary
+- **Test contrast:** Always verify text is readable on its background
+- **Consider context:** Choose colors that work with your brand and content
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card
+    title="Typography"
+    icon="text-size"
+    href="/overview/typography"
+  >
+    Font size and weight utilities
+  </Card>
+  <Card title="Background Colors" icon="square" href="/colors/background-colors">
+    Background color utilities
+  </Card>
+  <Card title="Colors Overview" icon="palette" href="/overview/colors">
+    Complete color system overview
+  </Card>
+</CardGroup>
+

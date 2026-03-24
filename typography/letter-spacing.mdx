@@ -1,0 +1,54 @@
+---
+title: "Letter Spacing"
+description: "Control tracking with `.tracking-*` utilities that tighten or loosen character spacing."
+---
+
+import { LetterSpacingDemo } from "/snippets/letter-spacing-demo.jsx"
+
+## Interactive Demo
+
+<LetterSpacingDemo />
+
+## Tracking Scale
+
+Letter spacing uses em units, so spacing adapts with the font size. Tight values are perfect for branding, while wider settings help uppercase text breathe.
+
+| Class | CSS | Effect |
+| ----- | --- | ------ |
+| `.tracking-tightest` | `letter-spacing: -0.1em;` | Ultra-condensed for logos |
+| `.tracking-extra-tight` | `letter-spacing: -0.075em;` | Tight headings |
+| `.tracking-tighter` | `letter-spacing: -0.05em;` | Compact subheads |
+| `.tracking-tight` | `letter-spacing: -0.025em;` | Slightly condensed body copy |
+| `.tracking-normal` | `letter-spacing: 0em;` | Default spacing |
+| `.tracking-wide` | `letter-spacing: 0.025em;` | Labels and uppercase text |
+| `.tracking-wider` | `letter-spacing: 0.05em;` | Button text, navigation |
+| `.tracking-widest` | `letter-spacing: 0.1em;` | Section headers |
+| `.tracking-extra-wide` | `letter-spacing: 0.15em;` | Display typography |
+| `.tracking-ultra-wide` | `letter-spacing: 0.2em;` | Dramatic hero type |
+
+```html
+<div class="space-y-4 text-center">
+  <p class="uppercase text-sm tracking-widest text-gray">Changelog</p>
+  <h1 class="text-fluid-5xl font-black tracking-tightest text-black">
+    Fluid typography, tighter alignment
+  </h1>
+  <button class="btn btn-blue btn-lg tracking-wide uppercase">
+    Read the release notes
+  </button>
+</div>
+```
+
+<Tip>
+Letter spacing compounds with uppercase transforms. Start at `.tracking-wide` for `.uppercase` text to avoid cramped characters.
+</Tip>
+
+## Practical Patterns
+
+- **Brand marks:** Combine `.text-4xl font-black tracking-tightest` for logo treatments.
+- **Hero headlines:** Use `.tracking-tight` with fluid sizes to keep lines compact without sacrificing readability.
+- **Navigation:** `.tracking-wide uppercase` keeps menu items legible and evenly spaced.
+
+<Check>
+Always preview on real content. Tracking that looks great on “Hello” might feel uneven on longer copy—tweak up or down the scale as needed.
+</Check>
+

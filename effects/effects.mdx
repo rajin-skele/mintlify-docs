@@ -1,0 +1,333 @@
+---
+title: "Effects"
+description: "Opacity utilities for creating overlays and transparency effects"
+---
+
+import { OpacityDemo } from "/snippets/opacity-demo.jsx"
+
+## Interactive Demo
+
+<OpacityDemo />
+
+## Opacity
+
+Control element transparency with opacity utilities.
+
+| Class | Value | CSS | Usage |
+| ----- | ----- | --- | ----- |
+| `.opacity-0` | 0% | `opacity: 0;` | Completely transparent |
+| `.opacity-25` | 25% | `opacity: 0.25;` | Very transparent |
+| `.opacity-50` | 50% | `opacity: 0.5;` | Semi-transparent |
+| `.opacity-75` | 75% | `opacity: 0.75;` | Mostly opaque |
+| `.opacity-100` | 100% | `opacity: 1;` | Completely opaque |
+
+### Examples
+
+```html
+<!-- Opacity examples -->
+<div class="opacity-100 p-4 bg-blue text-white">Fully opaque</div>
+<div class="opacity-75 p-4 bg-blue text-white">75% opacity</div>
+<div class="opacity-50 p-4 bg-blue text-white">50% opacity</div>
+<div class="opacity-25 p-4 bg-blue text-white">25% opacity</div>
+<div class="opacity-0 p-4 bg-blue text-white">Completely transparent</div>
+```
+
+## Common Opacity Patterns
+
+### Overlay Effects
+
+#### Image Overlay
+
+```html
+<div class="relative">
+  <img src="image.jpg" class="w-full h-64 object-cover" alt="Background image">
+  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="absolute inset-0 flex items-center justify-center">
+    <h2 class="text-white text-2xl font-bold">Overlay Text</h2>
+  </div>
+</div>
+```
+
+### Disabled State
+
+#### Disabled Elements
+
+```html
+<button class="btn btn-blue opacity-50 cursor-not-allowed">
+  Disabled Button
+</button>
+
+<div class="opacity-50">
+  <input type="text" class="w-full p-3 border border-gray rounded" disabled>
+</div>
+```
+
+### Hover Effects
+
+#### Hover Transitions
+
+```html
+<div class="opacity-75 hover:opacity-100 transition-opacity p-4 bg-blue text-white rounded">
+  Hover to see full opacity
+</div>
+```
+
+### Loading States
+
+#### Loading Overlay
+
+```html
+<div class="relative">
+  <div class="p-6 bg-white rounded-lg">
+    <h3 class="text-xl font-semibold mb-4">Content</h3>
+    <p class="text-gray">This content is loading...</p>
+  </div>
+  <div class="absolute inset-0 bg-white opacity-75 flex items-center justify-center">
+    <div class="text-center">
+      <div class="animate-spin w-8 h-8 border-2 border-blue border-t-transparent rounded-full mx-auto mb-2"></div>
+      <p class="text-sm text-gray">Loading...</p>
+    </div>
+  </div>
+</div>
+```
+
+## Opacity with Colors
+
+### Text Opacity
+
+#### Text with Opacity
+
+```html
+<h1 class="text-4xl font-bold text-black opacity-100">Primary Heading</h1>
+<h2 class="text-2xl font-semibold text-gray opacity-75">Secondary Heading</h2>
+<p class="text-base text-gray opacity-50">Muted paragraph text</p>
+```
+
+### Background Opacity
+
+#### Background with Opacity
+
+```html
+<div class="bg-blue opacity-100 p-6 text-white">Full opacity background</div>
+<div class="bg-blue opacity-75 p-6 text-white">75% opacity background</div>
+<div class="bg-blue opacity-50 p-6 text-white">50% opacity background</div>
+```
+
+### Border Opacity
+
+#### Border with Opacity
+
+```html
+<div class="border-2 border-blue opacity-100 p-4 rounded">
+  Full opacity border
+</div>
+<div class="border-2 border-blue opacity-75 p-4 rounded">
+  75% opacity border
+</div>
+<div class="border-2 border-blue opacity-50 p-4 rounded">
+  50% opacity border
+</div>
+```
+
+## Opacity in Components
+
+### Card with Overlay
+
+#### Card Overlay
+
+```html
+<div class="relative">
+  <div class="card p-6">
+    <h3 class="text-xl font-semibold mb-4">Card Title</h3>
+    <p class="text-gray">Card content goes here.</p>
+  </div>
+  <div class="absolute inset-0 bg-white opacity-50 rounded-lg"></div>
+</div>
+```
+
+### Button States
+
+#### Button Opacity States
+
+```html
+<!-- Normal state -->
+<button class="btn btn-blue opacity-100">Normal Button</button>
+
+<!-- Hover state -->
+<button class="btn btn-blue opacity-75 hover:opacity-100">Hover Button</button>
+
+<!-- Disabled state -->
+<button class="btn btn-blue opacity-50 cursor-not-allowed">Disabled Button</button>
+```
+
+### Form Field States
+
+#### Form Field Opacity
+
+```html
+<!-- Normal field -->
+<div class="mb-4">
+  <label class="text-sm font-medium mb-2">Normal Field</label>
+  <input type="text" class="w-full p-3 border border-gray rounded opacity-100">
+</div>
+
+<!-- Disabled field -->
+<div class="mb-4">
+  <label class="text-sm font-medium mb-2 text-gray">Disabled Field</label>
+  <input type="text" class="w-full p-3 border border-gray rounded opacity-50" disabled>
+</div>
+
+<!-- Loading field -->
+<div class="mb-4">
+  <label class="text-sm font-medium mb-2">Loading Field</label>
+  <input type="text" class="w-full p-3 border border-gray rounded opacity-75" disabled>
+</div>
+```
+
+## Opacity Best Practices
+
+### Accessibility Considerations
+
+<Warning>
+  **Accessibility Note:** Ensure sufficient contrast when using opacity. Text
+  with low opacity may not meet accessibility standards.
+</Warning>
+
+#### Opacity Guidelines
+
+- **Text:** Avoid opacity below 75% for readable text
+- **Interactive elements:** Use opacity to indicate disabled states
+- **Overlays:** Use opacity to create depth without hiding content completely
+- **Focus states:** Ensure focus indicators remain visible with opacity
+
+### Performance
+
+#### Performance Tips
+
+- Opacity changes are GPU-accelerated and performant
+- Use opacity instead of visibility for smooth transitions
+- Avoid animating opacity on large elements
+- Test opacity effects on different devices
+
+## Opacity Combinations
+
+### Layered Effects
+
+#### Layered Opacity
+
+```html
+<div class="relative">
+  <!-- Background layer -->
+  <div class="absolute inset-0 bg-blue opacity-25"></div>
+  
+  <!-- Middle layer -->
+  <div class="absolute inset-0 bg-white opacity-50"></div>
+  
+  <!-- Content layer -->
+  <div class="relative p-6">
+    <h3 class="text-xl font-semibold mb-4">Layered Content</h3>
+    <p class="text-gray">Content with layered opacity effects</p>
+  </div>
+</div>
+```
+
+### Gradient Overlays
+
+#### Gradient with Opacity
+
+```html
+<div class="relative">
+  <img src="image.jpg" class="w-full h-64 object-cover" alt="Background">
+  <div class="absolute inset-0 bg-gradient-to-r from-black opacity-50 to-transparent"></div>
+  <div class="absolute inset-0 flex items-center p-6">
+    <h2 class="text-white text-2xl font-bold">Gradient Overlay</h2>
+  </div>
+</div>
+```
+
+### Interactive Opacity
+
+#### Interactive Opacity
+
+```html
+<div class="opacity-75 hover:opacity-100 transition-opacity duration-300 p-4 bg-blue text-white rounded cursor-pointer">
+  Hover to increase opacity
+</div>
+
+<div class="opacity-100 hover:opacity-75 transition-opacity duration-300 p-4 bg-green text-white rounded cursor-pointer">
+  Hover to decrease opacity
+</div>
+```
+
+## Common Use Cases
+
+### Modal Overlays
+
+#### Modal Background
+
+```html
+<div class="fixed inset-0 bg-black opacity-50 flex items-center justify-center">
+  <div class="bg-white p-6 rounded-lg max-w-md">
+    <h3 class="text-xl font-semibold mb-4">Modal Title</h3>
+    <p class="text-gray mb-4">Modal content goes here.</p>
+    <button class="btn btn-blue">Close</button>
+  </div>
+</div>
+```
+
+### Image Galleries
+
+#### Image Gallery Overlay
+
+```html
+<div class="relative group">
+  <img src="image.jpg" class="w-full h-48 object-cover rounded" alt="Gallery image">
+  <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-300 flex items-center justify-center">
+    <button class="text-white text-lg font-semibold">View</button>
+  </div>
+</div>
+```
+
+### Loading States
+
+#### Loading Spinner
+
+```html
+<div class="relative">
+  <div class="p-6 bg-white rounded-lg">
+    <h3 class="text-xl font-semibold mb-4">Content</h3>
+    <p class="text-gray">This content is loading...</p>
+  </div>
+  <div class="absolute inset-0 bg-white opacity-90 flex items-center justify-center">
+    <div class="text-center">
+      <div class="w-8 h-8 border-2 border-blue border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+      <p class="text-sm text-gray">Loading...</p>
+    </div>
+  </div>
+</div>
+```
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Colors" icon="palette" href="/overview/colors">
+    Color utilities that work with opacity
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Positioning utilities for overlay effects
+  </Card>
+  <Card
+    title="Components"
+    icon="puzzle-piece"
+    href="/overview/components"
+  >
+    Pre-built components with opacity effects
+  </Card>
+  <Card
+    title="Positioning"
+    icon="crosshairs"
+    href="/positioning/positioning"
+  >
+    Z-index utilities for layered effects
+  </Card>
+</CardGroup>

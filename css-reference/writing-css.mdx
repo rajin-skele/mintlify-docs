@@ -1,0 +1,335 @@
+---
+title: "Writing CSS"
+description: "Guidelines for writing CSS utilities compatible with the importer"
+---
+
+## CSS Format
+
+### Simple Utilities
+
+Write one property per utility class:
+
+```css
+.text-large {
+  font-size: 24px;
+}
+.bg-primary {
+  background-color: #3b82f6;
+}
+.p-4 {
+  padding: 16px;
+}
+```
+
+### Multiple Properties
+
+You can include multiple properties in one class:
+
+```css
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+```
+
+### Directional Properties
+
+Use separate properties for directional values:
+
+```css
+.px-4 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+```
+
+## Value Requirements
+
+### Always Include Units
+
+Add units to numeric values:
+
+```css
+/* Correct */
+.text-lg {
+  font-size: 18px;
+}
+.w-64 {
+  width: 256px;
+}
+.m-4 {
+  margin: 16px;
+}
+
+/* Incorrect */
+.text-lg {
+  font-size: 18;
+}
+.w-64 {
+  width: 256;
+}
+.m-4 {
+  margin: 16;
+}
+```
+
+### Exceptions (No Units Needed)
+
+These properties don't need units:
+
+- `opacity`: `opacity: 0.5;`
+- `z-index`: `z-index: 10;`
+- `line-height`: `line-height: 1.5;`
+
+## Naming Conventions
+
+### Use Descriptive Names
+
+Choose clear, descriptive class names:
+
+```css
+/* Good */
+.text-heading {
+  font-size: 32px;
+}
+.bg-brand {
+  background-color: #your-brand-color;
+}
+.spacing-section {
+  margin: 48px;
+}
+
+/* Avoid */
+.text1 {
+  font-size: 32px;
+}
+.bg1 {
+  background-color: #your-brand-color;
+}
+.m1 {
+  margin: 48px;
+}
+```
+
+### Follow Patterns
+
+Use consistent naming patterns:
+
+```css
+/* Size-based */
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-lg {
+  font-size: 18px;
+}
+
+/* Color-based */
+.text-primary {
+  color: #3b82f6;
+}
+.bg-primary {
+  background-color: #3b82f6;
+}
+.border-primary {
+  border-color: #3b82f6;
+}
+```
+
+## Best Practices
+
+### Keep Classes Focused
+
+Each class should have a single purpose:
+
+```css
+/* Good: Single purpose */
+.text-center {
+  text-align: center;
+}
+.font-bold {
+  font-weight: 700;
+}
+.p-4 {
+  padding: 16px;
+}
+
+/* Avoid: Multiple purposes */
+.text-center-bold {
+  text-align: center;
+  font-weight: 700;
+}
+```
+
+### Use Semantic Values
+
+Choose values that make sense:
+
+```css
+/* Good: Semantic spacing */
+.spacing-sm {
+  margin: 8px;
+}
+.spacing-md {
+  margin: 16px;
+}
+.spacing-lg {
+  margin: 32px;
+}
+
+/* Avoid: Arbitrary values */
+.spacing-7 {
+  margin: 7px;
+}
+.spacing-13 {
+  margin: 13px;
+}
+```
+
+### Test Incrementally
+
+Import and test small batches:
+
+```css
+/* Import 5-10 classes at a time */
+.text-xs {
+  font-size: 12px;
+}
+.text-sm {
+  font-size: 14px;
+}
+.text-base {
+  font-size: 16px;
+}
+.text-lg {
+  font-size: 18px;
+}
+.text-xl {
+  font-size: 20px;
+}
+```
+
+## Common Mistakes
+
+### Missing Semicolons
+
+Always end properties with semicolons:
+
+```css
+/* Correct */
+.text-lg {
+  font-size: 18px;
+}
+
+/* Incorrect */
+.text-lg {
+  font-size: 18px;
+}
+```
+
+### Invalid Values
+
+Use valid CSS values:
+
+```css
+/* Correct */
+.items-center {
+  align-items: center;
+}
+
+/* Incorrect */
+.items-center {
+  align-items: flex-center;
+}
+```
+
+### Reserved Names
+
+Avoid reserved class names:
+
+```css
+/* Avoid */
+.container {
+  max-width: 1200px;
+}
+
+/* Use instead */
+.cont {
+  max-width: 1200px;
+}
+.wrapper {
+  max-width: 1200px;
+}
+```
+
+## Advanced Techniques
+
+### CSS Custom Properties
+
+Use CSS variables for consistency:
+
+```css
+:root {
+  --primary-color: #3b82f6;
+  --spacing-unit: 4px;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+.spacing-1 {
+  margin: var(--spacing-unit);
+}
+.spacing-2 {
+  margin: calc(var(--spacing-unit) * 2);
+}
+```
+
+### Logical Properties
+
+Use modern CSS logical properties:
+
+```css
+/* These are automatically converted */
+.text-start {
+  text-align: start;
+}
+.text-end {
+  text-align: end;
+}
+.items-start {
+  align-items: start;
+}
+.items-end {
+  align-items: end;
+}
+```
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card
+    title="Supported Properties"
+    icon="list"
+    href="/css-reference/supported-properties"
+  >
+    Complete property reference
+  </Card>
+  <Card
+    title="Reserved Names"
+    icon="exclamation-triangle"
+    href="/css-reference/reserved-names"
+  >
+    Names to avoid
+  </Card>
+</CardGroup>

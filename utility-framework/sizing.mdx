@@ -1,0 +1,103 @@
+---
+title: "Sizing"
+description: "Width, height, max-width, and min-height utilities"
+---
+
+## Width
+
+Control element width with percentage and auto utilities.
+
+<Card title="Width Properties" icon="expand">
+
+|           |         |                   |                |
+| --------- | ------- | ----------------- | -------------- |
+| `.w-full` | 100%    | `width: 100%;`    | Full width     |
+| `.w-auto` | Auto    | `width: auto;`    | Auto width     |
+| `.w-1-2`  | 50%     | `width: 50%;`     | Half width     |
+| `.w-1-3`  | 33.333% | `width: 33.333%;` | One third      |
+| `.w-2-3`  | 66.666% | `width: 66.666%;` | Two thirds     |
+| `.w-1-4`  | 25%     | `width: 25%;`     | Quarter width  |
+| `.w-3-4`  | 75%     | `width: 75%;`     | Three quarters |
+
+</Card>
+
+## Max Width
+
+Control maximum width with responsive breakpoints.
+
+<Card title="Max Width Properties" icon="expand">
+  |  |  |  |  | 
+  |-------|-----------|-----|-------| 
+  | `.max-w-sm` | 400px | `max-width: 400px;` | Small max width | 
+  | `.max-w-md` | 600px | `max-width: 600px;` | Medium max width | 
+  | `.max-w-lg` | 800px |`max-width: 800px;` | Large max width | 
+  | `.max-w-xl` | 1000px | `max-width: 1000px;` | Extra large max width | 
+  | `.max-w-2xl` | 1200px | `max-width: 1200px;` | 2x large max width | 
+  | `.max-w-full` | 100% | `max-width: 100%;` | Full max width |
+</Card>
+
+## Height
+
+Control element height with viewport and percentage units.
+
+<Card title="Height Properties" icon="expand">
+  |  |  |  |  | 
+  |-------|--------|-----|-------| 
+  | `.h-full` | 100% | `height: 100%;` | Full height | 
+  | `.h-auto` | Auto | `height: auto;` | Auto height | 
+  | `.h-screen` | 100vh | `height: 100vh;` | Full viewport height |
+</Card>
+
+## Min Height
+
+Control minimum height for content areas.
+
+<Card title="Min Height Properties" icon="expand">
+  |  |  |  |  | 
+  |-------|------------|-----|-------| 
+  |`.min-h-screen` | 100vh | `min-height: 100vh;` | Full viewport height | 
+  | `.min-h-full` | 100% | `min-height: 100%;` | Full height |
+</Card>
+
+## Common Sizing Patterns
+
+### Responsive Grid
+
+```html
+<div class="flex flex-wrap gap-6">
+  <div class="w-full md:w-1-2 lg:w-1-3">
+    <div class="card p-6">Responsive Card</div>
+  </div>
+</div>
+```
+
+### Centered Container
+
+```html
+<div class="max-w-2xl mx-auto p-6">
+  <h1 class="text-3xl font-700 mb-4">Centered Content</h1>
+  <p class="text-gray">Content with max width</p>
+</div>
+```
+
+### Full Height Layout
+
+```html
+<div class="min-h-screen flex items-center justify-center">
+  <div class="max-w-md p-8 text-center">
+    <h1 class="text-4xl font-700 mb-4">Full Height</h1>
+    <button class="btn btn-blue">Get Started</button>
+  </div>
+</div>
+```
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Layout" icon="grid" href="/utility-framework/layout">
+    Display utilities for sizing
+  </Card>
+  <Card title="Spacing" icon="arrows-to-line" href="/utility-framework/spacing">
+    Margin and padding utilities
+  </Card>
+</CardGroup>
