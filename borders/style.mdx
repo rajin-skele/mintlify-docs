@@ -1,91 +1,54 @@
 ---
 title: "Border Style"
-description: "Border style utilities: solid, dashed, and none"
+description: "The bundled border styles: solid, dashed, and none."
 ---
 
 import { BorderStyleDemo } from "/snippets/border-style-demo.jsx"
 
+## Interactive Demo
+
+<BorderStyleDemo />
+
 ## Overview
 
-Control border appearance with style utilities. Border style works together with border width, color, and radius to create complete border styling.
+Border style utilities define how a border line is drawn. The shipped set is intentionally small and covers the common UI cases.
 
 ## Border Style Utilities
 
 | Class | Style | CSS | Usage |
 | ----- | ----- | --- | ----- |
-| `.border-solid` | Solid | `border-style: solid;` | Solid line border |
-| `.border-dashed` | Dashed | `border-style: dashed;` | Dashed line border |
-| `.border-dotted` | Dotted | `border-style: dotted;` | Dotted line border |
-| `.border-double` | Double | `border-style: double;` | Double line border |
-| `.border-none` | None | `border-style: none;` | No border style |
-
-## Interactive Demo
-
-Try the different border styles below. Click on any button to copy the class name to your clipboard. Hover to see descriptions.
-
-<BorderStyleDemo />
+| `.border-solid` | Solid | `border-style: solid;` | Default border treatment |
+| `.border-dashed` | Dashed | `border-style: dashed;` | Optional or secondary framing |
+| `.border-none` | None | `border-style: none;` | Remove border style |
 
 ## Examples
 
-### Basic Border Styles
-
 ```html
-<!-- Border style examples -->
-<div class="border-2 border-solid p-4 bg-white">Solid border</div>
-<div class="border-2 border-dashed p-4 bg-white">Dashed border</div>
-<div class="border-none p-4 bg-gray-light">No border</div>
+<div class="border-2 border-solid p-4 bg-white rounded">Solid border</div>
+<div class="border-2 border-dashed p-4 bg-white rounded">Dashed border</div>
+<div class="border-0 border-none p-4 bg-gray-light rounded">No border</div>
 ```
 
-### Combined with Colors
-
 ```html
-<!-- Solid colored border -->
-<div class="border-2 border-solid border-blue p-4 rounded">Solid blue border</div>
+<input
+  type="text"
+  class="w-full p-3 border-1 border-solid border-gray rounded"
+  placeholder="Standard input"
+>
 
-<!-- Dashed colored border -->
-<div class="border-2 border-dashed border-gray p-4 rounded">Dashed gray border</div>
-```
-
-## Common Patterns
-
-### Form Inputs
-
-```html
-<!-- Normal input with solid border -->
-<input type="text" class="w-full p-3 border border-solid border-gray rounded" placeholder="Normal input">
-
-<!-- Dashed input for optional fields -->
-<input type="text" class="w-full p-3 border border-dashed border-gray rounded" placeholder="Optional field">
-```
-
-### Button Variants
-
-```html
-<!-- Solid button -->
-<button class="btn btn-blue">Solid Button</button>
-
-<!-- Dashed button -->
-<button class="border-2 border-dashed border-gray text-gray px-6 py-3 rounded">
-  Dashed Button
-</button>
-```
-
-### Card Borders
-
-```html
-<!-- Card with solid border -->
-<div class="card border border-solid border-gray-light p-6">Card with solid border</div>
-
-<!-- Card with dashed border -->
-<div class="card border border-dashed border-gray p-6">Card with dashed border</div>
+<input
+  type="text"
+  class="w-full p-3 border-1 border-dashed border-gray rounded"
+  placeholder="Optional field"
+>
 ```
 
 ## Best Practices
 
-- **Solid for standard:** Use solid borders for most UI elements
-- **Dashed for optional:** Use dashed borders to indicate optional or less important elements
-- **None to remove:** Use `border-none` to remove borders when needed
-- **Consistent usage:** Use the same border style for similar elements
+- Use `border-solid` for most buttons, inputs, cards, and structural UI.
+- Use `border-dashed` sparingly for optional, provisional, or drop-zone style patterns.
+- Pair style with explicit width and color classes so the full border treatment is obvious in markup.
+- Use `border-none` intentionally when a component preset adds a border you want removed.
 
 ## Related Utilities
 
@@ -103,4 +66,3 @@ Try the different border styles below. Click on any button to copy the class nam
     Complete borders overview
   </Card>
 </CardGroup>
-

@@ -1,6 +1,6 @@
 ---
 title: "Width"
-description: "Control element width with percentage and auto utilities"
+description: "Control element width with the bundled percentage and auto utilities."
 ---
 
 import { WidthDemo } from "/snippets/width-demo.jsx"
@@ -11,58 +11,31 @@ import { WidthDemo } from "/snippets/width-demo.jsx"
 
 ## Overview
 
-Use width utilities to control the horizontal size of elements. These utilities work with percentages, auto values, and fractional widths to create flexible, responsive layouts.
+Width utilities cover the core percentage-based widths used throughout the framework. They are intentionally simple: full width, auto width, and a small fractional set for common layouts.
 
 ## Width Utilities
 
 | Class | Value | CSS | Usage |
 | ----- | ----- | --- | ----- |
-| `.w-full` | 100% | `width: 100%;` | Full width |
-| `.w-auto` | Auto | `width: auto;` | Auto width |
-| `.w-1-2` | 50% | `width: 50%;` | Half width |
-| `.w-1-3` | 33.333% | `width: 33.333%;` | One third |
-| `.w-2-3` | 66.666% | `width: 66.666%;` | Two thirds |
-| `.w-1-4` | 25% | `width: 25%;` | Quarter width |
-| `.w-3-4` | 75% | `width: 75%;` | Three quarters |
+| `.w-full` | 100% | `width: 100%;` | Fill the available width |
+| `.w-auto` | Auto | `width: auto;` | Size to content |
+| `.w-1-2` | 50% | `width: 50%;` | Two-column layouts |
+| `.w-1-3` | 33.333% | `width: 33.333%;` | Three-up layouts |
+| `.w-2-3` | 66.666% | `width: 66.666%;` | Main content areas |
+| `.w-1-4` | 25% | `width: 25%;` | Sidebars or metadata rails |
+| `.w-3-4` | 75% | `width: 75%;` | Content-heavy panels |
 
 ## Full Width
 
-Use `.w-full` to make an element take up 100% of its container's width.
+Use `.w-full` when a field, card, or section should expand to the width of its parent.
 
 ```html
-<div class="w-full p-4 bg-blue text-white">
-  Full width container
-</div>
-```
-
-### Common Use Cases
-
-- Full-width sections
-- Form inputs
-- Container elements
-- Hero sections
-
-```html
-<!-- Full-width form input -->
-<input type="text" class="w-full p-3 border border-gray rounded" placeholder="Enter text">
+<input type="text" class="w-full p-3 border-1 border-solid border-gray rounded" placeholder="Enter text">
 ```
 
 ## Auto Width
 
-Use `.w-auto` to let the browser calculate the width based on the element's content.
-
-```html
-<div class="w-auto p-4 bg-blue text-white">
-  Auto width based on content
-</div>
-```
-
-### Common Use Cases
-
-- Buttons with dynamic text
-- Inline elements
-- Elements that should size to content
-- Navigation items
+Use `.w-auto` when content should define the width.
 
 ```html
 <button class="w-auto px-6 py-3 bg-blue text-white rounded">
@@ -72,64 +45,20 @@ Use `.w-auto` to let the browser calculate the width based on the element's cont
 
 ## Fractional Widths
 
-Use fractional width utilities to create column-based layouts. These utilities use percentage values that work perfectly with flexbox and grid layouts.
-
-### Half Width (50%)
-
-```html
-<div class="w-1-2 p-4 bg-blue text-white">
-  Half width (50%)
-</div>
-```
-
-### One Third (33.333%)
-
-```html
-<div class="w-1-3 p-4 bg-blue text-white">
-  One third width
-</div>
-```
-
-### Two Thirds (66.666%)
-
-```html
-<div class="w-2-3 p-4 bg-blue text-white">
-  Two thirds width
-</div>
-```
-
-### Quarter Width (25%)
-
-```html
-<div class="w-1-4 p-4 bg-blue text-white">
-  Quarter width
-</div>
-```
-
-### Three Quarters (75%)
-
-```html
-<div class="w-3-4 p-4 bg-blue text-white">
-  Three quarters width
-</div>
-```
-
-## Width Examples
-
-### Two-Column Layout
+Fractional width utilities are best for flex-based layouts.
 
 ```html
 <div class="flex gap-6">
   <div class="w-1-2 p-6 bg-gray-light rounded">
-    <h3 class="text-xl font-semibold mb-4">Left Column</h3>
-    <p class="text-gray">Content goes here</p>
+    Half width
   </div>
-  <div class="w-1-2 p-6 bg-gray-light rounded">
-    <h3 class="text-xl font-semibold mb-4">Right Column</h3>
-    <p class="text-gray">Content goes here</p>
+  <div class="w-1-2 p-6 bg-white rounded">
+    Half width
   </div>
 </div>
 ```
+
+## Width Examples
 
 ### Three-Column Grid
 
@@ -174,11 +103,11 @@ Use fractional width utilities to create column-based layouts. These utilities u
 <form class="max-w-md">
   <div class="mb-4">
     <label class="text-sm font-medium mb-2">Email</label>
-    <input type="email" class="w-full p-3 border border-gray rounded">
+    <input type="email" class="w-full p-3 border-1 border-solid border-gray rounded">
   </div>
   <div class="mb-4">
     <label class="text-sm font-medium mb-2">Message</label>
-    <textarea class="w-full p-3 border border-gray rounded" rows="4"></textarea>
+    <textarea class="w-full p-3 border-1 border-solid border-gray rounded" rows="4"></textarea>
   </div>
   <button class="w-full btn btn-blue">Submit</button>
 </form>
@@ -187,46 +116,19 @@ Use fractional width utilities to create column-based layouts. These utilities u
 ## Best Practices
 
 <Steps>
-  <Step title="Use with Flexbox">
-    Combine width utilities with flexbox (`.flex`) for responsive column layouts.
-  </Step>
   <Step title="Use Full Width for Forms">
-    Use `.w-full` for form inputs and textareas to ensure consistent sizing.
+    `.w-full` keeps form controls predictable and aligned.
   </Step>
-  <Step title="Combine with Max Width">
-    Use width utilities with max-width utilities to create centered, constrained layouts.
+  <Step title="Use Fractions for Structure">
+    Reach for `w-1-2`, `w-1-3`, and related helpers when the layout itself is column-based.
   </Step>
-  <Step title="Consider Responsive Design">
-    Use fractional widths with flex-wrap for responsive layouts that stack on mobile.
+  <Step title="Pair With Flex Wrap">
+    Width fractions work best with `.flex-wrap` so layouts can reflow instead of crushing content.
+  </Step>
+  <Step title="Constrain With Max Width">
+    Use width utilities alongside `max-w-*` when content needs both expansion and readable limits.
   </Step>
 </Steps>
-
-## Common Patterns
-
-### Responsive Card Grid
-
-```html
-<div class="flex flex-wrap gap-6">
-  <div class="w-full md:w-1-2 lg:w-1-3">
-    <div class="card p-6">Card 1</div>
-  </div>
-  <div class="w-full md:w-1-2 lg:w-1-3">
-    <div class="card p-6">Card 2</div>
-  </div>
-  <div class="w-full md:w-1-2 lg:w-1-3">
-    <div class="card p-6">Card 3</div>
-  </div>
-</div>
-```
-
-### Centered Container
-
-```html
-<div class="w-full max-w-2xl mx-auto p-6">
-  <h1 class="text-3xl font-bold mb-4">Centered Content</h1>
-  <p class="text-gray">Content with max width constraint</p>
-</div>
-```
 
 ## Related Utilities
 
@@ -244,4 +146,3 @@ Use fractional width utilities to create column-based layouts. These utilities u
     All sizing utilities overview
   </Card>
 </CardGroup>
-

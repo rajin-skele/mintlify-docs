@@ -1,6 +1,6 @@
 ---
 title: "Height"
-description: "Control element height with viewport and percentage units"
+description: "Control element height with the bundled full, auto, and viewport-height utilities."
 ---
 
 import { HeightDemo } from "/snippets/height-demo.jsx"
@@ -11,94 +11,47 @@ import { HeightDemo } from "/snippets/height-demo.jsx"
 
 ## Overview
 
-Use height utilities to control the vertical size of elements. These utilities work with percentages, viewport units, and auto values to create full-height layouts and consistent component sizing.
+Height utilities in the bundle focus on the common layout cases: follow content, fill a parent, or fill the viewport. For component-specific pixel heights, use custom CSS rather than expecting a large fixed-height utility scale.
 
 ## Height Utilities
 
 | Class | Value | CSS | Usage |
 | ----- | ----- | --- | ----- |
-| `.h-full` | 100% | `height: 100%;` | Full height |
-| `.h-auto` | Auto | `height: auto;` | Auto height |
-| `.h-screen` | 100vh | `height: 100vh;` | Full viewport height |
+| `.h-full` | 100% | `height: 100%;` | Match the parent height |
+| `.h-auto` | Auto | `height: auto;` | Follow content |
+| `.h-screen` | 100vh | `height: 100vh;` | Fill the viewport |
 
 ## Min Height Utilities
 
 | Class | Value | CSS | Usage |
 | ----- | ----- | --- | ----- |
-| `.min-h-screen` | 100vh | `min-height: 100vh;` | Full viewport height |
-| `.min-h-full` | 100% | `min-height: 100%;` | Full height |
+| `.min-h-screen` | 100vh | `min-height: 100vh;` | At least the full viewport |
+| `.min-h-full` | 100% | `min-height: 100%;` | At least the parent height |
 
-## Full Height
+## Usage
 
-Use `.h-full` to make an element take up 100% of its parent container's height.
+### Full Height
 
 ```html
-<div class="h-full p-4 bg-blue text-white">
-  Full height container
+<div style="height: 22rem;" class="bg-gray-light rounded-lg p-4">
+  <div class="h-full bg-white rounded p-4">
+    Child panel that matches its parent height
+  </div>
 </div>
 ```
 
-### Common Use Cases
-
-- Full-height sidebars
-- Container elements that need to fill parent
-- Nested layouts
-- Flex containers
+### Auto Height
 
 ```html
-<!-- Full-height sidebar -->
-<aside class="h-full w-64 p-6 bg-gray-light">
-  <nav class="flex flex-col gap-2">
-    <a href="#" class="text-gray">Link 1</a>
-    <a href="#" class="text-gray">Link 2</a>
-  </nav>
-</aside>
-```
-
-## Auto Height
-
-Use `.h-auto` to let the browser calculate the height based on the element's content.
-
-```html
-<div class="h-auto p-4 bg-blue text-white">
-  Auto height based on content
-</div>
-```
-
-### Common Use Cases
-
-- Content containers
-- Cards with variable content
-- Elements that should size to content
-- Default behavior for most elements
-
-```html
-<!-- Card with auto height -->
 <div class="card h-auto p-6">
   <h3 class="text-xl font-semibold mb-4">Card Title</h3>
   <p class="text-gray">Content that determines height</p>
 </div>
 ```
 
-## Screen Height
-
-Use `.h-screen` to make an element take up 100% of the viewport height (100vh).
+### Screen Height
 
 ```html
-<div class="h-screen p-4 bg-blue text-white">
-  Full viewport height
-</div>
-```
-
-### Common Use Cases
-
-- Full-screen hero sections
-- Landing pages
-- Full-viewport layouts
-- Modal overlays
-
-```html
-<!-- Full-screen hero -->
 <section class="h-screen flex items-center justify-center bg-gray-light">
   <div class="text-center">
     <h1 class="text-5xl font-bold mb-4">Hero Title</h1>
@@ -108,39 +61,13 @@ Use `.h-screen` to make an element take up 100% of the viewport height (100vh).
 </section>
 ```
 
-## Min Height Screen
-
-Use `.min-h-screen` to ensure an element is at least the full viewport height, but can grow taller if content requires it.
+### Minimum Screen Height
 
 ```html
-<div class="min-h-screen p-4 bg-blue text-white">
-  Minimum full viewport height
-</div>
-```
-
-### Common Use Cases
-
-- Page layouts that need full height
-- Content areas that should fill viewport
-- Landing pages with variable content
-- Main content areas
-
-```html
-<!-- Page layout with min height -->
 <main class="min-h-screen p-6">
   <h1 class="text-3xl font-bold mb-6">Page Title</h1>
-  <p class="text-gray">Content that may be longer than viewport</p>
+  <p class="text-gray">Content that may be longer than the viewport.</p>
 </main>
-```
-
-## Min Height Full
-
-Use `.min-h-full` to ensure an element is at least 100% of its parent's height.
-
-```html
-<div class="min-h-full p-4 bg-blue text-white">
-  Minimum full parent height
-</div>
 ```
 
 ## Height Examples
@@ -149,29 +76,17 @@ Use `.min-h-full` to ensure an element is at least 100% of its parent's height.
 
 ```html
 <div class="h-screen flex">
-  <aside class="w-64 h-full p-6 bg-gray-light">
+  <aside class="w-1-4 h-full p-6 bg-gray-light">
     <h2 class="text-lg font-semibold mb-4">Sidebar</h2>
     <nav class="flex flex-col gap-2">
       <a href="#" class="text-gray">Link 1</a>
       <a href="#" class="text-gray">Link 2</a>
     </nav>
   </aside>
-  <main class="flex-1 h-full p-6 overflow-auto">
+  <main class="w-3-4 h-full p-6 overflow-auto">
     <h1 class="text-3xl font-bold mb-6">Main Content</h1>
     <p class="text-gray">Scrollable content</p>
   </main>
-</div>
-```
-
-### Centered Full-Screen Content
-
-```html
-<div class="h-screen flex items-center justify-center">
-  <div class="text-center max-w-md">
-    <h1 class="text-4xl font-bold mb-4">Welcome</h1>
-    <p class="text-lg text-gray mb-8">Your content here</p>
-    <button class="btn btn-blue">Get Started</button>
-  </div>
 </div>
 ```
 
@@ -179,10 +94,13 @@ Use `.min-h-full` to ensure an element is at least 100% of its parent's height.
 
 ```html
 <div class="min-h-screen flex flex-col">
-  <header class="p-6 bg-white border-b border-gray-light">
+  <header
+    class="p-6 bg-white"
+    style="border-bottom: 1px solid #e5e7eb;"
+  >
     <h1 class="text-2xl font-bold">Header</h1>
   </header>
-  <main class="flex-1 p-6">
+  <main class="p-6">
     <h2 class="text-3xl font-bold mb-6">Content</h2>
     <p class="text-gray">Page content</p>
   </main>
@@ -192,67 +110,22 @@ Use `.min-h-full` to ensure an element is at least 100% of its parent's height.
 </div>
 ```
 
-### Full-Height Sidebar
-
-```html
-<div class="flex h-screen">
-  <aside class="w-64 h-full p-6 bg-gray-light overflow-auto">
-    <h2 class="text-lg font-semibold mb-4">Navigation</h2>
-    <nav class="flex flex-col gap-2">
-      <a href="#" class="p-2 bg-white rounded">Link 1</a>
-      <a href="#" class="p-2 bg-white rounded">Link 2</a>
-      <!-- More links... -->
-    </nav>
-  </aside>
-  <main class="flex-1 h-full overflow-auto p-6">
-    <h1 class="text-3xl font-bold mb-6">Main Content</h1>
-    <p class="text-gray">Scrollable main content</p>
-  </main>
-</div>
-```
-
 ## Best Practices
 
 <Steps>
   <Step title="Use Screen Height for Full Views">
-    Use `.h-screen` for full-viewport layouts like hero sections and landing pages.
+    Reach for `.h-screen` when a section or shell should fill the viewport exactly.
   </Step>
   <Step title="Use Min Height for Pages">
-    Use `.min-h-screen` for page layouts that should fill the viewport but can grow taller.
+    `.min-h-screen` is usually a better page-level default because it allows content to grow naturally.
   </Step>
-  <Step title="Combine with Flexbox">
-    Use height utilities with flexbox for full-height layouts and vertical centering.
+  <Step title="Use Parent Height Deliberately">
+    `h-full` and `min-h-full` only work when a parent already establishes height.
   </Step>
   <Step title="Consider Overflow">
-    Always consider overflow behavior when using fixed heights, especially with scrollable content.
+    Add `overflow-auto` or `overflow-hidden` when fixed vertical space and long content need controlled behavior.
   </Step>
 </Steps>
-
-## Common Patterns
-
-### Full-Height Dashboard
-
-```html
-<div class="h-screen flex flex-col">
-  <header class="p-4 bg-white border-b">Header</header>
-  <div class="flex-1 flex overflow-hidden">
-    <aside class="w-64 bg-gray-light overflow-auto">Sidebar</aside>
-    <main class="flex-1 overflow-auto p-6">Content</main>
-  </div>
-</div>
-```
-
-### Hero Section
-
-```html
-<section class="h-screen flex items-center justify-center bg-gray-light">
-  <div class="text-center">
-    <h1 class="text-6xl font-bold mb-4">Hero Title</h1>
-    <p class="text-xl text-gray mb-8">Hero subtitle</p>
-    <button class="btn btn-blue btn-lg">Call to Action</button>
-  </div>
-</section>
-```
 
 ## Related Utilities
 
@@ -260,14 +133,13 @@ Use `.min-h-full` to ensure an element is at least 100% of its parent's height.
   <Card title="Width" icon="expand" href="/sizing/width">
     Control element width
   </Card>
-  <Card title="Max Width" icon="expand" href="/sizing/max-width">
-    Constrain maximum element width
+  <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
+    Control overflow within fixed heights
   </Card>
-  <Card title="Flexbox" icon="table-cells-large" href="/overview/flexbox">
-    Flexbox utilities for layouts
+  <Card title="Display" icon="grid" href="/layout/display">
+    Use flex and block layout with height utilities
   </Card>
   <Card title="Sizing" icon="expand" href="/overview/sizing">
     All sizing utilities overview
   </Card>
 </CardGroup>
-

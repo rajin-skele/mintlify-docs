@@ -1,126 +1,37 @@
 ---
 title: "Container Component"
-description: "Centered container with max-width and responsive padding"
+description: "The bundled centered container preset, exposed as `.cont`."
 ---
 
 ## Overview
 
-Centered container with max-width and responsive padding. The container component provides a consistent way to center content and constrain width across different screen sizes.
-
-## Container Base
-
-```css
-.cont {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-```
+The bundled container preset is `.cont`. It centers content, applies the framework's max-width token, and adds horizontal padding.
 
 <Note>
-  **Reserved Name:** The class name is `.cont` because "container" is a reserved
-  keyword in Elementor.
+  `.cont` is used instead of `container` because `container` is reserved in Elementor.
 </Note>
 
-## Examples
-
-### Basic Container
-
 ```html
 <div class="cont">
-  <h1 class="text-3xl font-bold mb-6">Page Title</h1>
-  <p class="text-lg text-gray">Centered content with max width</p>
+  <h1 class="text-3xl font-bold text-black mb-6">Page Title</h1>
+  <p class="text-lg text-gray">Centered content with the bundled container preset.</p>
 </div>
 ```
 
-### Container with Card Grid
+## Typical Uses
+
+- Page sections
+- Marketing blocks
+- Centered article wrappers
+- Card grids that should not stretch full width
 
 ```html
-<div class="cont">
-  <div class="flex gap-6 flex-wrap">
-    <div class="w-1-3">
-      <div class="card p-6">Card 1</div>
-    </div>
-    <div class="w-1-3">
-      <div class="card p-6">Card 2</div>
-    </div>
-    <div class="w-1-3">
-      <div class="card p-6">Card 3</div>
-    </div>
-  </div>
-</div>
-```
-
-### Container with Section
-
-```html
-<section class="py-12">
+<section class="my-12">
   <div class="cont">
-    <h2 class="text-3xl font-bold mb-6">Section Title</h2>
-    <p class="text-lg text-gray">Section content</p>
+    <div class="flex gap-6">
+      <div class="w-1-2"><div class="card">Content 1</div></div>
+      <div class="w-1-2"><div class="card">Content 2</div></div>
+    </div>
   </div>
 </section>
 ```
-
-## Common Patterns
-
-### Full Page Layout
-
-```html
-<div class="cont">
-  <header class="py-6 border-b border-gray-light">
-    <h1 class="text-2xl font-bold">Site Title</h1>
-  </header>
-  
-  <main class="py-12">
-    <h2 class="text-3xl font-bold mb-6">Main Content</h2>
-    <p class="text-lg text-gray">Content goes here</p>
-  </main>
-  
-  <footer class="py-6 border-t border-gray-light">
-    <p class="text-gray">Footer content</p>
-  </footer>
-</div>
-```
-
-### Responsive Container
-
-```html
-<div class="cont">
-  <div class="flex flex-col md:flex-row gap-6">
-    <div class="flex-1">
-      <div class="card p-6">Content 1</div>
-    </div>
-    <div class="flex-1">
-      <div class="card p-6">Content 2</div>
-    </div>
-  </div>
-</div>
-```
-
-## Best Practices
-
-- **Use for page structure:** Wrap main page content in containers
-- **Combine with sections:** Use containers inside sections for consistent spacing
-- **Responsive padding:** Container includes responsive padding that works on all screen sizes
-- **Max width:** Container constrains content width for better readability
-
-## Related Utilities
-
-<CardGroup cols={2}>
-  <Card title="Button" icon="hand-pointer" href="/components/button">
-    Button component
-  </Card>
-  <Card title="Card" icon="square" href="/components/card">
-    Card component
-  </Card>
-  <Card title="Sizing" icon="expand" href="/overview/sizing">
-    Width and max-width utilities
-  </Card>
-  <Card title="Components Overview" icon="puzzle-piece" href="/overview/components">
-    Complete components overview
-  </Card>
-</CardGroup>
-

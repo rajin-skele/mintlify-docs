@@ -1,0 +1,134 @@
+---
+title: "Framework Overview"
+description: "The canonical overview of the bundled Skelementor utility framework."
+---
+
+## One Framework
+
+Skelementor ships one bundled utility framework for Elementor v4. The default class names are the framework. Where a class family uses responsive `clamp()` values, that responsive behavior is built in and does not need a separate naming layer.
+
+Use [skelementor-utilities.css](/Users/rajin/Desktop/css-utility-importer/skelementor-utilities.css) as the source of truth for the shipped utilities.
+
+<Card title="Quick Import" icon="download" href="/quickstart">
+  Import the bundled framework, then apply the classes directly inside Elementor.
+</Card>
+
+## Framework Categories
+
+<CardGroup cols={3}>
+  <Card title="Typography" icon="text-size" href="/overview/typography">
+    Responsive text scale, clamp-based leading, weights, tracking, alignment, and text styling.
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display, overflow, object-fit, aspect-ratio, positioning, z-index, and responsive structural suffixes.
+  </Card>
+  <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
+    Margin, padding, and gap utilities built around the bundled spacing tokens.
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    Fractional widths, screen-height helpers, and responsive max-width utilities.
+  </Card>
+  <Card title="Colors" icon="palette" href="/overview/colors">
+    Text, background, and border color helpers aligned with the bundled tokens.
+  </Card>
+  <Card title="Borders" icon="square" href="/overview/borders">
+    Border widths, styles, radius utilities, and the shipped border color set.
+  </Card>
+  <Card title="Effects" icon="sparkles" href="/overview/effects">
+    Full opacity scale for layering, disabled states, and visual depth.
+  </Card>
+  <Card title="Flexbox" icon="table-cells-large" href="/overview/flexbox">
+    Direction, wrap, alignment, order, grow/shrink, gap, and responsive structural variants.
+  </Card>
+  <Card title="Components" icon="puzzle-piece" href="/overview/components">
+    Bundled presets for buttons, cards, and the centered `.cont` container.
+  </Card>
+</CardGroup>
+
+## How The Bundle Is Shaped
+
+- Default responsive families: `text-*`, `leading-*`, `m-*`, `p-*`, `gap-*`, `max-w-*`, `border-*`
+- Intentionally fixed helpers: zero, auto, px, widths, heights, rounded utilities, color helpers, weights, tracking, display, positioning, and component presets
+- Responsive structural suffixes: `--on-xxl`, `--on-xl`, `--on-l`, `--on-m`, `--on-s`, `--on-xs`
+
+## Most Used Classes
+
+<Columns cols={2}>
+  <div>
+    <h3>Typography</h3>
+    ```css
+    .text-base
+    .text-4xl
+    .leading-relaxed
+    .font-semibold
+    .tracking-wide
+    ```
+  </div>
+  <div>
+    <h3>Layout</h3>
+    ```css
+    .flex
+    .items-center
+    .justify-between
+    .gap-4
+    .relative
+    ```
+  </div>
+  <div>
+    <h3>Spacing</h3>
+    ```css
+    .p-4
+    .px-6
+    .py-4
+    .mb-6
+    .mx-auto
+    ```
+  </div>
+  <div>
+    <h3>Components</h3>
+    ```css
+    .btn
+    .btn-blue
+    .card
+    .cont
+    .rounded-lg
+    ```
+  </div>
+</Columns>
+
+## Practical Example
+
+```html
+<section class="cont my-12">
+  <div class="card">
+    <p class="text-sm uppercase tracking-widest text-gray mb-2">Skelementor</p>
+    <h1 class="text-5xl font-black leading-tight text-black mb-4">
+      Build Elementor layouts with one bundled utility framework
+    </h1>
+    <p class="text-base leading-relaxed text-gray-dark mb-6">
+      The default class names already carry the bundled responsive behavior where it exists.
+    </p>
+    <div class="flex gap-4">
+      <button class="btn btn-blue">Import Framework</button>
+      <button class="btn btn-green">Open Examples</button>
+    </div>
+  </div>
+</section>
+```
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Fastest route from plugin install to working classes in Elementor.
+  </Card>
+  <Card title="Responsive Utilities" icon="mobile-screen" href="/layout/responsive-utilities">
+    Learn the shipped `--on-*` suffix system and breakpoint map.
+  </Card>
+  <Card title="Examples" icon="code" href="/usage/examples">
+    Copy a few real bundled patterns to get started quickly.
+  </Card>
+  <Card title="Custom CSS" icon="pen-to-square" href="/usage/custom-css">
+    Import your own classes once the bundled system is working.
+  </Card>
+</CardGroup>

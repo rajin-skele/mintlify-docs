@@ -11,22 +11,20 @@ import { FontWeightDemo } from "/snippets/font-weight-demo.jsx"
 
 ## Weight Scale
 
-Weights are aligned with standard numeric values so you can map them to any font family that supports the range.
-
 | Class | Weight | CSS | Usage notes |
 | ----- | ------ | --- | ----------- |
-| `.font-thin` | 100 | `font-weight: 100;` | Ultra-fine hero overlays |
-| `.font-extralight` | 200 | `font-weight: 200;` | Light captions on dark backgrounds |
+| `.font-thin` | 100 | `font-weight: 100;` | Ultra-fine display use |
+| `.font-extralight` | 200 | `font-weight: 200;` | Light editorial accents |
 | `.font-light` | 300 | `font-weight: 300;` | Subtle supporting text |
 | `.font-normal` | 400 | `font-weight: 400;` | Default body copy |
-| `.font-medium` | 500 | `font-weight: 500;` | Navigation, cards, CTAs |
-| `.font-semibold` | 600 | `font-weight: 600;` | Section headings and key metrics |
+| `.font-medium` | 500 | `font-weight: 500;` | Labels and UI controls |
+| `.font-semibold` | 600 | `font-weight: 600;` | Section headings |
 | `.font-bold` | 700 | `font-weight: 700;` | Primary headings and buttons |
-| `.font-extrabold` | 800 | `font-weight: 800;` | Emphasis on hero headings |
-| `.font-black` | 900 | `font-weight: 900;` | Large display typography |
+| `.font-extrabold` | 800 | `font-weight: 800;` | Strong emphasis |
+| `.font-black` | 900 | `font-weight: 900;` | Display typography |
 
 ```html
-<div class="space-y-2">
+<div>
   <p class="text-base font-light text-gray">Designed for Elementor</p>
   <h2 class="text-3xl font-bold text-black">Craft polished typographic systems</h2>
   <p class="text-base font-normal text-gray-dark">
@@ -37,11 +35,10 @@ Weights are aligned with standard numeric values so you can map them to any font
 
 ## Recommendations
 
-- **Pair with the right font files.** Ensure your Elementor site loads weight variants that match the utilities you plan to use.
-- **Keep contrast accessible.** Heavy weights improve legibility at smaller sizes; lighter weights need larger sizes or higher contrast.
-- **Use restraint.** Stick to two or three weights per page to maintain a cohesive voice.
+- Pair font weights with font files that are actually loaded on the site.
+- Use heavier weights for small UI labels and lighter weights only when contrast and size support them.
+- Keep most pages to two or three weight choices for a cleaner voice.
 
 <Tip>
-Combine `.font-semibold` with `.text-fluid-3xl` for marketing headlines. The fluid scale handles sizing while the semi-bold weight keeps text readable across breakpoints.
+Combine `.font-semibold` with `.text-3xl` or `.text-4xl` for marketing headlines. The bundled text scale already handles responsive sizing behavior where it ships.
 </Tip>
-

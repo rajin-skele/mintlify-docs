@@ -1,226 +1,32 @@
 ---
 title: "Max Width"
-description: "Constrain maximum element width with static and fluid utilities"
+description: "Constrain content width with the bundled `max-w-*` utilities."
 ---
 
 ## Overview
 
-Use max-width utilities to limit how wide an element can become. These utilities are essential for creating readable content widths, centered layouts, and responsive containers that scale appropriately.
+Use max-width utilities to keep content readable and layouts centered. In the Skelementor bundle, `max-w-*` is already the responsive max-width family.
 
-## Static Max Width Utilities
-
-| Class | Value | CSS | Usage |
-| ----- | ----- | --- | ----- |
-| `.max-w-sm` | 400px | `max-width: 400px;` | Small max width |
-| `.max-w-md` | 600px | `max-width: 600px;` | Medium max width |
-| `.max-w-lg` | 800px | `max-width: 800px;` | Large max width |
-| `.max-w-xl` | 1000px | `max-width: 1000px;` | Extra large max width |
-| `.max-w-2xl` | 1200px | `max-width: 1200px;` | 2x large max width |
-| `.max-w-full` | 100% | `max-width: 100%;` | Full max width |
-
-## Fluid Max Width Utilities
-
-Fluid max-width utilities use `clamp()` to scale smoothly between mobile and desktop sizes, perfect for responsive content containers.
-
-| Class | Clamp Expression | Mobile → Desktop |
-| ----- | ---------------- | ---------------- |
-| `.max-w-fluid-sm` | `clamp(20rem, calc(17rem + 7.4vw), 25rem)` | 320px → 400px |
-| `.max-w-fluid-md` | `clamp(30rem, calc(25.5rem + 11.1vw), 37.5rem)` | 480px → 600px |
-| `.max-w-fluid-lg` | `clamp(40rem, calc(34rem + 14.8vw), 50rem)` | 640px → 800px |
-| `.max-w-fluid-xl` | `clamp(50rem, calc(42.5rem + 18.5vw), 62.5rem)` | 800px → 1000px |
-| `.max-w-fluid-2xl` | `clamp(60rem, calc(51rem + 22.2vw), 75rem)` | 960px → 1200px |
-| `.max-w-fluid-full` | 100% | Full max width |
-
-## Static Max Width Examples
-
-### Small Max Width (400px)
+| Class | Range |
+| ----- | ----- |
+| `.max-w-sm` | 320px → 400px |
+| `.max-w-md` | 480px → 600px |
+| `.max-w-lg` | 640px → 800px |
+| `.max-w-xl` | 800px → 1000px |
+| `.max-w-2xl` | 960px → 1200px |
+| `.max-w-full` | 100% |
 
 ```html
-<div class="max-w-sm mx-auto p-6 bg-gray-light rounded">
-  <h3 class="text-xl font-semibold mb-4">Small Container</h3>
-  <p class="text-gray">Content constrained to 400px maximum width</p>
-</div>
-```
-
-### Medium Max Width (600px)
-
-```html
-<div class="max-w-md mx-auto p-6 bg-gray-light rounded">
-  <h3 class="text-xl font-semibold mb-4">Medium Container</h3>
-  <p class="text-gray">Content constrained to 600px maximum width</p>
-</div>
-```
-
-### Large Max Width (800px)
-
-```html
-<div class="max-w-lg mx-auto p-6 bg-gray-light rounded">
-  <h3 class="text-xl font-semibold mb-4">Large Container</h3>
-  <p class="text-gray">Content constrained to 800px maximum width</p>
-</div>
-```
-
-### Extra Large Max Width (1000px)
-
-```html
-<div class="max-w-xl mx-auto p-6 bg-gray-light rounded">
-  <h3 class="text-xl font-semibold mb-4">Extra Large Container</h3>
-  <p class="text-gray">Content constrained to 1000px maximum width</p>
-</div>
-```
-
-### 2X Large Max Width (1200px)
-
-```html
-<div class="max-w-2xl mx-auto p-6 bg-gray-light rounded">
-  <h3 class="text-xl font-semibold mb-4">2X Large Container</h3>
-  <p class="text-gray">Content constrained to 1200px maximum width</p>
-</div>
-```
-
-## Fluid Max Width Examples
-
-### Article with Fluid Max Width
-
-```html
-<article class="max-w-fluid-2xl mx-auto p-6">
-  <h1 class="text-4xl font-bold mb-6">Article Title</h1>
-  <p class="text-lg leading-relaxed mb-4">
-    Content that scales smoothly across viewport sizes, from mobile to desktop.
+<div class="max-w-lg mx-auto p-6">
+  <h2 class="text-3xl font-bold text-black mb-4">Readable content width</h2>
+  <p class="text-base leading-relaxed text-gray-dark">
+    Use `max-w-*` with `mx-auto` to center articles, forms, and marketing copy without introducing a separate naming system.
   </p>
-  <p class="text-lg leading-relaxed">
-    The max-width adapts automatically without media queries.
-  </p>
-</article>
-```
-
-### Hero Section with Fluid Max Width
-
-```html
-<section class="text-center py-fluid-12">
-  <div class="max-w-fluid-xl mx-auto px-fluid-6">
-    <h1 class="text-fluid-6xl font-bold mb-fluid-4">Hero Title</h1>
-    <p class="text-fluid-lg text-gray mb-fluid-8">
-      Supporting text that scales with the container
-    </p>
-    <button class="btn btn-blue btn-lg">Get Started</button>
-  </div>
-</section>
-```
-
-### Centered Content Container
-
-```html
-<div class="max-w-fluid-lg mx-auto p-fluid-6">
-  <h2 class="text-3xl font-bold mb-4">Centered Content</h2>
-  <p class="text-lg text-gray leading-relaxed">
-    This container scales smoothly between mobile and desktop sizes,
-    maintaining optimal readability at all viewport widths.
-  </p>
-</div>
-```
-
-## Common Patterns
-
-### Readable Article Width
-
-```html
-<article class="max-w-2xl mx-auto p-6">
-  <h1 class="text-4xl font-bold mb-6">Article Title</h1>
-  <div class="prose">
-    <p class="text-lg leading-relaxed mb-4">
-      Article content with optimal line length for readability.
-    </p>
-    <p class="text-lg leading-relaxed">
-      The max-width ensures lines don't become too long on large screens.
-    </p>
-  </div>
-</article>
-```
-
-### Responsive Card Container
-
-```html
-<div class="max-w-fluid-xl mx-auto p-fluid-6">
-  <div class="flex flex-wrap gap-6">
-    <div class="w-full md:w-1-2">
-      <div class="card p-6">Card 1</div>
-    </div>
-    <div class="w-full md:w-1-2">
-      <div class="card p-6">Card 2</div>
-    </div>
-  </div>
-</div>
-```
-
-### Centered Form
-
-```html
-<div class="max-w-md mx-auto p-6">
-  <h2 class="text-2xl font-bold mb-6 text-center">Contact Form</h2>
-  <form class="space-y-4">
-    <div>
-      <label class="text-sm font-medium mb-2">Name</label>
-      <input type="text" class="w-full p-3 border border-gray rounded">
-    </div>
-    <div>
-      <label class="text-sm font-medium mb-2">Email</label>
-      <input type="email" class="w-full p-3 border border-gray rounded">
-    </div>
-    <button class="w-full btn btn-blue">Submit</button>
-  </form>
 </div>
 ```
 
 ## Best Practices
 
-<Steps>
-  <Step title="Use for Readability">
-    Use max-width utilities to constrain content width for optimal readability, typically 600-800px for body text.
-  </Step>
-  <Step title="Center with Auto Margin">
-    Combine max-width with `.mx-auto` (or `.ml-auto`/`.mr-auto`) to center containers.
-  </Step>
-  <Step title="Use Fluid for Responsive">
-    Use fluid max-width utilities for content that needs to scale smoothly across viewport sizes.
-  </Step>
-  <Step title="Match Content Type">
-    Choose max-width based on content type: forms (400-600px), articles (800-1200px), hero sections (1000-1200px).
-  </Step>
-</Steps>
-
-## When to Use Static vs Fluid
-
-### Use Static Max Width For:
-- Forms and input containers (`.max-w-sm`, `.max-w-md`)
-- Fixed-width layouts that need precise control
-- Components with specific size requirements
-- UI elements that shouldn't scale
-
-### Use Fluid Max Width For:
-- Article content and long-form text
-- Hero sections and marketing pages
-- Content containers that need responsive scaling
-- Layouts that should adapt smoothly across breakpoints
-
-<Tip>
-Combine fluid max-width with fluid typography and spacing utilities for fully responsive designs that scale smoothly without media queries.
-</Tip>
-
-## Related Utilities
-
-<CardGroup cols={2}>
-  <Card title="Width" icon="expand" href="/sizing/width">
-    Control element width
-  </Card>
-  <Card title="Height" icon="expand" href="/sizing/height">
-    Control element height
-  </Card>
-  <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
-    Margin utilities for centering
-  </Card>
-  <Card title="Sizing" icon="expand" href="/overview/sizing">
-    All sizing utilities overview
-  </Card>
-</CardGroup>
-
+- Use `.max-w-md` for forms and compact content.
+- Use `.max-w-lg` or `.max-w-xl` for long-form content and feature sections.
+- Use `.max-w-2xl` for page-level wrappers and the bundled `.cont` pattern.

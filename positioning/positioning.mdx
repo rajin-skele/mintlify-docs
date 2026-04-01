@@ -1,50 +1,60 @@
 ---
 title: "Positioning"
-description: "Control element positioning with position utilities"
+description: "Control positioning modes with the bundled `static`, `relative`, `absolute`, `fixed`, and `sticky` utilities."
 ---
+
+## Overview
+
+The framework ships positioning modes, not a full offset utility system. Use the position classes to establish layout behavior, then add offsets with custom CSS or inline styles when a design needs exact placement.
 
 ## Position Types
 
-Control how elements are positioned with position utilities.
-
 | Class | Type | CSS | Usage |
 | ----- | ---- | --- | ----- |
-| `.static` | Static | `position: static;` | Default positioning |
-| `.relative` | Relative | `position: relative;` | Position relative to normal flow |
-| `.absolute` | Absolute | `position: absolute;` | Position relative to nearest positioned ancestor |
-| `.fixed` | Fixed | `position: fixed;` | Position relative to viewport |
-| `.sticky` | Sticky | `position: sticky;` | Sticky positioning |
+| `.static` | Static | `position: static;` | Default document flow |
+| `.relative` | Relative | `position: relative;` | Anchor child overlays |
+| `.absolute` | Absolute | `position: absolute;` | Remove from normal flow |
+| `.fixed` | Fixed | `position: fixed;` | Lock to the viewport |
+| `.sticky` | Sticky | `position: sticky;` | Stick while scrolling |
 
-### Examples
+## Examples
+
+### Position Modes
 
 ```html
-<!-- Position examples -->
-<div class="static p-4 bg-blue text-white">Static positioning (default)</div>
-<div class="relative p-4 bg-green text-white">Relative positioning</div>
-<div class="absolute p-4 bg-red text-white">Absolute positioning</div>
-<div class="fixed p-4 bg-yellow text-black">Fixed positioning</div>
-<div class="sticky p-4 bg-purple text-white">Sticky positioning</div>
+<div class="static p-4 bg-blue text-white rounded">Static positioning</div>
+<div class="relative p-4 bg-green text-white rounded">Relative positioning</div>
 ```
 
-## Z-Index
+```html
+<div class="relative bg-gray-light p-8 rounded">
+  <div
+    class="absolute p-4 bg-red text-white rounded"
+    style="top: 1rem; right: 1rem;"
+  >
+    Absolute positioning
+  </div>
+</div>
+```
 
-Control the stacking order of positioned elements with z-index utilities.
-
-<Card title="Z-Index Documentation" icon="layer-group" href="/layout/z-index">
-  For complete z-index utilities, examples, and best practices, see the dedicated [Z-Index page](/layout/z-index).
-</Card>
-
-## Common Positioning Patterns
-
-### Overlay Elements
-
-#### Image Overlay
+### Overlay Pattern
 
 ```html
 <div class="relative">
-  <img src="image.jpg" class="w-full h-64 object-cover" alt="Background image">
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  <div class="absolute inset-0 flex items-center justify-center">
+  <img
+    src="image.jpg"
+    class="w-full object-cover rounded-lg"
+    style="height: 16rem;"
+    alt="Background image"
+  >
+  <div
+    class="absolute bg-black opacity-50 rounded-lg"
+    style="top: 0; right: 0; bottom: 0; left: 0;"
+  ></div>
+  <div
+    class="absolute flex items-center justify-center"
+    style="top: 0; right: 0; bottom: 0; left: 0;"
+  >
     <h2 class="text-white text-2xl font-bold">Overlay Text</h2>
   </div>
 </div>
@@ -52,10 +62,11 @@ Control the stacking order of positioned elements with z-index utilities.
 
 ### Fixed Header
 
-#### Fixed Navigation
-
 ```html
-<header class="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-light">
+<header
+  class="fixed z-50 bg-white"
+  style="top: 0; left: 0; right: 0; border-bottom: 1px solid #e5e7eb;"
+>
   <div class="flex items-center justify-between p-4">
     <h1 class="text-xl font-bold">Logo</h1>
     <nav class="flex gap-6">
@@ -75,12 +86,13 @@ Control the stacking order of positioned elements with z-index utilities.
 
 ### Sticky Sidebar
 
-#### Sticky Sidebar
-
 ```html
 <div class="flex gap-6">
-  <aside class="w-64 sticky top-0 h-screen overflow-y-auto">
-    <div class="p-6 bg-gray-light">
+  <aside
+    class="w-1-4 sticky h-screen overflow-auto"
+    style="top: 0;"
+  >
+    <div class="p-6 bg-gray-light rounded">
       <h2 class="text-lg font-semibold mb-4">Sidebar</h2>
       <nav class="flex flex-col gap-2">
         <a href="#" class="text-gray">Link 1</a>
@@ -89,97 +101,35 @@ Control the stacking order of positioned elements with z-index utilities.
       </nav>
     </div>
   </aside>
-  <main class="flex-1 p-6">
+  <main class="w-3-4 p-6">
     <h1 class="text-3xl font-bold mb-6">Main Content</h1>
     <p class="text-gray mb-4">Content goes here...</p>
   </main>
 </div>
 ```
 
-### Modal Dialog
+## Z-Index
 
-#### Modal Dialog
+<Card title="Z-Index Documentation" icon="layer-group" href="/layout/z-index">
+  For the full layering scale and stacking examples, see the [Z-Index page](/layout/z-index).
+</Card>
 
-```html
-<div class="fixed inset-0 z-50 flex items-center justify-center">
-  <!-- Backdrop -->
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  
-  <!-- Modal -->
-  <div class="relative bg-white rounded-lg p-6 max-w-md w-full mx-4">
-    <h3 class="text-xl font-semibold mb-4">Modal Title</h3>
-    <p class="text-gray mb-6">Modal content goes here.</p>
-    <div class="flex gap-4 justify-end">
-      <button class="btn bg-gray text-white">Cancel</button>
-      <button class="btn btn-blue">Confirm</button>
-    </div>
-  </div>
-</div>
-```
-
-## Positioning with Flexbox
-
-### Centered Content
-
-#### Centered Content
-
-```html
-<div class="flex items-center justify-center min-h-screen">
-  <div class="text-center">
-    <h1 class="text-4xl font-bold mb-4">Centered Content</h1>
-    <p class="text-lg text-gray mb-8">This content is perfectly centered</p>
-    <button class="btn btn-blue">Get Started</button>
-  </div>
-</div>
-```
-
-### Absolute Positioning within Flex
-
-#### Flex with Absolute Elements
-
-```html
-<div class="flex items-center justify-center h-64 bg-gray-light relative">
-  <div class="text-center">
-    <h2 class="text-2xl font-semibold mb-4">Flex Container</h2>
-    <p class="text-gray">Content in flex container</p>
-  </div>
-  
-  <!-- Absolutely positioned elements -->
-  <div class="absolute top-4 right-4 bg-red text-white px-3 py-1 rounded text-sm">
-    Top Right
-  </div>
-  <div class="absolute bottom-4 left-4 bg-blue text-white px-3 py-1 rounded text-sm">
-    Bottom Left
-  </div>
-</div>
-```
-
-
-## Positioning Best Practices
+## Best Practices
 
 <Steps>
   <Step title="Choose the Right Position Type">
-    Use `static` for normal flow, `relative` for offset positioning, `absolute` for positioning relative to ancestors, `fixed` for viewport positioning, and `sticky` for scroll-based positioning.
+    Use `static` for normal flow, `relative` for anchoring, `absolute` for overlays, `fixed` for viewport-level UI, and `sticky` for scroll-aware sections.
   </Step>
-  <Step title="Plan Your Layout">
-    Think about how positioning affects document flow and other elements before implementing.
+  <Step title="Add Offsets Explicitly">
+    Since the bundle does not ship `top-*`, `left-*`, `right-*`, `bottom-*`, or `inset-*`, add exact offsets with custom CSS when needed.
   </Step>
-  <Step title="Combine with Z-Index">
-    Use z-index utilities to control stacking order when elements overlap. See the [Z-Index documentation](/layout/z-index) for details.
+  <Step title="Combine With Z-Index">
+    Layered interfaces usually need both positioning and z-index utilities.
   </Step>
-  <Step title="Test on Different Devices">
-    Ensure positioning works correctly on mobile and desktop, especially for fixed and sticky elements.
+  <Step title="Test Sticky and Fixed UI Carefully">
+    These patterns are easy to overuse and can become awkward on smaller screens.
   </Step>
 </Steps>
-
-### Performance Considerations
-
-#### Performance Tips
-
-- Use `position: fixed` sparingly as it can cause performance issues
-- Avoid deeply nested positioned elements
-- Test sticky positioning on different browsers
-- Use `transform` instead of `position` for animations when possible
 
 ## Related Utilities
 
@@ -188,12 +138,12 @@ Control the stacking order of positioned elements with z-index utilities.
     Control stacking order of positioned elements
   </Card>
   <Card title="Layout" icon="grid" href="/overview/layout">
-    Display utilities for positioning
+    Display utilities for positioning patterns
   </Card>
   <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
-    Margin utilities for positioning
+    Margin and padding around positioned elements
   </Card>
   <Card title="Effects" icon="sparkles" href="/effects/effects">
-    Opacity utilities for layered effects
+    Opacity utilities for layered interfaces
   </Card>
 </CardGroup>

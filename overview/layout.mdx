@@ -1,75 +1,60 @@
 ---
 title: "Layout"
-description: "Display, overflow, object-fit, aspect-ratio, and layout utilities for modern designs"
+description: "Display, overflow, object-fit, aspect-ratio, positioning, and responsive structural utilities."
 ---
 
 ## Overview
 
-Control the display type, overflow behavior, object fitting, and aspect ratios of elements using our layout utilities. These utilities form the foundation of your page structure and work seamlessly with Elementor v4's Atomic Elements.
+Layout utilities shape how blocks behave before you start styling them. The bundled framework includes display helpers, overflow control, object fitting, aspect ratio utilities, positioning tools, z-index helpers, and a responsive suffix system for structural classes.
 
 <CardGroup cols={2}>
   <Card title="Display" icon="grid" href="/layout/display">
-    Control how elements are displayed with `.block`, `.flex`, `.hidden`, and more
+    Block, inline-block, flex, inline-flex, and hidden helpers
+  </Card>
+  <Card title="Responsive Utilities" icon="mobile-screen" href="/layout/responsive-utilities">
+    Structural classes with the shipped `--on-*` breakpoint suffixes
   </Card>
   <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
-    Control content overflow with `.overflow-hidden` and `.overflow-auto`
+    Clip or scroll overflowing content with the bundled overflow helpers
   </Card>
   <Card title="Object Fit" icon="image" href="/layout/object-fit">
-    Control how images fit containers with `.object-cover` and `.object-contain`
+    Fit images or video frames with `.object-cover` and `.object-contain`
   </Card>
   <Card title="Aspect Ratio" icon="square" href="/layout/aspect-ratio">
-    Maintain consistent proportions with `.aspect-square` and `.aspect-video`
+    Preserve square and video proportions
   </Card>
   <Card title="Flexbox" icon="table-cells-large" href="/overview/flexbox">
-    Complete flexbox utilities for direction, alignment, and spacing
+    Direction, wrapping, alignment, order, and gap
   </Card>
 </CardGroup>
 
 ## Quick Start
 
-### Basic Layout
-
 ```html
-<!-- Display utilities -->
-<div class="flex items-center gap-4">
-  <div class="block p-4 bg-blue text-white">Block</div>
-  <div class="inline-block p-2 bg-green text-white">Inline Block</div>
-</div>
-
-<!-- Overflow -->
-<div class="w-64 h-32 overflow-auto border border-gray">
-  <p class="p-4">Scrollable content</p>
-</div>
-
-<!-- Object fit -->
-<img src="image.jpg" class="w-64 h-32 object-cover rounded" alt="Cover image">
-
-<!-- Aspect ratio -->
-<div class="w-full aspect-video bg-gray-light rounded"></div>
+<section class="cont my-12">
+  <div class="card">
+    <div class="flex items-center justify-between gap-4 mb-6">
+      <h2 class="text-2xl font-bold text-black">Layout Baseline</h2>
+      <p class="text-sm text-gray">Display, spacing, and alignment</p>
+    </div>
+    <div class="aspect-video overflow-hidden rounded-lg bg-gray-light mb-4"></div>
+    <div class="flex gap-4">
+      <div class="w-1-2 p-4 bg-blue text-white rounded">Column A</div>
+      <div class="w-1-2 p-4 bg-gray-light rounded">Column B</div>
+    </div>
+  </div>
+</section>
 ```
 
-## Layout Utilities Reference
+## What Ships Here
 
-### Display Utilities
-- **Block:** `.block`, `.inline-block`
-- **Flex:** `.flex`, `.inline-flex`
-- **Hidden:** `.hidden`
-
-### Overflow Utilities
-- **Hidden:** `.overflow-hidden`
-- **Auto:** `.overflow-auto`
-
-### Object Fit Utilities
-- **Cover:** `.object-cover`
-- **Contain:** `.object-contain`
-
-### Aspect Ratio Utilities
-- **Square:** `.aspect-square` (1:1)
-- **Video:** `.aspect-video` (16:9)
-
-<Info>
-For comprehensive flexbox utilities including direction, wrap, justify, align, and gap, see the [Flexbox documentation](/utility-framework/flexbox/flexbox).
-</Info>
+- Display: `.block`, `.inline-block`, `.flex`, `.inline-flex`, `.hidden`
+- Overflow: `.overflow-hidden`, `.overflow-auto`
+- Object fit: `.object-cover`, `.object-contain`
+- Aspect ratio: `.aspect-square`, `.aspect-video`
+- Positioning: `.static`, `.relative`, `.absolute`, `.fixed`, `.sticky`
+- Z-index: `.z-0`, `.z-10`, `.z-20`, `.z-50`, `.z-100`
+- Responsive structural suffixes: `.flex--on-m`, `.hidden--on-xs`, `.items-center--on-xl`, and related shipped variants
 
 ## Related Utilities
 
@@ -90,6 +75,13 @@ For comprehensive flexbox utilities including direction, wrap, justify, align, a
     href="/positioning/positioning"
   >
     Position utilities for advanced layouts
+  </Card>
+  <Card
+    title="Responsive Utilities"
+    icon="mobile-screen"
+    href="/layout/responsive-utilities"
+  >
+    Learn when and where to use the bundled `--on-*` suffixes
   </Card>
   <Card
     title="Components"

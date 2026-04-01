@@ -26,7 +26,7 @@
           {
             "group": "Utility Framework",
             "pages": [
-              "utility-framework/overview"
+              "overview"
             ]
           },
           {
@@ -58,6 +58,7 @@
             "group": "Layout",
             "pages": [
               "layout/display",
+              "layout/responsive-utilities",
               "layout/overflow",
               "layout/object-fit",
               "layout/aspect-ratio",

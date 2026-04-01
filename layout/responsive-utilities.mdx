@@ -1,0 +1,71 @@
+---
+title: "Responsive Utilities"
+description: "Document the shipped `--on-*` suffix system for structural classes."
+---
+
+import { ResponsiveUtilitiesDemo } from "/snippets/responsive-utilities-demo.jsx"
+
+## Interactive Demo
+
+<ResponsiveUtilitiesDemo />
+
+## Overview
+
+The bundled framework ships responsive suffix variants for structural utilities. Instead of prefix syntax, Skelementor appends a breakpoint suffix to the class name.
+
+```html
+<div class="flex flex-col flex-row--on-m gap-4">
+  <div class="w-1-2 p-4 bg-blue text-white rounded">A</div>
+  <div class="w-1-2 p-4 bg-gray-light rounded">B</div>
+</div>
+```
+
+## Breakpoint Map
+
+| Suffix | Media query | Usage |
+| ------ | ----------- | ----- |
+| `--on-xxl` | `min-width: 2400px` | Widescreen and above |
+| `--on-xl` | `max-width: 1366px` | Laptop and below |
+| `--on-l` | `max-width: 1200px` | Tablet landscape and below |
+| `--on-m` | `max-width: 1024px` | Tablet and below |
+| `--on-s` | `max-width: 880px` | Mobile landscape and below |
+| `--on-xs` | `max-width: 767px` | Mobile only |
+
+## Supported Families
+
+- Display: `.hidden`, `.block`, `.inline-block`, `.flex`, `.inline-flex`
+- Overflow: `.overflow-hidden`, `.overflow-auto`
+- Object fit: `.object-cover`, `.object-contain`
+- Aspect ratio: `.aspect-square`, `.aspect-video`
+- Positioning: `.static`, `.relative`, `.absolute`, `.fixed`, `.sticky`
+- Z-index: `.z-0`, `.z-10`, `.z-20`, `.z-50`, `.z-100`
+- Flex direction: `.flex-row`, `.flex-col`, reverse variants
+- Flex wrap: `.flex-wrap`, `.flex-nowrap`, `.flex-wrap-reverse`
+- Alignment: `.justify-*`, `.items-*`, `.self-*`, `.content-*`
+- Order: `.order-first`, `.order-last`
+
+## Example Patterns
+
+```html
+<div class="flex flex-row flex-col--on-m gap-6">
+  <div class="w-1-2 p-6 bg-white rounded-lg">Primary column</div>
+  <div class="w-1-2 p-6 bg-gray-light rounded-lg">Secondary column</div>
+</div>
+```
+
+```html
+<nav class="flex items-center justify-between justify-center--on-xs gap-4">
+  <span class="text-lg font-semibold">Brand</span>
+  <div class="flex gap-4 hidden--on-xs">
+    <a href="#" class="text-gray">Docs</a>
+    <a href="#" class="text-gray">Support</a>
+  </div>
+</nav>
+```
+
+## Best Practices
+
+- Use suffixes only for structural shifts, not for every class on the page.
+- Keep the base class readable first, then add the responsive override.
+- Prefer a small number of breakpoint changes over stacking many suffixes on one element.
+- Pair responsive suffixes with the standard spacing and sizing utilities that remain stable across breakpoints.

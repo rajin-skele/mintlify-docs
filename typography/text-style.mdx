@@ -20,7 +20,7 @@ import { TextStyleDemo } from "/snippets/text-style-demo.jsx"
 <div class="flex flex-col gap-2">
   <p class="text-sm uppercase tracking-wide text-gray">Release notes</p>
   <h3 class="text-3xl font-semibold text-black">
-    Version 1.4.0 introduces fluid typography
+    Version 1.4.0 sharpens the bundled typography system
   </h3>
 </div>
 ```
@@ -35,10 +35,13 @@ import { TextStyleDemo } from "/snippets/text-style-demo.jsx"
 
 ```html
 <p class="text-base text-gray">
-  Try the new <a class="text-blue underline font-medium">fluid utilities</a> or disable decoration with
+  Try the bundled <a class="text-blue underline font-medium">text decoration utilities</a> or disable decoration with
   <a class="text-blue no-underline font-medium">class="no-underline"</a>.
 </p>
-<blockquote class="text-lg italic text-gray-dark border-l-4 border-blue pl-4">
+<blockquote
+  class="text-lg italic text-gray-dark pl-4"
+  style="border-left: 4px solid #3b82f6;"
+>
   “Pair `.italic` with `.leading-relaxed` for long-form testimonials.”
 </blockquote>
 ```
@@ -56,4 +59,3 @@ Combine `.uppercase` with `.tracking-wide` or `.tracking-wider` to prevent cappe
 <Check>
 Inline emphasis should come from utility classes, not manual HTML elements. This keeps your Elementor global styles consistent and easy to audit.
 </Check>
-

@@ -9,36 +9,28 @@ The alignment utilities map directly to logical CSS properties, so they work aut
 
 | Class | CSS | When to use |
 | ----- | --- | ----------- |
-| `.text-start` | `text-align: start;` | Default left alignment (LTR) or right alignment (RTL) |
+| `.text-start` | `text-align: start;` | Default reading alignment |
 | `.text-center` | `text-align: center;` | Headlines, testimonials, CTA sections |
-| `.text-end` | `text-align: end;` | Pricing tables, metadata, RTL body copy |
+| `.text-end` | `text-align: end;` | Metadata, side notes, number-heavy content |
 
 ```html
-<div class="grid gap-6">
-  <header class="text-center">
+<div class="card">
+  <header class="text-center mb-6">
     <p class="text-sm text-gray">Case study</p>
     <h2 class="text-4xl font-semibold text-black">
-      Center alignment puts the spotlight on your testimonial
+      Center alignment puts the spotlight on the message
     </h2>
   </header>
   <aside class="text-end text-sm text-gray">
-    <p>Updated: October 2025</p>
-    <p>Written by: @project-team</p>
+    <p>Updated: April 2026</p>
+    <p>Written by: project-team</p>
   </aside>
 </div>
 ```
 
-<Tip>
-Because `.text-start` respects writing direction, you can design once and reuse the same component on multilingual Elementor sites without creating separate classes.
-</Tip>
+## Strategy
 
-## Responsive Alignment Strategy
-
-- **Mobile-first:** Keep paragraphs left-aligned for readability; reserve `.text-center` for short statements.
-- **Hero sections:** Combine `.text-center` with `.max-w-fluid-md mx-auto` to keep lines readable across breakpoints.
-- **Data tables:** Use `.text-end` for numbers and currency to align decimals cleanly.
-
-<Check>
-Wrap alignment utilities alongside flexbox helpers: `class="flex flex-col items-start text-start md:text-center"` gives you nuanced control as layouts shift.
-</Check>
-
+- Keep paragraphs at `.text-start` for readability.
+- Combine `.text-center` with `.max-w-md mx-auto` when you want a centered content column.
+- Use `.text-end` for side notes, meta information, and layouts that benefit from edge alignment.
+- When alignment should change responsively, pair it with the structural suffix system, for example `class="text-start text-center--on-xs"`.

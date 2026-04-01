@@ -1,23 +1,24 @@
 ---
 title: "Flexbox"
-description: "Complete flexbox utilities for modern layouts including direction, wrap, justify, align, and gap"
+description: "Direction, wrap, alignment, order, grow, shrink, gap, and responsive flex utilities."
 ---
 
 ## Overview
 
-Use flexbox utilities to control how flex items are sized, aligned, and distributed within a flex container. These utilities work seamlessly with Elementor v4's layout system and provide powerful control over component alignment and spacing.
-
-Flexbox utilities give you complete control over flex container behavior, item alignment, and spacing. Combine them with display utilities to build modern, responsive layouts.
+Use the bundled flexbox classes to control layout direction, wrapping, alignment, gap, visual order, and flexible growth. The same structural surface is also available through the `--on-*` responsive suffix system.
 
 <CardGroup cols={2}>
   <Card title="Direction" icon="arrows-left-right" href="/flexbox/direction">
-    Control flex direction with `.flex-row` and `.flex-col`
+    Row, column, and reverse direction helpers
   </Card>
   <Card title="Alignment" icon="objects-align-left" href="/flexbox/alignment">
-    Align items with justify-content and align-items utilities
+    Justify, items, self, content, order, grow, and shrink
   </Card>
   <Card title="Gap" icon="arrows-up-down-left-right" href="/flexbox/gap">
-    Static and fluid gap utilities for spacing between flex items
+    Gap, row-gap, and column-gap utilities for flex layouts
+  </Card>
+  <Card title="Responsive Utilities" icon="mobile-screen" href="/layout/responsive-utilities">
+    Structural flex classes with shipped `--on-*` variants
   </Card>
 </CardGroup>
 
@@ -50,6 +51,7 @@ Flexbox utilities give you complete control over flex container behavior, item a
 - **Centered Content:** Combine `items-center` and `justify-center`
 - **Card Grids:** Use `flex-wrap` with gap utilities
 - **Form Layouts:** Stack form fields with `flex-col`
+- **Responsive structure:** Switch structural behavior with helpers like `.flex-col--on-m` or `.items-center--on-xl`
 
 ## Related Utilities
 
@@ -61,4 +63,3 @@ Flexbox utilities give you complete control over flex container behavior, item a
     Margin and padding utilities
   </Card>
 </CardGroup>
-

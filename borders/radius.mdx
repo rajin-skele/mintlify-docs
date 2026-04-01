@@ -1,6 +1,6 @@
 ---
 title: "Border Radius"
-description: "Border radius utilities for rounded corners"
+description: "Border radius utilities for rounded corners."
 ---
 
 import { BorderRadiusDemo } from "/snippets/border-radius-demo.jsx"
@@ -11,91 +11,57 @@ import { BorderRadiusDemo } from "/snippets/border-radius-demo.jsx"
 
 ## Overview
 
-Control corner rounding with radius utilities. Border radius helps create softer, more modern designs and works together with border width, style, and color.
+Radius utilities shape corners across buttons, cards, fields, and media. They work with border width, style, and color utilities, but can also be used on borderless surfaces.
 
 ## Border Radius Utilities
 
 | Class | Value | CSS | Usage |
 | ----- | ----- | --- | ----- |
 | `.rounded-none` | 0 | `border-radius: 0;` | Square corners |
-| `.rounded-sm` | 4px | `border-radius: 4px;` | Small rounding |
+| `.rounded-sm` | 4px | `border-radius: 4px;` | Tight rounding |
 | `.rounded` | 6px | `border-radius: 6px;` | Standard rounding |
-| `.rounded-lg` | 8px | `border-radius: 8px;` | Large rounding |
-| `.rounded-xl` | 12px | `border-radius: 12px;` | Extra large rounding |
-| `.rounded-2xl` | 16px | `border-radius: 16px;` | Very large rounding |
-| `.rounded-full` | 9999px | `border-radius: 9999px;` | Fully rounded (pills) |
+| `.rounded-lg` | 8px | `border-radius: 8px;` | Comfortable card radius |
+| `.rounded-xl` | 12px | `border-radius: 12px;` | Soft, modern surfaces |
+| `.rounded-2xl` | 16px | `border-radius: 16px;` | Display containers |
+| `.rounded-full` | 9999px | `border-radius: 9999px;` | Pills and circles |
 
 ## Examples
 
-### Basic Border Radius
-
 ```html
-<!-- Border radius examples -->
-<div class="border-2 border-gray rounded-none p-4">Square corners</div>
-<div class="border-2 border-gray rounded-sm p-4">Small rounding</div>
-<div class="border-2 border-gray rounded p-4">Standard rounding</div>
-<div class="border-2 border-gray rounded-lg p-4">Large rounding</div>
-<div class="border-2 border-gray rounded-xl p-4">Extra large rounding</div>
-<div class="border-2 border-gray rounded-full p-4">Fully rounded</div>
+<div class="border-2 border-solid border-gray rounded-none p-4">Square corners</div>
+<div class="border-2 border-solid border-gray rounded-sm p-4">Small rounding</div>
+<div class="border-2 border-solid border-gray rounded p-4">Standard rounding</div>
+<div class="border-2 border-solid border-gray rounded-lg p-4">Large rounding</div>
+<div class="border-2 border-solid border-gray rounded-xl p-4">Extra large rounding</div>
+<div class="border-2 border-solid border-gray rounded-full p-4">Fully rounded</div>
 ```
 
-### Buttons with Radius
-
 ```html
-<!-- Standard button -->
-<button class="btn btn-blue rounded">Standard Button</button>
+<input
+  type="text"
+  class="w-full p-3 border-1 border-solid border-gray rounded"
+  placeholder="Rounded input"
+>
 
-<!-- Large radius button -->
-<button class="btn btn-blue rounded-lg">Large Radius Button</button>
-
-<!-- Pill button -->
-<button class="btn btn-blue rounded-full px-6">Pill Button</button>
+<input
+  type="text"
+  class="w-full p-3 border-1 border-solid border-gray rounded-lg"
+  placeholder="Large radius input"
+>
 ```
 
-## Common Patterns
-
-### Cards with Radius
-
 ```html
-<!-- Standard card -->
-<div class="card rounded-lg p-6">
-  <h3 class="text-xl font-semibold mb-4">Card Title</h3>
-  <p class="text-gray">Card content</p>
+<div style="width: 4rem; height: 4rem;" class="overflow-hidden rounded-full">
+  <img src="avatar.jpg" class="w-full h-full object-cover" alt="Avatar">
 </div>
-
-<!-- Extra rounded card -->
-<div class="card rounded-xl p-6">
-  <h3 class="text-xl font-semibold mb-4">Rounded Card</h3>
-  <p class="text-gray">Card with extra rounding</p>
-</div>
-```
-
-### Form Inputs
-
-```html
-<!-- Rounded input -->
-<input type="text" class="w-full p-3 border border-gray rounded" placeholder="Rounded input">
-
-<!-- Large radius input -->
-<input type="text" class="w-full p-3 border border-gray rounded-lg" placeholder="Large radius input">
-```
-
-### Images with Radius
-
-```html
-<!-- Rounded image -->
-<img src="image.jpg" class="rounded-lg" alt="Rounded image">
-
-<!-- Fully rounded image (circle) -->
-<img src="avatar.jpg" class="w-16 h-16 rounded-full object-cover" alt="Avatar">
 ```
 
 ## Best Practices
 
-- **Match border radius:** Use consistent border radius values throughout your design
-- **Small for subtle:** Use small radius (4-6px) for subtle rounding
-- **Large for emphasis:** Use large radius (12-16px) for modern, soft designs
-- **Full for pills:** Use `rounded-full` for pill-shaped buttons and badges
+- Use one or two radius sizes across a page so surfaces feel related.
+- `rounded` and `rounded-lg` cover most interface needs.
+- Reach for `rounded-full` on pills, avatars, and circular badges.
+- Pair larger radius values with generous padding so corners feel intentional.
 
 ## Related Utilities
 
@@ -113,4 +79,3 @@ Control corner rounding with radius utilities. Border radius helps create softer
     Complete borders overview
   </Card>
 </CardGroup>
-

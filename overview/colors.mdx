@@ -1,104 +1,76 @@
 ---
 title: "Colors"
-description: "Text, background, and border colors with semantic naming"
+description: "Text, background, and border colors with semantic naming."
 ---
 
 import { ColorPalette } from "/snippets/color-palette.jsx"
 
 ## Overview
 
-This framework includes a carefully curated color palette designed for modern web applications. Use semantic color utilities to style text, backgrounds, and borders with consistent, accessible color values.
-
-Control text, background, and border colors with semantic color utilities. All colors are designed to meet WCAG accessibility standards and work seamlessly with Elementor v4's styling system.
+The framework ships a semantic color layer for text, backgrounds, and borders. The goal is a small, dependable palette that works across editorial content, UI surfaces, and status messaging.
 
 ## Color Palette
 
-This framework includes a carefully curated color palette designed for modern web applications. Below is an interactive color palette showcasing all available shades. Click on any color to copy its OKLCH value, or hold Shift and click to copy the hex value.
-
 <ColorPalette />
 
-### Color Reference
-
-The palette includes 20 color families, each with 11 shades ranging from very light (l-5) to very dark (d-5), with a base shade in the middle:
+### Core Reference
 
 | Color | Hex Value | Usage |
 | ----- | --------- | ----- |
 | White | `#ffffff` | Backgrounds, text on dark |
 | Black | `#000000` | Text, borders |
-| Dark Gray | `#374151` | Primary text |
-| Gray | `#6b7280` | Secondary text |
+| Dark Gray | `#374151` | Primary supporting text |
+| Gray | `#6b7280` | Secondary text and borders |
 | Light Gray | `#9ca3af` | Muted text |
-| Blue | `#3b82f6` | Primary actions, links |
+| Blue | `#3b82f6` | Primary actions and accents |
 | Green | `#10b981` | Success states |
-| Red | `#ef4444` | Error states, warnings |
+| Red | `#ef4444` | Error states |
 | Yellow | `#f59e0b` | Warning states |
 
 <CardGroup cols={2}>
   <Card title="Text Colors" icon="text-size" href="/colors/text-colors">
-    Semantic text color utilities for headings, body text, and links
+    Semantic text color utilities
   </Card>
   <Card title="Background Colors" icon="square" href="/colors/background-colors">
-    Background color utilities for sections, cards, and containers
+    Background color utilities for sections and surfaces
   </Card>
   <Card title="Border Colors" icon="square" href="/colors/border-colors">
-    Border color utilities that work with border width utilities
+    Border color utilities that pair with the border system
   </Card>
 </CardGroup>
 
 ## Quick Start
 
-### Basic Color Usage
-
 ```html
-<!-- Text colors -->
 <h1 class="text-black">Primary Heading</h1>
 <p class="text-gray">Secondary text</p>
-<a href="#" class="text-blue">Link</a>
+<a href="#" class="text-blue underline">Link</a>
 
-<!-- Background colors -->
-<div class="bg-white p-6">White background</div>
-<div class="bg-blue text-white p-6">Blue background</div>
+<div class="bg-white p-6 rounded-lg">White background</div>
+<div class="bg-blue text-white p-6 rounded-lg">Blue background</div>
 
-<!-- Border colors -->
-<div class="border border-gray p-4">Gray border</div>
+<div class="border-1 border-solid border-gray p-4 rounded">Gray border</div>
 ```
 
-## Color Accessibility
+## Accessibility
 
 <Warning>
-  **Accessibility Note:** Ensure sufficient color contrast for readability. The
-  color palette is designed to meet WCAG AA standards.
+Ensure text and interface colors preserve readable contrast. The palette is designed for sensible defaults, but context still matters.
 </Warning>
-
-### Contrast Guidelines
-
-- **Normal text:** Minimum 4.5:1 contrast ratio
-- **Large text:** Minimum 3:1 contrast ratio
-- **UI components:** Minimum 3:1 contrast ratio
-- **Focus indicators:** Minimum 3:1 contrast ratio
 
 ## Related Utilities
 
 <CardGroup cols={2}>
-  <Card
-    title="Typography"
-    icon="text-size"
-    href="/overview/typography"
-  >
+  <Card title="Typography" icon="text-size" href="/overview/typography">
     Text utilities that work with colors
   </Card>
   <Card title="Borders" icon="square" href="/overview/borders">
     Border utilities with color support
   </Card>
-  <Card
-    title="Components"
-    icon="puzzle-piece"
-    href="/overview/components"
-  >
+  <Card title="Components" icon="puzzle-piece" href="/overview/components">
     Pre-built components with color variants
   </Card>
   <Card title="Effects" icon="sparkles" href="/overview/effects">
-    Opacity utilities for color effects
+    Opacity utilities for layered color effects
   </Card>
 </CardGroup>
-

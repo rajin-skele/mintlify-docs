@@ -1,38 +1,53 @@
 ---
 title: "Object Fit"
-description: "Control how images and videos fit within their containers"
+description: "Control how images and video media fit inside fixed frames."
 ---
 
 ## Overview
 
-Use object-fit utilities to control how replaced elements (like images and videos) are resized to fit their containers. These utilities are essential for creating consistent image layouts and maintaining aspect ratios.
+Use object-fit utilities on images or videos once the container has a known frame. The bundled framework ships two utilities: `object-cover` and `object-contain`.
 
 ## Object Fit Utilities
 
 | Class | Type | CSS | Usage |
 | ----- | ---- | --- | ----- |
-| `.object-cover` | Cover | `object-fit: cover;` | Cover container, crop if needed |
-| `.object-contain` | Contain | `object-fit: contain;` | Fit within container, no cropping |
+| `.object-cover` | Cover | `object-fit: cover;` | Fill the frame, crop if needed |
+| `.object-contain` | Contain | `object-fit: contain;` | Keep the whole asset visible |
 
 ## Object Cover
 
-Use `.object-cover` to scale the image to cover the entire container while maintaining its aspect ratio. The image will be cropped if necessary to fill the container.
+Use `.object-cover` when the frame matters more than seeing every edge of the image.
 
 ```html
-<img src="image.jpg" class="w-64 h-32 object-cover rounded" alt="Cover image" />
+<div style="width: 18rem; height: 10rem;" class="overflow-hidden rounded">
+  <img src="image.jpg" class="w-full h-full object-cover" alt="Cover image" />
+</div>
 ```
 
-### Common Use Cases
+## Object Contain
 
-- Hero images that need to fill a container
-- Card images with consistent dimensions
-- Gallery thumbnails
-- Background images in fixed-size containers
+Use `.object-contain` when the whole image or logo needs to stay visible.
 
 ```html
-<!-- Card with cover image -->
+<div
+  style="width: 18rem; height: 10rem;"
+  class="border-1 border-solid border-gray rounded"
+>
+  <img
+    src="image.jpg"
+    class="w-full h-full object-contain"
+    alt="Contain image"
+  />
+</div>
+```
+
+## Examples
+
+### Card Media
+
+```html
 <div class="card overflow-hidden rounded-lg">
-  <div class="h-48 overflow-hidden">
+  <div style="height: 12rem;" class="overflow-hidden">
     <img src="hero.jpg" class="w-full h-full object-cover" alt="Card image" />
   </div>
   <div class="p-6">
@@ -42,33 +57,10 @@ Use `.object-cover` to scale the image to cover the entire container while maint
 </div>
 ```
 
-<Tip>
-  Always combine `.object-cover` with `.overflow-hidden` on the container to
-  ensure clean edges when images are cropped.
-</Tip>
-
-## Object Contain
-
-Use `.object-contain` to scale the image to fit within the container while maintaining its aspect ratio. The entire image will be visible, but there may be empty space if the aspect ratios don't match.
+### Product Media
 
 ```html
-<img
-  src="image.jpg"
-  class="w-64 h-32 object-contain border border-gray"
-  alt="Contain image"
-/>
-```
-
-### Common Use Cases
-
-- Product images that must be fully visible
-- Logos in fixed-size containers
-- Icons and graphics
-- Images where no cropping is acceptable
-
-```html
-<!-- Product image container -->
-<div class="w-64 h-64 bg-gray-light p-4 rounded">
+<div style="width: 18rem; height: 18rem;" class="bg-gray-light p-4 rounded">
   <img
     src="product.jpg"
     class="w-full h-full object-contain"
@@ -77,170 +69,65 @@ Use `.object-contain` to scale the image to fit within the container while maint
 </div>
 ```
 
-## Object Fit Examples
-
-### Image Gallery with Cover
+### Gallery Thumbnails
 
 ```html
 <div class="flex flex-wrap gap-4">
-  <div class="w-48 h-48 overflow-hidden rounded-lg">
-    <img
-      src="image1.jpg"
-      class="w-full h-full object-cover"
-      alt="Gallery image 1"
-    />
+  <div style="width: 11rem; height: 11rem;" class="overflow-hidden rounded-lg">
+    <img src="image1.jpg" class="w-full h-full object-cover" alt="Gallery image 1" />
   </div>
-  <div class="w-48 h-48 overflow-hidden rounded-lg">
-    <img
-      src="image2.jpg"
-      class="w-full h-full object-cover"
-      alt="Gallery image 2"
-    />
+  <div style="width: 11rem; height: 11rem;" class="overflow-hidden rounded-lg">
+    <img src="image2.jpg" class="w-full h-full object-cover" alt="Gallery image 2" />
   </div>
-  <div class="w-48 h-48 overflow-hidden rounded-lg">
-    <img
-      src="image3.jpg"
-      class="w-full h-full object-cover"
-      alt="Gallery image 3"
-    />
+  <div style="width: 11rem; height: 11rem;" class="overflow-hidden rounded-lg">
+    <img src="image3.jpg" class="w-full h-full object-cover" alt="Gallery image 3" />
   </div>
 </div>
 ```
 
-### Hero Section with Cover Image
+### Hero Image
 
 ```html
-<section class="relative h-96 overflow-hidden">
+<section style="height: 24rem;" class="relative overflow-hidden rounded-lg">
   <img src="hero.jpg" class="w-full h-full object-cover" alt="Hero image" />
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  <div class="absolute inset-0 flex items-center justify-center">
+  <div
+    class="absolute bg-black opacity-50"
+    style="top: 0; right: 0; bottom: 0; left: 0;"
+  ></div>
+  <div
+    class="absolute flex items-center justify-center"
+    style="top: 0; right: 0; bottom: 0; left: 0;"
+  >
     <h1 class="text-4xl font-bold text-white">Hero Title</h1>
   </div>
 </section>
 ```
 
-### Product Grid with Contain
-
-```html
-<div class="flex flex-wrap gap-6">
-  <div class="w-64">
-    <div class="h-48 bg-gray-light p-4 rounded mb-4">
-      <img
-        src="product1.jpg"
-        class="w-full h-full object-contain"
-        alt="Product 1"
-      />
-    </div>
-    <h3 class="text-lg font-semibold">Product Name</h3>
-  </div>
-  <div class="w-64">
-    <div class="h-48 bg-gray-light p-4 rounded mb-4">
-      <img
-        src="product2.jpg"
-        class="w-full h-full object-contain"
-        alt="Product 2"
-      />
-    </div>
-    <h3 class="text-lg font-semibold">Product Name</h3>
-  </div>
-</div>
-```
-
-### Avatar with Cover
-
-```html
-<div class="flex items-center gap-4">
-  <div class="w-16 h-16 overflow-hidden rounded-full">
-    <img src="avatar.jpg" class="w-full h-full object-cover" alt="Avatar" />
-  </div>
-  <div>
-    <h4 class="font-semibold">User Name</h4>
-    <p class="text-sm text-gray">User description</p>
-  </div>
-</div>
-```
-
 ## Best Practices
 
 <Steps>
-  <Step title="Use Cover for Consistent Layouts">
-    Use `.object-cover` when you need images to fill containers consistently,
-    like in card grids or galleries.
+  <Step title="Set the Frame First">
+    Object-fit only matters once the container has a known width, height, or aspect ratio.
   </Step>
-  <Step title="Use Contain for Important Content">
-    Use `.object-contain` when the entire image must be visible, like product
-    photos or logos.
+  <Step title="Use Cover for Editorial Layouts">
+    Card art, hero media, and gallery crops usually work best with `.object-cover`.
   </Step>
-  <Step title="Combine with Overflow Hidden">
-    Always use `.overflow-hidden` on the container when using `.object-cover` to
-    ensure clean edges.
+  <Step title="Use Contain for Product and Brand Assets">
+    Logos and product images often need `.object-contain` so nothing important gets cropped.
   </Step>
-  <Step title="Set Container Dimensions">
-    Always set explicit width and height on containers when using object-fit
-    utilities.
+  <Step title="Pair With Overflow Hidden">
+    Cropped media looks cleaner when the container clips the edges.
   </Step>
 </Steps>
-
-## Common Patterns
-
-### Responsive Image Container
-
-```html
-<div class="w-full aspect-video overflow-hidden rounded-lg">
-  <img
-    src="image.jpg"
-    class="w-full h-full object-cover"
-    alt="Responsive image"
-  />
-</div>
-```
-
-### Logo Container
-
-```html
-<div class="w-32 h-16 bg-white p-2 rounded">
-  <img src="logo.png" class="w-full h-full object-contain" alt="Logo" />
-</div>
-```
-
-### Thumbnail Grid
-
-```html
-<div class="grid grid-cols-4 gap-2">
-  <div class="aspect-square overflow-hidden rounded">
-    <img
-      src="thumb1.jpg"
-      class="w-full h-full object-cover"
-      alt="Thumbnail 1"
-    />
-  </div>
-  <div class="aspect-square overflow-hidden rounded">
-    <img
-      src="thumb2.jpg"
-      class="w-full h-full object-cover"
-      alt="Thumbnail 2"
-    />
-  </div>
-  <!-- More thumbnails... -->
-</div>
-```
 
 ## Related Utilities
 
 <CardGroup cols={2}>
-  <Card
-    title="Aspect Ratio"
-    icon="square"
-    href="/layout/aspect-ratio"
-  >
-    Control container aspect ratios
+  <Card title="Aspect Ratio" icon="square" href="/layout/aspect-ratio">
+    Control container proportions
   </Card>
-  <Card
-    title="Overflow"
-    icon="arrows-left-right"
-    href="/layout/overflow"
-  >
-    Control content overflow behavior
+  <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
+    Control clipping and scrolling
   </Card>
   <Card title="Sizing" icon="expand" href="/overview/sizing">
     Width and height utilities

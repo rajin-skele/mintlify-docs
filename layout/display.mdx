@@ -1,6 +1,6 @@
 ---
 title: "Display"
-description: "Control how elements are displayed with display utilities"
+description: "Control how elements participate in layout with the bundled display utilities."
 ---
 
 import { DisplayDemo } from "/snippets/display-demo.jsx"
@@ -11,56 +11,27 @@ import { DisplayDemo } from "/snippets/display-demo.jsx"
 
 ## Overview
 
-Use display utilities to control how elements are rendered. These utilities set the CSS `display` property and are fundamental to building layouts in Elementor v4.
+Display utilities control how elements render in layout. They are the starting point for most framework composition: block flow, inline layout, flex layout, and visibility toggles.
 
 ## Display Utilities
 
 | Class | Type | CSS | Usage |
 | ----- | ---- | --- | ----- |
 | `.block` | Block | `display: block;` | Full-width block element |
-| `.inline-block` | Inline-block | `display: inline-block;` | Inline with block properties |
-| `.flex` | Flex | `display: flex;` | Flexbox container |
-| `.inline-flex` | Inline-flex | `display: inline-flex;` | Inline flexbox container |
-| `.hidden` | Hidden | `display: none;` | Hide element |
+| `.inline-block` | Inline-block | `display: inline-block;` | Inline with box-model sizing |
+| `.flex` | Flex | `display: flex;` | Flex container |
+| `.inline-flex` | Inline-flex | `display: inline-flex;` | Inline flex container |
+| `.hidden` | Hidden | `display: none;` | Remove from layout |
 
-## Block
+## Examples
 
-Use `.block` to make an element a block-level element. Block elements take up the full width of their container and start on a new line.
-
-```html
-<div class="block p-4 bg-blue text-white">This is a block element</div>
-```
-
-### Common Use Cases
-
-- Creating full-width containers
-- Stacking elements vertically
-- Form elements that need full width
+### Block
 
 ```html
-<div class="block p-4 bg-gray-light mb-4">Block 1</div>
-<div class="block p-4 bg-gray-light mb-4">Block 2</div>
-<div class="block p-4 bg-gray-light">Block 3</div>
+<div class="block p-4 bg-blue text-white rounded">This is a block element</div>
 ```
 
-## Inline Block
-
-Use `.inline-block` to make an element inline but with block-level properties. Elements can sit side-by-side but still respect width and height.
-
-```html
-<span class="inline-block p-2 bg-blue text-white rounded">
-  Inline Block 1
-</span>
-<span class="inline-block p-2 bg-green text-white rounded">
-  Inline Block 2
-</span>
-```
-
-### Common Use Cases
-
-- Buttons in navigation
-- Icon and text combinations
-- Elements that need to flow inline but respect dimensions
+### Inline Block
 
 ```html
 <div class="text-center">
@@ -73,34 +44,17 @@ Use `.inline-block` to make an element inline but with block-level properties. E
 </div>
 ```
 
-## Flex
-
-Use `.flex` to create a flexbox container. This is the foundation for most modern layouts.
+### Flex
 
 ```html
 <div class="flex items-center gap-4">
-  <div class="p-4 bg-blue text-white">Item 1</div>
-  <div class="p-4 bg-green text-white">Item 2</div>
-  <div class="p-4 bg-red text-white">Item 3</div>
+  <div class="p-4 bg-blue text-white rounded">Item 1</div>
+  <div class="p-4 bg-green text-white rounded">Item 2</div>
+  <div class="p-4 bg-red text-white rounded">Item 3</div>
 </div>
 ```
 
-### Common Use Cases
-
-- Navigation bars
-- Card grids
-- Centered content
-- Responsive layouts
-
-<Tip>
-  Combine `.flex` with other flexbox utilities like `.items-center`,
-  `.justify-between`, and `.gap-4` for powerful layouts. See the [Flexbox
-  documentation](/utility-framework/flexbox/flexbox) for complete flexbox utilities.
-</Tip>
-
-## Inline Flex
-
-Use `.inline-flex` to create an inline flexbox container. Useful when you want flexbox behavior but need the container to flow inline with other elements.
+### Inline Flex
 
 ```html
 <div class="text-center">
@@ -108,123 +62,49 @@ Use `.inline-flex` to create an inline flexbox container. Useful when you want f
     <span>Icon</span>
     <span>Label</span>
   </div>
-  <div class="inline-flex items-center gap-2 bg-gray-light p-2 rounded">
-    <span>Icon</span>
-    <span>Label</span>
-  </div>
 </div>
 ```
 
-### Common Use Cases
-
-- Badges and tags
-- Icon-text combinations in paragraphs
-- Inline form elements
-
-## Hidden
-
-Use `.hidden` to completely hide an element from the page. The element is removed from the document flow and takes up no space.
+### Hidden
 
 ```html
 <div class="hidden">This content is hidden</div>
 ```
 
 <Warning>
-  The `.hidden` utility uses `display: none`, which removes the element from
-  accessibility trees. For screen reader accessibility, consider using
-  visibility utilities or conditional rendering instead.
+The `.hidden` utility removes the element from layout and accessibility trees. Use it intentionally.
 </Warning>
-
-### Common Use Cases
-
-- Conditionally showing/hiding content
-- Mobile menu toggles
-- Progressive disclosure patterns
-
-## Display Examples
-
-### Navigation Bar
-
-```html
-<nav class="flex items-center justify-between p-6 bg-white">
-  <h1 class="text-2xl font-bold">Logo</h1>
-  <div class="flex gap-6">
-    <a href="#" class="text-gray">Home</a>
-    <a href="#" class="text-gray">About</a>
-    <a href="#" class="text-gray">Contact</a>
-  </div>
-</nav>
-```
-
-### Card Grid
-
-```html
-<div class="flex flex-wrap gap-6">
-  <div class="w-1-3">
-    <div class="card p-6">Card 1</div>
-  </div>
-  <div class="w-1-3">
-    <div class="card p-6">Card 2</div>
-  </div>
-  <div class="w-1-3">
-    <div class="card p-6">Card 3</div>
-  </div>
-</div>
-```
-
-### Centered Content
-
-```html
-<div class="flex items-center justify-center min-h-screen">
-  <div class="text-center">
-    <h1 class="text-4xl font-bold mb-4">Centered Content</h1>
-    <p class="text-lg text-gray">Perfectly centered</p>
-  </div>
-</div>
-```
 
 ## Best Practices
 
 <Steps>
-  <Step title="Choose the Right Display">
-    Use `.block` for full-width elements, `.flex` for layouts, and
-    `.inline-block` for inline elements that need dimensions.
+  <Step title="Use Flex for Layouts">
+    Prefer `.flex` for modern horizontal and vertical layout composition.
   </Step>
-  <Step title="Combine with Other Utilities">
-    Display utilities work best when combined with spacing, sizing, and
-    alignment utilities.
+  <Step title="Use Block for Structural Elements">
+    Reach for `.block` when the element should start on a new line and fill the row.
   </Step>
-  <Step title="Use Flexbox for Layouts">
-    Prefer `.flex` over floats or positioning for modern layouts. It's more
-    predictable and easier to maintain.
+  <Step title="Use Inline Block or Inline Flex for Compact UI">
+    Badges, buttons, and compact controls often benefit from inline formatting with layout control.
   </Step>
-  <Step title="Consider Accessibility">
-    Be mindful of how display changes affect screen readers and keyboard
-    navigation.
+  <Step title="Use Responsive Suffixes Where Needed">
+    Display classes also support the bundled `--on-*` suffix pattern when layout behavior needs to change by viewport.
   </Step>
 </Steps>
 
 ## Related Utilities
 
 <CardGroup cols={2}>
-  <Card
-    title="Flexbox"
-    icon="table-cells-large"
-    href="/overview/flexbox"
-  >
+  <Card title="Flexbox" icon="table-cells-large" href="/overview/flexbox">
     Complete flexbox utilities for layouts
   </Card>
   <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
-    Margin and padding for display spacing
+    Margin, padding, and gap utilities
   </Card>
   <Card title="Sizing" icon="expand" href="/overview/sizing">
     Width and height utilities
   </Card>
-  <Card
-    title="Overflow"
-    icon="arrows-left-right"
-    href="/layout/overflow"
-  >
+  <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
     Control content overflow behavior
   </Card>
 </CardGroup>

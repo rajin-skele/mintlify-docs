@@ -1,163 +1,37 @@
 ---
 title: "Best Practices"
-description: "Advanced usage patterns and optimization tips"
+description: "Use the bundled framework consistently without drifting into unsupported patterns."
 ---
 
-## Class Organization
+## Core Principles
 
-### Group Related Classes
+- Use the bundled class names exactly as they ship.
+- Prefer small, composable groups of classes over one-off custom patterns.
+- Reach for `.btn`, `.card`, and `.cont` when the preset already fits the job.
+- Keep layout changes structural and use the `--on-*` suffix system when responsiveness is needed.
 
-Organize classes by function for better readability:
-
-```html
-<!-- Typography -->
-<h1 class="text-4xl font-bold text-center mb-6">Title</h1>
-
-<!-- Layout -->
-<div class="flex items-center justify-between p-6 bg-white">
-  <!-- Spacing -->
-  <div class="p-4 mb-6 mt-4"></div>
-</div>
-```
-
-### Use Consistent Patterns
-
-Establish consistent patterns across your design:
+## Good Composition
 
 ```html
-<!-- Card pattern -->
-<div class="card p-6 rounded-lg bg-white border border-gray-light">
-  <h3 class="text-xl font-semibold mb-4">Title</h3>
-  <p class="text-gray mb-4">Content</p>
+<div class="card">
+  <h3 class="text-xl font-semibold text-black mb-4">Title</h3>
+  <p class="text-base leading-relaxed text-gray-dark mb-6">Content</p>
   <button class="btn btn-blue">Action</button>
 </div>
 ```
 
-## Performance Optimization
-
-### Minimize Class Usage
-
-Use only the classes you need:
+## Responsive Guidance
 
 ```html
-<!-- Good: Minimal classes -->
-<div class="flex items-center gap-4">
-  <!-- Avoid: Unnecessary classes -->
-  <div class="flex items-center gap-4 p-0 m-0 bg-transparent"></div>
+<div class="flex flex-row flex-col--on-m gap-6">
+  <div class="w-1-2"><div class="card">Content</div></div>
+  <div class="w-1-2"><div class="card">Content</div></div>
 </div>
 ```
 
-### Leverage Component Classes
+## Avoid
 
-Use pre-built components when possible:
-
-```html
-<!-- Use component classes -->
-<button class="btn btn-blue">Button</button>
-
-<!-- Instead of building from scratch -->
-<button class="inline-block px-6 py-3 bg-blue text-white rounded">
-  Button
-</button>
-```
-
-## Responsive Design
-
-### Mobile-First Approach
-
-Design for mobile first, then enhance for larger screens:
-
-```html
-<div class="flex flex-col md:flex-row gap-4">
-  <div class="w-full md:w-1-2">Content</div>
-  <div class="w-full md:w-1-2">Content</div>
-</div>
-```
-
-### Consistent Breakpoints
-
-Use consistent responsive patterns:
-
-```html
-<div class="w-full md:w-1-2 lg:w-1-3 xl:w-1-4">
-  <div class="card p-4 md:p-6">Responsive Card</div>
-</div>
-```
-
-## Accessibility
-
-### Semantic HTML
-
-Always use semantic HTML elements:
-
-```html
-<!-- Good -->
-<header class="bg-white p-6">
-  <h1 class="text-2xl font-bold">Site Title</h1>
-</header>
-
-<!-- Avoid -->
-<div class="bg-white p-6">
-  <div class="text-2xl font-bold">Site Title</div>
-</div>
-```
-
-### Color Contrast
-
-Ensure sufficient color contrast:
-
-```html
-<!-- Good contrast -->
-<div class="bg-blue text-white p-4">High contrast</div>
-
-<!-- Avoid low contrast -->
-<div class="bg-gray text-gray-light p-4">Low contrast</div>
-```
-
-## Maintenance
-
-### Document Patterns
-
-Create reusable patterns for your team:
-
-```html
-<!-- Hero section pattern -->
-<section class="flex items-center justify-center min-h-screen bg-gray-light">
-  <div class="max-w-2xl text-center p-8">
-    <h1 class="text-5xl font-extrabold mb-6">Hero Title</h1>
-    <p class="text-xl text-gray mb-8">Hero description</p>
-    <button class="btn btn-blue btn-lg">Call to Action</button>
-  </div>
-</section>
-```
-
-### Consistent Naming
-
-Use consistent naming conventions:
-
-```html
-<!-- Button patterns -->
-<button class="btn btn-blue">Primary Action</button>
-<button class="btn bg-gray text-white">Secondary Action</button>
-<button class="btn btn-red">Destructive Action</button>
-```
-
-## Common Mistakes
-
-<Warning>**Avoid these common mistakes:**</Warning>
-
-- Don't use too many classes on a single element
-- Don't mix different spacing scales inconsistently
-- Don't forget to test on mobile devices
-- Don't use utility classes for complex animations
-
-## Related Guides
-
-<CardGroup cols={2}>
-  <Card title="Basic Usage" icon="play" href="/usage/basic-usage">
-    Getting started with utilities
-  </Card>
-  <Card title="Examples" icon="code" href="/usage/examples">
-    Real-world usage examples
-  </Card>
-</CardGroup>
+- Copying Tailwind-style prefixes like `md:` or `lg:`
+- Reaching for class names that are not in the shipped Skelementor bundle
+- Mixing margin-based spacing inside flex layouts when `gap-*` would do the job
+- Using too many different spacing or type steps in the same component

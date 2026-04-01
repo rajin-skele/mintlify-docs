@@ -1,51 +1,41 @@
 ---
 title: "Effects"
-description: "Opacity utilities for creating overlays and transparency effects"
+description: "Full bundled opacity scale for overlays, states, and depth."
 ---
 
 ## Overview
 
-Control element transparency with opacity utilities. Use opacity to create overlays, disabled states, hover effects, and layered visual effects. All opacity utilities are GPU-accelerated for smooth performance.
-
-Opacity utilities provide fine-grained control over element transparency, perfect for creating depth, indicating states, and building modern UI patterns.
+Control transparency with the bundled opacity scale. The framework ships every 5% step from `opacity-0` through `opacity-100`, which gives you finer control than the small subset used in older examples.
 
 ## Opacity Scale
 
 | Class | Value | CSS | Usage |
 | ----- | ----- | --- | ----- |
-| `.opacity-0` | 0% | `opacity: 0;` | Completely transparent |
-| `.opacity-25` | 25% | `opacity: 0.25;` | Very transparent |
-| `.opacity-50` | 50% | `opacity: 0.5;` | Semi-transparent |
-| `.opacity-75` | 75% | `opacity: 0.75;` | Mostly opaque |
-| `.opacity-100` | 100% | `opacity: 1;` | Completely opaque |
+| `.opacity-0` | 0% | `opacity: 0;` | Fully transparent |
+| `.opacity-25` | 25% | `opacity: 0.25;` | Light layering |
+| `.opacity-50` | 50% | `opacity: 0.5;` | Balanced overlay |
+| `.opacity-75` | 75% | `opacity: 0.75;` | Subtle dimming |
+| `.opacity-100` | 100% | `opacity: 1;` | Fully opaque |
 
 ## Quick Start
 
 ### Basic Opacity
 
 ```html
-<!-- Overlay effect -->
-<div class="relative">
-  <img src="image.jpg" class="w-full h-64 object-cover" alt="Background">
-  <div class="absolute inset-0 bg-black opacity-50"></div>
-  <div class="absolute inset-0 flex items-center justify-center">
-    <h2 class="text-white text-2xl font-bold">Overlay Text</h2>
+<div class="card">
+  <h2 class="text-2xl font-bold text-black mb-4">Opacity Example</h2>
+  <div class="bg-blue text-white rounded-lg p-6 opacity-85">
+    Layered content with a bundled opacity helper
   </div>
 </div>
-
-<!-- Disabled state -->
-<button class="btn btn-blue opacity-50 cursor-not-allowed">
-  Disabled Button
-</button>
 ```
 
 ## Common Use Cases
 
-- **Overlays:** Create image overlays and modal backgrounds
-- **Disabled States:** Indicate disabled form fields and buttons
-- **Hover Effects:** Add interactive opacity transitions
-- **Loading States:** Show loading overlays on content
-- **Layered Effects:** Build depth with multiple opacity layers
+- **Surface layering:** tone down panels without changing the color token
+- **Disabled previews:** show non-primary states in mockups
+- **Depth cues:** build subtle contrast between stacked blocks
+- **Content hierarchy:** soften secondary text or supporting panels
 
 ## Accessibility
 
@@ -85,4 +75,3 @@ Opacity utilities provide fine-grained control over element transparency, perfec
     Z-index utilities for layered effects
   </Card>
 </CardGroup>
-

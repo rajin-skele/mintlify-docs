@@ -1,6 +1,6 @@
 ---
 title: "Border Width"
-description: "Static and fluid border width utilities"
+description: "The bundled border-width scale from `border-0` through `border-20`."
 ---
 
 import { BorderWidthDemo } from "/snippets/border-width-demo.jsx"
@@ -9,130 +9,48 @@ import { BorderWidthDemo } from "/snippets/border-width-demo.jsx"
 
 <BorderWidthDemo />
 
-## Overview
+## Border Width Scale
 
-Control border thickness with static and fluid border width utilities. Border width works together with border style, color, and radius to create complete border styling.
-
-## Static Border Width
+The bundled border-width classes are:
 
 | Class | Value | CSS | Usage |
 | ----- | ----- | --- | ----- |
 | `.border-0` | 0 | `border-width: 0;` | No border |
-| `.border-1` | 1px | `border-width: 1px;` | Thin border |
-| `.border-2` | 2px | `border-width: 2px;` | Medium border |
-| `.border-4` | 4px | `border-width: 4px;` | Thick border |
-| `.border-8` | 8px | `border-width: 8px;` | Extra thick border |
-| `.border-10` | 10px | `border-width: 10px;` | Very thick border |
-| `.border-15` | 15px | `border-width: 15px;` | Ultra thick border |
-| `.border-20` | 20px | `border-width: 20px;` | Maximum border |
-
-## Fluid Border Width
-
-Fluid border width utilities use `clamp()` to scale smoothly between mobile and desktop sizes, perfect for responsive borders.
-
-<Tabs>
-  <Tab title="Static">
-    | Class | Value | CSS | Usage |
-    | ----- | ----- | --- | ----- |
-    | `.border-0` | 0 | `border-width: 0;` | No border |
-    | `.border-1` | 1px | `border-width: 1px;` | Thin border |
-    | `.border-2` | 2px | `border-width: 2px;` | Medium border |
-    | `.border-4` | 4px | `border-width: 4px;` | Thick border |
-    | `.border-8` | 8px | `border-width: 8px;` | Extra thick border |
-    | `.border-10` | 10px | `border-width: 10px;` | Very thick border |
-    | `.border-15` | 15px | `border-width: 15px;` | Ultra thick border |
-    | `.border-20` | 20px | `border-width: 20px;` | Maximum border |
-  </Tab>
-  <Tab title="Fluid">
-    | Class | Clamp Expression | Mobile → Desktop |
-    | ----- | ---------------- | ---------------- |
-    | `.border-fluid-1` | `clamp(0.0625rem, calc(0.053rem + 0.023vw), 0.078rem)` | 1px → 1.25px |
-    | `.border-fluid-2` | `clamp(0.125rem, calc(0.107rem + 0.046vw), 0.156rem)` | 2px → 2.5px |
-    | `.border-fluid-4` | `clamp(0.25rem, calc(0.21rem + 0.09vw), 0.31rem)` | 4px → 5px |
-    | `.border-fluid-8` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px |
-    | `.border-fluid-10` | `clamp(0.625rem, calc(0.53rem + 0.22vw), 0.78rem)` | 10px → 12.5px |
-    | `.border-fluid-15` | `clamp(0.94rem, calc(0.8rem + 0.33vw), 1.17rem)` | 15px → 18.75px |
-    | `.border-fluid-20` | `clamp(1.25rem, calc(1.07rem + 0.44vw), 1.56rem)` | 20px → 25px |
-  </Tab>
-</Tabs>
-
-## Examples
-
-### Static Border Width
+| `.border-1` | 1px → 1.25px | `var(--border-1)` | Subtle separation |
+| `.border-2` | 2px → 2.5px | `var(--border-2)` | Standard border |
+| `.border-4` | 4px → 5px | `var(--border-4)` | Accent framing |
+| `.border-8` | 8px → 10px | `var(--border-8)` | Strong decorative border |
+| `.border-10` | 10px → 12.5px | `var(--border-10)` | Heavy framing |
+| `.border-15` | 15px → 18.75px | `var(--border-15)` | Display framing |
+| `.border-20` | 20px → 25px | `var(--border-20)` | Maximum emphasis |
 
 ```html
-<!-- Border width examples -->
-<div class="border-1 p-4 bg-white">Thin border</div>
-<div class="border-2 p-4 bg-white">Medium border</div>
-<div class="border-4 p-4 bg-white">Thick border</div>
-<div class="border-0 p-4 bg-gray-light">No border</div>
-```
-
-### Fluid Border Width
-
-```html
-<!-- Card with fluid border -->
-<div class="border-fluid-2 border-gray rounded-lg p-fluid-6 bg-white">
-  <h3 class="text-xl font-semibold mb-fluid-2">Card Title</h3>
-  <p class="text-gray">Content with responsive border</p>
+<div class="card border-2 border-solid border-gray">
+  <h3 class="text-xl font-semibold text-black mb-2">Standard border</h3>
+  <p class="text-gray">Use the bundled border classes directly.</p>
 </div>
-
-<!-- Hero section with fluid accent border -->
-<section class="border-fluid-8 border-blue rounded-xl p-fluid-12">
-  <h1 class="text-fluid-6xl font-bold">Hero Title</h1>
-</section>
 ```
 
 ## Common Patterns
 
-### Form Input Borders
-
 ```html
-<!-- Normal input -->
-<input type="text" class="w-full p-3 border border-gray rounded" placeholder="Normal input">
-
-<!-- Focused input -->
-<input type="text" class="w-full p-3 border-2 border-blue rounded" placeholder="Focused input">
-
-<!-- Error input -->
-<input type="text" class="w-full p-3 border-2 border-red rounded" placeholder="Error input">
+<input
+  type="text"
+  class="w-full p-3 border-1 border-solid border-gray rounded"
+  placeholder="Normal input"
+>
 ```
 
-### Accent Borders
-
 ```html
-<!-- Left accent border -->
-<div class="border-l-4 border-blue bg-blue-light p-6 rounded">
-  <h3 class="text-lg font-600 mb-2">Accent Border</h3>
-  <p class="text-gray">Left accent border for emphasis</p>
+<div class="border-4 border-solid border-blue rounded-lg p-6 bg-white">
+  <h3 class="text-lg font-semibold mb-2">Accent border</h3>
+  <p class="text-gray">Heavier widths work best for emphasis and framing.</p>
 </div>
 ```
 
 ## Best Practices
 
-- **Use consistent widths:** Stick to the predefined border widths (1px, 2px, 4px) for consistency
-- **Thin for subtle:** Use 1px borders for subtle separation
-- **Thick for emphasis:** Use 2px+ borders for important elements
-- **Fluid for responsive:** Use fluid border width utilities for borders that need to scale smoothly
-
-<Tip>
-Use fluid border width utilities for borders that need to scale smoothly across viewport sizes. They work especially well for accent borders and decorative elements.
-</Tip>
-
-## Related Utilities
-
-<CardGroup cols={2}>
-  <Card title="Border Style" icon="square" href="/borders/style">
-    Border style utilities
-  </Card>
-  <Card title="Border Radius" icon="circle" href="/borders/radius">
-    Border radius utilities
-  </Card>
-  <Card title="Border Colors" icon="palette" href="/colors/border-colors">
-    Border color utilities
-  </Card>
-  <Card title="Borders Overview" icon="square" href="/overview/borders">
-    Complete borders overview
-  </Card>
-</CardGroup>
-
+- Use `border-1` and `border-2` for most UI surfaces.
+- Use `border-4` and above sparingly for accents, highlights, and decorative frames.
+- Pair width utilities with explicit style and color helpers such as `.border-solid` and `.border-gray`.
+- Keep border widths consistent across similar components.

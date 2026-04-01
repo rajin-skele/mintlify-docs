@@ -1,6 +1,6 @@
 ---
 title: "Padding"
-description: "Control internal spacing with padding utilities including static and fluid variants"
+description: "Control internal spacing with the bundled padding utilities."
 ---
 
 import { PaddingDemo } from "/snippets/padding-demo.jsx"
@@ -11,284 +11,26 @@ import { PaddingDemo } from "/snippets/padding-demo.jsx"
 
 ## Overview
 
-Use padding utilities to control the space inside elements. Padding creates space between an element's content and its border. These utilities work with a consistent 4px scale and include both static and fluid variants for responsive designs. The spacing scale is a core concept—see the [Spacing Overview](/overview/spacing#spacing-scale) for details.
+Use padding utilities to control space inside an element. The bundled `p-*`, `px-*`, `py-*`, `pt-*`, and `pb-*` families follow the shared Skelementor spacing scale.
 
-## All Sides Padding
+## Scale
 
-Apply padding to all sides of an element at once.
-
-| Class   | Value | CSS              | Usage               |
-| ------- | ----- | ---------------- | ------------------- |
-| `.p-0`  | 0     | `padding: 0;`    | No padding          |
-| `.p-px` | 1px   | `padding: 1px;`  | 1px padding         |
-| `.p-1`  | 4px   | `padding: 4px;`  | Small padding       |
-| `.p-2`  | 8px   | `padding: 8px;`  | Small padding       |
-| `.p-3`  | 12px  | `padding: 12px;` | Medium padding      |
-| `.p-4`  | 16px  | `padding: 16px;` | Standard padding    |
-| `.p-6`  | 24px  | `padding: 24px;` | Large padding       |
-| `.p-8`  | 32px  | `padding: 32px;` | Extra large padding |
-| `.p-12` | 48px  | `padding: 48px;` | Section padding     |
-
-### Examples
+- Available values: `0`, `px`, `1`, `2`, `3`, `4`, `6`, `8`, `12`
+- Families: `p-*`, `px-*`, `py-*`, `pt-*`, `pb-*`
 
 ```html
-<!-- All sides padding -->
-<div class="elementor-element p-4 bg-blue text-white">
-  Standard padding all around
+<div class="card p-8">
+  <p class="text-sm uppercase tracking-wide text-gray mb-2">Bundled padding</p>
+  <h3 class="text-2xl font-semibold text-black mb-4">Internal spacing stays consistent</h3>
+  <p class="text-base leading-relaxed text-gray-dark">
+    Start with `p-4` or `p-6` for most components, then increase to `p-8` or `p-12` for roomy sections.
+  </p>
 </div>
-
-<!-- No padding -->
-<div class="elementor-element p-0 bg-gray-light">No internal spacing</div>
-```
-
-## Vertical Padding
-
-Control top and bottom padding independently.
-
-### Top Padding
-
-| Class    | Value | CSS                  | Usage                   |
-| -------- | ----- | -------------------- | ----------------------- |
-| `.pt-0`  | 0     | `padding-top: 0;`    | No top padding          |
-| `.pt-px` | 1px   | `padding-top: 1px;`  | 1px top padding         |
-| `.pt-1`  | 4px   | `padding-top: 4px;`  | Small top padding       |
-| `.pt-2`  | 8px   | `padding-top: 8px;`  | Small top padding       |
-| `.pt-3`  | 12px  | `padding-top: 12px;` | Medium top padding      |
-| `.pt-4`  | 16px  | `padding-top: 16px;` | Standard top padding    |
-| `.pt-6`  | 24px  | `padding-top: 24px;` | Large top padding       |
-| `.pt-8`  | 32px  | `padding-top: 32px;` | Extra large top padding |
-
-### Bottom Padding
-
-| Class    | Value | CSS                     | Usage                      |
-| -------- | ----- | ----------------------- | -------------------------- |
-| `.pb-0`  | 0     | `padding-bottom: 0;`    | No bottom padding          |
-| `.pb-px` | 1px   | `padding-bottom: 1px;`  | 1px bottom padding         |
-| `.pb-1`  | 4px   | `padding-bottom: 4px;`  | Small bottom padding       |
-| `.pb-2`  | 8px   | `padding-bottom: 8px;`  | Small bottom padding       |
-| `.pb-3`  | 12px  | `padding-bottom: 12px;` | Medium bottom padding      |
-| `.pb-4`  | 16px  | `padding-bottom: 16px;` | Standard bottom padding    |
-| `.pb-6`  | 24px  | `padding-bottom: 24px;` | Large bottom padding       |
-| `.pb-8`  | 32px  | `padding-bottom: 32px;` | Extra large bottom padding |
-
-### Examples
-
-```html
-<!-- Top and bottom padding -->
-<div class="elementor-element pt-6 pb-4 px-4 bg-green text-white">
-  Different top and bottom padding
-</div>
-
-<!-- Section with vertical padding -->
-<section class="elementor-element py-12">
-  <h2 class="text-3xl font-bold mb-6">Section Title</h2>
-  <p class="text-gray">Section content</p>
-</section>
-```
-
-## Horizontal Padding
-
-Control left and right padding together.
-
-| Class    | Type       | Value | CSS                                        | Usage                          |
-| -------- | ---------- | ----- | ------------------------------------------ | ------------------------------ |
-| `.px-px` | Horizontal | 1px   | `padding-left: 1px; padding-right: 1px;`   | 1px horizontal padding         |
-| `.px-2`  | Horizontal | 8px   | `padding-left: 8px; padding-right: 8px;`   | Small horizontal padding       |
-| `.px-3`  | Horizontal | 12px  | `padding-left: 12px; padding-right: 12px;` | Medium horizontal padding      |
-| `.px-4`  | Horizontal | 16px  | `padding-left: 16px; padding-right: 16px;` | Standard horizontal padding    |
-| `.px-6`  | Horizontal | 24px  | `padding-left: 24px; padding-right: 24px;` | Large horizontal padding       |
-| `.px-8`  | Horizontal | 32px  | `padding-left: 32px; padding-right: 32px;` | Extra large horizontal padding |
-
-## Vertical Padding
-
-Control top and bottom padding together.
-
-| Class    | Type     | Value | CSS                                        | Usage                        |
-| -------- | -------- | ----- | ------------------------------------------ | ---------------------------- |
-| `.py-px` | Vertical | 1px   | `padding-top: 1px; padding-bottom: 1px;`   | 1px vertical padding         |
-| `.py-2`  | Vertical | 8px   | `padding-top: 8px; padding-bottom: 8px;`   | Small vertical padding       |
-| `.py-3`  | Vertical | 12px  | `padding-top: 12px; padding-bottom: 12px;` | Medium vertical padding      |
-| `.py-4`  | Vertical | 16px  | `padding-top: 16px; padding-bottom: 16px;` | Standard vertical padding    |
-| `.py-6`  | Vertical | 24px  | `padding-top: 24px; padding-bottom: 24px;` | Large vertical padding       |
-| `.py-8`  | Vertical | 32px  | `padding-top: 32px; padding-bottom: 32px;` | Extra large vertical padding |
-
-### Examples
-
-```html
-<!-- Horizontal and vertical padding -->
-<div class="elementor-element px-6 py-4 bg-green text-white">
-  Horizontal and vertical padding
-</div>
-
-<!-- Mixed padding values -->
-<div class="elementor-element pt-6 pb-4 px-4 bg-red text-white">
-  Mixed padding values
-</div>
-```
-
-## Fluid Padding
-
-Fluid padding utilities use `clamp()` to scale smoothly between mobile and desktop sizes. They're perfect for hero sections, marketing pages, and responsive layouts that need to adapt automatically.
-
-<Tabs>
-  <Tab title="All Sides">
-    | Class | Clamp Expression | Mobile → Desktop | 
-    | ----- | ---------------- | ---------------- | 
-    | `.p-fluid-1` | `clamp(0.25rem, calc(0.21rem + 0.09vw), 0.31rem)` | 4px → 5px | 
-    | `.p-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px | 
-    | `.p-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
-    | `.p-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
-    | `.p-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px | 
-    | `.p-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px | 
-    | `.p-fluid-12` | `clamp(3rem, calc(2.56rem + 1.1vw), 3.75rem)` | 48px → 60px |
-  </Tab>
-  <Tab title="Top">
-    | Class | Clamp Expression | Mobile → Desktop | 
-    | ----- | ---------------- | ---------------- | 
-    | `.pt-fluid-1` | `clamp(0.25rem, calc(0.21rem + 0.09vw), 0.31rem)` | 4px → 5px | 
-    | `.pt-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px | 
-    | `.pt-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
-    | `.pt-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
-    | `.pt-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px | 
-    | `.pt-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px |
-  </Tab>
-  <Tab title="Bottom">
-    | Class | Clamp Expression | Mobile → Desktop | 
-    | ----- | ---------------- |---------------- | 
-    | `.pb-fluid-1` | `clamp(0.25rem, calc(0.21rem + 0.09vw),0.31rem)` | 4px → 5px | 
-    | `.pb-fluid-2` | `clamp(0.5rem, calc(0.43rem +0.18vw), 0.63rem)` | 8px → 10px | 
-    | `.pb-fluid-3` | `clamp(0.75rem,calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
-    | `.pb-fluid-4` |`clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
-    |`.pb-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px →30px | 
-    | `.pb-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px |
-  </Tab>
-  <Tab title="Horizontal">
-    | Class | Clamp Expression | Mobile → Desktop | 
-    | ----- | ---------------- | ---------------- | 
-    | `.px-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px | 
-    | `.px-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
-    | `.px-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
-    | `.px-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px | 
-    | `.px-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px |
-  </Tab>
-  <Tab title="Vertical">
-    | Class | Clamp Expression | Mobile → Desktop | 
-    | ----- | ---------------- | ---------------- | 
-    | `.py-fluid-2` | `clamp(0.5rem, calc(0.43rem + 0.18vw), 0.63rem)` | 8px → 10px | 
-    | `.py-fluid-3` | `clamp(0.75rem, calc(0.64rem + 0.27vw), 0.94rem)` | 12px → 15px | 
-    | `.py-fluid-4` | `clamp(1rem, calc(0.85rem + 0.37vw), 1.25rem)` | 16px → 20px | 
-    | `.py-fluid-6` | `clamp(1.5rem, calc(1.28rem + 0.56vw), 1.88rem)` | 24px → 30px | 
-    | `.py-fluid-8` | `clamp(2rem, calc(1.71rem + 0.74vw), 2.5rem)` | 32px → 40px |
-  </Tab>
-</Tabs>
-
-### Fluid Padding Examples
-
-```html
-<!-- Hero section with fluid padding -->
-<section class="elementor-element py-fluid-12 px-fluid-6">
-  <h1 class="text-fluid-6xl font-bold mb-fluid-4">Hero Title</h1>
-  <p class="text-fluid-lg mb-fluid-8">Supporting text with fluid spacing</p>
-</section>
-
-<!-- Card with fluid padding -->
-<div class="elementor-element card p-fluid-6 mb-fluid-4">
-  <h3 class="text-xl font-semibold mb-fluid-2">Card Title</h3>
-  <p class="text-gray">Content with responsive padding</p>
-</div>
-```
-
-<Tip>
-  Use fluid padding utilities for hero sections, marketing pages, and any
-  content that needs to scale smoothly across viewport sizes. They work
-  especially well when paired with fluid typography utilities.
-</Tip>
-
-## Common Padding Patterns
-
-### Card with Consistent Padding
-
-```html
-<div class="elementor-element card p-6 mb-4">
-  <h3 class="text-xl font-semibold mb-4">Card Title</h3>
-  <p class="text-gray mb-4">Card description with consistent spacing.</p>
-  <button class="btn btn-blue">Action</button>
-</div>
-```
-
-### Form Input Padding
-
-```html
-<form class="elementor-element max-w-md">
-  <div class="elementor-element mb-4">
-    <label class="text-sm font-medium mb-2">Email</label>
-    <input type="email" class="w-full p-3 border border-gray rounded" />
-  </div>
-  <div class="elementor-element mb-6">
-    <label class="text-sm font-medium mb-2">Password</label>
-    <input type="password" class="w-full p-3 border border-gray rounded" />
-  </div>
-  <button class="btn btn-blue w-full">Submit</button>
-</form>
-```
-
-### Navigation with Padding
-
-```html
-<nav
-  class="elementor-element flex items-center justify-between px-6 py-4 bg-white"
->
-  <h1 class="text-2xl font-bold">Logo</h1>
-  <div class="elementor-element flex gap-6">
-    <a href="#" class="text-gray">Home</a>
-    <a href="#" class="text-gray">About</a>
-    <a href="#" class="text-gray">Contact</a>
-  </div>
-</nav>
 ```
 
 ## Best Practices
 
-<Steps>
-  <Step title="Use the 4px Scale">
-    Always use the predefined spacing scale (1px, 1, 2, 3, 4, 6, 8, 12) for
-    consistency. See the [Spacing Overview](/overview/spacing) for the complete
-    scale.
-  </Step>
-  <Step title="Consistent Internal Spacing">
-    Use consistent padding values within components for better visual harmony.
-  </Step>
-  <Step title="Use Shorthand When Possible">
-    Use `.px-*` and `.py-*` utilities when left/right or top/bottom values are
-    the same.
-  </Step>
-  <Step title="Consider Content Density">
-    Adjust padding based on content density and user experience needs.
-  </Step>
-</Steps>
-
-## Common Mistakes
-
-<Warning>**Avoid these padding mistakes:**</Warning>
-
-- Don't mix different spacing scales inconsistently
-- Don't forget to consider mobile padding needs
-- Don't use padding where margin would be more appropriate
-- Don't over-pad small elements (keep proportions in mind)
-
-## Related Utilities
-
-<CardGroup cols={2}>
-  <Card title="Margin" icon="arrows-maximize" href="/spacing/margin">
-    Control external spacing with margin utilities
-  </Card>
-  <Card title="Gap" icon="arrows-up-down-left-right" href="/spacing/gap">
-    Control spacing between flex items
-  </Card>
-  <Card title="Layout" icon="grid" href="/overview/layout">
-    Flexbox and display utilities for layout
-  </Card>
-  <Card title="Sizing" icon="expand" href="/overview/sizing">
-    Width and height utilities
-  </Card>
-</CardGroup>
+- Use `p-*` for even padding on all sides.
+- Use `px-*` and `py-*` when horizontal and vertical rhythm should differ.
+- Use `pt-*` and `pb-*` for stacked sections or framed cards.
+- Keep component padding values consistent across the same UI family.

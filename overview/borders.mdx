@@ -1,17 +1,20 @@
 ---
 title: "Borders"
-description: "Border width, style, radius, and color utilities for defining element boundaries"
+description: "Border width, style, radius, and color utilities for defining element boundaries."
 ---
 
 ## Overview
 
-Control border width, style, radius, and color with comprehensive border utilities. Borders help define element boundaries, create visual separation, and add emphasis to important content.
+Border utilities define structure, separation, and emphasis. The bundled system is built from four parts:
 
-Use border utilities to create clear visual hierarchy, separate content sections, and add decorative accents. All border utilities work seamlessly with Elementor v4's styling system.
+- width classes like `border-1` and `border-2`
+- style classes like `border-solid`
+- radius classes like `rounded-lg`
+- color classes like `border-gray-light` and `border-blue`
 
 <CardGroup cols={2}>
   <Card title="Width" icon="square" href="/borders/width">
-    Static and fluid border width utilities
+    Bundled border-width scale from `border-0` through `border-20`
   </Card>
   <Card title="Style" icon="square" href="/borders/style">
     Border style utilities: solid, dashed, and none
@@ -23,25 +26,18 @@ Use border utilities to create clear visual hierarchy, separate content sections
 
 ## Quick Start
 
-### Basic Borders
-
 ```html
-<!-- Simple border -->
-<div class="border border-gray p-4 rounded">Gray border</div>
-
-<!-- Thick border -->
-<div class="border-2 border-blue p-4 rounded-lg">Blue accent border</div>
-
-<!-- No border -->
-<div class="border-0 p-4 bg-gray-light">No border</div>
+<div class="border-1 border-solid border-gray p-4 rounded">Gray border</div>
+<div class="border-2 border-solid border-blue p-4 rounded-lg">Blue accent border</div>
+<div class="border-0 border-none p-4 bg-gray-light rounded">No border</div>
 ```
 
 ## Common Patterns
 
-- **Cards:** Use subtle borders with rounded corners
-- **Form Inputs:** Border states for normal, focus, and error
-- **Accent Borders:** Use thick colored borders for emphasis
-- **Buttons:** Combine borders with background colors for variants
+- Use `border-gray-light` for soft section and card separation.
+- Use `border-gray` or `border-black` when structure needs more contrast.
+- Use `border-blue` for the main bundled accent border.
+- Keep width, style, color, and radius explicit in markup for clarity.
 
 ## Related Utilities
 
@@ -50,17 +46,12 @@ Use border utilities to create clear visual hierarchy, separate content sections
     Color utilities for border colors
   </Card>
   <Card title="Spacing" icon="arrows-to-line" href="/overview/spacing">
-    Padding utilities for border spacing
+    Padding utilities for internal border spacing
   </Card>
   <Card title="Layout" icon="grid" href="/overview/layout">
-    Display utilities for border behavior
+    Layout utilities used with bordered surfaces
   </Card>
-  <Card
-    title="Components"
-    icon="puzzle-piece"
-    href="/overview/components"
-  >
-    Pre-built components with borders
+  <Card title="Components" icon="puzzle-piece" href="/overview/components">
+    Pre-built components with border support
   </Card>
 </CardGroup>
-
