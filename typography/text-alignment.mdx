@@ -3,6 +3,12 @@ title: "Text Alignment"
 description: "Apply semantic alignment utilities that respect document direction and layout context."
 ---
 
+import { TextAlignDemo } from "/snippets/text-align-demo.jsx"
+
+## Interactive Demo
+
+<TextAlignDemo />
+
 ## Alignment Utilities
 
 The alignment utilities map directly to logical CSS properties, so they work automatically for both LTR and RTL content.
@@ -33,4 +39,4 @@ The alignment utilities map directly to logical CSS properties, so they work aut
 - Keep paragraphs at `.text-start` for readability.
 - Combine `.text-center` with `.max-w-md mx-auto` when you want a centered content column.
 - Use `.text-end` for side notes, meta information, and layouts that benefit from edge alignment.
-- When alignment should change responsively, pair it with the structural suffix system, for example `class="text-start text-center--on-xs"`.
+- When alignment needs to shift across breakpoints, change the surrounding layout with the structural suffix system instead of looking for text-alignment suffix variants.

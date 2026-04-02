@@ -21,7 +21,7 @@ export const WidthDemo = () => {
           borderRadius: "0.75rem",
           padding: "1.5rem",
           boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
-          transition: "all 0.2s ease"
+          transition: "background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease"
         }}
         className="bg-white border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800"
       >
@@ -44,7 +44,7 @@ export const WidthDemo = () => {
                 border: "1px solid",
                 cursor: "pointer",
                 fontFamily: "monospace",
-                transition: "all 0.15s ease",
+                transition: "background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease",
                 outline: "none",
                 appearance: "none",
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
@@ -64,7 +64,7 @@ export const WidthDemo = () => {
         </div>
 
         <div
-          style={{ padding: "1.5rem", borderRadius: "0.5rem", transition: "all 0.2s ease" }}
+          style={{ padding: "1.5rem", borderRadius: "0.5rem", transition: "background-color 0.2s ease, border-color 0.2s ease" }}
           className="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700"
         >
           <div

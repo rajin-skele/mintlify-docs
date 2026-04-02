@@ -3,6 +3,12 @@ title: "Flexbox Wrap"
 description: "Control whether flex items stay on one line or wrap onto new rows."
 ---
 
+import { FlexWrapDemo } from "/snippets/flex-wrap-demo.jsx"
+
+## Interactive Demo
+
+<FlexWrapDemo />
+
 ## Overview
 
 Wrap utilities decide whether flex items stay in a single row or flow onto additional lines. They are especially useful for card collections, tag lists, and horizontally scrollable rails.
@@ -39,7 +45,7 @@ Wrap utilities decide whether flex items stay in a single row or flow onto addit
 ### No-Wrap Rail
 
 ```html
-<div class="flex flex-nowrap gap-4 overflow-x-auto">
+<div class="flex flex-nowrap gap-4 overflow-auto">
   <div style="width: 12rem;" class="p-6 bg-gray-light rounded">Item 1</div>
   <div style="width: 12rem;" class="p-6 bg-gray-light rounded">Item 2</div>
   <div style="width: 12rem;" class="p-6 bg-gray-light rounded">Item 3</div>

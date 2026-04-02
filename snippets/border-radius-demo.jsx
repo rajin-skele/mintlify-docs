@@ -21,7 +21,7 @@ export const BorderRadiusDemo = () => {
         borderRadius: '0.75rem',
         padding: '1.5rem',
         boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
-        transition: 'all 0.2s ease'
+        transition: 'background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease'
       }}
       className="bg-white border border-zinc-200 dark:bg-zinc-900 dark:border-zinc-800">
         
@@ -42,7 +42,7 @@ export const BorderRadiusDemo = () => {
                 border: '1px solid',
                 cursor: 'pointer',
                 fontFamily: 'monospace',
-                transition: 'all 0.15s ease',
+                transition: 'background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease',
                 outline: 'none',
                 appearance: 'none',
                 backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
@@ -61,7 +61,7 @@ export const BorderRadiusDemo = () => {
           </div>
         </div>
 
-        <div style={{ padding: '2rem', borderRadius: '0.5rem', transition: 'all 0.2s ease' }}
+        <div style={{ padding: '2rem', borderRadius: '0.5rem', transition: 'background-color 0.2s ease, border-color 0.2s ease' }}
           className="bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700">
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', alignItems: 'center' }}>
             {/* Square/Rectangle Preview */}
@@ -76,7 +76,7 @@ export const BorderRadiusDemo = () => {
                 fontFamily: 'monospace',
                 fontSize: '0.75rem',
                 fontWeight: '600',
-                transition: 'all 0.3s ease',
+                transition: 'border-radius 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease',
                 margin: '0 auto'
               }}
               className="bg-gradient-to-br from-blue-500 to-blue-600 dark:from-blue-600 dark:to-blue-700 text-white shadow-lg">
@@ -97,7 +97,7 @@ export const BorderRadiusDemo = () => {
                 fontWeight: '600',
                 border: 'none',
                 cursor: 'pointer',
-                transition: 'all 0.3s ease',
+                transition: 'border-radius 0.3s ease, box-shadow 0.2s ease, transform 0.2s ease',
                 width: '100%'
               }}
               className="bg-gradient-to-r from-purple-500 to-purple-600 dark:from-purple-600 dark:to-purple-700 text-white shadow-lg hover:shadow-xl">
@@ -119,5 +119,4 @@ export const BorderRadiusDemo = () => {
     </div>
   );
 };
-
 
