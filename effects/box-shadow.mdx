@@ -1,0 +1,88 @@
+---
+title: "Box Shadow"
+description: "Custom CSS guidance for box-shadow utilities supported by the Skelementor importer."
+---
+
+## Overview
+
+`box-shadow` is supported by the Skelementor importer, but bundled Skelementor `shadow-*` utility classes are not currently shipped in `skelementor-utilities.css`.
+
+That means the right pattern today is to import your own semantic box-shadow utilities when a project needs them.
+
+## Suggested Pattern
+
+```css
+.shadow-sm {
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.shadow-md {
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+}
+
+.shadow-lg {
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.16);
+}
+```
+
+## Usage
+
+### Card Surface
+
+```html
+<div class="card shadow-md">
+  <h3 class="text-xl font-semibold mb-3">Elevated card</h3>
+  <p class="text-gray">Use shadow to separate a surface from the page background.</p>
+</div>
+```
+
+### Hover Emphasis
+
+```css
+.shadow-hover {
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.14);
+}
+```
+
+```html
+<button class="btn btn-blue shadow-hover">Call To Action</button>
+```
+
+### Large Feature Panel
+
+```css
+.shadow-panel {
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+}
+```
+
+```html
+<section class="shadow-panel rounded-2xl bg-white p-8">
+  <h2 class="text-3xl font-bold mb-4">Feature panel</h2>
+  <p class="text-gray">Use deeper shadows sparingly on high-emphasis surfaces.</p>
+</section>
+```
+
+## Best Practices
+
+- Prefer a small semantic shadow scale instead of many one-off values
+- Keep shadows subtle on dense UI and stronger on isolated feature surfaces
+- Combine shadows with border radius and background color so elevation feels intentional
+- Test in both light and dark themes because the same shadow can feel much heavier in dark surfaces
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Opacity" icon="circle-half-stroke" href="/effects/opacity">
+    Pair shadow and opacity for layered states
+  </Card>
+  <Card title="Filters" icon="wand-magic-sparkles" href="/effects/filters">
+    Visual effect guidance for unsupported filter utilities
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Import your own custom shadow utilities through Skelementor
+  </Card>
+  <Card title="Borders" icon="square" href="/overview/borders">
+    Combine radius and border styling with shadow depth
+  </Card>
+</CardGroup>

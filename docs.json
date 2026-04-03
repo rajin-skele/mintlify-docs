@@ -103,8 +103,9 @@
           {
             "group": "Effects",
             "pages": [
-              "effects/effects",
-              "effects/opacity"
+              "effects/opacity",
+              "effects/filters",
+              "effects/box-shadow"
             ]
           },
           {
