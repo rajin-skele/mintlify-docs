@@ -51,6 +51,7 @@ export const FontSizeDemo = () => {
                 padding: "0.875rem 1rem",
                 borderRadius: "0.5rem",
                 cursor: "pointer",
+                overflow: "hidden",
                 transition: "background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease",
               }}
               className="bg-zinc-50 border border-zinc-200 hover:bg-zinc-100 hover:border-zinc-300 hover:shadow-sm dark:bg-zinc-800/30 dark:border-zinc-700/50 dark:hover:bg-zinc-800/50 dark:hover:border-zinc-600"
@@ -74,14 +75,25 @@ export const FontSizeDemo = () => {
               </div>
               <div
                 style={{
-                  fontSize: item.size,
-                  fontWeight: "700",
-                  lineHeight: "1.05",
-                  transition: "font-size 0.3s ease, color 0.2s ease",
+                  maxWidth: "100%",
+                  overflowX: "auto",
+                  overflowY: "hidden",
+                  overscrollBehaviorX: "contain",
                 }}
-                className="text-zinc-900 dark:text-zinc-100"
               >
-                Skelementor scale
+                <div
+                  style={{
+                    width: "max-content",
+                    minWidth: "100%",
+                    fontSize: item.size,
+                    fontWeight: "700",
+                    lineHeight: "1.05",
+                    transition: "font-size 0.3s ease, color 0.2s ease",
+                  }}
+                  className="text-zinc-900 dark:text-zinc-100"
+                >
+                  Skelementor scale
+                </div>
               </div>
             </div>
           ))}

@@ -1,15 +1,23 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Atomic Utility Docs",
-  "description": "Documentation for importing utility classes and design variables into Elementor v4.",
+  "name": "Skelementor",
+  "description": "CSS Utility Importer for Elementor v4 - Import utility classes directly into Elementor's Global Classes and Variables systems.",
   "colors": {
     "primary": "#3b82f6",
     "light": "#60a5fa",
     "dark": "#2563eb"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/logo/favicon.png",
   "css": "/custom.css",
+  "logo": {
+    "light": "/logo/wordmark-light.png",
+    "dark": "/logo/wordmark-dark.png"
+  },
+  "hero": {
+    "light": "/images/skele-light.png",
+    "dark": "/images/skele-dark.png"
+  },
   "navigation": {
     "tabs": [
       {
@@ -155,7 +163,37 @@
       }
     ],
     "global": {
-      "anchors": []
+      "anchors": [
+        {
+          "anchor": "GitHub",
+          "href": "https://github.com/rajinkhan/skelementor",
+          "icon": "github"
+        },
+        {
+          "anchor": "WordPress.org",
+          "href": "https://wordpress.org/plugins/skelementor",
+          "icon": "wordpress"
+        }
+      ]
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Editor",
+        "href": "https://skele-kit.vercel.app/"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Download Plugin",
+      "href": "https://github.com/rajinkhan/skelementor/releases"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/rajinkhan/skelementor",
+      "website": "https://wordpress.org/plugins/skelementor"
     }
   }
 }

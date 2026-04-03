@@ -1,7 +1,20 @@
 ---
 title: "Quickstart"
-description: "Detailed setup guide for importing your first utility classes into Elementor v4."
+description: "Detailed setup guide for importing your first Skelementor utility classes into Elementor v4."
 ---
+
+<img
+  style={{ borderRadius: "0.5rem", width: "100%", height: "auto" }}
+  src="/images/quickstart-light.png"
+  className="dark:hidden"
+  alt="Skelementor Quickstart - Get up and running in 3 simple steps"
+/>
+<img
+  style={{ borderRadius: "0.5rem", width: "100%", height: "auto" }}
+  src="/images/quickstart-dark.png"
+  className="hidden dark:block"
+  alt="Skelementor Quickstart - Get up and running in 3 simple steps"
+/>
 
 ## Get Started in 3 Steps
 
@@ -13,7 +26,7 @@ This is the longer version of the quickstart flow for teams that want a little m
   <Accordion icon="download" title="Install the package">
     <Steps>
       <Step title="Get the build">
-        Download the plugin ZIP from the release source or handoff package used by your team.
+        Download the latest Skelementor ZIP from the [GitHub releases page](https://github.com/rajinkhan/skelementor/releases) or the [WordPress.org plugin page](https://wordpress.org/plugins/skelementor/).
       </Step>
       <Step title="Upload to WordPress">
         In WordPress admin, go to **Plugins -> Add New -> Upload Plugin** and select the ZIP file.
@@ -35,16 +48,16 @@ This is the longer version of the quickstart flow for teams that want a little m
 
 <AccordionGroup>
   <Accordion icon="code" title="Use the bundled framework">
-    Start with the bundled utility CSS so you can verify the full workflow first.
+    Start with the bundled Skelementor utility CSS so you can verify the full workflow first.
     <Steps>
-      <Step title="Open the importer admin screen">
-        Open the plugin's importer screen from the WordPress dashboard.
+      <Step title="Open the Skelementor admin screen">
+        Open the Skelementor import screen from the WordPress dashboard.
       </Step>
       <Step title="Copy the bundled stylesheet">
-        Copy the CSS from the utility stylesheet shipped with the plugin package.
+        Copy the CSS from `skelementor-utilities.css` shipped with the Skelementor plugin package.
       </Step>
       <Step title="Run the import">
-        Paste the CSS into the importer and submit it.
+        Paste the CSS into Skelementor and submit it.
       </Step>
       <Step title="Confirm success">
         Wait for the confirmation state, then check the imported classes inside Elementor.
@@ -146,7 +159,7 @@ This is the longer version of the quickstart flow for teams that want a little m
 ### Classes Not Working?
 
 - Check that Elementor v4 Atomic Elements is enabled.
-- Verify the import completed successfully in the importer admin screen.
+- Verify the import completed successfully in the Skelementor admin screen.
 - Clear Elementor cache through **Elementor -> Tools -> Regenerate CSS**.
 
 ### Import Errors?
