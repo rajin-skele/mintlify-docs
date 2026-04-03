@@ -42,6 +42,7 @@
             "pages": [
               "overview/typography",
               "overview/layout",
+              "overview/responsive-utilities",
               "overview/spacing",
               "overview/sizing",
               "overview/colors",
@@ -66,7 +67,6 @@
             "group": "Layout",
             "pages": [
               "layout/display",
-              "layout/responsive-utilities",
               "layout/overflow",
               "layout/object-fit",
               "layout/aspect-ratio",
