@@ -11,13 +11,6 @@ export const FontSizeDemo = () => {
     { label: "text-lg", size: "clamp(1.2rem, calc(1.02rem + 0.53vw), 1.56rem)" },
     { label: "text-xl", size: "clamp(1.44rem, calc(1.22rem + 0.75vw), 1.95rem)" },
     { label: "text-2xl", size: "clamp(1.73rem, calc(1.47rem + 1.05vw), 2.44rem)" },
-    { label: "text-3xl", size: "clamp(2.07rem, calc(1.76rem + 1.45vw), 3.05rem)" },
-    { label: "text-4xl", size: "clamp(2.49rem, calc(2.12rem + 1.97vw), 3.82rem)" },
-    { label: "text-5xl", size: "clamp(2.99rem, calc(2.54rem + 2.63vw), 4.77rem)" },
-    { label: "text-6xl", size: "clamp(3.59rem, calc(3.08rem + 3.47vw), 5.96rem)" },
-    { label: "text-7xl", size: "clamp(4.31rem, calc(3.74rem + 4.58vw), 7.45rem)" },
-    { label: "text-8xl", size: "clamp(5.17rem, calc(4.51rem + 6.05vw), 9.31rem)" },
-    { label: "text-9xl", size: "clamp(6.2rem, calc(5.45rem + 7.98vw), 11.64rem)" },
   ];
 
   const copyToClipboard = (className) => {
@@ -92,7 +85,7 @@ export const FontSizeDemo = () => {
                   }}
                   className="text-zinc-900 dark:text-zinc-100"
                 >
-                  Skelementor scale
+                  The quick brown fox jumps over the lazy dog.
                 </div>
               </div>
             </div>
@@ -103,7 +96,7 @@ export const FontSizeDemo = () => {
           style={{ marginTop: "1rem", paddingTop: "1rem", fontSize: "0.75rem", textAlign: "center", transition: "color 0.2s ease" }}
           className="border-t border-zinc-200 dark:border-zinc-700 text-zinc-500 dark:text-zinc-400"
         >
-          Click any row to copy the class name from the full bundled text scale.
+          Click any row to copy the class name from the preview scale.
         </div>
       </div>
     </div>

@@ -28,13 +28,14 @@
             "pages": [
               "index",
               "quickstart",
-              "getting-started/installation"
+              "overview"
             ]
           },
           {
-            "group": "Utility Framework",
+            "group": "Plugin",
             "pages": [
-              "overview"
+              "skelementor",
+              "getting-started/installation"
             ]
           },
           {
@@ -46,8 +47,8 @@
               "overview/sizing",
               "overview/colors",
               "overview/effects",
+              "overview/filters",
               "overview/flexbox",
-              "overview/components",
               "overview/responsive-utilities",
               "overview/borders"
             ]
@@ -172,14 +173,9 @@
     "global": {
       "anchors": [
         {
-          "anchor": "GitHub",
-          "href": "https://github.com/rajinkhan/skelementor",
-          "icon": "github"
-        },
-        {
-          "anchor": "WordPress.org",
-          "href": "https://wordpress.org/plugins/skelementor",
-          "icon": "wordpress"
+          "anchor": "Facebook Community",
+          "href": "https://www.facebook.com/share/g/1DuiKvQvtq/",
+          "icon": "facebook"
         }
       ]
     }

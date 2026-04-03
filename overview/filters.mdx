@@ -1,0 +1,48 @@
+---
+title: "Filters"
+description: "Overview of filter-related guidance for blur, brightness, contrast, and drop shadow."
+---
+
+## Overview
+
+Skelementor documents filters as custom CSS guidance rather than bundled utility classes. Use these pages when you want to import your own `filter`-based utilities and understand the current parser limitations before you do.
+
+## Filter Guides
+
+<CardGroup cols={2}>
+  <Card title="Blur" icon="circle-half-stroke" href="/filters/blur">
+    Learn how to structure blur utilities and where they fit best in Elementor.
+  </Card>
+  <Card title="Brightness" icon="sun" href="/filters/brightness">
+    Adjust visual intensity with custom brightness utilities and practical usage notes.
+  </Card>
+  <Card title="Contrast" icon="adjust" href="/filters/contrast">
+    Review contrast utility patterns and the tradeoffs for readability and imagery.
+  </Card>
+  <Card title="Drop Shadow" icon="wand-magic-sparkles" href="/filters/drop-shadow">
+    Add filter-based shadows when you need a softer effect than standard box-shadow.
+  </Card>
+</CardGroup>
+
+## Current Framework Truth
+
+- `filter` is not currently mapped as a shipped Skelementor utility family
+- These docs are for custom imported utilities and recommended patterns
+- Use `box-shadow` docs separately when you want importer-supported shadow utilities
+
+## Related Guides
+
+<CardGroup cols={2}>
+  <Card title="Effects" icon="sparkles" href="/overview/effects">
+    Opacity and related visual utility guidance
+  </Card>
+  <Card title="Box Shadow" icon="square" href="/effects/box-shadow">
+    Import custom box-shadow utilities supported by Skelementor
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Import your own utilities with the supported Skelementor workflow
+  </Card>
+  <Card title="Supported Properties" icon="list-check" href="/css-reference/supported-properties">
+    Check which CSS properties the importer currently supports
+  </Card>
+</CardGroup>
