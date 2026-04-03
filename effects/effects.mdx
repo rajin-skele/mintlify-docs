@@ -1,154 +1,40 @@
 ---
 title: "Effects"
-description: "Use the bundled opacity scale for overlays, states, and layered interfaces."
+description: "Overview of the currently shipped Skelementor effects utilities."
 ---
 
-import { OpacityDemo } from "/snippets/opacity-demo.jsx"
+## Overview
 
-## Interactive Demo
+The currently shipped Skelementor effects surface focuses on opacity utilities. The bundle includes every 5% step from `opacity-0` through `opacity-100`, which makes it easier to fine-tune overlays, disabled states, and layered interfaces.
 
-<OpacityDemo />
+<Card title="Opacity" icon="circle-half-stroke" href="/effects/opacity">
+  Explore the full shipped opacity scale, examples, and usage guidance.
+</Card>
 
-## Opacity Scale
+## Current Effects Surface
 
-| Class | Value | CSS |
-| ----- | ----- | --- |
-| `.opacity-0` | 0% | `opacity: 0;` |
-| `.opacity-5` | 5% | `opacity: 0.05;` |
-| `.opacity-10` | 10% | `opacity: 0.1;` |
-| `.opacity-15` | 15% | `opacity: 0.15;` |
-| `.opacity-20` | 20% | `opacity: 0.2;` |
-| `.opacity-25` | 25% | `opacity: 0.25;` |
-| `.opacity-30` | 30% | `opacity: 0.3;` |
-| `.opacity-35` | 35% | `opacity: 0.35;` |
-| `.opacity-40` | 40% | `opacity: 0.4;` |
-| `.opacity-45` | 45% | `opacity: 0.45;` |
-| `.opacity-50` | 50% | `opacity: 0.5;` |
-| `.opacity-55` | 55% | `opacity: 0.55;` |
-| `.opacity-60` | 60% | `opacity: 0.6;` |
-| `.opacity-65` | 65% | `opacity: 0.65;` |
-| `.opacity-70` | 70% | `opacity: 0.7;` |
-| `.opacity-75` | 75% | `opacity: 0.75;` |
-| `.opacity-80` | 80% | `opacity: 0.8;` |
-| `.opacity-85` | 85% | `opacity: 0.85;` |
-| `.opacity-90` | 90% | `opacity: 0.9;` |
-| `.opacity-95` | 95% | `opacity: 0.95;` |
-| `.opacity-100` | 100% | `opacity: 1;` |
+| Family | Status | Notes |
+| ------ | ------ | ----- |
+| `opacity-*` | Shipped | Full 5% scale from `opacity-0` through `opacity-100` |
 
-## Examples
+## Common Use Cases
 
-### Overlay
-
-```html
-<div class="relative">
-  <img
-    src="image.jpg"
-    class="w-full object-cover rounded-lg"
-    style="height: 16rem;"
-    alt="Background image"
-  >
-  <div
-    class="absolute bg-black opacity-50 rounded-lg"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  ></div>
-  <div
-    class="absolute flex items-center justify-center"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <h2 class="text-white text-2xl font-bold">Overlay Text</h2>
-  </div>
-</div>
-```
-
-### Disabled Surface
-
-```html
-<button class="btn btn-blue opacity-50">Disabled Button</button>
-
-<div class="opacity-50">
-  <input
-    type="text"
-    class="w-full p-3 border-1 border-solid border-gray rounded"
-    disabled
-  >
-</div>
-```
-
-### Loading State
-
-```html
-<div class="relative">
-  <div class="p-6 bg-white rounded-lg">
-    <h3 class="text-xl font-semibold mb-4">Content</h3>
-    <p class="text-gray">This content is loading...</p>
-  </div>
-  <div
-    class="absolute bg-white opacity-75 flex items-center justify-center rounded-lg"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <p class="text-sm text-gray">Loading...</p>
-  </div>
-</div>
-```
-
-### Text, Background, and Border Opacity
-
-```html
-<h1 class="text-4xl font-bold text-black opacity-100">Primary Heading</h1>
-<h2 class="text-2xl font-semibold text-gray opacity-75">Secondary Heading</h2>
-<p class="text-base text-gray opacity-50">Muted paragraph text</p>
-```
-
-```html
-<div class="bg-blue opacity-100 p-6 text-white">Full opacity background</div>
-<div class="bg-blue opacity-75 p-6 text-white">75% opacity background</div>
-<div class="bg-blue opacity-50 p-6 text-white">50% opacity background</div>
-```
-
-```html
-<div class="border-2 border-solid border-blue opacity-100 p-4 rounded">
-  Full opacity border
-</div>
-<div class="border-2 border-solid border-blue opacity-75 p-4 rounded">
-  75% opacity border
-</div>
-<div class="border-2 border-solid border-blue opacity-50 p-4 rounded">
-  50% opacity border
-</div>
-```
-
-## Best Practices
-
-<Warning>
-Ensure text remains readable when opacity reduces contrast. Decorative overlays can go low; body text usually should not.
-</Warning>
-
-<Steps>
-  <Step title="Use Lower Values for Overlays">
-    `opacity-10` through `opacity-50` work well for dimming media or stacking panels.
-  </Step>
-  <Step title="Use Higher Values for State Changes">
-    `opacity-60` through `opacity-95` can suggest disabled or loading states while keeping content visible.
-  </Step>
-  <Step title="Avoid Overusing Transparency">
-    Too many translucent layers can make interfaces feel muddy and hard to read.
-  </Step>
-  <Step title="Pair With Positioning">
-    Overlays usually combine opacity with `.relative`, `.absolute`, or `.fixed`.
-  </Step>
-</Steps>
+- Surface layering and media dimming
+- Disabled and loading states
+- Subtle hierarchy shifts between primary and secondary content
+- Overlay patterns that combine opacity with positioning and z-index
 
 ## Related Utilities
 
 <CardGroup cols={2}>
+  <Card title="Opacity" icon="circle-half-stroke" href="/effects/opacity">
+    Full shipped opacity scale and examples
+  </Card>
   <Card title="Colors" icon="palette" href="/overview/colors">
     Color utilities that work with opacity
   </Card>
   <Card title="Layout" icon="grid" href="/overview/layout">
     Positioning utilities for overlay effects
-  </Card>
-  <Card title="Components" icon="puzzle-piece" href="/overview/components">
-    Cards, buttons, and bundled UI patterns
   </Card>
   <Card title="Z-Index" icon="layer-group" href="/layout/z-index">
     Layer opacity effects with predictable stacking

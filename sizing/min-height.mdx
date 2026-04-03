@@ -1,0 +1,65 @@
+---
+title: "Min Height"
+description: "Use the bundled `min-h-screen` and `min-h-full` helpers to guarantee vertical space."
+---
+
+## Overview
+
+Skelementor ships two bundled minimum-height helpers:
+
+- `.min-h-screen` for a full viewport minimum
+- `.min-h-full` for matching the parent height as a minimum
+
+Use min-height when content should be allowed to grow beyond a baseline height instead of being clipped to a fixed `height`.
+
+## Min Height Utilities
+
+| Class | Value | CSS | Usage |
+| ----- | ----- | --- | ----- |
+| `.min-h-screen` | 100vh | `min-height: 100vh;` | At least the full viewport |
+| `.min-h-full` | 100% | `min-height: 100%;` | At least the parent height |
+
+## Usage
+
+### Minimum Screen Height
+
+```html
+<main class="min-h-screen p-6">
+  <h1 class="text-3xl font-bold mb-6">Page Title</h1>
+  <p class="text-gray">Content that may be longer than the viewport.</p>
+</main>
+```
+
+### Parent-Based Minimum Height
+
+```html
+<section style="height: 24rem;" class="bg-gray-light rounded-lg p-4">
+  <div class="min-h-full bg-white rounded p-6">
+    This panel stays at least as tall as its parent container.
+  </div>
+</section>
+```
+
+## Best Practices
+
+- Use `.min-h-screen` for page shells, hero sections, and empty-state layouts.
+- Use `.min-h-full` only when a parent already establishes height.
+- Prefer min-height over fixed height when content length may change.
+- Combine with `overflow-auto` when a minimum-height region may still need scroll control.
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Height" icon="expand" href="/sizing/height">
+    Fixed and viewport height helpers
+  </Card>
+  <Card title="Max Height" icon="expand" href="/sizing/max-height">
+    Custom CSS guidance for height caps
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Display and overflow utilities for vertical layouts
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    All sizing utilities overview
+  </Card>
+</CardGroup>

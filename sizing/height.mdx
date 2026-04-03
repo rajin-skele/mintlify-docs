@@ -21,13 +21,6 @@ Height utilities in the bundle focus on the common layout cases: follow content,
 | `.h-auto` | Auto | `height: auto;` | Follow content |
 | `.h-screen` | 100vh | `height: 100vh;` | Fill the viewport |
 
-## Min Height Utilities
-
-| Class | Value | CSS | Usage |
-| ----- | ----- | --- | ----- |
-| `.min-h-screen` | 100vh | `min-height: 100vh;` | At least the full viewport |
-| `.min-h-full` | 100% | `min-height: 100%;` | At least the parent height |
-
 ## Usage
 
 ### Full Height
@@ -59,15 +52,6 @@ Height utilities in the bundle focus on the common layout cases: follow content,
     <button class="btn btn-blue">Get Started</button>
   </div>
 </section>
-```
-
-### Minimum Screen Height
-
-```html
-<main class="min-h-screen p-6">
-  <h1 class="text-3xl font-bold mb-6">Page Title</h1>
-  <p class="text-gray">Content that may be longer than the viewport.</p>
-</main>
 ```
 
 ## Height Examples
@@ -116,11 +100,8 @@ Height utilities in the bundle focus on the common layout cases: follow content,
   <Step title="Use Screen Height for Full Views">
     Reach for `.h-screen` when a section or shell should fill the viewport exactly.
   </Step>
-  <Step title="Use Min Height for Pages">
-    `.min-h-screen` is usually a better page-level default because it allows content to grow naturally.
-  </Step>
   <Step title="Use Parent Height Deliberately">
-    `h-full` and `min-h-full` only work when a parent already establishes height.
+    `h-full` only works when a parent already establishes height.
   </Step>
   <Step title="Consider Overflow">
     Add `overflow-auto` or `overflow-hidden` when fixed vertical space and long content need controlled behavior.
@@ -133,13 +114,10 @@ Height utilities in the bundle focus on the common layout cases: follow content,
   <Card title="Width" icon="expand" href="/sizing/width">
     Control element width
   </Card>
+  <Card title="Min Height" icon="expand" href="/sizing/min-height">
+    Use bundled `min-h-screen` and `min-h-full` helpers
+  </Card>
   <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
     Control overflow within fixed heights
-  </Card>
-  <Card title="Display" icon="grid" href="/layout/display">
-    Use flex and block layout with height utilities
-  </Card>
-  <Card title="Sizing" icon="expand" href="/overview/sizing">
-    All sizing utilities overview
   </Card>
 </CardGroup>

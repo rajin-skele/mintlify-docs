@@ -1,11 +1,11 @@
 ---
 title: "Sizing"
-description: "Width, height, and max-width helpers that match the bundled CSS."
+description: "Width, height, min-height, and max-width helpers that match the bundled CSS, plus custom sizing guidance where needed."
 ---
 
 ## Overview
 
-Control element dimensions with the bundled width, height, min-height, and max-width helpers. Fractional widths and screen-height utilities stay fixed, while `max-w-*` uses the bundled responsive scale.
+Control element dimensions with the bundled width, height, min-height, and max-width helpers. Fractional widths and screen-height utilities stay fixed, while `max-w-*` uses the bundled responsive scale. When you need `min-width` or `max-height`, use custom imported utilities because those helpers are supported by the importer but not shipped in the bundled Skelementor CSS.
 
 <CardGroup cols={2}>
   <Card title="Width" icon="expand" href="/sizing/width">
@@ -16,6 +16,15 @@ Control element dimensions with the bundled width, height, min-height, and max-w
   </Card>
   <Card title="Max Width" icon="expand" href="/sizing/max-width">
     Responsive max-width utilities used by `.cont` and content wrappers
+  </Card>
+  <Card title="Min Width" icon="expand" href="/sizing/min-width">
+    Custom CSS guidance for minimum width constraints
+  </Card>
+  <Card title="Max Height" icon="expand" href="/sizing/max-height">
+    Custom CSS guidance for height caps and scroll regions
+  </Card>
+  <Card title="Min Height" icon="expand" href="/sizing/min-height">
+    Bundled `min-h-screen` and `min-h-full` helpers
   </Card>
 </CardGroup>
 
@@ -55,6 +64,10 @@ Control element dimensions with the bundled width, height, min-height, and max-w
 ### Min Height Utilities
 - **Screen:** `.min-h-screen` (100vh)
 - **Full:** `.min-h-full` (100%)
+
+### Custom Sizing Properties
+- **Minimum width:** document and import your own `min-width` utilities when needed
+- **Maximum height:** document and import your own `max-height` utilities when needed
 
 ### Max Width Utilities
 - **Responsive bundle:** `.max-w-sm`, `.max-w-md`, `.max-w-lg`, `.max-w-xl`, `.max-w-2xl`, `.max-w-full`

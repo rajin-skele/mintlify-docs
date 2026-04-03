@@ -1,11 +1,11 @@
 ---
 title: "Spacing"
-description: "Margin, padding, and gap utilities built around the bundled spacing scale."
+description: "Margin and padding utilities built around the bundled spacing scale, with flex gap covered in the Flexbox section."
 ---
 
 ## Overview
 
-Spacing utilities use the bundled spacing tokens directly. Margin, padding, and gap default to the framework's responsive spacing scale where available, while zero, auto, and pixel helpers remain fixed for precise control.
+Spacing utilities use the bundled spacing tokens directly. Margin and padding default to the framework's responsive spacing scale where available, while zero, auto, and pixel helpers remain fixed for precise control. Gap utilities use the same spacing rhythm, but they are documented in the Flexbox section because they depend on a flex parent.
 
 <CardGroup cols={2}>
   <Card title="Margin" icon="arrows-maximize" href="/spacing/margin">
@@ -14,7 +14,7 @@ Spacing utilities use the bundled spacing tokens directly. Margin, padding, and 
   <Card title="Padding" icon="square" href="/spacing/padding">
     Internal spacing with all-side and directional helpers
   </Card>
-  <Card title="Gap" icon="arrows-up-down-left-right" href="/spacing/gap">
+  <Card title="Flex Gap" icon="arrows-up-down-left-right" href="/flexbox/gap">
     Gap, row-gap, and column-gap for flex layouts
   </Card>
 </CardGroup>
@@ -60,7 +60,7 @@ Gap utilities extend beyond the core scale for larger spacing needs:
 - **Built into the bundle**: The default scale already carries the bundled responsive behavior where those classes exist
 
 <Info>
-This scale is reused across margin, padding, and the core `gap-*` classes. Larger gap-only steps extend the same rhythm for layout sections.
+This scale is reused across margin, padding, and the core `gap-*` classes documented in the Flexbox section. Larger gap-only steps extend the same rhythm for layout sections.
 </Info>
 
 ## Quick Start
@@ -71,7 +71,7 @@ This scale is reused across margin, padding, and the core `gap-*` classes. Large
     <p class="text-sm uppercase tracking-wide text-gray mb-2">Spacing system</p>
     <h2 class="text-4xl font-bold leading-tight text-black mb-4">One bundled scale</h2>
     <p class="text-base leading-relaxed text-gray-dark mb-8">
-      Use the default `m-*`, `p-*`, and `gap-*` families directly.
+      Use the default `m-*` and `p-*` families directly, then pair flex layouts with `gap-*` utilities where needed.
     </p>
     <div class="flex gap-6">
       <div class="w-1-2 p-6 bg-blue text-white rounded-lg">Card A</div>
@@ -94,7 +94,7 @@ This scale is reused across margin, padding, and the core `gap-*` classes. Large
 - **Vertical:** `.py-*`, `.pt-*`, `.pb-*` (0, px, 1, 2, 3, 4, 6, 8)
 - **Horizontal:** `.px-*` (px, 2, 3, 4, 6, 8)
 
-### Gap Utilities
+### Flex Gap Utilities
 - **Core gap:** `.gap-px`, `.gap-1`, `.gap-2`, `.gap-3`, `.gap-4`, `.gap-6`, `.gap-8`, `.gap-10`, `.gap-12`, `.gap-14`, `.gap-16`, `.gap-18`, `.gap-20`, `.gap-22`, `.gap-24`
 - **Column gap:** `.gap-x-*` with the same scale
 - **Row gap:** `.gap-y-*` with the same scale
@@ -156,7 +156,7 @@ This scale is reused across margin, padding, and the core `gap-*` classes. Large
     Use smaller gaps within groups and larger gaps between groups.
   </Step>
   <Step title="Use Gap for Flex Items">
-    Use gap utilities instead of margin for spacing between flex items.
+    Use flex gap utilities instead of margin for spacing between flex items.
   </Step>
   <Step title="Reserve Fixed Helpers For Exceptions">
     Reach for `0`, `px`, and `auto` when you need explicit control beyond the main bundled scale.

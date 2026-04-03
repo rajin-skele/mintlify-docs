@@ -1,0 +1,80 @@
+---
+title: "Min Width"
+description: "Custom CSS guidance for minimum width utilities that are supported by the importer but not shipped in the bundled Skelementor CSS."
+---
+
+## Overview
+
+`min-width` is supported by the Skelementor importer, but dedicated bundled `min-w-*` utility classes are not currently shipped in `skelementor-utilities.css`.
+
+Use this page when you want to import your own `min-width` helpers alongside the bundled sizing system.
+
+## Suggested Pattern
+
+Keep custom min-width utilities narrow and purpose-driven:
+
+```css
+.min-w-sidebar {
+  min-width: 18rem;
+}
+
+.min-w-card {
+  min-width: 16rem;
+}
+
+.min-w-field {
+  min-width: 12rem;
+}
+```
+
+## Usage
+
+### Prevent a Sidebar from Collapsing
+
+```html
+<div class="flex gap-6">
+  <aside class="min-w-sidebar w-1-4 p-6 bg-gray-light rounded">
+    Sidebar content
+  </aside>
+  <main class="w-3-4 p-6 bg-white rounded">
+    Main content
+  </main>
+</div>
+```
+
+### Keep Small Cards Readable
+
+```html
+<div class="flex flex-wrap gap-6">
+  <div class="min-w-card p-6 bg-white rounded-lg border-1 border-solid border-gray">
+    Card content
+  </div>
+  <div class="min-w-card p-6 bg-white rounded-lg border-1 border-solid border-gray">
+    Card content
+  </div>
+</div>
+```
+
+## Best Practices
+
+- Use `min-width` only when content becomes unusable below a threshold.
+- Pair custom min-width helpers with width or max-width utilities instead of replacing the bundled sizing system.
+- Test wrapped flex layouts carefully so a minimum width does not force unintended horizontal overflow.
+- Prefer a few semantic custom classes over a large one-off min-width scale.
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Width" icon="expand" href="/sizing/width">
+    Bundled width utilities
+  </Card>
+  <Card title="Max Width" icon="expand" href="/sizing/max-width">
+    Constrain maximum size alongside minimum width
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Import your own utilities through Skelementor
+  </Card>
+  <Card title="Sizing" icon="expand" href="/overview/sizing">
+    All sizing utilities overview
+  </Card>
+</CardGroup>

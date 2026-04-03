@@ -1,0 +1,74 @@
+---
+title: "Max Height"
+description: "Custom CSS guidance for maximum height utilities that are supported by the importer but not shipped in the bundled Skelementor CSS."
+---
+
+## Overview
+
+`max-height` is supported by the Skelementor importer, but dedicated bundled `max-h-*` utility classes are not currently shipped in `skelementor-utilities.css`.
+
+Use custom imported utilities when content should stop growing after a certain height and then rely on overflow behavior.
+
+## Suggested Pattern
+
+```css
+.max-h-modal {
+  max-height: 80vh;
+}
+
+.max-h-panel {
+  max-height: 32rem;
+}
+
+.max-h-list {
+  max-height: 20rem;
+}
+```
+
+## Usage
+
+### Scrollable Modal Body
+
+```html
+<div class="bg-white rounded-lg max-h-modal overflow-auto p-6">
+  <h2 class="text-2xl font-bold mb-4">Modal Content</h2>
+  <p class="text-gray">Long content can scroll once the panel reaches its height cap.</p>
+</div>
+```
+
+### Constrained Sidebar Panel
+
+```html
+<aside class="max-h-panel overflow-auto p-4 bg-gray-light rounded-lg">
+  <h3 class="text-lg font-semibold mb-3">Filters</h3>
+  <div class="flex flex-col gap-3">
+    <label>Item 1</label>
+    <label>Item 2</label>
+    <label>Item 3</label>
+  </div>
+</aside>
+```
+
+## Best Practices
+
+- Pair `max-height` with `overflow-auto` or `overflow-hidden` deliberately.
+- Use viewport-relative caps like `80vh` for modals and drawers.
+- Use fixed caps like `32rem` for repeated panels that need consistent rhythm.
+- Avoid height caps on content that must remain fully visible without scrolling.
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Height" icon="expand" href="/sizing/height">
+    Bundled height utilities
+  </Card>
+  <Card title="Min Height" icon="expand" href="/sizing/min-height">
+    Bundled minimum-height helpers
+  </Card>
+  <Card title="Overflow" icon="arrows-left-right" href="/layout/overflow">
+    Control clipping and scrolling
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Import your own utilities through Skelementor
+  </Card>
+</CardGroup>

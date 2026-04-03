@@ -78,8 +78,7 @@
             "group": "Spacing",
             "pages": [
               "spacing/margin",
-              "spacing/padding",
-              "spacing/gap"
+              "spacing/padding"
             ]
           },
           {
@@ -87,7 +86,10 @@
             "pages": [
               "sizing/width",
               "sizing/height",
-              "sizing/max-width"
+              "sizing/max-width",
+              "sizing/min-width",
+              "sizing/max-height",
+              "sizing/min-height"
             ]
           },
           {
@@ -101,7 +103,8 @@
           {
             "group": "Effects",
             "pages": [
-              "effects/effects"
+              "effects/effects",
+              "effects/opacity"
             ]
           },
           {
@@ -175,8 +178,8 @@
   "navbar": {
     "links": [
       {
-        "label": "Editor",
-        "href": "https://skele-kit.vercel.app/"
+        "label": "Feedback",
+        "href": "https://skelementor.com"
       }
     ],
     "primary": {
