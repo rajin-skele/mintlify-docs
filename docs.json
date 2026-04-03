@@ -42,13 +42,13 @@
             "pages": [
               "overview/typography",
               "overview/layout",
-              "overview/responsive-utilities",
               "overview/spacing",
               "overview/sizing",
               "overview/colors",
               "overview/effects",
               "overview/flexbox",
               "overview/components",
+              "overview/responsive-utilities",
               "overview/borders"
             ]
           },
@@ -68,6 +68,7 @@
             "pages": [
               "layout/display",
               "layout/overflow",
+              "layout/positioning",
               "layout/object-fit",
               "layout/aspect-ratio",
               "layout/z-index"
@@ -87,12 +88,6 @@
               "sizing/width",
               "sizing/height",
               "sizing/max-width"
-            ]
-          },
-          {
-            "group": "Positioning",
-            "pages": [
-              "positioning/positioning"
             ]
           },
           {
