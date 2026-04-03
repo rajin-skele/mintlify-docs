@@ -1,0 +1,50 @@
+---
+title: "Brightness"
+description: "Guidance for CSS brightness filters and the current Skelementor importer limitations."
+---
+
+## Overview
+
+Brightness filters help dim or lift media without changing the source asset, but CSS `filter` is not currently mapped by the Skelementor importer and no bundled brightness utility classes are shipped in `skelementor-utilities.css`.
+
+Use native Elementor controls when possible, or apply brightness with custom frontend CSS when a true CSS filter is required.
+
+## Example
+
+```css
+.media-dim {
+  filter: brightness(0.75);
+}
+
+.media-boost {
+  filter: brightness(1.1);
+}
+```
+
+```html
+<img class="media-dim" src="banner.jpg" alt="Dimmed image">
+```
+
+## Best Practices
+
+- Reduce brightness for background media behind text
+- Increase brightness sparingly to avoid washed-out visuals
+- Pair brightness with contrast carefully so images stay readable
+- Prefer opacity alone when you only need a simple dimming effect
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Contrast" icon="adjust" href="/filters/contrast">
+    Tune contrast alongside brightness
+  </Card>
+  <Card title="Blur" icon="circle-half-stroke" href="/filters/blur">
+    Combine brightness with blur for hero media treatments
+  </Card>
+  <Card title="Opacity" icon="circle-half-stroke" href="/effects/opacity">
+    Use bundled opacity utilities for simpler dimming
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Write custom CSS when filters are required
+  </Card>
+</CardGroup>

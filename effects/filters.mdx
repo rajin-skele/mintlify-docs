@@ -7,68 +7,26 @@ description: "Guidance for visual filter effects and the current Skelementor imp
 
 CSS filter effects like blur, brightness, contrast, grayscale, and drop-shadow are useful for media treatments and layered UI, but they are not currently mapped by the Skelementor importer in the same way as bundled utility classes or supported custom `box-shadow` values.
 
-Use this page as guidance for when filter effects belong in your workflow and how to handle them today.
+The filters docs now live in the dedicated `Filters` section:
 
-## Current State
+- [Blur](/filters/blur)
+- [Brightness](/filters/brightness)
+- [Contrast](/filters/contrast)
+- [Drop Shadow](/filters/drop-shadow)
 
-| Capability | Status | Notes |
-| ---------- | ------ | ----- |
-| Bundled Skelementor filter utilities | Not shipped | No `filter-*` utility family is included in `skelementor-utilities.css` |
-| Importer support for CSS `filter` | Not currently mapped | Current importer code does not expose `filter` handling like it does for `box-shadow` |
-| Elementor-native visual effects | Available separately | Use native Elementor controls where appropriate |
-
-## Recommended Approach Today
-
-- Use bundled Skelementor utilities for layout, spacing, color, opacity, and sizing
-- Use Elementor’s native effect controls when they already cover the filter you need
-- Use custom frontend CSS outside the Skelementor import workflow when a true CSS `filter` rule is required
-
-## Common Filter Use Cases
-
-### Image Dimming and Blur
-
-```css
-.hero-image-soft {
-  filter: brightness(0.8) blur(2px);
-}
-```
-
-### Grayscale Preview
-
-```css
-.card-image-muted {
-  filter: grayscale(1);
-}
-```
-
-### High-Contrast Badge
-
-```css
-.badge-boosted {
-  filter: contrast(1.15) saturate(1.1);
-}
-```
-
-## When to Avoid Filters
-
-- When opacity alone already achieves the effect
-- When Elementor offers a native control with better editor visibility
-- When performance matters on heavy image grids or animated surfaces
-- When text readability could be harmed by blur or contrast extremes
-
-## Related Utilities
+Use those pages for filter-specific guidance and current limitations.
 
 <CardGroup cols={2}>
-  <Card title="Opacity" icon="circle-half-stroke" href="/effects/opacity">
-    Use bundled opacity utilities for many layered effects
+  <Card title="Blur" icon="circle-half-stroke" href="/filters/blur">
+    Soft focus and media treatment guidance
   </Card>
-  <Card title="Box Shadow" icon="square" href="/effects/box-shadow">
-    Import custom box-shadow utilities supported by Skelementor
+  <Card title="Brightness" icon="sun" href="/filters/brightness">
+    Brightness adjustments for images and surfaces
   </Card>
-  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
-    Write your own CSS when filters must live outside the bundled utility set
+  <Card title="Contrast" icon="adjust" href="/filters/contrast">
+    Contrast tuning for stronger visual separation
   </Card>
-  <Card title="Layout" icon="grid" href="/overview/layout">
-    Position and frame visual effects cleanly
+  <Card title="Drop Shadow" icon="wand-magic-sparkles" href="/filters/drop-shadow">
+    Filter-based shadow guidance and limitations
   </Card>
 </CardGroup>

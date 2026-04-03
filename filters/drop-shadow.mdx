@@ -1,0 +1,53 @@
+---
+title: "Drop Shadow"
+description: "Guidance for filter-based drop-shadow effects and the current Skelementor importer limitations."
+---
+
+## Overview
+
+`drop-shadow()` is part of the CSS `filter` property, not `box-shadow`. That means it follows the same current limitation as other filter effects: CSS `filter` is not currently mapped by the Skelementor importer, and no bundled drop-shadow utility classes are shipped in `skelementor-utilities.css`.
+
+If you need a standard surface shadow today, use custom imported `box-shadow` utilities instead. Use filter-based drop shadow only when you specifically need the shadow to follow the visible alpha shape of an image or SVG.
+
+## Example
+
+```css
+.icon-drop-shadow {
+  filter: drop-shadow(0 10px 18px rgba(15, 23, 42, 0.18));
+}
+```
+
+```html
+<img class="icon-drop-shadow" src="logo.svg" alt="Logo with alpha-aware drop shadow">
+```
+
+## When to Use Drop Shadow vs Box Shadow
+
+| Use case | Better choice | Why |
+| -------- | ------------- | --- |
+| Card, panel, button, modal | `box-shadow` | Works naturally on rectangular surfaces and is importer-supported |
+| PNG, SVG, transparent artwork | `drop-shadow()` | Follows the visible alpha edges instead of the box bounds |
+
+## Best Practices
+
+- Use `box-shadow` for most UI surfaces
+- Use `drop-shadow()` only when the image shape matters
+- Keep drop shadows subtle on logos and icons
+- Test carefully because filter effects are not currently handled by the Skelementor importer
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Box Shadow" icon="square" href="/effects/box-shadow">
+    Use importer-supported custom box-shadow utilities for standard surfaces
+  </Card>
+  <Card title="Blur" icon="circle-half-stroke" href="/filters/blur">
+    Another filter-based visual treatment with the same limitation
+  </Card>
+  <Card title="Contrast" icon="adjust" href="/filters/contrast">
+    Pair carefully with other filter effects
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Write custom CSS when filters are required
+  </Card>
+</CardGroup>

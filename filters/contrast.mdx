@@ -1,0 +1,52 @@
+---
+title: "Contrast"
+description: "Guidance for CSS contrast filters and the current Skelementor importer limitations."
+---
+
+## Overview
+
+Contrast filters can sharpen visual separation in photos, badges, and overlays, but CSS `filter` is not currently mapped by the Skelementor importer and no bundled contrast utility classes are shipped in `skelementor-utilities.css`.
+
+Use custom frontend CSS when contrast filtering is essential, and test carefully to avoid overly harsh imagery.
+
+## Example
+
+```css
+.contrast-boost {
+  filter: contrast(1.15);
+}
+
+.contrast-soft {
+  filter: contrast(0.9);
+}
+```
+
+```html
+<div class="contrast-boost">
+  <img src="card-art.jpg" alt="Higher contrast media">
+</div>
+```
+
+## Best Practices
+
+- Use small contrast adjustments first before reaching for stronger values
+- Test both light and dark contexts because contrast changes feel different in each
+- Avoid over-processing UI imagery that already has strong tonal separation
+- Combine with brightness intentionally when refining hero or card media
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Brightness" icon="sun" href="/filters/brightness">
+    Balance contrast with brightness changes
+  </Card>
+  <Card title="Drop Shadow" icon="wand-magic-sparkles" href="/filters/drop-shadow">
+    Filter-based shadow guidance and limitations
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Write custom CSS outside the bundled utility set
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Position media and overlays cleanly
+  </Card>
+</CardGroup>

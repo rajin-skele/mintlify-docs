@@ -1,0 +1,57 @@
+---
+title: "Blur"
+description: "Guidance for CSS blur filters and the current Skelementor importer limitations."
+---
+
+## Overview
+
+Blur is useful for softening media, backgrounds, and supporting layers, but CSS `filter` is not currently mapped by the Skelementor importer and no bundled blur utility classes are shipped in `skelementor-utilities.css`.
+
+Use Elementor-native visual controls where available, or apply blur through custom frontend CSS outside the Skelementor import workflow.
+
+## Current State
+
+| Capability | Status | Notes |
+| ---------- | ------ | ----- |
+| Bundled blur utilities | Not shipped | No Skelementor `blur-*` utility family exists today |
+| Importer support for CSS `filter` | Not currently mapped | The importer code does not currently expose `filter` handling |
+
+## Example
+
+```css
+.hero-blur-soft {
+  filter: blur(2px);
+}
+
+.hero-blur-strong {
+  filter: blur(8px);
+}
+```
+
+```html
+<img class="hero-blur-soft" src="hero.jpg" alt="Softened background media">
+```
+
+## Best Practices
+
+- Use blur on decorative media, not on body text
+- Keep blur values low unless the layer is intentionally abstracted
+- Pair blur with opacity and overlays for more controlled hero treatments
+- Prefer native editor controls when they already cover the effect you need
+
+## Related Utilities
+
+<CardGroup cols={2}>
+  <Card title="Brightness" icon="sun" href="/filters/brightness">
+    Pair blur with brightness adjustments
+  </Card>
+  <Card title="Opacity" icon="circle-half-stroke" href="/effects/opacity">
+    Use opacity for layered visual treatments
+  </Card>
+  <Card title="Custom CSS" icon="code" href="/usage/custom-css">
+    Write custom CSS outside the bundled utility set
+  </Card>
+  <Card title="Layout" icon="grid" href="/overview/layout">
+    Frame visual layers cleanly
+  </Card>
+</CardGroup>

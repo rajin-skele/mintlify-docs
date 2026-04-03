@@ -104,8 +104,16 @@
             "group": "Effects",
             "pages": [
               "effects/opacity",
-              "effects/filters",
               "effects/box-shadow"
+            ]
+          },
+          {
+            "group": "Filters",
+            "pages": [
+              "filters/blur",
+              "filters/brightness",
+              "filters/contrast",
+              "filters/drop-shadow"
             ]
           },
           {
