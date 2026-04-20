@@ -32,11 +32,10 @@ Z-index only affects positioned elements. Use it together with `.relative`, `.ab
 ### Modal Dialog
 
 ```html
-<div
-  class="fixed z-50 flex items-center justify-center"
-  style="top: 0; right: 0; bottom: 0; left: 0;"
->
-  <div class="bg-white rounded-lg p-6">Modal content</div>
+<div class="fixed z-50 flex items-center justify-center" style="top: 0; right: 0; bottom: 0; left: 0;">
+  <div class="bg-white rounded-lg p-6">
+    Modal content
+  </div>
 </div>
 ```
 
@@ -44,11 +43,10 @@ Z-index only affects positioned elements. Use it together with `.relative`, `.ab
 
 ```html
 <div class="relative">
-  <button class="btn btn-blue">Menu</button>
-  <div
-    class="absolute z-50 mt-2 bg-white rounded-lg"
-    style="top: 100%; left: 0;"
-  >
+  <button class="btn btn-blue">
+    Menu
+  </button>
+  <div class="absolute z-50 mt-2 bg-white rounded-lg" style="top: 100%; left: 0;">
     Dropdown content
   </div>
 </div>
@@ -58,16 +56,13 @@ Z-index only affects positioned elements. Use it together with `.relative`, `.ab
 
 ```html
 <div class="relative">
-  <img src="image.jpg" alt="Background" />
-  <div
-    class="absolute z-10 bg-black opacity-50"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  ></div>
-  <div
-    class="absolute z-20 flex items-center justify-center"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <h2 class="text-white">Overlay Text</h2>
+  <img alt="Background" src="image.jpg"/>
+  <div class="absolute z-10 bg-black opacity-50" style="top: 0; right: 0; bottom: 0; left: 0;">
+  </div>
+  <div class="absolute z-20 flex items-center justify-center" style="top: 0; right: 0; bottom: 0; left: 0;">
+    <h2 class="text-white">
+      Overlay Text
+    </h2>
   </div>
 </div>
 ```

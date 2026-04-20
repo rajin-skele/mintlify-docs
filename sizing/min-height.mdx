@@ -12,6 +12,8 @@ Skelementor ships two bundled minimum-height helpers:
 
 Use min-height when content should be allowed to grow beyond a baseline height instead of being clipped to a fixed `height`.
 
+Additional **`.min-h-*`** classes mirror the fractional, pixel, and container height tokens on the [Height](/sizing/height) page the same way **`.min-w-3xs` … `.min-w-7xl`** mirror container widths.
+
 ## Min Height Utilities
 
 | Class | Value | CSS | Usage |
@@ -25,15 +27,19 @@ Use min-height when content should be allowed to grow beyond a baseline height i
 
 ```html
 <main class="min-h-screen p-6">
-  <h1 class="text-3xl font-bold mb-6">Page Title</h1>
-  <p class="text-gray">Content that may be longer than the viewport.</p>
+  <h1 class="text-3xl font-bold mb-6">
+    Page Title
+  </h1>
+  <p class="text-gray">
+    Content that may be longer than the viewport.
+  </p>
 </main>
 ```
 
 ### Parent-Based Minimum Height
 
 ```html
-<section style="height: 24rem;" class="bg-gray-light rounded-lg p-4">
+<section class="bg-gray-light rounded-lg p-4" style="height: 24rem;">
   <div class="min-h-full bg-white rounded p-6">
     This panel stays at least as tall as its parent container.
   </div>

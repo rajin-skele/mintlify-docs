@@ -41,21 +41,13 @@ import { OpacityDemo } from "/snippets/opacity-demo.jsx"
 
 ```html
 <div class="relative">
-  <img
-    src="image.jpg"
-    class="w-full object-cover rounded-lg"
-    style="height: 16rem;"
-    alt="Background image"
-  >
-  <div
-    class="absolute bg-black opacity-50 rounded-lg"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  ></div>
-  <div
-    class="absolute flex items-center justify-center"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <h2 class="text-white text-2xl font-bold">Overlay Text</h2>
+  <img alt="Background image" class="w-full object-cover rounded-lg" src="image.jpg" style="height: 16rem;"/>
+  <div class="absolute bg-black opacity-50 rounded-lg" style="top: 0; right: 0; bottom: 0; left: 0;">
+  </div>
+  <div class="absolute flex items-center justify-center" style="top: 0; right: 0; bottom: 0; left: 0;">
+    <h2 class="text-white text-2xl font-bold">
+      Overlay Text
+    </h2>
   </div>
 </div>
 ```
@@ -63,14 +55,11 @@ import { OpacityDemo } from "/snippets/opacity-demo.jsx"
 ### Disabled Surface
 
 ```html
-<button class="btn btn-blue opacity-50">Disabled Button</button>
-
+<button class="btn btn-blue opacity-50">
+  Disabled Button
+</button>
 <div class="opacity-50">
-  <input
-    type="text"
-    class="w-full p-3 border-1 border-solid border-gray rounded"
-    disabled
-  >
+  <input class="w-full p-3 border-1 border-solid border-gray rounded" disabled="" type="text"/>
 </div>
 ```
 
@@ -79,14 +68,17 @@ import { OpacityDemo } from "/snippets/opacity-demo.jsx"
 ```html
 <div class="relative">
   <div class="p-6 bg-white rounded-lg">
-    <h3 class="text-xl font-semibold mb-4">Content</h3>
-    <p class="text-gray">This content is loading...</p>
+    <h3 class="text-xl font-semibold mb-4">
+      Content
+    </h3>
+    <p class="text-gray">
+      This content is loading...
+    </p>
   </div>
-  <div
-    class="absolute bg-white opacity-75 flex items-center justify-center rounded-lg"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <p class="text-sm text-gray">Loading...</p>
+  <div class="absolute bg-white opacity-75 flex items-center justify-center rounded-lg" style="top: 0; right: 0; bottom: 0; left: 0;">
+    <p class="text-sm text-gray">
+      Loading...
+    </p>
   </div>
 </div>
 ```
@@ -94,15 +86,27 @@ import { OpacityDemo } from "/snippets/opacity-demo.jsx"
 ### Text, Background, and Border Opacity
 
 ```html
-<h1 class="text-4xl font-bold text-black opacity-100">Primary Heading</h1>
-<h2 class="text-2xl font-semibold text-gray opacity-75">Secondary Heading</h2>
-<p class="text-base text-gray opacity-50">Muted paragraph text</p>
+<h1 class="text-4xl font-bold text-black opacity-100">
+  Primary Heading
+</h1>
+<h2 class="text-2xl font-semibold text-gray opacity-75">
+  Secondary Heading
+</h2>
+<p class="text-base text-gray opacity-50">
+  Muted paragraph text
+</p>
 ```
 
 ```html
-<div class="bg-blue opacity-100 p-6 text-white">Full opacity background</div>
-<div class="bg-blue opacity-75 p-6 text-white">75% opacity background</div>
-<div class="bg-blue opacity-50 p-6 text-white">50% opacity background</div>
+<div class="bg-blue opacity-100 p-6 text-white">
+  Full opacity background
+</div>
+<div class="bg-blue opacity-75 p-6 text-white">
+  75% opacity background
+</div>
+<div class="bg-blue opacity-50 p-6 text-white">
+  50% opacity background
+</div>
 ```
 
 ```html

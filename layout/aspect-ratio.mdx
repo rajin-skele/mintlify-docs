@@ -25,14 +25,15 @@ Use aspect ratio utilities when the shape of the frame matters more than the med
 ### Square Frame
 
 ```html
-<div style="width: 12rem;" class="aspect-square bg-blue rounded"></div>
+<div class="aspect-square bg-blue rounded" style="width: 12rem;">
+</div>
 ```
 
 ### Square Avatar
 
 ```html
-<div style="width: 8rem;" class="aspect-square overflow-hidden rounded-full">
-  <img src="avatar.jpg" class="w-full h-full object-cover" alt="Avatar">
+<div class="aspect-square overflow-hidden rounded-full" style="width: 8rem;">
+  <img alt="Avatar" class="w-full h-full object-cover" src="avatar.jpg"/>
 </div>
 ```
 
@@ -40,11 +41,7 @@ Use aspect ratio utilities when the shape of the frame matters more than the med
 
 ```html
 <div class="w-full aspect-video bg-black rounded-lg overflow-hidden">
-  <iframe
-    src="https://www.youtube.com/embed/VIDEO_ID"
-    class="w-full h-full"
-    frameborder="0"
-    allowfullscreen>
+  <iframe allowfullscreen="" class="w-full h-full" frameborder="0" src="https://www.youtube.com/embed/VIDEO_ID">
   </iframe>
 </div>
 ```
@@ -53,14 +50,14 @@ Use aspect ratio utilities when the shape of the frame matters more than the med
 
 ```html
 <div class="flex flex-wrap gap-4">
-  <div style="width: 8rem;" class="aspect-square overflow-hidden rounded">
-    <img src="thumb1.jpg" class="w-full h-full object-cover" alt="Thumbnail 1">
+  <div class="aspect-square overflow-hidden rounded" style="width: 8rem;">
+    <img alt="Thumbnail 1" class="w-full h-full object-cover" src="thumb1.jpg"/>
   </div>
-  <div style="width: 8rem;" class="aspect-square overflow-hidden rounded">
-    <img src="thumb2.jpg" class="w-full h-full object-cover" alt="Thumbnail 2">
+  <div class="aspect-square overflow-hidden rounded" style="width: 8rem;">
+    <img alt="Thumbnail 2" class="w-full h-full object-cover" src="thumb2.jpg"/>
   </div>
-  <div style="width: 16rem;" class="aspect-video overflow-hidden rounded">
-    <img src="video-thumb.jpg" class="w-full h-full object-cover" alt="Video thumbnail">
+  <div class="aspect-video overflow-hidden rounded" style="width: 16rem;">
+    <img alt="Video thumbnail" class="w-full h-full object-cover" src="video-thumb.jpg"/>
   </div>
 </div>
 ```
@@ -69,18 +66,15 @@ Use aspect ratio utilities when the shape of the frame matters more than the med
 
 ```html
 <section class="w-full aspect-video relative overflow-hidden rounded-lg">
-  <video class="w-full h-full object-cover" autoplay muted loop>
-    <source src="hero-video.mp4" type="video/mp4">
+  <video autoplay="" class="w-full h-full object-cover" loop="" muted="">
+    <source src="hero-video.mp4" type="video/mp4"/>
   </video>
-  <div
-    class="absolute bg-black opacity-50"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  ></div>
-  <div
-    class="absolute flex items-center justify-center"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <h1 class="text-4xl font-bold text-white">Hero Title</h1>
+  <div class="absolute bg-black opacity-50" style="top: 0; right: 0; bottom: 0; left: 0;">
+  </div>
+  <div class="absolute flex items-center justify-center" style="top: 0; right: 0; bottom: 0; left: 0;">
+    <h1 class="text-4xl font-bold text-white">
+      Hero Title
+    </h1>
   </div>
 </section>
 ```

@@ -1,6 +1,6 @@
 ---
 title: "Height"
-description: "Control element height with the bundled full, auto, and viewport-height utilities."
+description: "Control element height with full, auto, viewport, fractional, pixel, and container-scale utilities."
 ---
 
 import { HeightDemo } from "/snippets/height-demo.jsx"
@@ -11,7 +11,7 @@ import { HeightDemo } from "/snippets/height-demo.jsx"
 
 ## Overview
 
-Height utilities in the bundle focus on the common layout cases: follow content, fill a parent, or fill the viewport. For component-specific pixel heights, use custom CSS rather than expecting a large fixed-height utility scale.
+Height utilities cover layout shells, percentage slices, fixed pixels, and the same **container rem scale** as width. The bundle does **not** ship rem-based “spacing ladder” heights (such as `.h-6`, `.h-8`, `.h-12`); use fractional, `px`, or container classes instead, or [custom CSS](/usage/custom-css) for one-offs.
 
 ## Height Utilities
 
@@ -20,13 +20,23 @@ Height utilities in the bundle focus on the common layout cases: follow content,
 | `.h-full` | 100% | `height: 100%;` | Match the parent height |
 | `.h-auto` | Auto | `height: auto;` | Follow content |
 | `.h-screen` | 100vh | `height: 100vh;` | Fill the viewport |
+| `.h-px` | `1px` | `height: 1px;` | Hairline / divider rows |
+| `.h-1-2` | 50% | `height: 50%;` | Half-height regions |
+| `.h-1-3` | 33.333% | `height: 33.333%;` | Third-height regions |
+| `.h-2-3` | 66.666% | `height: 66.666%;` | Two-thirds height |
+| `.h-1-4` | 25% | `height: 25%;` | Quarter height |
+| `.h-3-4` | 75% | `height: 75%;` | Three-quarters height |
+
+**Container-scale heights** — **`.h-3xs` … `.h-7xl`** use the **same rem values** as **`.w-3xs` … `.w-7xl`** on the [Width](/sizing/width) page.
+
+**Min / max** — For each fractional, pixel, and container height token, **`.min-h-*`** and **`.max-h-*`** share the same suffix (for example `.max-h-1-2` with `.h-1-2`, `.max-h-lg` with `.h-lg`). **`.min-h-screen`** and **`.min-h-full`** stay the primary viewport and parent minimums; see [Min Height](/sizing/min-height) and [Max Height](/sizing/max-height).
 
 ## Usage
 
 ### Full Height
 
 ```html
-<div style="height: 22rem;" class="bg-gray-light rounded-lg p-4">
+<div class="bg-gray-light rounded-lg p-4" style="height: 22rem;">
   <div class="h-full bg-white rounded p-4">
     Child panel that matches its parent height
   </div>
@@ -37,8 +47,12 @@ Height utilities in the bundle focus on the common layout cases: follow content,
 
 ```html
 <div class="card h-auto p-6">
-  <h3 class="text-xl font-semibold mb-4">Card Title</h3>
-  <p class="text-gray">Content that determines height</p>
+  <h3 class="text-xl font-semibold mb-4">
+    Card Title
+  </h3>
+  <p class="text-gray">
+    Content that determines height
+  </p>
 </div>
 ```
 
@@ -47,9 +61,15 @@ Height utilities in the bundle focus on the common layout cases: follow content,
 ```html
 <section class="h-screen flex items-center justify-center bg-gray-light">
   <div class="text-center">
-    <h1 class="text-5xl font-bold mb-4">Hero Title</h1>
-    <p class="text-lg text-gray mb-8">Hero subtitle</p>
-    <button class="btn btn-blue">Get Started</button>
+    <h1 class="text-5xl font-bold mb-4">
+      Hero Title
+    </h1>
+    <p class="text-lg text-gray mb-8">
+      Hero subtitle
+    </p>
+    <button class="btn btn-blue">
+      Get Started
+    </button>
   </div>
 </section>
 ```
@@ -61,15 +81,25 @@ Height utilities in the bundle focus on the common layout cases: follow content,
 ```html
 <div class="h-screen flex">
   <aside class="w-1-4 h-full p-6 bg-gray-light">
-    <h2 class="text-lg font-semibold mb-4">Sidebar</h2>
+    <h2 class="text-lg font-semibold mb-4">
+      Sidebar
+    </h2>
     <nav class="flex flex-col gap-2">
-      <a href="#" class="text-gray">Link 1</a>
-      <a href="#" class="text-gray">Link 2</a>
+      <a class="text-gray" href="#">
+        Link 1
+      </a>
+      <a class="text-gray" href="#">
+        Link 2
+      </a>
     </nav>
   </aside>
   <main class="w-3-4 h-full p-6 overflow-auto">
-    <h1 class="text-3xl font-bold mb-6">Main Content</h1>
-    <p class="text-gray">Scrollable content</p>
+    <h1 class="text-3xl font-bold mb-6">
+      Main Content
+    </h1>
+    <p class="text-gray">
+      Scrollable content
+    </p>
   </main>
 </div>
 ```
@@ -78,18 +108,23 @@ Height utilities in the bundle focus on the common layout cases: follow content,
 
 ```html
 <div class="min-h-screen flex flex-col">
-  <header
-    class="p-6 bg-white"
-    style="border-bottom: 1px solid #e5e7eb;"
-  >
-    <h1 class="text-2xl font-bold">Header</h1>
+  <header class="p-6 bg-white" style="border-bottom: 1px solid #e5e7eb;">
+    <h1 class="text-2xl font-bold">
+      Header
+    </h1>
   </header>
   <main class="p-6">
-    <h2 class="text-3xl font-bold mb-6">Content</h2>
-    <p class="text-gray">Page content</p>
+    <h2 class="text-3xl font-bold mb-6">
+      Content
+    </h2>
+    <p class="text-gray">
+      Page content
+    </p>
   </main>
   <footer class="p-6 bg-gray-light">
-    <p class="text-gray">Footer</p>
+    <p class="text-gray">
+      Footer
+    </p>
   </footer>
 </div>
 ```

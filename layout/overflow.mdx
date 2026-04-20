@@ -25,10 +25,7 @@ Use overflow utilities when content needs to be clipped or made scrollable insid
 ### Hidden Overflow
 
 ```html
-<div
-  style="width: 18rem; height: 8rem;"
-  class="overflow-hidden border-1 border-solid border-gray rounded"
->
+<div class="overflow-hidden border-1 border-solid border-gray rounded" style="width: 18rem; height: 8rem;">
   <p class="p-4">
     This content might overflow the container and will be hidden if it does.
   </p>
@@ -38,13 +35,10 @@ Use overflow utilities when content needs to be clipped or made scrollable insid
 ### Auto Overflow
 
 ```html
-<div
-  style="width: 18rem; height: 8rem;"
-  class="overflow-auto border-1 border-solid border-gray rounded"
->
+<div class="overflow-auto border-1 border-solid border-gray rounded" style="width: 18rem; height: 8rem;">
   <p class="p-4">
     This content will show scrollbars when it overflows the container. You can
-    scroll to see all the content.
+        scroll to see all the content.
   </p>
 </div>
 ```
@@ -53,14 +47,19 @@ Use overflow utilities when content needs to be clipped or made scrollable insid
 
 ```html
 <div class="max-w-2xl mx-auto">
-  <div
-    style="height: 24rem;"
-    class="overflow-auto border-1 border-solid border-gray rounded-lg p-6"
-  >
-    <h2 class="text-2xl font-bold mb-4">Scrollable Content</h2>
-    <p class="mb-4">Long content that can scroll...</p>
-    <p class="mb-4">More content...</p>
-    <p class="mb-4">Additional content that causes scrolling...</p>
+  <div class="overflow-auto border-1 border-solid border-gray rounded-lg p-6" style="height: 24rem;">
+    <h2 class="text-2xl font-bold mb-4">
+      Scrollable Content
+    </h2>
+    <p class="mb-4">
+      Long content that can scroll...
+    </p>
+    <p class="mb-4">
+      More content...
+    </p>
+    <p class="mb-4">
+      Additional content that causes scrolling...
+    </p>
   </div>
 </div>
 ```
@@ -68,27 +67,29 @@ Use overflow utilities when content needs to be clipped or made scrollable insid
 ### Image Cropping
 
 ```html
-<div style="height: 16rem;" class="w-full overflow-hidden rounded-lg">
-  <img src="image.jpg" class="w-full h-full object-cover" alt="Cover image">
+<div class="w-full overflow-hidden rounded-lg" style="height: 16rem;">
+  <img alt="Cover image" class="w-full h-full object-cover" src="image.jpg"/>
 </div>
 ```
 
 ### Modal Body
 
 ```html
-<div
-  class="fixed z-50 flex items-center justify-center"
-  style="top: 0; right: 0; bottom: 0; left: 0;"
->
-  <div
-    class="bg-white rounded-lg max-w-md w-full mx-4 overflow-auto"
-    style="max-height: 24rem;"
-  >
+<div class="fixed z-50 flex items-center justify-center" style="top: 0; right: 0; bottom: 0; left: 0;">
+  <div class="bg-white rounded-lg max-w-md w-full mx-4 overflow-auto" style="max-height: 24rem;">
     <div class="p-6">
-      <h3 class="text-xl font-semibold mb-4">Modal Title</h3>
-      <p class="mb-4">Modal content that might be long...</p>
-      <p class="mb-4">More content...</p>
-      <p class="mb-4">More content...</p>
+      <h3 class="text-xl font-semibold mb-4">
+        Modal Title
+      </h3>
+      <p class="mb-4">
+        Modal content that might be long...
+      </p>
+      <p class="mb-4">
+        More content...
+      </p>
+      <p class="mb-4">
+        More content...
+      </p>
     </div>
   </div>
 </div>

@@ -11,7 +11,12 @@ import { MaxWidthDemo } from "/snippets/max-width-demo.jsx"
 
 ## Overview
 
-Use max-width utilities to keep content readable and layouts centered. In the Skelementor bundle, `max-w-*` is already the responsive max-width family.
+Use max-width utilities to keep content readable and layouts centered. Skelementor ships **two** max-width families: readable **content** widths and **container-scale** caps. Suffixes like `sm` or `lg` can appear in both, but the **numeric values differ**—pick the family that matches your goal.
+
+### Two families (do not mix them up)
+
+1. **Content max-widths** — The table below: tuned for typography and layout columns, with responsive ranges where documented.
+2. **Container-scale caps** — **`.max-w-3xs` … `.max-w-7xl`** use the **same rem values** as **`.w-3xs` … `.w-7xl`** on the [Width](/sizing/width) page. **`.min-w-3xs` … `.min-w-7xl`** mirror that scale for minimum width.
 
 | Class | Range |
 | ----- | ----- |
@@ -24,7 +29,9 @@ Use max-width utilities to keep content readable and layouts centered. In the Sk
 
 ```html
 <div class="max-w-lg mx-auto p-6">
-  <h2 class="text-3xl font-bold text-black mb-4">Readable content width</h2>
+  <h2 class="text-3xl font-bold text-black mb-4">
+    Readable content width
+  </h2>
   <p class="text-base leading-relaxed text-gray-dark">
     Use `max-w-*` with `mx-auto` to center articles, forms, and marketing copy without introducing a separate naming system.
   </p>

@@ -22,16 +22,17 @@ The framework ships positioning modes, not a full offset utility system. Use the
 ### Position Modes
 
 ```html
-<div class="static p-4 bg-blue text-white rounded">Static positioning</div>
-<div class="relative p-4 bg-green text-white rounded">Relative positioning</div>
+<div class="static p-4 bg-blue text-white rounded">
+  Static positioning
+</div>
+<div class="relative p-4 bg-green text-white rounded">
+  Relative positioning
+</div>
 ```
 
 ```html
 <div class="relative bg-gray-light p-8 rounded">
-  <div
-    class="absolute p-4 bg-red text-white rounded"
-    style="top: 1rem; right: 1rem;"
-  >
+  <div class="absolute p-4 bg-red text-white rounded" style="top: 1rem; right: 1rem;">
     Absolute positioning
   </div>
 </div>
@@ -41,21 +42,13 @@ The framework ships positioning modes, not a full offset utility system. Use the
 
 ```html
 <div class="relative">
-  <img
-    src="image.jpg"
-    class="w-full object-cover rounded-lg"
-    style="height: 16rem;"
-    alt="Background image"
-  >
-  <div
-    class="absolute bg-black opacity-50 rounded-lg"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  ></div>
-  <div
-    class="absolute flex items-center justify-center"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <h2 class="text-white text-2xl font-bold">Overlay Text</h2>
+  <img alt="Background image" class="w-full object-cover rounded-lg" src="image.jpg" style="height: 16rem;"/>
+  <div class="absolute bg-black opacity-50 rounded-lg" style="top: 0; right: 0; bottom: 0; left: 0;">
+  </div>
+  <div class="absolute flex items-center justify-center" style="top: 0; right: 0; bottom: 0; left: 0;">
+    <h2 class="text-white text-2xl font-bold">
+      Overlay Text
+    </h2>
   </div>
 </div>
 ```
@@ -63,23 +56,32 @@ The framework ships positioning modes, not a full offset utility system. Use the
 ### Fixed Header
 
 ```html
-<header
-  class="fixed z-50 bg-white"
-  style="top: 0; left: 0; right: 0; border-bottom: 1px solid #e5e7eb;"
->
+<header class="fixed z-50 bg-white" style="top: 0; left: 0; right: 0; border-bottom: 1px solid #e5e7eb;">
   <div class="flex items-center justify-between p-4">
-    <h1 class="text-xl font-bold">Logo</h1>
+    <h1 class="text-xl font-bold">
+      Logo
+    </h1>
     <nav class="flex gap-6">
-      <a href="#" class="text-gray">Home</a>
-      <a href="#" class="text-gray">About</a>
-      <a href="#" class="text-gray">Contact</a>
+      <a class="text-gray" href="#">
+        Home
+      </a>
+      <a class="text-gray" href="#">
+        About
+      </a>
+      <a class="text-gray" href="#">
+        Contact
+      </a>
     </nav>
   </div>
 </header>
 <main class="pt-16">
   <div class="p-6">
-    <h2 class="text-2xl font-semibold mb-4">Main Content</h2>
-    <p class="text-gray">Content goes here...</p>
+    <h2 class="text-2xl font-semibold mb-4">
+      Main Content
+    </h2>
+    <p class="text-gray">
+      Content goes here...
+    </p>
   </div>
 </main>
 ```
@@ -88,22 +90,31 @@ The framework ships positioning modes, not a full offset utility system. Use the
 
 ```html
 <div class="flex gap-6">
-  <aside
-    class="w-1-4 sticky h-screen overflow-auto"
-    style="top: 0;"
-  >
+  <aside class="w-1-4 sticky h-screen overflow-auto" style="top: 0;">
     <div class="p-6 bg-gray-light rounded">
-      <h2 class="text-lg font-semibold mb-4">Sidebar</h2>
+      <h2 class="text-lg font-semibold mb-4">
+        Sidebar
+      </h2>
       <nav class="flex flex-col gap-2">
-        <a href="#" class="text-gray">Link 1</a>
-        <a href="#" class="text-gray">Link 2</a>
-        <a href="#" class="text-gray">Link 3</a>
+        <a class="text-gray" href="#">
+          Link 1
+        </a>
+        <a class="text-gray" href="#">
+          Link 2
+        </a>
+        <a class="text-gray" href="#">
+          Link 3
+        </a>
       </nav>
     </div>
   </aside>
   <main class="w-3-4 p-6">
-    <h1 class="text-3xl font-bold mb-6">Main Content</h1>
-    <p class="text-gray mb-4">Content goes here...</p>
+    <h1 class="text-3xl font-bold mb-6">
+      Main Content
+    </h1>
+    <p class="text-gray mb-4">
+      Content goes here...
+    </p>
   </main>
 </div>
 ```

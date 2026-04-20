@@ -5,7 +5,7 @@ description: "Width, height, min-height, and max-width helpers that match the bu
 
 ## Overview
 
-Control element dimensions with the bundled width, height, min-height, and max-width helpers. Fractional widths and screen-height utilities stay fixed, while `max-w-*` uses the bundled responsive scale. When you need `min-width` or `max-height`, use custom imported utilities because those helpers are supported by the importer but not shipped in the bundled Skelementor CSS.
+Control element dimensions with the bundled width, height, min-height, and max-width helpers. Use **fractional** widths and **container-scale** widths (`.w-3xs` … `.w-7xl`), **content** max-widths (`max-w-sm` … `max-w-2xl`) for readable columns, and height utilities that include **fractions**, **`.h-px`**, **container heights** (`.h-3xs` … `.h-7xl`), and matching **`.min-h-*` / `.max-h-*`** suffixes. For one-off or branded names, add **custom imported** utilities where the importer allows it.
 
 <CardGroup cols={2}>
   <Card title="Width" icon="expand" href="/sizing/width">
@@ -34,18 +34,26 @@ Control element dimensions with the bundled width, height, min-height, and max-w
 
 ```html
 <!-- Width utilities -->
-<div class="w-full p-4">Full width</div>
-<div class="w-1-2 p-4">Half width</div>
-<div class="w-1-3 p-4">One third width</div>
-
+<div class="w-full p-4">
+  Full width
+</div>
+<div class="w-1-2 p-4">
+  Half width
+</div>
+<div class="w-1-3 p-4">
+  One third width
+</div>
 <!-- Height utilities -->
 <div class="h-screen flex items-center justify-center">
-  <div class="text-center">Full viewport height</div>
+  <div class="text-center">
+    Full viewport height
+  </div>
 </div>
-
 <!-- Max width utilities -->
 <div class="max-w-2xl mx-auto p-6">
-  <h1 class="text-3xl font-bold">Centered content</h1>
+  <h1 class="text-3xl font-bold">
+    Centered content
+  </h1>
 </div>
 ```
 
@@ -55,22 +63,24 @@ Control element dimensions with the bundled width, height, min-height, and max-w
 - **Full:** `.w-full` (100%)
 - **Auto:** `.w-auto`
 - **Fractions:** `.w-1-2`, `.w-1-3`, `.w-2-3`, `.w-1-4`, `.w-3-4`
+- **Container scale:** `.w-3xs` … `.w-7xl` — fixed `rem` widths per [Width](/sizing/width)
 
 ### Height Utilities
 - **Full:** `.h-full` (100%)
 - **Auto:** `.h-auto`
 - **Screen:** `.h-screen` (100vh)
+- **Also:** `.h-px`, fractional `.h-1-2` … `.h-3-4`, container-scale `.h-3xs` … `.h-7xl`, and matching `.min-h-*` / `.max-h-*` — see [Height](/sizing/height)
 
 ### Min Height Utilities
 - **Screen:** `.min-h-screen` (100vh)
 - **Full:** `.min-h-full` (100%)
 
 ### Custom Sizing Properties
-- **Minimum width:** document and import your own `min-width` utilities when needed
-- **Maximum height:** document and import your own `max-height` utilities when needed
+- **Semantic min-width / max-height:** import your own named utilities when you need presets beyond the bundled scales (see [Min Width](/sizing/min-width), [Max Height](/sizing/max-height))
 
 ### Max Width Utilities
-- **Responsive bundle:** `.max-w-sm`, `.max-w-md`, `.max-w-lg`, `.max-w-xl`, `.max-w-2xl`, `.max-w-full`
+- **Content / readable-width:** `.max-w-sm`, `.max-w-md`, `.max-w-lg`, `.max-w-xl`, `.max-w-2xl`, `.max-w-full`
+- **Container scale:** `.max-w-3xs` … `.max-w-7xl` — same rem table as `.w-3xs` … `.w-7xl` — see [Max Width](/sizing/max-width)
 
 ## Related Utilities
 

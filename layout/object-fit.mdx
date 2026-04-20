@@ -19,8 +19,8 @@ Use object-fit utilities on images or videos once the container has a known fram
 Use `.object-cover` when the frame matters more than seeing every edge of the image.
 
 ```html
-<div style="width: 18rem; height: 10rem;" class="overflow-hidden rounded">
-  <img src="image.jpg" class="w-full h-full object-cover" alt="Cover image" />
+<div class="overflow-hidden rounded" style="width: 18rem; height: 10rem;">
+  <img alt="Cover image" class="w-full h-full object-cover" src="image.jpg"/>
 </div>
 ```
 
@@ -29,15 +29,8 @@ Use `.object-cover` when the frame matters more than seeing every edge of the im
 Use `.object-contain` when the whole image or logo needs to stay visible.
 
 ```html
-<div
-  style="width: 18rem; height: 10rem;"
-  class="border-1 border-solid border-gray rounded"
->
-  <img
-    src="image.jpg"
-    class="w-full h-full object-contain"
-    alt="Contain image"
-  />
+<div class="border-1 border-solid border-gray rounded" style="width: 18rem; height: 10rem;">
+  <img alt="Contain image" class="w-full h-full object-contain" src="image.jpg"/>
 </div>
 ```
 
@@ -47,12 +40,16 @@ Use `.object-contain` when the whole image or logo needs to stay visible.
 
 ```html
 <div class="card overflow-hidden rounded-lg">
-  <div style="height: 12rem;" class="overflow-hidden">
-    <img src="hero.jpg" class="w-full h-full object-cover" alt="Card image" />
+  <div class="overflow-hidden" style="height: 12rem;">
+    <img alt="Card image" class="w-full h-full object-cover" src="hero.jpg"/>
   </div>
   <div class="p-6">
-    <h3 class="text-xl font-semibold mb-2">Card Title</h3>
-    <p class="text-gray">Card content</p>
+    <h3 class="text-xl font-semibold mb-2">
+      Card Title
+    </h3>
+    <p class="text-gray">
+      Card content
+    </p>
   </div>
 </div>
 ```
@@ -60,12 +57,8 @@ Use `.object-contain` when the whole image or logo needs to stay visible.
 ### Product Media
 
 ```html
-<div style="width: 18rem; height: 18rem;" class="bg-gray-light p-4 rounded">
-  <img
-    src="product.jpg"
-    class="w-full h-full object-contain"
-    alt="Product image"
-  />
+<div class="bg-gray-light p-4 rounded" style="width: 18rem; height: 18rem;">
+  <img alt="Product image" class="w-full h-full object-contain" src="product.jpg"/>
 </div>
 ```
 
@@ -73,14 +66,14 @@ Use `.object-contain` when the whole image or logo needs to stay visible.
 
 ```html
 <div class="flex flex-wrap gap-4">
-  <div style="width: 11rem; height: 11rem;" class="overflow-hidden rounded-lg">
-    <img src="image1.jpg" class="w-full h-full object-cover" alt="Gallery image 1" />
+  <div class="overflow-hidden rounded-lg" style="width: 11rem; height: 11rem;">
+    <img alt="Gallery image 1" class="w-full h-full object-cover" src="image1.jpg"/>
   </div>
-  <div style="width: 11rem; height: 11rem;" class="overflow-hidden rounded-lg">
-    <img src="image2.jpg" class="w-full h-full object-cover" alt="Gallery image 2" />
+  <div class="overflow-hidden rounded-lg" style="width: 11rem; height: 11rem;">
+    <img alt="Gallery image 2" class="w-full h-full object-cover" src="image2.jpg"/>
   </div>
-  <div style="width: 11rem; height: 11rem;" class="overflow-hidden rounded-lg">
-    <img src="image3.jpg" class="w-full h-full object-cover" alt="Gallery image 3" />
+  <div class="overflow-hidden rounded-lg" style="width: 11rem; height: 11rem;">
+    <img alt="Gallery image 3" class="w-full h-full object-cover" src="image3.jpg"/>
   </div>
 </div>
 ```
@@ -88,17 +81,14 @@ Use `.object-contain` when the whole image or logo needs to stay visible.
 ### Hero Image
 
 ```html
-<section style="height: 24rem;" class="relative overflow-hidden rounded-lg">
-  <img src="hero.jpg" class="w-full h-full object-cover" alt="Hero image" />
-  <div
-    class="absolute bg-black opacity-50"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  ></div>
-  <div
-    class="absolute flex items-center justify-center"
-    style="top: 0; right: 0; bottom: 0; left: 0;"
-  >
-    <h1 class="text-4xl font-bold text-white">Hero Title</h1>
+<section class="relative overflow-hidden rounded-lg" style="height: 24rem;">
+  <img alt="Hero image" class="w-full h-full object-cover" src="hero.jpg"/>
+  <div class="absolute bg-black opacity-50" style="top: 0; right: 0; bottom: 0; left: 0;">
+  </div>
+  <div class="absolute flex items-center justify-center" style="top: 0; right: 0; bottom: 0; left: 0;">
+    <h1 class="text-4xl font-bold text-white">
+      Hero Title
+    </h1>
   </div>
 </section>
 ```

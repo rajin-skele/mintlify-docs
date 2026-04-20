@@ -1,13 +1,13 @@
 ---
 title: "Max Height"
-description: "Custom CSS guidance for maximum height utilities that are supported by the importer but not shipped in the bundled Skelementor CSS."
+description: "Bundled max-height utilities paired with the height scale, plus custom patterns for modals and panels."
 ---
 
 ## Overview
 
-`max-height` is supported by the Skelementor importer, but dedicated bundled `max-h-*` utility classes are not currently shipped in `skelementor-utilities.css`.
+The bundle includes **`.max-h-*`** utilities that pair with the height scale on the [Height](/sizing/height) page—fractional heights, `.h-px`, container **`.h-3xs` … `.h-7xl`**, and matching suffixes. For **named** caps (modals, lists) you can still add custom classes in imported CSS; the Skelementor importer accepts `max-height` in custom utilities.
 
-Use custom imported utilities when content should stop growing after a certain height and then rely on overflow behavior.
+Use overflow utilities when content should scroll or clip inside a capped region.
 
 ## Suggested Pattern
 
@@ -31,8 +31,12 @@ Use custom imported utilities when content should stop growing after a certain h
 
 ```html
 <div class="bg-white rounded-lg max-h-modal overflow-auto p-6">
-  <h2 class="text-2xl font-bold mb-4">Modal Content</h2>
-  <p class="text-gray">Long content can scroll once the panel reaches its height cap.</p>
+  <h2 class="text-2xl font-bold mb-4">
+    Modal Content
+  </h2>
+  <p class="text-gray">
+    Long content can scroll once the panel reaches its height cap.
+  </p>
 </div>
 ```
 
@@ -40,11 +44,19 @@ Use custom imported utilities when content should stop growing after a certain h
 
 ```html
 <aside class="max-h-panel overflow-auto p-4 bg-gray-light rounded-lg">
-  <h3 class="text-lg font-semibold mb-3">Filters</h3>
+  <h3 class="text-lg font-semibold mb-3">
+    Filters
+  </h3>
   <div class="flex flex-col gap-3">
-    <label>Item 1</label>
-    <label>Item 2</label>
-    <label>Item 3</label>
+    <label>
+      Item 1
+    </label>
+    <label>
+      Item 2
+    </label>
+    <label>
+      Item 3
+    </label>
   </div>
 </aside>
 ```
